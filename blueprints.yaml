@@ -1,15 +1,15 @@
 name: Gasken Gantry
-version: "0.1"
-description: "Base on Hydrogen, the default Gantry 5 theme."
+version: "1.0"
+description: "Gasken base on Hydrogen, the default Gantry 5 theme with more options."
 icon: gantry
 author:
-  name: gasken
-  email: gasken@dibiak.com
-  url: https://github.com/gasken
-homepage: https://github.com/gasken
-readme: https://github.com/gantry/gantry5/blob/master/README.md
+  name: tacoen
+  email: tacoen@gmail.com
+  url: https://github.com/tacoen/
+homepage: https://github.com/tacoen/gasken
+readme: https://github.com/tacoen/gasken/blob/master/README.md
 keywords: gantry, gantry5, theme
-bugs: https://github.com/gantry/gantry5/issues
+bugs: https://github.com/tacoen/gasken/issues
 license: MIT
 
 dependencies:

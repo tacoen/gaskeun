@@ -1,0 +1,17 @@
+{% extends '@nucleus/partials/particle.html.twig' %}
+
+{% block particle %}
+
+{% if config.get('plugins.page-toc.active') or attribute(page.header, 'page-toc').active %}
+<div class="page-toc"> 
+<div class="page-list {{particle.style}}">
+    {% set table_of_contents = toc(page.content,particle.start,particle.depth) %}
+    {% if table_of_contents is not empty %}
+	{% if particle.title %}<h4>{{ particle.title|raw }}</h4>{% endif %}
+    {{ table_of_contents|raw|raw }}
+    {% endif %}
+</div>
+</div>
+{% endif %}
+
+{% endblock %}

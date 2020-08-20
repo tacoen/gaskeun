@@ -1,0 +1,11 @@
+favicon: ''
+touchicon: ''
+css: {  }
+javascript:
+  -
+    location: 'gantry-assets://gasken/gasken.js'
+    inline: ''
+    in_footer: '1'
+    extra: {  }
+    priority: '0'
+    name: gasken

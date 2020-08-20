@@ -1,0 +1,50 @@
+name: Navigation Colors
+description: Navigation colors for the Gasken theme
+type: section
+
+form:
+  fields:
+    font:
+      type: input.fonts
+      label: Navigation Font
+      default: 'roboto, sans-serif'
+    fontsize:
+      type: input.text
+      label: FontSize
+      default: "1rem"
+      pattern: '\d+(\.\d+){0,1}(rem|em|px)'
+    background:
+      type: input.colorpicker
+      label: Background
+      default: "#439a86"
+    text-color:
+      type: input.colorpicker
+      label: Text
+      default: "#ffffff"
+    hover-background:
+      type: input.colorpicker
+      label: Hover Background
+      default: "#439a86"
+    hover-color:
+      type: input.colorpicker
+      label: Hover text
+      default: "#ffffff"
+    hover-sub-background:
+      type: input.colorpicker
+      label: Hover Sublevel Background
+      default: "#439a86"
+    active-background:
+      type: input.colorpicker
+      label: Active Background
+      default: "#439a86"
+    active-color:
+      type: input.colorpicker
+      label: Active text
+      default: "#ffffff"
+    overlay:
+      type: input.colorpicker
+      label: Overlay
+      description: Set the color of the page overlay when the certain menu modes are active.
+      default: "rgba(0, 0, 0, 0.4)"
+      
+      

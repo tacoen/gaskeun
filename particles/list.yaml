@@ -1,0 +1,80 @@
+name: Page List Content
+description: Displays Page List Content
+type: particle
+icon: fa-pencil-square-o
+
+form:
+  fields:
+    enabled:
+      type: input.checkbox
+      label: Enabled
+      description: Globally enable the particle.
+      default: true
+
+    title:
+      type: input.text
+      label: title
+      overridable: false
+
+    style:
+      type: select.selectize
+      label: Style
+      placeholder: 'Select...'
+      default: decimal
+      options:
+            custom1: custom1
+            decimal: decimal
+            disc: disc
+            circle: circle
+            square: square
+            leading-zero: decimal-leading-zero
+            upper-roman: upper-roman
+            lower-roman: lower-roman
+            
+    items:
+        label: Page Collection
+        type: select.selectize
+        default: @self.siblings
+        options:
+            root:  root
+            root.children:  root.children
+            root.descendants:  root.descendants
+            self.siblings:  self.siblings
+            self.modular:  self.modular
+            self.children:  self.children
+            self.descendants:  self.descendants
+            page.children:  page.children
+            page.page:  page.page
+            page.descendants:  page.descendants
+            page.modular:  page.modular
+    
+    keyword:
+        label: Keyword
+        type: input.text
+    
+    order_by:
+        label: Order by
+        type: select.selectize
+        default: default
+        options:
+            default: default
+            title: title
+            basename: basename
+            date: date
+            modified: modified
+            folder: folder
+            manual: manual
+            random: random
+            
+    order_dir:
+        label: Sort
+        type: select.selectize
+        default: desc
+        options:
+            desc: desc
+            asc: asc
+
+    limit:
+      type: input.number
+      label: Limit
+      default: 5

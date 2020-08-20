@@ -1,0 +1,34 @@
+name: TOC
+description: Display Table of contect
+type: particle
+icon: fa-list-ol
+
+configuration:
+  caching:
+    type: static
+
+form:
+  fields:
+    title:
+      type: input.text
+      label: title
+    style:
+      type: select.selectize
+      label: Style
+      placeholder: 'Select...'
+      default: decimal
+      options:
+            custom1: custom1
+            decimal: decimal
+            disc: disc
+            circle: circle
+            square: square
+            leading-zero: decimal-leading-zero
+            upper-roman: upper-roman
+            lower-roman: lower-roman
+    start:
+      type: input.text
+      label: Start
+    depth:
+      type: input.text
+      label: Depth

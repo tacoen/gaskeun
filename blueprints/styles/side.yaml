@@ -1,0 +1,19 @@
+name: Side Colors
+description: Side colors for the Gasken theme
+type: section
+
+form:
+  fields:
+
+    background:
+      type: input.colorpicker
+      label: Background
+      default: "#ffffff"
+    image:
+      type: input.imagepicker
+      label: Image
+      default: ""
+    text-color:
+      type: input.colorpicker
+      label: Text
+      default: "#666666"

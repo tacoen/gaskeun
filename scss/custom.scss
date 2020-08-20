@@ -1,0 +1,27 @@
+* {
+    box-sizing: border-box;
+}
+
+.menu-item-particle .search-wrapper { margin: -.25rem 1rem }
+
+.deck-top {
+	position: fixed !important;
+    top: 0;
+    left: 0;
+    width: 100%;
+	z-index:102 !important;
+}
+
+.deck-top.beyond { opacity: .7 }
+.deck-top:hover.beyond { opacity: 1 }
+
+.on-left ul:not(.g-sublevel) {
+	float:left;
+}
+
+.on-right ul:not(.g-sublevel) {
+	float:right;
+}
+
+body { min-height: 100vh; }
+main { min-height: 90vh; }

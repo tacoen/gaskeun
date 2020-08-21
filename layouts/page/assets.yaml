@@ -5,7 +5,7 @@ javascript:
   -
     location: 'gantry-assets://gasken/gasken.js'
     inline: ''
-    in_footer: '1'
+    in_footer: '0'
     extra: {  }
     priority: '0'
-    name: gasken
+    name: 'New item'

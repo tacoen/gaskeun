@@ -3,8 +3,12 @@ function hasClass(element, className) {
 }
 
 function deck_toper() {
-	var tt = hasClass('deck-top');
+	var tt = hasClass('section','deck-top');
+	
+	console.log(tt)
+	
 	var h = document.getElementsByClassName('deck-top');
+	
 	if (tt) {
 		document.body.style.marginTop = h[0].offsetHeight + 'px';
 	}

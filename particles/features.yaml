@@ -1,0 +1,54 @@
+name: Features
+description: Features particle
+type: particle
+icon: fa-th
+
+configuration:
+  caching:
+    type: static
+
+form:
+  fields:
+    features:  
+        type: collection.list
+        array: true
+        label: Feature Items
+        value: title
+        ajax: true
+        overridable: false
+        fields:
+            .icon:
+                type: input.icon
+                label: Icon
+            .image:
+                type: input.imagepicker
+                label: Image
+            .header:
+                type: input.text
+                label: title
+            .text:
+                type: textarea.textarea
+                label: Description
+
+    background:
+        type: input.imagepicker
+        label: Background
+        overridable: true
+
+    class:
+        type: input.selectize
+        label: CSS Classes
+        description: Enter CSS class names.
+        overridable: true
+          
+    headline:
+        type: input.text
+        label: Headline
+        placeholder: Enter headline
+        overridable: true
+        
+    description:
+        type: textarea.textarea
+        label: Description
+        placeholder: Enter short description
+        overridable: true

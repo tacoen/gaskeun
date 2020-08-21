@@ -1,0 +1,44 @@
+version: 2
+
+preset:
+  image: 'gantry-admin://images/layouts/onepage.png'
+
+layout:
+  /navigation/:
+    -
+      - menu-1945
+  /container-main/:
+    main:
+      -
+        - features-1945
+  /footer/:
+    -
+      - position-footer
+    -
+      - 'copyright-1945 30'
+      - 'spacer 30'
+      - 'branding-1945 40'
+  offcanvas:
+    -
+      - mobile-menu-1045
+      
+structure:
+structure:
+  navigation:
+    type: section
+    attributes:
+      boxed: '3'
+      class: ''
+      variations: 'deck-top'
+  container-main:
+    attributes:
+      boxed: '3'
+      class: ''
+      extra: {  }
+ copyright-1945:
+    block:
+      variations: align-left
+  branding-1945:
+    block:
+      variations: align-right
+      

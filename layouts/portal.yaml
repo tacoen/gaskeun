@@ -1,0 +1,83 @@
+version: 2
+
+preset:
+  image: 'gantry-admin://images/layouts/none.png'
+
+layout:
+  /header/:
+    -
+      - 'logo-1945 30'
+    -
+      - 'position-header 70'
+
+  /navigation/:
+    -
+      - 'menu-1945 50'
+      - 'search-1945 50'
+
+
+  /container-main/:
+    -
+      - sidebar 30:
+         - position-sidebar
+      - main 35:
+          - position-breadcrumbs
+          - system-messages
+          - system-content          
+      - aside 35:
+         - position-aside
+
+  /footer/:
+    -
+      - position-footer
+    -
+      - 'copyright-1945 30'
+      - 'spacer 30'
+      - 'branding-1945 40'
+  
+  offcanvas:
+    - mobile-menu
+
+structure:
+  header:
+    attributes:
+      boxed: ''
+      class: 'homepage'
+  navigation:
+    type: section
+    attributes:
+      boxed: ''
+  main:
+    attributes:
+      boxed: ''
+  footer:
+    attributes:
+      boxed: ''
+content:
+  logo-1945:
+    attributes:
+      image: 'gantry-media://su-w.png'
+      class: ''
+    block:
+      variations: center
+  position-header:
+    attributes:
+      key: header
+  menu-1945:
+    block:
+      variations: align-left
+  search-1945:
+    block:
+      variations: align-right
+  position-breadcrumbs:
+    attributes:
+      key: breadcrumbs
+  position-footer:
+    attributes:
+      key: footer
+  copyright-1945:
+    block:
+      variations: align-left
+  branding-1945:
+    block:
+      variations: align-right

@@ -62,3 +62,70 @@ main { min-height: 90vh; }
 #g-navigation form#search:hover::after {
     color: $navigation-background;
 }
+
+.ga-features {
+	display:flex;
+	background-size: cover; 
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+	background-color: #00000099;
+	background-blend-mode: soft-light;
+	box-sizing:border-box;
+	align-items: center;
+	justify-content: center;
+	transition: all 1.5s ease;
+	margin: -2.5rem;	
+}
+
+.g-container .ga-features {
+	margin: -3rem -6rem 0 -6rem;	
+
+}
+
+.ga-features.absolute {
+
+	position:absolute;
+	width:100%;
+	left:0px;
+	top:0px;
+}
+
+.ga-features,
+.ga-features h1,
+.ga-features h2,
+.ga-features h3,
+.ga-features h4,
+.ga-features h5,
+.ga-features h6 { color: $main-background }
+
+.ga-features .block {
+	width: 100%;
+	padding: 6rem;
+}
+
+.ga-features .block .desc {
+	text-align: center;
+}
+
+.ga-features .feature-items {
+	display: flex;
+    flex-basis: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.ga-features .feature {
+	padding: 1rem 2rem;
+    width: 25%;
+	justify-content: space-around;
+    text-align: center;
+}
+
+.ga-features .feature img { width: 100px; }
+
+.ga-features .feature h4 { margin-bottom: 0 }
+.ga-features .feature p { font-size: .9rem; margin-top:.5rem }
+
+.ga-features .desc .headline { font-size: 6rem }
+
+.ga-features i.fa { font-size: 3rem; }

@@ -1,17 +1,40 @@
+function ahasClass(element, className) {
+	elem = document.querySelector(element)
+	console.log(elem)
+	console.log(elem.classList.contains(className))
+	return elem.classList.contains(className)
+}
+
+
 function hasClass(element, className) {
-	return (' ' + element.className + ' ').indexOf(' ' + className + ' ') > -1;
+	var c = document.getElementsByClassName(className).length
+    console.log(className,c)
+	return c > 0;
 }
 
 function deck_toper() {
+
 	var tt = hasClass('section','deck-top');
 	
-	console.log(tt)
-	
-	var h = document.getElementsByClassName('deck-top');
-	
-	if (tt) {
-		document.body.style.marginTop = h[0].offsetHeight + 'px';
+	var d = document.getElementsByClassName('deck-top');
+	if (tt) {document.body.style.marginTop = d[0].offsetHeight + 'px';}
+/*
+	var ta = hasClass('div','ga-features');
+	if (ta) {
+		var h = document.getElementsByClassName('ga-features');
+		var p = h[0].parentElement
+		
+		p.style.height = h[0].offsetHeight+'px'
+		
+		console.log(h)
+		
+		if (tt) {
+			h[0].style.top = '-'+d[0].offsetHeight + 'px'
+		} else {
+			h[0].style.top = (p.offsetTop-24)+'px'
+		}
 	}
+*/	
 }
 
 function deck_scroll() {

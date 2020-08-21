@@ -1,0 +1,41 @@
+{% extends '@nucleus/partials/particle.html.twig' %}
+
+{% block particle %}
+
+<div {% if particle.background %}style='background-image: url({{ particle.background|e }});'{% endif %} 
+    class="ga-features">
+
+	<div class='block {{particle.class}}'>
+
+	<div class='desc'><h2 class='headline'>{{ particle.headline|html }}</h2>
+    <p>{{ particle.description|html }}</p>
+	</div>
+	
+	<div class="feature-items">
+    
+	{% for feature in particle.features %}
+    
+		<div class="feature">
+
+			{% if feature.image %}
+				<div class='image'><img src="{{ feature.image|e }}"></div>
+				<div class="feature-content icon-offset">
+			{% else %}
+				{% if feature.icon %}
+					<i class="{{ feature.icon }}" aria-hidden="true"></i>
+					<div class="feature-content icon-offset">
+				{% else %}
+					<div class="feature-content">
+				{% endif %}
+            {% endif %}
+            {% if feature.header %}<h4>{{ feature.header }}</h4>{% endif %}
+            {% if feature.text %}<p>{{ feature.text }}</p>{% endif %}
+			</div>
+        </div>
+    {% endfor %}
+    </div>
+
+	</div>
+</div>
+
+{% endblock %}

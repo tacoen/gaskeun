@@ -1,7 +1,7 @@
 name: Page List Content
 description: Displays Page List Content
 type: particle
-icon: fa-pencil-square-o
+icon: fa-outdent
 
 form:
   fields:

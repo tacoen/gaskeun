@@ -70,7 +70,7 @@ preset2:
   colors:
     - '#991111'
     - '#333333'
-    - '#f0f0f0'
+    - '#dddddd'
 
   styles:
     base:

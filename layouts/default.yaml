@@ -5,10 +5,15 @@ preset:
 
 layout:
   /header/:
-    - [logo 30, position-header 70]
+    -
+      - 'logo-1945 30'
+    -
+      - 'position-header 70'
 
   /navigation/:
-    - menu
+    -
+      - 'menu-1945 50'
+      - 'search-1945 50'
 
   /main/:
     - position-breadcrumbs
@@ -16,8 +21,55 @@ layout:
     - system-content
 
   /footer/:
-    - position-footer
-    - [copyright 40, spacer 30, branding 30]
-
+    -
+      - position-footer
+    -
+      - 'copyright-1945 30'
+      - 'spacer 30'
+      - 'branding-1945 40'
+  
   offcanvas:
     - mobile-menu
+
+structure:
+  header:
+    attributes:
+      boxed: ''
+  navigation:
+    type: section
+    attributes:
+      boxed: ''
+  main:
+    attributes:
+      boxed: ''
+  footer:
+    attributes:
+      boxed: ''
+content:
+  logo-1945:
+    attributes:
+      image: 'gantry-media://su-w.png'
+      class: ''
+    block:
+      variations: center
+  position-header:
+    attributes:
+      key: header
+  menu-1945:
+    block:
+      variations: align-left
+  search-1945:
+    block:
+      variations: align-right
+  position-breadcrumbs:
+    attributes:
+      key: breadcrumbs
+  position-footer:
+    attributes:
+      key: footer
+  copyright-1945:
+    block:
+      variations: align-left
+  branding-1945:
+    block:
+      variations: align-right

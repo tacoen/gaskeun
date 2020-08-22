@@ -1,28 +1,31 @@
 details:
   name: Gasken
-  version: '5.4.34'
-  icon: paper-plane
-  date: 'April 30, 2020'
-  author:
-    name: 'RocketTheme, LLC'
-    email: support@rockettheme.com
-    link: http://www.rockettheme.com
+  version: '1.0'
+  icon: github-square
+  date: 'August 17, 2020'
 
-  documentation:
-    link: http://docs.gantry.org/gantry5
-
-  support:
-    link: https://gitter.im/gantry/gantry5
-
-  updates:
-    link: http://updates.rockettheme.com/themes/gasken.yaml
-
-  copyright: (C) 2005 - 2019 RocketTheme, LLC. All rights reserved.
-  license: GPLv2
   description: Gasken Theme
   images:
-    thumbnail: admin/images/preset1.png
-    preview: admin/images/preset1.png
+    thumbnail: /admin/image/preset1.png
+    preview: /admin/image/preset1.png
+
+author:
+  name: tacoen
+  email: tacoen@gmail.com
+  url: https://github.com/tacoen/
+
+  homepage: https://github.com/tacoen/gasken
+  readme: https://github.com/tacoen/gasken/blob/master/README.md
+  keywords: gantry, gantry5, theme
+  bugs: https://github.com/tacoen/gasken/issues
+  license: MIT
+
+  documentation:
+    link: https://github.com/tacoen/gasken/wiki
+
+  support:
+    link: https://github.com/tacoen/gasken/issues
+
 
 configuration:
   gantry:
@@ -61,11 +64,12 @@ configuration:
       deck-top: Deck on Top
       deck-bottom: Deck on Bottom
     Utility:
-      full-width: Full Width
       align-right: Align Right
       align-left: Align Left
       nomarginall: No Margin
       nopaddingall: No Padding
+      full-height: Full Height
+      full-width: Full Width
   block-variations:
     Box Variations:
       box1: Box 1
@@ -96,14 +100,16 @@ admin:
     core:
       - base
       - accent
+      - box
+      - cover
     section:
+      - main
       - header
       - footer
       - navigation
       - showcase
       - feature
       - subfeature
-      - main
       - side
     configuration:
       - breakpoints

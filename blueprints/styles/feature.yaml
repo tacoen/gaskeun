@@ -8,12 +8,8 @@ form:
     background:
       type: input.colorpicker
       label: Background
-      default: "#ffffff"
-    image:
-      type: input.imagepicker
-      label: Image
-      default: ""
+      default: "#f0f0f0"
     text-color:
       type: input.colorpicker
       label: Text
-      default: "#666666"
+      default: "#222222"

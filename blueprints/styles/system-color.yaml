@@ -1,0 +1,22 @@
+name: System Color
+type: configuration
+
+form:
+  fields:
+
+    warning-color:
+      type: input.colorpicker
+      label: Warning
+      default: '#c09853'
+    error-color:
+      type: input.colorpicker
+      label: Error
+      default: '#b94a48'
+    info-color:
+      type: input.colorpicker
+      label: Info
+      default: '#3a87ad'
+    success-color:
+      type: input.colorpicker
+      label: Success
+      default: '#468847'

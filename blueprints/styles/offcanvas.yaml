@@ -8,11 +8,11 @@ form:
     background:
       type: input.colorpicker
       label: Background
-      default: "#354d59"
+      default: "#ffcc33"
     text-color:
       type: input.colorpicker
       label: Text
-      default: "#ffffff"
+      default: "#333333"
     width:
       type: input.text
       label: Panel Width

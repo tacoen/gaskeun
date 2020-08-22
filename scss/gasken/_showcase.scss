@@ -28,6 +28,16 @@
 		}
 	}
 
+	.button.primary {
+		background: $accent-color-1;
+		color: $showcase-text-color;
+		&:hover {
+			background: lighten($accent-color-1, 5%);
+		}
+		&:active {
+			background: darken($accent-color-1, 5%);
+		}
+	}
 	.g-social {
 		a {
 			background: darken($showcase-background, 6%);

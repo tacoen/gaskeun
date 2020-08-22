@@ -1,13 +1,27 @@
-{% set showcase_image = page.media.images|first.grayscale().contrast(20).brightness(-125).colorize(-35,81,122) %}
-{% if showcase_image %}
-	<div class="modular-row showcase flush-top" style="background-image: url({{ showcase_image.url }});">
-{% else %}
-<div class="modular-row showcase">
-{% endif %}
-    {{ content|raw }}
+{% extends '@nucleus/partials/particle.html.twig' %}
 
-    {% for button in page.header.buttons %}
+{% block particle %}
+
+{% set showcase_image = particle.background %}
+
+{% if showcase_image %}
+	<div class="ga-showcase ga-bgrimg" style="background-image: url({{ showcase_image|e }});">
+{% else %}
+	<div class="modular-row showcase">
+{% endif %}
+
+	<div class='block {{particle.class}}'>
+    
+	{% if particle.headline %}<h2 class='headline'>{{ particle.headline|html }}</h2>{% endif %}
+    {% if particle.text %}<p>{{ particle.text|html }}</p>{% endif %}
+	
+    {% for button in particle.buttons %}
         <a class="button{% if button.primary %} primary{% endif %}" href="{{ button.url }}">{{ button.text }}</a>
     {% endfor %}
 
+	</div>
+	
 </div>
+
+
+{% endblock %}

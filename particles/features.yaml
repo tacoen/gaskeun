@@ -47,8 +47,8 @@ form:
         placeholder: Enter headline
         overridable: true
         
-    description:
+    text:
         type: textarea.textarea
-        label: Description
+        label: text
         placeholder: Enter short description
         overridable: true

@@ -1,7 +1,8 @@
 version: 2
+
 preset:
-  image: 'gantry-admin://images/layouts/none.png'
-  name: free_grid
+  image: 'gantry-admin://images/layouts/onepage.png'
+  name: full_page
 
 layout:
   /navigation/:
@@ -11,10 +12,11 @@ layout:
   /header/:
     -
       - position-header
-  /showcase/:
-  /feature/:
+  /main/:
     -
-      - features-1945
+      - features
+    -
+      - system-content
   /footer/:
     -
       - position-footer
@@ -23,25 +25,22 @@ layout:
       - 'branding-1945 50'
   offcanvas:
     -
-      - mobile-menu-9425
+      - mobile-menu
 structure:
   navigation:
     type: section
     attributes:
-      boxed: '3'
+      boxed: '0'
       class: ''
       variations: deck-top
   header:
     attributes:
       boxed: ''
-  showcase:
-    type: section
+  main:
     attributes:
-      boxed: ''
-  feature:
-    type: section
-    attributes:
-      boxed: ''
+      boxed: '0'
+      class: ''
+      variations: ''
   footer:
     attributes:
       boxed: ''
@@ -58,3 +57,9 @@ content:
   position-footer:
     attributes:
       key: footer
+  copyright-1245:
+    block:
+      variations: align-left
+  branding-9166:
+    block:
+      variations: align-right

@@ -1,0 +1,25 @@
+name: Box Variantions
+type: core
+
+form:
+  fields:
+
+    box1-background:
+      type: input.colorpicker
+      label: Box1 Color
+      default: '#f0f0f0'
+    box2-background:
+      type: input.colorpicker
+      label: Box2 Color
+      default: '#111111'
+    box3-background:
+      type: input.colorpicker
+      label: Box3 Color
+      default: '#336699'
+    box4-background:
+      type: input.colorpicker
+      label: Box4 Color
+      default: '#FFCC33'
+
+
+

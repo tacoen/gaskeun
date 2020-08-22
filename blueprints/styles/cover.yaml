@@ -1,0 +1,30 @@
+name: Background Image
+type: core
+
+form:
+  fields:
+
+    blend-mode:
+      type: select.selectize
+      label: Belnd
+      placeholder: 'Select...'
+      default: soft-light
+      options:
+        soft-light: soft-light
+        darken: darken
+        multiply: multiply
+        overlay: overlay
+        screen: screen
+        none: none
+    background1:
+      type: input.imagepicker
+      label: Image1
+    background2:
+      type: input.imagepicker
+      label: Image2
+    background3:
+      type: input.imagepicker
+      label: Image3
+    background4:
+      type: input.imagepicker
+      label: Image4

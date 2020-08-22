@@ -39,6 +39,7 @@ structure:
     type: section
     attributes:
       boxed: ''
+      variations: deck-top      
   main:
     attributes:
       boxed: ''

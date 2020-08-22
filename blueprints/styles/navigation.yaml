@@ -10,41 +10,39 @@ form:
       default: 'roboto, sans-serif'
     fontsize:
       type: input.text
-      label: FontSize
+      label: Font Size
       default: "1rem"
       pattern: '\d+(\.\d+){0,1}(rem|em|px)'
     background:
       type: input.colorpicker
       label: Background
-      default: "#439a86"
+      default: "#ffcc33"
     text-color:
       type: input.colorpicker
       label: Text
-      default: "#ffffff"
+      default: "#333333"
     hover-background:
       type: input.colorpicker
       label: Hover Background
-      default: "#439a86"
+      default: "rgba(255, 255, 255, 0.4)"
     hover-color:
       type: input.colorpicker
       label: Hover text
-      default: "#ffffff"
+      default: "#111111"
     hover-sub-background:
       type: input.colorpicker
-      label: Hover Sublevel Background
-      default: "#439a86"
+      label: Hover Sublevel
+      default: "rgba(255, 255, 255, 0.3)"
     active-background:
       type: input.colorpicker
       label: Active Background
-      default: "#439a86"
+      default: "rgba(255, 32, 32, 0.3)"
     active-color:
       type: input.colorpicker
       label: Active text
-      default: "#ffffff"
+      default: "#666666"
     overlay:
       type: input.colorpicker
       label: Overlay
       description: Set the color of the page overlay when the certain menu modes are active.
       default: "rgba(0, 0, 0, 0.4)"
-      
-      

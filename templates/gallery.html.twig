@@ -1,0 +1,20 @@
+{% extends "partials/page.html.twig" %}
+
+{% block content %}
+
+    {{ page.content|raw }}
+
+    <ul class='page-gallery'>
+    {% for image in page.media.images %}
+    <li class='item'>
+        <div class="image-surround">
+            <a href="javascript:imageview('{{ image.url }}');">
+            {{ image.cropResize(300,200).html|raw }}
+			</a>
+        </div>
+    </li>
+    {% endfor %}
+    </ul>
+
+
+{% endblock %}

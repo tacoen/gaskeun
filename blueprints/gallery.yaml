@@ -1,0 +1,35 @@
+title: Gallery
+'@extends':
+    type: default
+    context: blueprints://pages
+
+form:
+  fields:
+    tabs:
+      type: tabs
+      active: 1
+
+      fields:
+        gallery:
+          type: tab
+          title: Gallery
+
+          fields:
+
+
+            gitems:  
+                type: collection.list
+                array: true
+                label: Gallery Items
+                value: title
+                ajax: true
+                fields:
+                    .image:
+                        type: input.imagepicker
+                        label: Image
+                    .title:
+                        type: input.text
+                        label: title
+                    .text:
+                        type: textarea.textarea
+                        label: Description

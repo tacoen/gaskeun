@@ -9,41 +9,49 @@ configuration:
 
 form:
   fields:
-    headline:
-        type: input.text
-        label: Headline
-        placeholder: Enter headline
-        
-    text:
-        type: textarea.textarea
-        label: Text
-        placeholder: Enter short description
-
-    background:
-        type: input.imagepicker
-        label: Background
-        overridable: true
-
-    class:
-        type: input.selectize
-        label: CSS Classes
-        description: Enter CSS class names.
-        overridable: true
-          
-    buttons:  
-        type: collection.list
-        array: true
-        label: Buttons
-        value: title
-        ajax: true
-        overridable: false
-        fields:
-            .text:
+    tabs:
+      type: container.tabs
+      fields:
+        tab_container:
+          label: Container
+          fields:
+            headline:
                 type: input.text
+                label: Headline
+                placeholder: Enter headline
+            text:
+                type: textarea.textarea
                 label: Text
-            .primary:
-                type: input.checkbox
-                label: primary
-            .url:
-                type: input.url
-                label: url
+                placeholder: Enter short description
+
+            background:
+                type: input.imagepicker
+                label: Background
+                overridable: true
+
+            class:
+                type: input.selectize
+                label: CSS Classes
+                description: Enter CSS class names.
+                overridable: true
+
+        tab_button:
+          label: Buttons
+          fields:          
+            buttons:  
+                type: collection.list
+                array: true
+                label: Buttons
+                value: title
+                ajax: true
+                overridable: false
+                fields:
+                    .text:
+                        type: input.text
+                        label: Text
+                    .primary:
+                        type: input.checkbox
+                        label: primary
+                    .url:
+                        type: input.url
+                        label: url

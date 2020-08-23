@@ -19,12 +19,24 @@ body {
 a {
 	color: $accent-color-1;
 	&:hover {
-		color: darken($base-text-color, 10%);
+		color: darken($accent-color-1, 10%);
+	}
+	&:active {
+		color: ligthten($accent-color-1, 10%);
 	}
 }
 
-h1, h2, h3, h4, h5, h6, strong {
-	color: darken($base-text-color, 10%);
+h1, h2, h3, h4, h5, h6 {
+	color: $accent-color-3;
+}
+
+h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
+	&:hover {
+		color: darken($accent-color-3, 10%);
+	}
+	&:active {
+		color: ligthten($accent-color-3, 10%);
+	}
 }
 
 .button {

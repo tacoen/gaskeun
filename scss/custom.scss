@@ -135,3 +135,28 @@ main { min-height: 90vh; }
 	padding:0 !important;
 	margin:0 !important;
 }
+
+
+.page-gallery {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.page-gallery .item {
+    list-style-type:none;
+	margin:0 .5rem 1rem .5rem;
+	padding:0;
+}
+
+.page-gallery .item .image-surround {
+    border: 1px solid #ddd;
+    width:  300px;
+    padding: .25rem;
+    text-align: center;
+}
+
+
+.page-gallery .item a { display:block; }

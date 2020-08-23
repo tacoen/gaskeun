@@ -4,19 +4,19 @@ type: core
 form:
   fields:
 
-    box1-background:
+    background1:
       type: input.colorpicker
       label: Box1 Color
       default: '#f0f0f0'
-    box2-background:
+    background2:
       type: input.colorpicker
       label: Box2 Color
       default: '#111111'
-    box3-background:
+    background3:
       type: input.colorpicker
       label: Box3 Color
       default: '#336699'
-    box4-background:
+    background4:
       type: input.colorpicker
       label: Box4 Color
       default: '#FFCC33'

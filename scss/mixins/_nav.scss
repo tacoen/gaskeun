@@ -3,6 +3,7 @@
 }
 
 // Main Nav Colors
+
 @mixin main-nav-colors(
 	$section-background: $navigation-background, 
 	$section-text-color: $navigation-text-color, 
@@ -73,7 +74,11 @@
 }
 
 // Touch Indicators
-@mixin main-nav-indicators($section-background: $navigation-background, $section-text-color: $navigation-text-color) {
+
+@mixin main-nav-indicators(
+	$section-background: $navigation-background, 
+	$section-text-color: $navigation-text-color) {
+	
 	.g-menu-hastouch {
 		.g-toplevel {
 			> li {

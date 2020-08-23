@@ -7,16 +7,16 @@ form:
     warning-color:
       type: input.colorpicker
       label: Warning
-      default: '#c09853'
+      default: '#df8a13'
     error-color:
       type: input.colorpicker
       label: Error
-      default: '#b94a48'
+      default: '#b52b27'
     info-color:
       type: input.colorpicker
       label: Info
-      default: '#3a87ad'
+      default: '#28a1c5'
     success-color:
       type: input.colorpicker
       label: Success
-      default: '#468847'
+      default: '#3d8b3d'

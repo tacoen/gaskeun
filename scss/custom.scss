@@ -1,4 +1,48 @@
-* { box-sizing: border-box; }
+*, *::before, *::after { box-sizing: border-box; }
+
+
+.awarning { color: $systemcolor-warning-color; }
+.aerror { color: $systemcolor-error-color; }
+
+
+.notices {
+    padding: 1px 1px 1px 30px;
+    margin: 15px 0;
+}
+
+
+.gasken {
+.notices.yellow {
+    color: $systemcolor-warning-color;
+    border-left: 10px solid $systemcolor-warning-color;
+    background: lighten($systemcolor-warning-color,50%); 
+}
+
+.notices.red {
+    color: $systemcolor-error-color;
+    border-left: 10px solid $systemcolor-error-color;
+    background: lighten($systemcolor-error-color,50%); 
+}
+
+.notices.blue {
+    color: $systemcolor-info-color;
+    border-left: 10px solid $systemcolor-info-color;
+    background: lighten($systemcolor-info-color,50%); 
+}
+
+.notices.green {
+    color: $systemcolor-success-color;
+    border-left: 10px solid $systemcolor-success-color;
+    background: lighten($systemcolor-success-color,50%); 
+
+}
+
+}
+
+
+
+
+
 
 
 /* added variations */

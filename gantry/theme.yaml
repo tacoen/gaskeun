@@ -113,3 +113,4 @@ admin:
       - side
     configuration:
       - breakpoints
+      - systemcolor

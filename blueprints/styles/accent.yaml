@@ -16,8 +16,8 @@ form:
     color-3:
       type: input.colorpicker
       label: Accent Color 3
-      default: "#6699CC"
+      default: "#114477"
     color-4:
       type: input.colorpicker
       label: Accent Color 4
-      default: "#ffcc33"
+      default: "#6699CC"

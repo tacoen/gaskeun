@@ -2,7 +2,7 @@
 	padding: $section-padding 0;
 	background-color: $showcase-background;
 	@if $showcase-image {
-    	background-image: url($showcase-image);
+		background-image: url($showcase-image);
 	}
 	color: $showcase-text-color;
 

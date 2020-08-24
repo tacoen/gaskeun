@@ -1,5 +1,5 @@
 #g-navigation {
-    background: $navigation-background;
+    background-color: $navigation-background;
     color: $navigation-text-color;
     text-align: center;
     position: relative;
@@ -19,14 +19,14 @@
 
     .g-social {
         a {
-            background: darken($navigation-background, 6%);
+            background-color: darken($navigation-background, 6%);
             border: none;
             text-decoration: none;
             color: $navigation-text-color;
             @include transition(background 0.2s);
 
             &:hover {
-                background: lighten($navigation-background, 6%);
+                background-color: lighten($navigation-background, 6%);
             }
         }
     }
@@ -142,7 +142,7 @@
 
 // Nav Overlay
 .g-nav-overlay, .g-menu-overlay {
-    background: $navigation-overlay;
+    background-color: $navigation-overlay;
 }
 
 @media print {

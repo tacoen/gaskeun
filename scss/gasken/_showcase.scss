@@ -18,34 +18,34 @@
 	}
 
 	.button {
-		background: $accent-color-2;
+		background-color: $accent-color-2;
 		color: $showcase-text-color;
 		&:hover {
-			background: lighten($accent-color-2, 5%);
+			background-color: lighten($accent-color-2, 5%);
 		}
 		&:active {
-			background: darken($accent-color-2, 5%);
+			background-color: darken($accent-color-2, 5%);
 		}
 	}
 
 	.button.primary {
-		background: $accent-color-1;
+		background-color: $accent-color-1;
 		color: $showcase-text-color;
 		&:hover {
-			background: lighten($accent-color-1, 5%);
+			background-color: lighten($accent-color-1, 5%);
 		}
 		&:active {
-			background: darken($accent-color-1, 5%);
+			background-color: darken($accent-color-1, 5%);
 		}
 	}
 	.g-social {
 		a {
-			background: darken($showcase-background, 6%);
+			background-color: darken($showcase-background, 6%);
 			border: none;
 			color: $showcase-text-color;
 			@include transition(background 0.2s);
 			&:hover {
-				background: lighten($showcase-background, 6%);
+				background-color: lighten($showcase-background, 6%);
 			}
 		}
 	}

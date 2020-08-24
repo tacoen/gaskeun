@@ -1,12 +1,11 @@
 name: Background Image
-type: core
+type: configuration
 
 form:
   fields:
-
     blend-mode:
       type: select.selectize
-      label: Belnd
+      label: blend
       placeholder: 'Select...'
       default: soft-light
       options:
@@ -19,12 +18,17 @@ form:
     background1:
       type: input.imagepicker
       label: Image1
+      default: gantry-media://cover1.png
     background2:
       type: input.imagepicker
       label: Image2
+      default: gantry-media://cover2.png
     background3:
       type: input.imagepicker
       label: Image3
+      default: gantry-media://cover3.png
+      
     background4:
       type: input.imagepicker
       label: Image4
+      default: gantry-media://cover4.png

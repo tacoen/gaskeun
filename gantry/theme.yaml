@@ -70,6 +70,17 @@ configuration:
       nopaddingall: No Padding
       full-height: Full Height
       full-width: Full Width
+    Box Variations:
+      box1: Box 1
+      box2: Box 2
+      box3: Box 3
+      box4: Box 4
+    Image Background:
+      ga-cover-1: Cover 1
+      ga-cover-2: Cover 2
+      ga-cover-3: Cover 3
+      ga-cover-4: Cover 4
+      
   block-variations:
     Box Variations:
       box1: Box 1
@@ -77,11 +88,15 @@ configuration:
       box3: Box 3
       box4: Box 4
     Effects:
-      button-alike: button alike
       shadow: Shadow 1
       shadow2: Shadow 2
       rounded: Rounded
       square: Square
+    Image Background:
+      ga-cover-1: Cover 1
+      ga-cover-2: Cover 2
+      ga-cover-3: Cover 3
+      ga-cover-4: Cover 4
     Utility:
       disabled: Disabled
       align-right: Align Right
@@ -100,8 +115,6 @@ admin:
     core:
       - base
       - accent
-      - box
-      - cover
     section:
       - main
       - header
@@ -113,4 +126,6 @@ admin:
       - side
     configuration:
       - breakpoints
+      - cover
+      - box
       - systemcolor

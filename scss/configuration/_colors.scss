@@ -48,15 +48,16 @@ $offcanvas-text-color:			#ffffff !default;
 $offcanvas-toggle-color:		#ffffff !default;
 
 // Block Variations
-$box1-background:				#ffffff !default;
-$box2-background:				#e0e0e0 !default;
+//$box1-background:				#ffffff !default;
+//$box2-background:				#e0e0e0 !default;
 
 // Block Variations (gasken)
 
-// $box1-background:$box-background1;
-// $box2-background: $box-background2;
-// $box3-background: $box-background3;
-// $box4-background: $box-background4;
+$box1-background:$box-background1;
+$box2-background: $box-background2;
+$box3-background: $box-background3;
+$box4-background: $box-background4;
+
 
 // System Messsages and Alerts
 //$warning-color:					#c09853;

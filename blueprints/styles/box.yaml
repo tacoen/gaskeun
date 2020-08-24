@@ -1,5 +1,5 @@
 name: Box Variantions
-type: core
+type: configuration
 
 form:
   fields:

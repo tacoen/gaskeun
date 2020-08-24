@@ -37,14 +37,14 @@ blockquote {
 
 // Inline and Code
 code {
-	background: $code-bg;
+	background-color: $code-bg;
 	color: darken($code-text,10%);
 }
 
 pre {
 	padding: 1rem;
 	margin: 2rem 0;
-	background: $pre-bg;
+	background-color: $pre-bg;
 	border: 1px solid $base-border-color;
 	border-radius: $core-border-radius;
 	line-height: 1.15;
@@ -52,7 +52,7 @@ pre {
 
 	code {
 		color: $pre-text;
-		background: inherit;
+		background-color: inherit;
 		font-size: $core-font-size - 0.1;
 	}
 }

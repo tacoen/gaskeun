@@ -1,5 +1,48 @@
 *, *::before, *::after { box-sizing: border-box; }
 
+.has-decktop .g-offcanvas-toggle {
+    position: fixed;
+    z-index: 999;
+}
+
+.g-offcanvas-open body {
+    margin-top: 0 !important;
+}
+
+
+#g-navigation .g-toplevel {
+	flex-flow: row !important;
+}
+	
+#g-main {
+
+	[class^='box'] {
+		padding: 1rem;
+		margin-bottom: 1rem;
+	}
+
+}
+
+.box1 { 
+	background-color: $box-background1; 
+	color: if(lightness($box-background1) < 50, $main-background, $main-text-color );		
+}
+
+.box2 { 
+	background-color: $box-background2; 
+	color: if(lightness($box-background2) < 50, $main-background, $main-text-color );		
+}
+
+.box3 { 
+	background-color: $box-background3; 
+	color: if(lightness($box-background3) < 50, $main-background, $main-text-color );		
+}
+
+.box4 { 
+	background-color: $box-background4; 
+	color: if(lightness($box-background4) < 50, $main-background, $main-text-color );		
+}
+
 
 .notices {
     padding: 1px 1px 1px 30px;
@@ -78,6 +121,10 @@
 
 .deck-top.scrolled { opacity: .7 }
 .deck-top:hover.scrolled { opacity: 1 }
+
+.deck-top .g-menu-item-title {
+    text-transform: capitalize;
+}	
 
 
 .on-left ul:not(.g-sublevel) {

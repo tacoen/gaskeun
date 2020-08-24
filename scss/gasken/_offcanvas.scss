@@ -1,26 +1,26 @@
 #g-offcanvas {
 	background-color: $offcanvas-background;
 	width: $offcanvas-width;
-	color: $offcanvas-text-color;
+	color: $navigation-text-color;
 	a {
 		color: lighten($offcanvas-background, 50%);
 		&:hover {
-			color: $offcanvas-text-color;
+			color: $navigation-text-color;
 		}
 	}
 
 	h1, h2, h3, h4, h5, h6, strong {
-		color: $offcanvas-text-color;
+		color: $navigation-text-color;
 	}
 
 	.button {
 		background-color: $accent-color-2;
-		color: $offcanvas-text-color;
+		color: $navigation-text-color;
 		&:hover {
-			background-color: lighten($accent-color-2, 5%);
+			background-color: $navigation-hover-background;
 		}
 		&:active {
-			background-color: darken($accent-color-2, 5%);
+			background-color: $navigation-active-background;
 		}
 	}
 }
@@ -45,14 +45,19 @@
 			background-color: $offcanvas-background;
 			> li {
 				> .g-menu-item-container {
-					color: $offcanvas-text-color;
+					color: $navigation-text-color;
 				}
 				&:not(.g-menu-item-type-particle):not(.g-menu-item-type-module) {
-					&:hover, &.active {
-						background-color: darken($accent-color-1, 4%);
+					&:hover {
+						background-color: $navigation-hover-background;
+					
+					}
+					
+					&.active {
+						background-color: $navigation-active-background;
 
 						> .g-menu-item-container {
-							color: $offcanvas-text-color;
+							color: $navigation-text-color;
 						}
 					}
 				}
@@ -60,9 +65,9 @@
 					> .g-menu-item-container {
 						> .g-menu-parent-indicator {
 							border: 1px solid lighten($accent-color-1, 6%);
-							background-color: darken($accent-color-1, 4%);
+							background-color: $navigation-active-background;
 							&:hover {
-								background-color: darken($accent-color-1, 8%);
+								background-color: $navigation-hover-background;
 							}
 							border-radius: $core-border-radius;
 							margin: -0.2rem 0 -0.2rem 0.5rem;

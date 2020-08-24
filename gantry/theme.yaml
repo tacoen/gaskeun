@@ -115,11 +115,11 @@ admin:
     core:
       - base
       - accent
+      - navigation
     section:
       - main
       - header
       - footer
-      - navigation
       - showcase
       - feature
       - subfeature
@@ -129,3 +129,5 @@ admin:
       - cover
       - box
       - systemcolor
+      - menu
+      - offcanvas

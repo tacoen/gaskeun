@@ -1,6 +1,6 @@
 name: Offcanvas Section
 description: Paramters for the Off Canvas sidepanel section.
-type: section
+type: configuration
 
 form:
   fields:
@@ -9,10 +9,6 @@ form:
       type: input.colorpicker
       label: Background
       default: "#ffcc33"
-    text-color:
-      type: input.colorpicker
-      label: Text
-      default: "#333333"
     width:
       type: input.text
       label: Panel Width

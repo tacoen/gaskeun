@@ -17,7 +17,7 @@ function deck_toper() {
 	if (hasClass('deck-top')) {
 		var element = document.getElementsByClassName('deck-top');
 		document.body.style.marginTop = element[0].offsetHeight + 'px';
-		document.body.className += 'has-decktop'
+		document.body.className += ' has-decktop'
 	}
 	
 	if (hasClass('ga-features')) {

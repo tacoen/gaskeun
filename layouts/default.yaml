@@ -34,11 +34,10 @@ layout:
 structure:
   header:
     attributes:
-      boxed: ''
+      variations: ga-cover-1      
   navigation:
     type: section
     attributes:
-      boxed: ''
       variations: deck-top      
   main:
     attributes:

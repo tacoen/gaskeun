@@ -1,6 +1,6 @@
 name: Navigation Colors
 description: Navigation colors for the Gasken theme
-type: section
+type: core
 
 form:
   fields:
@@ -37,10 +37,6 @@ form:
       type: input.colorpicker
       label: Active Background
       default: "rgba(255, 32, 32, 0.3)"
-    active-color:
-      type: input.colorpicker
-      label: Active text
-      default: "#666666"
     overlay:
       type: input.colorpicker
       label: Overlay

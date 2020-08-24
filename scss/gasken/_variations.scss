@@ -19,6 +19,8 @@
 }
 
 .box1 {
+  background-color: $box1-background;
+
   &.moduletable, &.widget, &.g-outer-box,> .g-content {
     background-color: $box1-background;
   }

@@ -1,6 +1,6 @@
 name: Offcanvas Section
 description: Paramters for the Off Canvas sidepanel section.
-type: configuration
+type: core
 
 form:
   fields:

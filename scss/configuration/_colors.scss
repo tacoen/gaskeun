@@ -47,23 +47,12 @@ $offcanvas-background:			#354D59 !default;
 $offcanvas-text-color:			#ffffff !default;
 $offcanvas-toggle-color:		#ffffff !default;
 
-// Block Variations
-//$box1-background:				#ffffff !default;
-//$box2-background:				#e0e0e0 !default;
-
 // Block Variations (gasken)
 
-$box1-background:$box-background1;
+$box1-background: $box-background1;
 $box2-background: $box-background2;
 $box3-background: $box-background3;
 $box4-background: $box-background4;
-
-
-// System Messsages and Alerts
-//$warning-color:					#c09853;
-//$error-color:					#b94a48;
-//$info-color:					#3a87ad;
-//$success-color:					#468847;
 
 // System Messsages and Alerts (gasken)
 
@@ -71,8 +60,6 @@ $warning-color: $systemcolor-warning-color;
 $error-color: $systemcolor-error-color;
 $info-color: $systemcolor-info-color;
 $success-color: $systemcolor-success-color;
-
-
 
 // Typography
 $rule-color:					#F0F2F4;

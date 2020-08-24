@@ -19,10 +19,8 @@
 }
 
 .box1 {
-  background-color: $box1-background;
-
   &.moduletable, &.widget, &.g-outer-box,> .g-content {
-    background-color: $box1-background;
+    background: $box1-background;
   }
   &.moduletable, &.widget, > .g-content {
     &, h1, h2, h3, h4, h5, h6, strong, i {
@@ -33,7 +31,7 @@
 
 .box2 {
   &.moduletable, &.widget, &.g-outer-box, > .g-content {
-    background-color: $box2-background;
+    background: $box2-background;
   }
   &.moduletable, &.widget, > .g-content {
     &, h1, h2, h3, h4, h5, h6, strong, i {
@@ -45,7 +43,7 @@
 .box3 {
   &.moduletable, &.widget, &.g-outer-box,
   > .g-content {
-    background-color: $box3-background;
+    background: $accent-color-1;
   }
   &.moduletable, &.widget, > .g-content {
     &, h1, h2, h3, h4, h5, h6, strong, i {
@@ -59,9 +57,9 @@
     }
     .button {
       color: if(lightness($accent-color-1) > 50, darken($accent-color-1, 65%), lighten($accent-color-1, 65%));
-      background-color: if(lightness($accent-color-1) > 50, darken($accent-color-1, 10%), lighten($accent-color-1, 10%));
+      background: if(lightness($accent-color-1) > 50, darken($accent-color-1, 10%), lighten($accent-color-1, 10%));
       &:hover {
-        background-color: if(lightness($accent-color-1) > 50, darken($accent-color-1, 15%), lighten($accent-color-1, 15%));
+        background: if(lightness($accent-color-1) > 50, darken($accent-color-1, 15%), lighten($accent-color-1, 15%));
       }
     }
   }
@@ -69,7 +67,7 @@
 
 .box4 {
   &.moduletable, &.widget, &.g-outer-box, > .g-content {
-    background-color: $box4-background;
+    background: $accent-color-2;
   }
   &.moduletable, &.widget, > .g-content {
     &, h1, h2, h3, h4, h5, h6, strong, i {
@@ -83,9 +81,9 @@
     }
     .button {
       color: if(lightness($accent-color-2) > 50, darken($accent-color-2, 45%), lighten($accent-color-2, 45%));
-      background-color: if(lightness($accent-color-2) > 50, darken($accent-color-2, 15%), lighten($accent-color-2, 15%));
+      background: if(lightness($accent-color-2) > 50, darken($accent-color-2, 15%), lighten($accent-color-2, 15%));
       &:hover {
-        background-color: if(lightness($accent-color-2) > 50, darken($accent-color-2, 10%), lighten($accent-color-2, 10%));
+        background: if(lightness($accent-color-2) > 50, darken($accent-color-2, 10%), lighten($accent-color-2, 10%));
       }
     }
   }

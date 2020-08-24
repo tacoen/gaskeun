@@ -36,7 +36,7 @@
 
 
 				&.g-selected {
-					background: $section-hover-background;
+					background-color: $section-hover-background;
 
 					> .g-menu-item-container {
 						color: $section-hover-color;
@@ -49,7 +49,7 @@
 	}
 
 	.g-dropdown {
-		background: $section-background;
+		background-color: $section-background;
 		border-top: 1px solid $section-overlay;
 	}
 
@@ -62,7 +62,7 @@
 
 			&:not(.g-menu-item-type-particle):not(.g-menu-item-type-module) {
 				&:hover, &.active {
-					background: $section-hover-sub-background;
+					background-color: $section-hover-sub-background;
 				}
 			}
 		}

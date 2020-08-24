@@ -1,5 +1,13 @@
 *, *::before, *::after { box-sizing: border-box; }
 
+button { text-transform: capitalize; }
+
+.ga-large { padding: 1rem 1.5rem; font-size:1.2rem }
+.ga-default { padding: .5rem 1rem; font-size:1rem  }
+.ga-small { padding: .5rem .75rem; font-size:.9rem  }
+.ga-xsmall { padding: .25rem .5rem; font-size:.8rem  }
+
+
 .has-decktop .g-offcanvas-toggle {
     position: fixed;
     z-index: 999;

@@ -39,41 +39,6 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
 	}
 }
 
-.button {
-	display: inline-block;
-	padding: 0.5rem 1rem;
-	border-radius: $core-border-radius;
-	box-shadow: 1px 1px 1px rgba(0,0,0,0.1);
-	background: $accent-color-1;
-	color: $white;
-	border: 0;
-	line-height: $core-line-height;
-	font-size: $core-font-size;
-	vertical-align: middle;
-	text-shadow: none;
-	@include transition(background 0.1s);
-
-	&:hover {
-		background: lighten($accent-color-1, 5%);
-		color: $white;
-	}
-
-	&:active, &:focus {
-		background: darken($accent-color-1, 5%);
-		box-shadow: inset -1px -1px 1px rgba(0,0,0,0.15);
-		color: $white;
-        outline: 0;
-	}
-
-    &:disabled {
-        opacity: 0.25;
-        cursor: not-allowed;
-
-        &:hover {
-            background: $accent-color-1;
-        }
-    }
-}
 
 .gantry-logo {
 	display: inline-block;

@@ -1,0 +1,17 @@
+
+@mixin ga-button($background,$black: $black,$white: $white) {
+	
+	background-color: $background;
+	color: if(lightness($background) > 50, $black, $white);	
+	text-shadow: 0 1px 3px darken($background,10%);	
+	
+	&:hover,&.hover {
+		background-color: if(lightness($background) > 50, darken($background,5%), lighten($background,15%) );
+		text-shadow: 0px 1px 3px if(lightness($background) > 50, darken($background,25%),lighten($background,25%));
+	}
+	&:active,&.active {
+		background-color: if(lightness($background) > 50, darken($background,5%), lighten($background,15%) );
+		text-shadow: 0px -1px 3px if(lightness($background) > 50, darken($background,25%),lighten($background,25%));
+	}
+	
+}

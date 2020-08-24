@@ -1,0 +1,22 @@
+button {
+	display: inline-block;
+	padding: 0.5rem 1rem;
+	border-radius: $core-border-radius;
+	box-shadow: 1px 1px 1px rgba(0,0,0,0.1);
+	border: 0;
+	line-height: $core-line-height;
+	font-size: $core-font-size;
+	vertical-align: middle;
+	text-shadow: none;
+	@include transition(background 0.1s);
+
+	&.accent1 { @include ga-button($accent-color-1, $main-text-color,$main-background); }
+	&.accent2 { @include ga-button($accent-color-2); }
+	&.accent3 { @include ga-button($accent-color-3); }
+	&.accent4 { @include ga-button($accent-color-4); }
+	&.yellow,&.warning { @include ga-button($systemcolor-warning-color); }
+	&.red,&.error { @include ga-button($systemcolor-error-color); }
+	&.blue,&.info { @include ga-button($systemcolor-info-color); }
+	&.green,&.success { @include ga-button($systemcolor-success-color); }
+}
+

@@ -26,21 +26,21 @@
 			}
 			&:not(.g-menu-item-type-particle):not(.g-menu-item-type-module) {
 				&:hover {
-					background: $section-hover-background;
+					background-color: $section-hover-background;
 					> .g-menu-item-container {
 						color: $section-hover-color;
 					}
 				}
 
 				&.active {
-					background: $section-active-background;
+					background-color: $section-active-background;
 
 					> .g-menu-item-container {
 						color: $section-active-text-color;
 					}
 
 					&.g-selected {
-						background: $section-hover-background;
+						background-color: $section-hover-background;
 
 						> .g-menu-item-container {
 							color: $section-hover-color;
@@ -52,7 +52,7 @@
 	}
 
 	.g-dropdown {
-		background: $section-background;
+		background-color: $section-background;
 		border-top: 1px solid $section-overlay;
 	}
 
@@ -65,7 +65,7 @@
 
 			&:not(.g-menu-item-type-particle):not(.g-menu-item-type-module) {
 				&:hover, &.active {
-					background: $section-hover-sub-background;
+					background-color: $section-hover-sub-background;
 				}
 			}
 		}

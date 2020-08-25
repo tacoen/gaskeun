@@ -1,5 +1,5 @@
 
-@mixin ga-button($background,$black: $black,$white: $white) {
+@mixin ga-button($background, $black: $black, $white: $white) {
 	
 	background-color: $background;
 	color: if(lightness($background) > 50, $black, $white);	
@@ -15,3 +15,15 @@
 	}
 	
 }
+
+@mixin ga-notice($color) {
+	color: $color;
+	border-left: 10px solid $color;
+	background-color: if(lightness($color) < 50, lighten($color,50%), darken($color,25%));
+}
+
+@mixin ga-box($background, $white: $white, $black: $black) {
+	background-color: $background;
+	color: if(lightness($background) < 50, $white, $black );
+}
+

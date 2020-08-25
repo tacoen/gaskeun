@@ -20,3 +20,16 @@ button {
 	&.green,&.success { @include ga-button($systemcolor-success-color); }
 }
 
+.g-content {
+
+	.box1 { @include ga-box($box-background1); }
+	.box2 { @include ga-box($box-background2); }
+	.box3 { @include ga-box($box-background3); }
+	.box4 { @include ga-box($box-background4); }
+
+	.notices.yellow { @include ga-notice($systemcolor-warning-color); }
+	.notices.red { @include ga-notice($systemcolor-error-color); }
+	.notices.blue { @include ga-notice($systemcolor-info-color); }
+	.notices.green { @include ga-notice($systemcolor-success-color); }
+
+}

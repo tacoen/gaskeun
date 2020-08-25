@@ -13,8 +13,4 @@ form:
       type: input.colorpicker
       label: Text
       default: "#ffffff"
-    image:
-      type: input.imagepicker
-      label: Image
-      default: ""
       

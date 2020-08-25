@@ -1,12 +1,37 @@
-*, *::before, *::after { box-sizing: border-box; }
+*, *::before, *::after {
+	box-sizing: border-box;
+}
 
-button { text-transform: capitalize; }
+.presentation-iframe {
+	width: 100%;
+	width: -moz-available;
+	width: -webkit-fill-available;
+	width: fill-available;
+	height: 100%;
+	height: -moz-available;
+	height: -webkit-fill-available;
+	height: fill-available;
+}
 
-.ga-large { padding: 1rem 1.5rem; font-size:1.2rem }
-.ga-default { padding: .5rem 1rem; font-size:1rem }
-.ga-small { padding: .5rem .75rem; font-size:.9rem }
-.ga-xsmall { padding: .25rem .5rem; font-size:.8rem }
+button {
+	text-transform: capitalize;
+}
 
+.ga-large {
+	padding: 1rem 1.5rem;
+	font-size: 1.2rem }
+
+.ga-default {
+	padding: .5rem 1rem;
+	font-size: 1rem }
+
+.ga-small {
+	padding: .5rem .75rem;
+	font-size: .9rem }
+
+.ga-xsmall {
+	padding: .25rem .5rem;
+	font-size: .8rem }
 
 .has-decktop .g-offcanvas-toggle {
 	position: fixed;
@@ -17,38 +42,14 @@ button { text-transform: capitalize; }
 	margin-top: 0 !important;
 }
 
-
 #g-navigation .g-toplevel {
 	flex-flow: row !important;
 }
-	
+
+
+
 #g-main {
-
-	[class^='box'] {
-		padding: 1rem;
-		margin-bottom: 1rem;
-	}
-
-}
-
-.box1 { 
-	background-color: $box-background1; 
-	color: if(lightness($box-background1) < 50, $main-background, $main-text-color );		
-}
-
-.box2 { 
-	background-color: $box-background2; 
-	color: if(lightness($box-background2) < 50, $main-background, $main-text-color );		
-}
-
-.box3 { 
-	background-color: $box-background3; 
-	color: if(lightness($box-background3) < 50, $main-background, $main-text-color );		
-}
-
-.box4 { 
-	background-color: $box-background4; 
-	color: if(lightness($box-background4) < 50, $main-background, $main-text-color );		
+	[class^='box'] { padding: 1rem; margin-bottom: 1rem; }
 }
 
 
@@ -59,7 +60,7 @@ button { text-transform: capitalize; }
 
 
 .gasken {
-
+	
 	[class^='ga-cover'] {
 		background-size: cover !important;
 		background-position: 50% 50% !important;
@@ -73,40 +74,10 @@ button { text-transform: capitalize; }
 	.ga-cover-4 { background-image: url($cover-background4) !important; }
 
 
-	.notices.yellow {
-		color: $systemcolor-warning-color;
-		border-left: 10px solid $systemcolor-warning-color;
-		background-color: lighten($systemcolor-warning-color,50%);
-	}
-
-	.notices.red {
-		color: $systemcolor-error-color;
-		border-left: 10px solid $systemcolor-error-color;
-		background-color: lighten($systemcolor-error-color,50%);
-	}
-
-	.notices.blue {
-		color: $systemcolor-info-color;
-		border-left: 10px solid $systemcolor-info-color;
-		background-color: lighten($systemcolor-info-color,50%);
-	}
-
-	.notices.green {
-		color: $systemcolor-success-color;
-		border-left: 10px solid $systemcolor-success-color;
-		background: lighten($systemcolor-success-color,50%);
-
-	}
 
 }
 
-
-
-
-
-
-
-/* added variations */
+/* added variations */ 
 
 .button-alike {
 	border-bottom: 1px solid rgba(0,0,0,0.3);
@@ -124,7 +95,7 @@ button { text-transform: capitalize; }
 	top: 0;
 	left: 0;
 	width: 100%;
-	z-index:102 !important;
+	z-index: 102 !important;
 }
 
 .deck-top.scrolled { opacity: .7 }
@@ -132,36 +103,36 @@ button { text-transform: capitalize; }
 
 .deck-top .g-menu-item-title {
 	text-transform: capitalize;
-}	
-
+}
 
 .on-left ul:not(.g-sublevel) {
-	float:left;
+	float: left;
 }
 
 .on-right ul:not(.g-sublevel) {
-	float:right;
+	float: right;
 }
 
-/* fix-a-fix */
+/* fix-a-fix */ 
 
-.menu-item-particle .search-wrapper { margin: -.25rem 1rem }
+.menu-item-particle .search-wrapper {
+	margin: -.25rem 1rem }
 
-main { min-height: 90vh; }
+main {
+	min-height: 90vh;
+}
 
-#g-navigation form#search { 
-	background-color: $navigation-background; 
+#g-navigation form#search {
+	background-color: $navigation-background;
 	border-radius: 0.1875rem;
-	display:inline-table;
-	margin: -1rem
-}
+	display: inline-table;
+	margin: -1rem }
 
-#g-navigation form#search input { 
-	border:none; 
-	background-color: #0000; 
-	box-shadow:none; 
-	width:auto 
-}
+#g-navigation form#search input {
+	border: none;
+	background-color: #0000;
+	box-shadow: none;
+	width: auto }
 
 #g-navigation form#search::after {
 	clear: both;
@@ -175,26 +146,20 @@ main { min-height: 90vh; }
 
 #g-navigation form#search:hover,
 #g-navigation form#search:hover input {
-	background-color:$main-background
-}
-
-#g-navigation .align-right form#search{
-}
+	background-color: $main-background }
 
 #g-navigation form#search:hover::after {
 	color: $navigation-background;
 }
 
 .ga-bgrimg {
-/*
-	display:flex;
-*/
+	display: flex;
 	background-size: cover;
 	background-position: 50% 50%;
 	background-repeat: no-repeat;
 	background-color: #00000099;
 	background-blend-mode: soft-light;
-	box-sizing:border-box;
+	box-sizing: border-box;
 	align-items: center;
 	justify-content: center;
 	transition: all 1.5s ease;
@@ -208,15 +173,13 @@ main { min-height: 90vh; }
 .ga-features h5,
 .ga-features h6 { color: $main-background }
 
-
 .ga-showcase .block,
 .ga-features .block {
 	width: 100%;
 	padding: 6rem;
 	text-align: center;
-	display:block;
+	display: block;
 }
-
 
 .ga-features .feature-items {
 	display: flex;
@@ -232,27 +195,34 @@ main { min-height: 90vh; }
 	text-align: center;
 }
 
-.ga-features .feature img { width: 100px; }
+.ga-features .feature img {
+	width: 100px;
+}
 
-.ga-features .feature h4 { margin-bottom: 0 }
-.ga-features .feature p { font-size: .9rem; margin-top:.5rem }
+.ga-features .feature h4 {
+	margin-bottom: 0 }
 
-.ga-features .desc .headline { font-size: 6rem }
+.ga-features .feature p {
+	font-size: .9rem;
+	margin-top: .5rem }
 
-.ga-features i.fa { font-size: 3rem; }
+.ga-features .desc .headline {
+	font-size: 6rem }
 
+.ga-features i.fa {
+	font-size: 3rem;
+}
 
 #g-showcase.flush .g-container,
-#g-feature.flush .g-container {
-	width:100% !important;
+ #g-feature.flush .g-container {
+	width: 100% !important;
 }
 
 #g-showcase.flush .g-content,
 #g-feature.flush .g-content {
-	padding:0 !important;
-	margin:0 !important;
+	padding: 0 !important;
+	margin: 0 !important;
 }
-
 
 .page-gallery {
 	display: flex;
@@ -263,9 +233,9 @@ main { min-height: 90vh; }
 }
 
 .page-gallery .item {
-	list-style-type:none;
-	margin:0 .5rem 1rem .5rem;
-	padding:0;
+	list-style-type: none;
+	margin: 0 .5rem 1rem .5rem;
+	padding: 0;
 }
 
 .page-gallery .item .image-surround {
@@ -275,5 +245,6 @@ main { min-height: 90vh; }
 	text-align: center;
 }
 
-
-.page-gallery .item a { display:block; }
+.page-gallery .item a {
+	display: block;
+}

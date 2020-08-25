@@ -7,7 +7,7 @@ use Grav\Common\Theme;
 use RocketTheme\Toolbox\ResourceLocator\UniformResourceLocator;
 
 
-class G5_Gasken extends Theme
+class Gasken extends Theme
 {
     public $gantry = '5.4.0';
 
@@ -62,7 +62,7 @@ class G5_Gasken extends Theme
 
         // Define Gantry services.
         $gantry['theme'] = function ($c) {
-            return new \Gantry\Theme\G5_Gasken($c['theme.path'], $c['theme.name']);
+            return new \Gantry\Theme\Gasken($c['theme.path'], $c['theme.name']);
         };
     }
 }

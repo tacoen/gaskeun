@@ -6,3 +6,23 @@ Gasken is Grav Gantry 5 Theme for your new website. Base on Hydrogen, the defaul
 Gasken loaded with more options.
 
 ![gasken - preset1](admin/images/default.png)
+
+### Tips
+
+To copy this theme theme
+
+Use devtools plugins:
+
+```
+	bin/plugin devtools newtheme
+```
+
+Choose a template type: **copy** Copy another theme
+ 
+Then:
+ 
+```
+	$ find ./ -type f -exec sed -i 's/gasken/newtheme/g' {} \;
+	$ find ./ -type f -exec sed -i 's/Gasken/newtheme/g' {} \;
+	$ find ./ -type f -exec sed -i 's/GASKEN/NEWTHEME/g' {} \;
+```

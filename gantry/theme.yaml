@@ -14,17 +14,17 @@ author:
   email: tacoen@gmail.com
   url: https://github.com/tacoen/
 
-  homepage: https://github.com/tacoen/gasken
-  readme: https://github.com/tacoen/gasken/blob/master/README.md
+  homepage: https://github.com/tacoen/gaskeun
+  readme: https://github.com/tacoen/gaskeun/blob/master/README.md
   keywords: gantry, gantry5, theme
-  bugs: https://github.com/tacoen/gasken/issues
+  bugs: https://github.com/tacoen/gaskeun/issues
   license: MIT
 
   documentation:
-    link: https://github.com/tacoen/gasken/wiki
+    link: https://github.com/tacoen/gaskeun/wiki
 
   support:
-    link: https://github.com/tacoen/gasken/issues
+    link: https://github.com/tacoen/gaskeun/issues
 
 
 configuration:
@@ -33,7 +33,6 @@ configuration:
     engine: nucleus
 
   theme:
-    parent: g5_gasken
     base: gantry-theme://common
     file: gantry-theme://include/theme.php
     class: \Gantry\Framework\Theme
@@ -50,12 +49,12 @@ configuration:
       - gantry-theme://scss
       - gantry-engine://scss
     files:
-      - gasken
-      - gasken-grav
+      - gaskeun
+      - gaskeun-grav
       - custom
     persistent:
-      - gasken
-      - gasken-grav
+      - gaskeun
+      - gaskeun-grav
     overrides:
       - custom
 

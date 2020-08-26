@@ -28,7 +28,7 @@
 		a[rel='home'] { display:block; }
 
 		.search-wrapper { display: flex }
-		
+
 	}
 
 
@@ -54,3 +54,19 @@
 	width: 100%;
 }
 
+html.gaskeun-mobile,
+html.gaskeun-small {
+
+	.g-top-shadow { display:none; }
+	#g-top {
+		.logo img { height: 2rem }
+		[class*="size-"] { max-width: fit-content; }
+
+		.g-container { height: 3rem; }
+		.g-grid { height: 100%; justify-content: space-between; }
+	}
+
+}
+
+
+html.gaskeun-small .hide-small * { display:none }	

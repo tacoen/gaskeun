@@ -23,13 +23,31 @@ function gaskeun_fix() {
 	}
 }
 
-function gaskeun_breakpoint() {
+function gasearch_toggle() {
+	
+	event.preventDefault()
+	
+	var ga = document.getElementById('ga-searchbox');
+	if (! ga.classList.contains('active')) {
+		ga.classList.add('active')
+	} else {
+		ga.classList.remove('active')
+	}
+}
 
+function gaskeun_breakpoint() {
 	if (window.innerWidth < gaskeun_media_breakpoint.tablet) { media='gaskeun-mobile'; }
+	if (window.innerWidth <= 520) { media='gaskeun-small'; }
+	if (window.innerWidth <= gaskeun_media_breakpoint.mobile) { media='gaskeun-small'; }
 	if (window.innerWidth >= gaskeun_media_breakpoint.tablet) { media='gaskeun-tablet'; }
 	if (window.innerWidth >= gaskeun_media_breakpoint.desktop) { media='gaskeun-desktop'; }
 	if (window.innerWidth >= gaskeun_media_breakpoint.wide) { media=false; }
-	ghtml.classList= ghtml_origclasslist
+	
+	ghtml.classList.remove('gaskeun-small');
+	ghtml.classList.remove('gaskeun-desktop');
+	ghtml.classList.remove('gaskeun-tablet');
+	ghtml.classList.remove('gaskeun-mobile');
+	
 	if (media) { ghtml.classList.add(media); }
 }
 
@@ -66,16 +84,41 @@ function gaskeun_deck_top(id) {
 	}
 }
 
+var dctop = 0
+
 function deck_toper() {
 
 	if (hasClass('deck-top')) {
+		
+
+		var e = document.getElementsByClassName('deck-top');
+		var h = e[0];
+
+		/*
 		var element = document.getElementsByClassName('deck-top');
 		document.body.style.marginTop = element[0].offsetHeight + 'px';
+		*/
+
 		if (! document.body.classList.contains('has-decktop')) {
 			document.body.className += ' has-decktop'
 		}
 		
-		deck_scroll();
+		if (!dctop) { dctop = h.offsetTop; }
+
+		window.addEventListener('scroll', (event) => {
+
+			var scroll = this.scrollY;
+
+			if (scroll > dctop) {
+				h.classList.add('pinned')
+				h.style.top = 0;
+			}
+
+			if (scroll < dctop) {
+				h.classList.remove('pinned')
+				h.style.top = dctop;
+			}
+		});
 		
 		/*
 		element[0].style.height = element[0].offsetHeight + 'px';
@@ -83,28 +126,12 @@ function deck_toper() {
 	}
 }
 
-function deck_scroll() {
-	
-	window.addEventListener('scroll', (event) => {
-
-		var scroll = this.scrollY;
-
-		var e = document.getElementsByClassName('deck-top');
-		var h = e[0];
-		if (scroll > h.offsetHeight) {
-			h.className = 'deck-top scrolled';
-		} else {
-			h.className = 'deck-top';
-		}
-	});
-	
-}
-
 document.addEventListener('DOMContentLoaded', function () {
 
 	gaskeun_breakpoint();
 	gaskeun_deck_top('g-top');
 	gaskeun_fix();
+	deck_toper();
 	
 });
 
@@ -112,5 +139,6 @@ window.addEventListener('resize', function() {
 
 	gaskeun_breakpoint();
 	gaskeun_deck_top('g-top');
+	deck_toper();
 
 });

@@ -10,7 +10,6 @@
 	$section-hover-color: $navigation-hover-color, 
 	$section-hover-sub-background: $navigation-hover-sub-background,
 	$section-active-background: $navigation-active-background, 
-	$section-active-text-color: $navigation-text-color,
 	$section-overlay: $navigation-overlay,
 	$section-fontsize: $navigation-fontsize) {
 
@@ -36,7 +35,7 @@
 					background-color: $section-active-background;
 
 					> .g-menu-item-container {
-						color: $section-active-text-color;
+						color: darken($section-text-color,25%);
 					}
 
 					&.g-selected {

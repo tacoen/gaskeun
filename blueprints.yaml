@@ -1,15 +1,15 @@
 name: Gasken
 version: "1.0"
-description: "Gasken base on Hydrogen, the default Gantry 5 theme with more options."
+description: "Gasken is Indonesian Slang for 'Speedu-up!'. Gasken was base on Hydrogen, the default Gantry 5 theme. Gasken with more options."
 icon: gantry
 author:
   name: tacoen
   email: tacoen@gmail.com
   url: https://github.com/tacoen/
-homepage: https://github.com/tacoen/gasken
-readme: https://github.com/tacoen/gasken/blob/master/README.md
+homepage: https://github.com/tacoen/gaskeun
+readme: https://github.com/tacoen/gaskeun/blob/master/README.md
 keywords: gantry, gantry5, theme
-bugs: https://github.com/tacoen/gasken/issues
+bugs: https://github.com/tacoen/gaskeun/issues
 license: MIT
 
 dependencies:

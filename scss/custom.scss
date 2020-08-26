@@ -98,6 +98,14 @@ button {
 	z-index: 102 !important;
 }
 
+.g-offcanvas-toggle {
+	z-index: 103 !important;
+}
+
+.g-offcanvas-left .has-decktop #g-page-surround {
+	margin-top: -2rem;
+}
+
 .deck-top.scrolled { opacity: .7 }
 .deck-top:hover.scrolled { opacity: 1 }
 
@@ -113,44 +121,57 @@ button {
 	float: right;
 }
 
-/* fix-a-fix */ 
-
-.menu-item-particle .search-wrapper {
-	margin: -.25rem 1rem }
 
 main {
 	min-height: 90vh;
 }
 
-#g-navigation form#search {
-	background-color: $navigation-background;
-	border-radius: 0.1875rem;
-	display: inline-table;
-	margin: -1rem }
 
-#g-navigation form#search input {
-	border: none;
-	background-color: #0000;
-	box-shadow: none;
-	width: auto }
+/* seach inside navigation */
 
-#g-navigation form#search::after {
-	clear: both;
-	display: inline-table;
-	color: #000;
-	padding: 0 .5rem;
-	font-family: FontAwesome, serif;
-	color: $navigation-text-color;
-	content: "\f002";
+#g-navigation {
+
+	form#search {
+		background-color: $navigation-background;
+		border-radius: 0.1875rem;
+		display: inline-flex;
+	}
+
+	form#search input {
+		border: none;
+		background-color: #0000;
+		box-shadow: none;
+		width: auto;
+		padding: 0.25rem 0 0.25rem 0.5rem;
+		transition: background .5s ease-out;		
+	}
+
+	form#search::after {
+		clear: both;
+		display: inline-flex;
+		color: #000;
+		padding: 0.1rem .5rem;
+		font-family: FontAwesome, serif;
+		color: $navigation-text-color;
+		content: "\f002";
+	}
+	
+	form#search:hover, form#search:hover input {
+		background-color: $main-background;
+		transition: background .5s ease-out;		
+	}
+
+	form#search::after {
+		transition: background .5s ease-out;		
+	}
+	
+	form#search:hover::after {
+		color: $navigation-background;
+		transition: background .5s ease-out;		
+	}
+
 }
 
-#g-navigation form#search:hover,
-#g-navigation form#search:hover input {
-	background-color: $main-background }
-
-#g-navigation form#search:hover::after {
-	color: $navigation-background;
-}
 
 .ga-bgrimg {
 	display: flex;
@@ -248,3 +269,32 @@ main {
 .page-gallery .item a {
 	display: block;
 }
+
+
+/* --------------------------------------------------------------- */
+
+// nucleus fix
+
+.g-content { 
+	margin: $base-margin; 
+	padding: $base-padding; 
+}
+
+@if $base-padding < 1 {
+
+		$base-padding: 1rem;
+		
+		#g-footer {
+			padding: 2*$base-padding 0 3*$base-padding 0;
+		}
+		
+		#g-main {
+			padding: 0 0 3*$base-padding 0;
+		}
+		
+}
+
+/* --------------------------------------------------------------- */
+
+@import 'gaskeun/decktop'
+

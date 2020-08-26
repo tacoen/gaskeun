@@ -1,0 +1,56 @@
+version: 2
+
+preset:
+  image: 'gantry-admin://images/layouts/default.png'
+
+layout:
+  deck-top:
+  header:
+  main:
+  footer:
+  deck-bottom:
+  offcanvas:
+    - mobile-menu
+
+structure:
+  header:
+    attributes:
+      variations: ga-cover-1      
+  navigation:
+    type: section
+    attributes:
+      variations: deck-top      
+  main:
+    attributes:
+      boxed: ''
+  footer:
+    attributes:
+      boxed: ''
+content:
+  logo-1945:
+    attributes:
+      image: 'gantry-media://su-w.png'
+      class: ''
+    block:
+      variations: center
+  position-header:
+    attributes:
+      key: header
+  menu-1945:
+    block:
+      variations: align-left
+  search-1945:
+    block:
+      variations: align-right
+  position-breadcrumbs:
+    attributes:
+      key: breadcrumbs
+  position-footer:
+    attributes:
+      key: footer
+  copyright-1945:
+    block:
+      variations: align-left
+  branding-1945:
+    block:
+      variations: align-right

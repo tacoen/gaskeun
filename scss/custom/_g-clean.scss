@@ -1,0 +1,23 @@
+@mixin clean() {
+	background: none !important;
+	outline: none !important;
+	border: none !important;
+}
+
+.g-clean {
+
+	#g-footer,
+	#g-navigation,
+	#g-main,
+	#g-header { 
+		@include clean;
+	}
+	
+	#g-header .logo {
+		height: 3rem;
+		img {
+			height: 3.5rem;
+		}
+	}
+	
+}

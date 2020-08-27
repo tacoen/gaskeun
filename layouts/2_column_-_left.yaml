@@ -1,33 +1,78 @@
 version: 2
-
 preset:
-  image: 'gantry-admin://images/layouts/2-col-left.png'
+  image: 'gantry-admin://images/layouts/fixtop.png'
+  name: Gasken - Sidebar Left
 
 layout:
-  /header/:
-    - [logo 30, position-header 70]
-
-  /navigation/:
-    - menu
+  /top/:
+    /navigation/:
+      -
+        - 'logo-1945 5'
+        - 'menu-1945 75'
+        - 'custom-1945 20'
+  header: {  }
 
   /container-main/:
     -
-      - sidebar 20:
+      - sidebar 30:
          - position-sidebar
-      - main 80:
+      - main 70:
           - position-breadcrumbs
-          - system-messages
           - system-content
 
   /footer/:
-    - position-footer
-    - [copyright 40, spacer 30, branding 30]
-
+    -
+      - 'copyright-1945 50'
+      - 'branding-1945 50'
+  /bottom/:
+    -
+      - system-messages-1945
   offcanvas:
-    - mobile-menu
-
+    -
+      - mobile-menu-1945
 structure:
-  sidebar:
-    subtype: aside
+  navigation:
+    type: section
+    attributes:
+      boxed: ''
+  top:
+    type: section
+    attributes:
+      boxed: ''
+  header:
+    attributes:
+      variations: ga-cover-1
+  main:
+    attributes:
+      boxed: ''
+  footer:
+    attributes:
+      boxed: ''
+  bottom:
+    type: section
+    attributes:
+      boxed: ''
+content:
+  logo-1945:
+    title: 'Logo / Image'
+    attributes:
+      image: 'gantry-media://su-b.png'
     block:
-      fixed: 1
+      class: 'logo hide-small'
+      fixed: '1'
+  menu-1945:
+    block:
+      variations: align-left
+  custom-1945:
+    title: 'Custom HTML'
+    attributes:
+      html: "<div class=\"ga-search-wrapper\" id='ga-searchbox'><form name=\"search\" data-simplesearch-form=\"\" id=\"search\">\n<input name=\"searchfield\" class=\"search-input\" aria-label=\"search\" type=\"text\" data-min=\"3\" required=\"\" placeholder=\"Search …\" value=\"\" data-search-invalid=\"Please add at least 3 characters\" data-search-separator=\":\" data-search-input=\"/search/query\"></form><button onclick='javascript:gasearch_toggle()' class='toggle'><i class='fa fa-search'></i></button></div>"
+    block:
+      variations: align-right
+      fixed: '1'
+  copyright-1945:
+    block:
+      variations: align-left
+  branding-1945:
+    block:
+      variations: align-right

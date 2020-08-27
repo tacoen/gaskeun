@@ -113,6 +113,7 @@ admin:
   styles:
     core:
       - base
+      - offcanvas
       - accent
       - navigation
     section:
@@ -129,4 +130,3 @@ admin:
       - box
       - systemcolor
       - menu
-      - offcanvas

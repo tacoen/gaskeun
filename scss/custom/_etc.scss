@@ -173,12 +173,11 @@ main {
 	display: block;
 }
 
-
 /* --------------------------------------------------------------- */
 
 // nucleus fix
 
-.g-content { 
+.g-spacing,.g-content { 
 	margin: $base-margin; 
 	padding: $base-padding; 
 }

@@ -15,10 +15,14 @@ form:
       description: Set offcanvas size in rem, em, px, or percentage unit values
       default: "17rem"
       pattern: '\d+(\.\d+){0,1}(rem|em|ex|ch|vw|vh|vmin|vmax|%|px|cm|mm|in|pt|pc)'
+    toggle-icon:
+        type: input.icon
+        label: Toggle Icon
+        default: fa fa-bars
     toggle-color:
       type: input.colorpicker
       label: Toggle Color
-      default: "#ffffff"
+      default: "#111111"
     toggle-visibility:
       type: select.selectize
       label: Toggle Visibility

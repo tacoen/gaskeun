@@ -2,6 +2,32 @@ var ghtml = document.getElementsByTagName('html')[0]
 var ghtml_origclasslist = ghtml.classList;
 
 
+document.querySelectorAll('.g-offcanvas-toggle')[0].innerHTML="<i class='"+gaskeun_toogle_icon+"'></i>";
+
+gaskeun_toogle_icon
+
+
+function combineArray(array1, array2) {
+  return [...array1, ...array2];
+}
+
+function add_class(query,classname) {
+	var e = document.querySelectorAll(query)
+	for (i=0; i < e.length; ++i) { 
+		if (! e[i].classList.contains(classname)) {  e[i].classList.add(classname); }
+	}
+}
+
+function remove_class(query,classname) {
+	var e = document.querySelectorAll(query)
+	for (i=0; i < e.length; ++i) { 
+		if (e[i].classList.contains(classname)) {  e[i].classList.remove(classname); }
+	}
+}
+
+
+/* ==================================================== */
+
 function page_lightbox(img) {
 
 	var modal = document.getElementById('page-gallery-modal');
@@ -24,9 +50,6 @@ function page_lightbox(img) {
 
 function hasClass(className) {
 	var c = document.getElementsByClassName(className).length
-    /*
-	console.log(className,c)
-	*/
 	return (c > 0)
 }
 
@@ -34,12 +57,12 @@ function gaskeun_fix() {
 	
 	if (hasClass('ga-features')) {
 		var div = document.getElementById('g-feature');
-		if (! div.classList.contains('flush')) { div.className += ' flush ' }
+		if (! div.classList.contains('flush')) { div.classList.add('flush') }
 	}
 
 	if (hasClass('ga-showcase')) {
 		var div = document.getElementById('g-showcase');
-		if (! div.classList.contains('flush')) { div.className += ' flush ' }
+		if (! div.classList.contains('flush')) { div.classList.add('flush') }
 	}
 }
 
@@ -79,7 +102,7 @@ function gaskeun_deck_top(id) {
 	if (e) {
 
 		var body = document.body;
-		var aa = document.getElementsByClassName('g-top-shadow')
+		var aa = document.querySelectorAll('.g-top-shadow');
 		var shadow = document.createElement("div");
 		
 		if(!aa[0]) {
@@ -87,7 +110,7 @@ function gaskeun_deck_top(id) {
 		}
 		
 		if (! shadow.classList.contains('g-top-shadow')) {
-			shadow.className += ' g-top-shadow';
+			shadow.classList.add('g-top-shadow');
 			shadow.style.height = e.offsetHeight+'px';
 		}
 		
@@ -120,7 +143,7 @@ function deck_toper() {
 		*/
 
 		if (! document.body.classList.contains('has-decktop')) {
-			document.body.className += ' has-decktop'
+			document.body.classList.add('has-decktop')
 		}
 		
 		if (!dctop) { dctop = h.offsetTop; }

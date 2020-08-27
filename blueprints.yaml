@@ -1,7 +1,7 @@
 name: Gasken
 version: "1.0"
-description: "Gasken is Indonesian Slang for 'Speedu-up!'. Gasken was base on Hydrogen, the default Gantry 5 theme. Gasken with more options."
-icon: gantry
+description: "Gaskeun/Gasken is Indonesian Slang for 'Speedu-up!'. Gaskeun was base on Hydrogen, the default Gantry 5 theme. Gaskeun with more options."
+icon: html5
 author:
   name: tacoen
   email: tacoen@gmail.com
@@ -15,6 +15,15 @@ license: MIT
 dependencies:
   - { name: grav, version: '>=1.5.10' }
 
+
 form:
   validation: loose
   fields:
+    client:
+        type: section
+        title: Client
+    info:
+        type: textarea
+        label: Information
+        readonly: true
+        default: Edit this in your theme's blueprints.yaml --It's readonly.

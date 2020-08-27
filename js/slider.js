@@ -1,3 +1,15 @@
+function image_slider(id,n,delay,x) {
+	var is = document.getElementById(id);
+	is.style.left = '-'+(x*100)+'%'
+	var x = x+1;
+	if (x >= n) { x = 0 }
+	setTimeout(image_slider, 1000 * delay,id, n, delay,x);
+}
+
+
+
+
+
 var slideIndex = 0;
 var rol = 0;
 

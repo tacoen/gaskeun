@@ -1,11 +1,11 @@
-# Gasken!
+# Gaskeun!
 
 ![gasken - speed racer](screenshot.jpg)
 
-Gasken is Grav Gantry 5 Theme for your new website. Base on Hydrogen, the default Gantry 5 theme.
-Gasken loaded with more options.
+Gaskeun is Grav Gantry 5 Theme for your new website. Base on Hydrogen, the default Gantry 5 theme.
+Gaskeun loaded with more options.
 
-![gasken - preset1](admin/images/default.png)
+![gaskeun - preset1](admin/images/default.png)
 
 ### Tips
 
@@ -26,3 +26,5 @@ Then:
 	$ find ./ -type f -exec sed -i 's/Gasken/newtheme/g' {} \;
 	$ find ./ -type f -exec sed -i 's/GASKEN/NEWTHEME/g' {} \;
 ```
+
+While several 'gaskeun' remain intact.

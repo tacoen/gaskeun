@@ -8,7 +8,7 @@
     {% for image in page.media.images %}
     <li class='item'>
         <div class="image-surround">
-            <a href="javascript:imageview('{{ image.url }}');">
+            <a href="javascript:page_lightbox('{{ image.url }}');">
             {{ image.cropResize(300,200).html|raw }}
 			</a>
         </div>
@@ -16,5 +16,13 @@
     {% endfor %}
     </ul>
 
+
+{% endblock %}
+
+{% block body_bottom %}
+
+    <div id='page-gallery-modal'>
+	<div class='g-content' onclick='javascript:page_lightbox(false)'></div>
+	</div>
 
 {% endblock %}

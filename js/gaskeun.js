@@ -2,6 +2,26 @@ var ghtml = document.getElementsByTagName('html')[0]
 var ghtml_origclasslist = ghtml.classList;
 
 
+function page_lightbox(img) {
+
+	var modal = document.getElementById('page-gallery-modal');
+	
+	if (!img) {
+		modal.children[0].innerHTML = ''
+		modal.classList.remove('show'); 
+	} else {
+	
+		if (! modal.classList.contains('show')) { 
+			modal.children[0].innerHTML="<img src='"+img+"'>"
+			modal.classList.add('show'); 
+		} else {
+			modal.children[0].innerHTML = ''
+			modal.classList.remove('show'); 
+		}
+	}
+	
+}	
+
 function hasClass(className) {
 	var c = document.getElementsByClassName(className).length
     /*

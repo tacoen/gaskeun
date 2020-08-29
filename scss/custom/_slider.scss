@@ -1,0 +1,49 @@
+@keyframes slider {
+    0% { left: 0%; }
+    20% { left: 0%; }
+    25% { left: -100%; }
+    45% { left: -100%; }
+    50% { left: -200%; }
+    70% { left: -200%; }
+    75% { left: -300%; }
+    95% { left: -300%; }
+    100% { left: -400%; }
+}
+
+.img-slider-container {
+
+	background: #ccc;
+	overflow: hidden;
+	height: 200px;
+	position: relative;
+	
+	.slide {
+		
+		height: 100%;
+		display: flex;
+		flex-direction: row;
+		position: absolute;
+		transition: all 2s linear;
+	
+		.image {
+			float: left;
+			width: 100%;
+			height: 100%;
+			background-size: cover;
+			padding: .5rem;
+			background-position: center;
+			position:relative;
+    
+			.caption {
+				background: #0009;
+				color: #fff;
+				position: absolute;
+				bottom: 0;
+				left: 0;
+				width: 100%;
+				font-size: .9rem;
+				padding: .5rem;			
+			}
+		}
+	}
+}

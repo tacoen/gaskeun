@@ -1,0 +1,79 @@
+version: 2
+
+preset:
+  image: 'gantry-admin://images/layouts/fix-left.png'
+  name: Fixed Left sidebar
+  
+layout:
+  /container/:
+    -
+      -
+        'sidebar 25':
+          -
+            - tocbot-1945
+      -
+        'mainbar 75':
+          -
+            -
+              header:
+                -
+                  - logo-1945
+          -
+            -
+              /main/:
+                -
+                  - system-messages-1945
+                -
+                  - system-content-1945
+          -
+            -
+              footer:
+                -
+                  - 'copyright-1945 50'
+                  - 'branding-1945 50'
+  offcanvas:
+    -
+      - mobile-menu-1945
+structure:
+  sidebar:
+    type: section
+    attributes:
+      class: ''
+      variations: ''
+    block:
+      class: fix-leftbar
+      fixed: '1'
+  main:
+    attributes:
+      boxed: ''
+      class: ''
+      variations: ''
+    block:
+      class: 'tocbot-content'
+  footer:
+    attributes:
+      variations: null
+  mainbar:
+    type: section
+    attributes:
+      class: ''
+      variations: ''
+    block:
+      class: mainbar
+  container:
+    attributes:
+      boxed: '3'
+      class: ''
+      extra: {  }
+content:
+  tocbot-1945:
+    title: tocbot
+  system-content-1945:
+    block:
+      class: here
+  copyright-1945:
+    block:
+      variations: align-left
+  branding-1945:
+    block:
+      variations: align-right

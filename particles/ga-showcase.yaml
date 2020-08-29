@@ -9,6 +9,11 @@ configuration:
 
 form:
   fields:
+    enabled:
+      type: input.checkbox
+      label: Enabled
+      description: Globally enable the particle.
+      default: true  
     tabs:
       type: container.tabs
       fields:

@@ -1,0 +1,20 @@
+name: tocbot.js
+description: Display Table of content
+type: particle
+icon: fa-list-alt
+
+configuration:
+  caching:
+    type: static
+
+form:
+  fields:
+    enabled:
+      type: input.checkbox
+      label: Enabled
+      description: Globally enable the particle.
+      default: true
+    title:
+        type: input.text
+        label: Title
+        default: Table of Content

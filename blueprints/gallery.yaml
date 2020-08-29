@@ -16,20 +16,18 @@ form:
 
           fields:
 
-
-            gitems:  
-                type: collection.list
-                array: true
-                label: Gallery Items
-                value: title
-                ajax: true
+            header.gallery_items:  
+                type: list
+                label: Gallery Item
                 fields:
                     .image:
-                        type: input.imagepicker
-                        label: Image
+                        preview_images: true
+                        type: pagemediaselect
+                        label: image
                     .title:
-                        type: input.text
+                        type: text
                         label: title
                     .text:
-                        type: textarea.textarea
+                        type: textarea
                         label: Description
+                        

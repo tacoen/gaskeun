@@ -9,35 +9,14 @@ configuration:
 
 form:
   fields:
-    title:
-        type: separator.note
-        content: 'Works like modular'
+    enabled:
+      type: input.checkbox
+      label: Enabled
+      description: Globally enable the particle.
+      default: true  
     tabs:
       type: container.tabs
       fields:
-        tab_items:
-          label: Items
-          fields:
-            features:  
-                type: collection.list
-                array: true
-                label: Feature Items
-                value: title
-                ajax: true
-                overridable: false
-                fields:
-                    .icon:
-                        type: input.icon
-                        label: Icon
-                    .image:
-                        type: input.imagepicker
-                        label: Image
-                    .header:
-                        type: input.text
-                        label: title
-                    .text:
-                        type: textarea.textarea
-                        label: Description
         tab_container:
           label: Container
           fields:
@@ -63,3 +42,27 @@ form:
                 label: text
                 placeholder: Enter short description
                 overridable: true
+     
+        tab_items:
+          label: Items
+          fields:
+            features:  
+                type: collection.list
+                array: true
+                label: Feature Items
+                value: title
+                ajax: true
+                overridable: false
+                fields:
+                    .icon:
+                        type: input.icon
+                        label: Icon
+                    .image:
+                        type: input.imagepicker
+                        label: Image
+                    .header:
+                        type: input.text
+                        label: title
+                    .text:
+                        type: textarea.textarea
+                        label: Description

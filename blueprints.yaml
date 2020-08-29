@@ -25,5 +25,6 @@ form:
     info:
         type: textarea
         label: Information
+        size: large
         readonly: true
-        default: Edit this in your theme's blueprints.yaml --It's readonly.
+        default: edit this in yourtheme/blueprint.yaml

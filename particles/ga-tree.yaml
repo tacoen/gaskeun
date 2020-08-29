@@ -1,0 +1,21 @@
+name: Tree
+description: Article Tree particle
+type: particle
+icon: fa-list-ol
+
+configuration:
+  caching:
+    type: static
+
+form:
+  fields:
+    enabled:
+      type: input.checkbox
+      label: Enabled
+      description: Globally enable the particle.
+      default: true  
+    pagekey:
+        type: input.text
+        label: Folder
+        overrideable: True
+ 

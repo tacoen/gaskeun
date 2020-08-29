@@ -1,0 +1,45 @@
+{% extends '@nucleus/partials/particle.html.twig' %}
+
+{% block particle %}
+{% for page in pages.find(particle.pagekey).children %}
+{{ page.title }}
+{% endfor %}
+{% if particle.pagekey %}
+	{% set pagecol = pages.find('/'~particle.pagekey).children.visible %}
+{% else %}
+	{% set pagecol = pages.children.visible %}
+{% endif %}
+
+<ol class="ga-tree">
+    {% for page in pagecol %}
+        {% if page.children.visible is empty %}
+            <li class="item">
+            <a href="{{ page.url }}">{{ page.title }}</a>
+        {% else %}
+            <li class="parent">
+            <a href="javascript:void(0);">{{ page.title }}</a>
+            <ol>
+                {% for child in page.children.visible %}
+                    {% if child.children.visible is empty %}
+                        <li class="item">
+                        <a href="{{ child.url }}">{{ child.title }}</a>
+                    {% else %}
+                        <li class="parent">
+                        <a href="javascript:void(0);">{{ child.title }}</a>
+                        <ol>
+                            {% for subchild in child.children.visible %}
+                                <li><a href="{{ subchild.url }}">{{ subchild.title }}</a></li>
+                            {% endfor %}
+                        </ol>
+                    {% endif %}
+                    </li>
+                {% endfor %}
+            </ol>
+        {% endif %}
+        </li>
+    {% endfor %}
+</ol>
+
+{% do gantry.document.addInlineScript('gasken_usetree()', 0, 'footer') %}
+
+{% endblock %}

@@ -1,0 +1,49 @@
+
+.toc {
+	
+	ol { list-style:none; counter-reset: li; }
+
+	li { counter-increment: li; position: relative; padding-left: 2rem;}
+
+	li:before {
+		position: absolute;
+		color: $accent-color-4;
+		left: 0;
+		font-size: .8em;
+		line-height: 1.5rem;
+		width: 1.5rem;
+		content: counter(ol)"."counter(li);
+	}
+	
+	ol ol { padding-left: 0;  }
+	
+	> ol { padding-left: 0;  }
+	> ol > li { counter-increment: ol; padding-left: 1.5rem;}
+	> ol > li:before { 
+		content: counter(ol)".";
+	}
+
+	.is-position-fixed {
+		position:fixed !important;
+		top:0
+	}
+
+
+	.is-collapsible {
+		max-height:1000px;
+		overflow:hidden;
+		transition:all 300ms ease-in-out
+	}
+	
+	.is-collapsed { max-height:0; }
+
+	.is-active-li > a { font-weight: 700; }
+	.is-active-li:before {
+		color: $accent-color-2;
+		content: "\25b6"
+	}
+	
+}
+
+
+

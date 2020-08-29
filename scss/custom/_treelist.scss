@@ -1,0 +1,99 @@
+ol.ga-tree {
+	li { 
+		position: relative; 
+		ol { display: none; }
+		&.open > ol { display: block; }
+		&.parent:after { content: '[+]'; }
+		&.parent.open:after { content: ''; }
+	}
+}	
+
+.g-block {
+
+	&.li-custom-1 ol,
+	&.li-custom-1 ul {
+		list-style-type: none;
+
+		.parent:after {
+			color: $accent-color-4;
+			content: "\25bc";
+		}
+		
+		.parent.open:after { content: ''; }
+		
+		li:before {
+			position: absolute;
+			top: 0;
+			left: -1.5rem;
+			content: "\25b6";
+			color: $accent-color-2;
+		}
+	}
+	
+	&.li-custom-2 ol,
+	&.li-custom-2 ul {
+
+		list-style-type: none;
+		counter-reset: li;
+		padding-left:1.5rem;
+
+		li.parent:after {
+			float: right; color: $accent-color-4; 
+		}
+		
+		li {
+			counter-increment: li;
+			position: relative;
+		}
+		
+		ol {
+			counter-increment: ol;
+			padding-left: 2rem
+		}
+		
+		li:before {
+			position: absolute;
+			top: 0;
+			left: -1.5rem;
+			content: counter(li)".";
+			font-size: .9rem;
+			line-height: 1.5rem;
+			color: $accent-color-3;
+		}
+		
+		ul li:before,
+		ol li:before {
+			left: -2rem;
+			content: counters(li,".") ".";
+		}
+
+	}
+	
+	&.decimal ol,
+	&.decimal ul { list-style-type: decimal-leading-zero }
+	
+	&.decimal-leading-zero ol,
+	&.decimal-leading-zero ul { list-style-type: decimal-leading-zero }
+	
+	&.upper-roman ol,
+	&.upper-roman ul { list-style-type: upper-roman }
+	
+	&.lower-roman ol,
+	&.upper-roman ul { list-style-type: lower-roman  }
+	
+	&.disc ol, 
+	&.disc ul { list-style-type:  disc }
+	
+	&.circle ol, 
+	&.circle ul { list-style-type: circle }
+	
+	&.square ol, 
+	&.square ul { list-style-type: square } 
+
+	&.lower-alpha ol,
+	&.lower-alpha ul { list-style-type: lower-alpha } 
+	
+	&.upper-alpha ol, 
+	&.upper-alpha ul { list-style-type: upper-alpha } 
+
+}	

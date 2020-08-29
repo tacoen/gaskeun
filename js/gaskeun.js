@@ -1,11 +1,28 @@
+function gasken_usetree() {
+	
+	var tree = document.querySelectorAll('ol.ga-tree a:not(:last-child)');
+	for(var i = 0; i < tree.length; i++){
+		tree[i].addEventListener('click', function(e) {
+			var parent = e.target.parentElement;
+			var classList = parent.classList;
+			if(classList.contains("open")) {
+				classList.remove('open');
+				var opensubs = parent.querySelectorAll(':scope .open');
+				for(var i = 0; i < opensubs.length; i++){
+					opensubs[i].classList.remove('open');
+				}
+			} else {
+				classList.add('open');
+			}
+		});
+	}
+}
+
 var ghtml = document.getElementsByTagName('html')[0]
 var ghtml_origclasslist = ghtml.classList;
 
 
 document.querySelectorAll('.g-offcanvas-toggle')[0].innerHTML="<i class='"+gaskeun_toogle_icon+"'></i>";
-
-gaskeun_toogle_icon
-
 
 function combineArray(array1, array2) {
   return [...array1, ...array2];
@@ -28,7 +45,7 @@ function remove_class(query,classname) {
 
 /* ==================================================== */
 
-function page_lightbox(img) {
+function page_lightbox(img,title='',text='') {
 
 	var modal = document.getElementById('page-gallery-modal');
 	
@@ -38,7 +55,12 @@ function page_lightbox(img) {
 	} else {
 	
 		if (! modal.classList.contains('show')) { 
-			modal.children[0].innerHTML="<img src='"+img+"'>"
+			var content = "<figure><img src='"+img+"'>";
+			if (title) {
+				content += "<div class='caption'><h5>"+title+"</h5>"+"<p>"+title+"</p></div>"
+			}
+			content += "</figure>"
+			modal.children[0].innerHTML=content
 			modal.classList.add('show'); 
 		} else {
 			modal.children[0].innerHTML = ''

@@ -1,0 +1,49 @@
+{% extends '@nucleus/partials/particle.html.twig' %}
+
+{% block particle %}
+
+{% if particle.title %}<h3>{{ particle.title }}</h3>{% endif %}
+
+<div class="tocbot-toc toc"></div>
+
+{% endblock %}
+
+{% set inline_js %}
+tocbot.init({
+tocSelector: '.tocbot-toc',
+contentSelector: '.tocbot-content',
+headingSelector: 'h2, h3, h4',
+linkClass: 'toc-link',
+ignoreSelector: '.js-toc-ignore',
+hasInnerContainers: false,
+extraLinkClasses: '',
+activeLinkClass: 'is-active-link',
+listClass: 'toc-list',
+extraListClasses: '',
+isCollapsedClass: 'is-collapsed',
+collapsibleClass: 'is-collapsible',
+listItemClass: 'toc-list-item',
+collapseDepth: 0,
+headingsOffset: 1,
+throttleTimeout: 50,
+positionFixedSelector: null,
+positionFixedClass: 'is-position-fixed',
+fixedSidebarOffset: 'auto',
+includeHtml: false,
+orderedList: true,
+scrollContainer: null,
+skipRendering: false,
+headingLabelCallback: false,
+ignoreHiddenElements: false,
+headingObjectCallback: null,
+});
+
+var w  = document.querySelector('.fix-leftbar').offsetWidth
+document.querySelector('.mainbar').style.marginLeft = w+'px'
+
+{% endset %}
+
+{% do gantry.document.addInlineScript(inline_js, 0, 'footer') %}
+{% block javascript_footer %}
+    <script src="{{ url('gantry-theme://js/tocbot.js') }}"></script>
+{% endblock %}  

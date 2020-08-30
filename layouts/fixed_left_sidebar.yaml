@@ -1,16 +1,15 @@
 version: 2
-
 preset:
   image: 'gantry-admin://images/layouts/fix-left.png'
-  name: Fixed Left sidebar
-  
+  name: 'Fixed Left sidebar'
+  timestamp: 0
 layout:
   /container/:
     -
       -
         'sidebar 25':
           -
-            - tocbot-1945
+            - ga-toc-1945
       -
         'mainbar 75':
           -
@@ -43,13 +42,15 @@ structure:
     block:
       class: fix-leftbar
       fixed: '1'
+  header:
+    attributes:
+      class: cover-3
+      variations: ''
   main:
     attributes:
       boxed: ''
       class: ''
       variations: ''
-    block:
-      class: 'tocbot-content'
   footer:
     attributes:
       variations: null
@@ -66,11 +67,11 @@ structure:
       class: ''
       extra: {  }
 content:
-  tocbot-1945:
-    title: tocbot
+  ga-toc-1945:
+    title: ga-toc
   system-content-1945:
     block:
-      class: here
+      class: js-toc-content
   copyright-1945:
     block:
       variations: align-left

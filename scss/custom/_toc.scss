@@ -1,5 +1,16 @@
 
-.toc {
+html {
+	scroll-behavior: smooth;
+	scroll-margin-top: 1em;	
+}
+
+@media screen and (prefers-reduced-motion: reduce) {
+	html {
+		scroll-behavior: auto;
+	}
+}
+
+#ga-toc {
 	
 	ol { list-style:none; counter-reset: li; }
 
@@ -14,6 +25,24 @@
 		width: 1.5rem;
 		content: counter(ol)"."counter(li);
 	}
+
+	li.active > a { font-weight: 700 }
+	
+	li.active:before {
+		color: $accent-color-2;
+		content: "\25b6"
+	}
+
+	li.active > ol,
+	li:hover > ol,
+	li:active > ol,
+	li:focus > ol { height:auto; visibility: visible; }
+
+	li:hover > ol {
+		transition: all .5s linear .15s;      
+	}
+
+	li > ol { height: 0; visibility:collapse; }
 	
 	ol ol { padding-left: 0;  }
 	
@@ -38,10 +67,6 @@
 	.is-collapsed { max-height:0; }
 
 	.is-active-li > a { font-weight: 700; }
-	.is-active-li:before {
-		color: $accent-color-2;
-		content: "\25b6"
-	}
 	
 }
 

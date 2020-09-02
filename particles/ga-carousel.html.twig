@@ -1,42 +1,57 @@
 {% extends '@nucleus/partials/particle.html.twig' %}
 
 {% block particle %}
-{% if particle.items|length > 0 %}
 
-<div class='carousel-container' style='max-height:{{particle.height|e}};height:{{particle.height|e}};'>
-{% set n = 0 %}
-{% for item in particle.items %}
-	<div {% if item.image %}style='height:{{particle.height|e}};background-image: url({{ item.image|e }});'{% endif %} class='carousel-item {% if n==0 %}slide-show{% else %}slide-hide{% endif %}'>
-	<div class='content'>
-	<div class='inside {{ item.variations }}'>{{ item.html|html|raw }}
-	{% if item.url %}
-	<div class='carousel-button'><a class="button primary" href="{{item.url|url}}">{{item.button}}</a></div>
-	{% endif %}
-	</div></div>
-	</div>
-	{% set n = +1 %}
-{% endfor %}
+	{% if particle.items|length > 0 %}
+	
+	<div class='ga-carousel' style='max-height:{{particle.height|e}};height:{{particle.height|e}};'>
+	{% set n = 0 %}
+	{% for item in particle.items %}
+	
+		<div {% if item.image %}style='background-image: url({{ item.image|e }});'{% endif %} class='carousel-item {% if n==0 %}slide-show{% else %}slide-hide{% endif %}'>
 
-<div class='carousel-ctl'>  
-  <a class="prev" onclick="plusSlides(-1, {{ particle.delay }})">&#10094;</a>
-  <a class="next" onclick="plusSlides(1, {{ particle.delay }})">&#10095;</a>
-</div>
+		{% set html = gantry.theme.compile(item.html) %}
+	
+		<div class='content'>
+			<div class='inside {{ item.variations }}'>
+			{{ gantry.platform.filter(html)|html|raw }}
+			{% if item.url %}
+			<div class='carousel-button'><a class="button primary" href="{{item.url|url}}">{{item.button}}</a></div>
+			{% endif %}
+			</div>
+		</div>
+
+		</div>
+
+		{% set n = +1 %}
+
+	{% endfor %}
+	
+
+		<div class='carousel-ctl'>  
+			<a class="prev" onclick="plusSlides(-1, {{ particle.delay }})">&#10094;</a>
+			<a class="next" onclick="plusSlides(1, {{ particle.delay }})">&#10095;</a>
+		</div>
+
+		<div class="carousel-dot">
+
+			{% set n = 0 %}
+			{% for item in particle.items %}
+				<span class="dot" onclick="currentSlide({{n}} , {{ particle.delay }})"></span>
+				{% set n = n+1 %}
+			{% endfor %}
+
+		</div>
+
+		
   
-</div>
+	</div>
 
-<div class="carousel-dot">
 
-{% set n = 0 %}
-{% for item in particle.items %}
-  <span class="dot" onclick="currentSlide({{n}} , {{ particle.delay }})"></span>
-  {% set n = n+1 %}
-{% endfor %}
+	{% endif %}
 
-</div>
-
-{% block stylesheets %}
-    <link rel="stylesheet" type="text/css" href="gantry-theme://css/slider.css" /> 
 {% endblock %}
+
 {% block javascript_footer %}
     <script src="{{ url('gantry-theme://js/slider.js') }}"></script>
 {% endblock %}  
@@ -46,7 +61,4 @@ showSlides(0, {{ particle.delay }});
 {% endset %}
 
 {% do gantry.document.addInlineScript(slider_inject, 0, 'footer') %}
-
-{% endif %}
-{% endblock %}
 

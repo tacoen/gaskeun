@@ -1,0 +1,80 @@
+version: 2
+
+preset:
+  image: 'gantry-admin://images/layouts/modular.png'
+
+layout:
+  /header/:
+    -
+      - 'logo-1945 30'
+
+  /navigation/:
+    -
+      - 'menu-1945 50'
+      - 'search-1945 50'
+
+  /showcase/:
+  
+  /feature/:
+
+  /sub-feature/:
+  
+  /main/:
+    - system-content
+
+  /footer/:
+    -
+      - position-footer
+    -
+      - 'copyright-1945 30'
+      - 'spacer 30'
+      - 'branding-1945 40'
+      
+  /bottom/:
+    - system-messages
+  
+  offcanvas:
+    - mobile-menu
+
+structure:
+  header:
+    attributes:
+      variations: ga-cover-1      
+  navigation:
+    type: section
+    attributes:
+      variations: deck-top      
+  main:
+    attributes:
+      boxed: ''
+  footer:
+    attributes:
+      boxed: ''
+content:
+  logo-1945:
+    attributes:
+      image: 'gantry-media://su-w.png'
+      class: ''
+    block:
+      variations: center
+  position-header:
+    attributes:
+      key: header
+  menu-1945:
+    block:
+      variations: align-left
+  search-1945:
+    block:
+      variations: align-right
+  position-breadcrumbs:
+    attributes:
+      key: breadcrumbs
+  position-footer:
+    attributes:
+      key: footer
+  copyright-1945:
+    block:
+      variations: align-left
+  branding-1945:
+    block:
+      variations: align-right

@@ -12,7 +12,7 @@
 .ga-cover-3 { background-image: url($cover-background3) !important; }
 .ga-cover-4 { background-image: url($cover-background4) !important; }
 
-button {
+button,.button {
 
 	display: inline-block;
 	padding: 0.5rem 1rem;
@@ -31,8 +31,8 @@ button {
 	}
 	
 	&.button {  }
-	
 	&.accent1 { @include ga-button($accent-color-1, $main-text-color,$main-background); }
+	&.primary,
 	&.accent2 { @include ga-button($accent-color-2); }
 	&.accent3 { @include ga-button($accent-color-3); }
 	&.accent4 { @include ga-button($accent-color-4); }

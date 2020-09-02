@@ -5,8 +5,8 @@ icon: html5
 author:
   name: tacoen
   email: tacoen@gmail.com
-  url: https://github.com/tacoen/
-homepage: https://github.com/tacoen/gaskeun
+  url: https://tacoen.github.io/
+homepage: https://tacoen.github.io/gaskeun/
 readme: https://github.com/tacoen/gaskeun/blob/master/README.md
 keywords: gantry, gantry5, theme
 bugs: https://github.com/tacoen/gaskeun/issues
@@ -22,9 +22,9 @@ form:
     client:
         type: section
         title: Client
-    info:
+    owner:
         type: textarea
         label: Information
         size: large
         readonly: true
-        default: edit this in yourtheme/blueprint.yaml
+        default: owner information

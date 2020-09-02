@@ -1,9 +1,3 @@
-{# 
-
-	gasken.js need this!
-
-#}
-
 {% extends "@nucleus/page_head.html.twig" %}
 
 {% block head_title %}
@@ -15,24 +9,33 @@
     {% if header.robots %}
         <meta name="robots" content="{{ header.robots }}">
     {% endif %}
-
-	{% set media_breakpoint %}
-var gaskeun_toogle_icon ='{{gantry.config.get('styles.offcanvas.toggle-icon')}}';
-var gaskeun_media_breakpoint = {'wide':{{ 16*gantry.config.get('styles.breakpoints.large-desktop-container')|number_format }},'desktop':{{ 16*gantry.config.get('styles.breakpoints.desktop-container')|number_format}},'tablet':{{ 16*gantry.config.get('styles.breakpoints.tablet-container')|number_format}},'mobile':{{ 16*gantry.config.get('styles.breakpoints.large-mobile-container')|number_format}}}
-	{% endset %}
-	{% do gantry.document.addInlineScript(media_breakpoint, 0) %}
 	
+	{% set aaa = include('meta.html', ignore_missing = true) %}
+	
+	{{ aaa|raw }}
 
 {% endblock %}
 
-
 {% block head_application %}
     {% do gantry.platform.finalize %}
-
     {% block assets deferred %}
         {{ assets.css()|raw }}
         {{ assets.js()|raw }}
     {% endblock %}
-
 {% endblock %}
 
+{# 
+
+gasken.js need this!
+
+#}
+
+{% block javascript_footer %}
+    <script src="{{ url('gantry-assets://js/gaskeun.js') }}"></script>
+{% endblock %}
+
+{% set media_breakpoint %}
+var gaskeun_toogle_icon ='{{gantry.config.get('styles.offcanvas.toggle-icon')}}';
+var gaskeun_media_breakpoint = {'wide':{{ 16*gantry.config.get('styles.breakpoints.large-desktop-container')|number_format }},'desktop':{{ 16*gantry.config.get('styles.breakpoints.desktop-container')|number_format}},'tablet':{{ 16*gantry.config.get('styles.breakpoints.tablet-container')|number_format}},'mobile':{{ 16*gantry.config.get('styles.breakpoints.large-mobile-container')|number_format}}}
+{% endset %}
+{% do gantry.document.addInlineScript(media_breakpoint, 0) %}

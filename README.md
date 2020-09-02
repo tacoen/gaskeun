@@ -39,7 +39,7 @@ While several 'gaskeun' remain intact.
 <style type="text/css"> 
 .fit { width:100% }
 .fit a { display:block; }
-.fit a image { width:100%; }
+.fit img { width:100%; }
 .images { display: flex; }
 .images > img { padding: .25rem; }
 </style>

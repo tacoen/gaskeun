@@ -1,7 +1,7 @@
 # Gaskeun!
 
 <div class='fit'>
-![gasken - speed racer](screenshot.jpg)
+<img src='screenshot.jpg' alt='Gasken!'>
 </div>
 
 Gaskeun is Grav Gantry 5 Theme for your new website. Base on Hydrogen, the default Gantry 5 theme.

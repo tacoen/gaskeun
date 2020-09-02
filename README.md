@@ -5,18 +5,11 @@
 Gaskeun is Grav Gantry 5 Theme for your new website. Base on Hydrogen, the default Gantry 5 theme.
 Gaskeun loaded with more options.
 
-<<<<<<< HEAD
 <img src='admin/images/default.png' height='160'>
 <img src='admin/images/preset1.png' height='160'>
+
 <img src='admin/images/preset2.png' height='160'>
 <img src='admin/images/preset3.png' height='160'>
-=======
-
-<img align='left' src='admin/images/default.png' height='200'><img align='' src='admin/images/preset1.png' height='200'>
-
-<img align='left' src='admin/images/preset2.png' height='200'><img  src='admin/images/preset3.png' height='200'>
->>>>>>> f82f8fc548fa74312e1afab9be2a22e83306ee60
-
 
 ### Tips
 

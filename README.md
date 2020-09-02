@@ -1,6 +1,8 @@
 # Gaskeun!
 
+<div class='fit'>
 ![gasken - speed racer](screenshot.jpg)
+</div>
 
 Gaskeun is Grav Gantry 5 Theme for your new website. Base on Hydrogen, the default Gantry 5 theme.
 Gaskeun loaded with more options.
@@ -35,6 +37,9 @@ Then:
 While several 'gaskeun' remain intact.
 
 <style type="text/css"> 
+.fit { width:100% }
+.fit a { display:block; }
+.fit a image { width:100%; }
 .images { display: flex; }
 .images > img { padding: .25rem; }
 </style>

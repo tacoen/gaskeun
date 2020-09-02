@@ -32,3 +32,8 @@ Then:
 ```
 
 While several 'gaskeun' remain intact.
+
+<style type="text/css"> 
+.images { display: flex; }
+.images > img { padding: .25rem; }
+</style>

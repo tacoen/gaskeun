@@ -16,7 +16,8 @@ form:
     image:
       type: input.imagepicker
       label: Image
-      description: Select the background image.      
+      description: Select the background image.
+      default: gantry-media://cover3.png
     text-color:
       type: input.colorpicker
       label: Text

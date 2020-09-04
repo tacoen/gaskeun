@@ -1,44 +1,45 @@
 version: 2
-
 preset:
   image: 'gantry-admin://images/layouts/default.png'
-
+  name: no_container
+  timestamp: 1599237128
 layout:
   /header/:
     -
-      - 'logo-1945 30'
+      - logo-1945
     -
-      - 'position-header 70'
-
+      - position-header
   /navigation/:
     -
-      - 'menu-1945 50'
-      - 'search-1945 50'
-
+      - 'menu-1945 80'
+      - 'custom-1945 20'
   /main/:
-    - position-breadcrumbs
-    - system-messages
-    - system-content
-
+    -
+      - position-breadcrumbs
+    -
+      - system-messages-1945
+    -
+      - system-content-1945
   /footer/:
     -
       - position-footer
     -
       - 'copyright-1945 30'
-      - 'spacer 30'
+      - 'spacer-1945 30'
       - 'branding-1945 40'
-  
   offcanvas:
-    - mobile-menu
-
+    -
+      - mobile-menu-1945
 structure:
   header:
     attributes:
-      variations: ga-cover-1      
+      boxed: ''
   navigation:
     type: section
     attributes:
-      variations: deck-top      
+      boxed: ''
+      class: ''
+      variations: dock-top
   main:
     attributes:
       boxed: ''
@@ -58,9 +59,10 @@ content:
   menu-1945:
     block:
       variations: align-left
-  search-1945:
-    block:
-      variations: align-right
+  custom-6367:
+    title: 'ga-simplesearch'
+    attributes:
+      html: "<div class=\"ga-search-wrapper\" id='ga-searchbox'><form name=\"search\" data-simplesearch-form=\"\" id=\"search\">\n<input name=\"searchfield\" class=\"search-input\" aria-label=\"search\" type=\"text\" data-min=\"3\" required=\"\" placeholder=\"Search …\" value=\"\" data-search-invalid=\"Please add at least 3 characters\" data-search-separator=\":\" data-search-input=\"/search/query\"></form><button onclick='javascript:gasearch_toggle()' class='toggle'><i class='fa fa-search'></i></button></div>"
   position-breadcrumbs:
     attributes:
       key: breadcrumbs

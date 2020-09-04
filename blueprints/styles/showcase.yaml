@@ -8,7 +8,7 @@ form:
     background:
       type: input.colorpicker
       label: Background
-      default: "#4477AA"
+      default: "#001122"
     image:
       type: input.imagepicker
       label: Image

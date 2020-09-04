@@ -5,3 +5,10 @@
 	width: 100%
 }
 
+.fix-leftbar {
+	position: fixed;
+    top: 0;
+    left: 0;
+    overflow-y: auto;
+    height: 100vh;
+}

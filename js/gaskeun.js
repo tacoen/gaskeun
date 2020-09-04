@@ -160,39 +160,38 @@ function gaskeun_fix() {
 	}
 }
 
-
-var h = document.querySelector('.deck-top');
-
-if (h) {
-	var dc_t = h.offsetTop;
-	var dc_x = h.offsetLeft;
-	var dc_w = h.offsetWidth;
-}
+var mx = false;
 
 function gaskeun_decktop() {
 
-	var h = document.querySelector('.deck-top');
+	var h = document.querySelector('.dock-top');
 
 	if (h) {
 		
 
 		dctop = h.offsetTop;
 
-		if (! document.body.classList.contains('has-decktop')) {
-			document.body.classList.add('has-decktop')
+		if (! document.body.classList.contains('has-docktop')) {
+			document.body.classList.add('has-docktop')
 		}
 		
 		console.log(dctop);
 
 		window.addEventListener('scroll', (event) => {
 
+
+			if (!mx) {
+				var mx = h.offsetLeft;
+				var mw = h.offsetWidth;
+			}
+			
 			var scroll = this.scrollY;
 
 			if (scroll > dctop) {
 				h.classList.add('pinned')
 				h.style.top = 0;
-				h.style.left=dc_x+'px'
-				h.style.width=dc_w+'px'				
+				h.style.left=mx+'px'
+				h.style.width=mw+'px'				
 			}
 
 			if (scroll < dctop) {
@@ -206,6 +205,17 @@ function gaskeun_decktop() {
 }
 
 document.addEventListener('DOMContentLoaded', function () {
+
+	var h = document.querySelector('.dock-top');
+
+	if (h) {
+		var dc_t = h.offsetTop;
+		var dc_x = h.offsetLeft;
+		var dc_w = h.offsetWidth;
+	}
+
+	console.table (dc_x,dc_t,dc_w)
+
 
 	gaskeun_breakpoint();
 	gaskeun_container_top('#g-container-top');

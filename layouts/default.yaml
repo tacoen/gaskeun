@@ -1,27 +1,30 @@
 version: 2
 preset:
   image: 'gantry-admin://images/layouts/fixtop.png'
-  name: Gasken Default
-  
+  name: default
+  timestamp: 1599207037
 layout:
   /container-top/:
-    - 
-      - /navigation/:
-        -
+    -
+      -
+        /navigation/:
+          -
             - 'logo-1945 5'
             - 'menu-1945 75'
             - 'custom-1945 20'
   /container-main/:
     -
-      - /header/: {  }
+      -
+        /header/: {  }
     -
-      - /main/:
-        -
+      -
+        /main/:
+          -
             - system-content-1945
-  
     -
-      - /footer/:
-        -
+      -
+        /footer/:
+          -
             - 'copyright-1945 50'
             - 'branding-1945 50'
   /container-bottom/:
@@ -35,21 +38,24 @@ structure:
     type: section
     attributes:
       boxed: ''
-  top:
-    type: section
+  container-top:
     attributes:
-      boxed: ''
+      boxed: '3'
+      class: ''
+      extra: {  }
   header:
     attributes:
-      variations: ga-cover-1
+      boxed: ''
   main:
     attributes:
       boxed: ''
   footer:
     attributes:
       boxed: ''
-  bottom:
-    type: section
+  container-main:
+    attributes:
+      boxed: ''
+  container-bottom:
     attributes:
       boxed: ''
 content:
@@ -64,7 +70,7 @@ content:
     block:
       variations: align-left
   custom-1945:
-    title: 'Custom HTML'
+    title: 'ga-simplesearch'
     attributes:
       html: "<div class=\"ga-search-wrapper\" id='ga-searchbox'><form name=\"search\" data-simplesearch-form=\"\" id=\"search\">\n<input name=\"searchfield\" class=\"search-input\" aria-label=\"search\" type=\"text\" data-min=\"3\" required=\"\" placeholder=\"Search …\" value=\"\" data-search-invalid=\"Please add at least 3 characters\" data-search-separator=\":\" data-search-input=\"/search/query\"></form><button onclick='javascript:gasearch_toggle()' class='toggle'><i class='fa fa-search'></i></button></div>"
     block:

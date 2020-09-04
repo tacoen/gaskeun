@@ -1,0 +1,19 @@
+@mixin ga-bgr($color) {
+	$text-color: if(lightness($color) < 50, $white, $black);
+
+	background-color: $color;
+	color: $text-color;
+	a { color: $text-color }
+}
+
+
+.bgr-accent1 { @include ga-bgr($accent-color-1); }
+.bgr-accent2 { @include ga-bgr($accent-color-2); }
+.bgr-accent3 { @include ga-bgr($accent-color-3); }
+.bgr-accent4 { @include ga-bgr($accent-color-4); }
+.bgr-yellow  { @include ga-bgr($systemcolor-warning-color); }
+.bgr-red     { @include ga-bgr($systemcolor-error-color); }
+.bgr-blue    { @include ga-bgr($systemcolor-info-color); }
+.bgr-green 	 { @include ga-bgr($systemcolor-success-color); }
+
+span[itemprop='name']:hover { text-decoration: underline; }

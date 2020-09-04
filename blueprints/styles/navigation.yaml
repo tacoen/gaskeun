@@ -1,4 +1,4 @@
-name: Navigation Colors
+name: Navigation
 description: Navigation colors for the Gasken theme
 type: core
 
@@ -8,11 +8,6 @@ form:
       type: input.fonts
       label: Navigation Font
       default: 'roboto, sans-serif'
-    fontsize:
-      type: input.text
-      label: Font Size
-      default: "1rem"
-      pattern: '\d+(\.\d+){0,1}(rem|em|px)'
     background:
       type: input.colorpicker
       label: Background
@@ -25,14 +20,14 @@ form:
       type: input.colorpicker
       label: Hover Background
       default: "rgba(255, 255, 255, 0.3)"
-    hover-color:
+    hover-text-color:
       type: input.colorpicker
       label: Hover text
       default: "#111111"
-    hover-sub-background:
+    active-text-color:
       type: input.colorpicker
-      label: Hover Sublevel
-      default: "rgba(255, 255, 255, 0.1)"
+      label: Active Text Color
+      default: "#111133"
     active-background:
       type: input.colorpicker
       label: Active Background

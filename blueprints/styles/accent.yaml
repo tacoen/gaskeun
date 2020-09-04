@@ -7,16 +7,16 @@ form:
 
     color-1:
       type: input.colorpicker
-      label: Accent Color 1
+      label: Accent Color 1 (link)
       default: "#336699"
     color-2:
       type: input.colorpicker
-      label: Accent Color 2
-      default: "#ff9911"
+      label: Accent Color 2 (heading)
+      default: "#113377"
     color-3:
       type: input.colorpicker
       label: Accent Color 3
-      default: "#114477"
+      default: "#ff9911"
     color-4:
       type: input.colorpicker
       label: Accent Color 4

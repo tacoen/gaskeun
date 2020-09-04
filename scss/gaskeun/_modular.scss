@@ -1,0 +1,20 @@
+// Section which in modular
+
+.modular .showcase { @extend #g-showcase; }
+.modular .features { @extend #g-features; }
+.modular .sub-features { @extend #g-sub-features; }
+
+.modular-row {
+	margin: -1rem; display: flow-root;
+}
+
+
+#g-header, #g-showcase,#g-features,#g-sub-features,
+.showcase,.features,.sub-features {
+	padding: 6rem 4rem;
+	text-align: center;
+	.button, button {
+		margin-right: .15rem;
+	}
+}
+	

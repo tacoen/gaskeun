@@ -1,5 +1,5 @@
-name: Showcase
-description: Showcase colors for the Gasken theme
+name: Features
+description: Feature colors for the Gasken theme
 type: section
 
 form:
@@ -8,7 +8,7 @@ form:
     background:
       type: input.colorpicker
       label: Background
-      default: "#4477AA"
+      default: "#f0f0f0"
     image:
       type: input.imagepicker
       label: Image
@@ -16,4 +16,4 @@ form:
     text-color:
       type: input.colorpicker
       label: Text
-      default: "#ffffff"
+      default: "#222222"

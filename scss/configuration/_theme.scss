@@ -1,0 +1,87 @@
+
+$main-font: 					$base-body-font !default;
+$footer-font: 					$base-body-font !default;
+$header-font: 					$base-body-font !default;
+$features-font:			 		$base-body-font !default;
+$sub-features-font: 			$base-body-font !default;
+$showcase-font:			 		$base-body-font !default;
+$navigation-font: 				$base-body-font !default;
+
+// Base
+$base-background:				#ffffff !default;
+$base-text-color:				#111111 !default;
+$base-border-color:				#dddddd !default;
+
+$border-color-hover:			darken($base-border-color, 10%);
+$border-color-focus:			darken($base-border-color, 15%);
+$base-box-shadow:				inset 0 1px 3px hsla(0, 0%, 0%, 0.06);
+
+// Accents
+$accent-color-1:				#336699 !default;
+$accent-color-2:				#ff9911 !default;
+$accent-color-3:				#114477 !default;
+$accent-color-4:				#6699cc !default;
+
+$link-color:					$accent-color-1 !default;
+$heading-color:					$accent-color-2 !default;
+$primary-color:					$accent-color-3 !default;
+$button-color:					$accent-color-4 !default;
+
+$box-background-1: 				#f0f0f0 !default;
+$box-background-2: 				#333333 !default;
+$box-background-3: 				#336699 !default;
+$box-background-4: 				#ffcc33 !default;
+
+$warning-color: 				#ffcc33 !default;
+$error-color: 					#cc1111 !default;
+$info-color: 					#28a1c5 !default;
+$success-color: 				#3d8b3d !default;
+
+// Header
+$header-background:				#439A86 !default;
+$header-text-color:				#ffffff !default;
+$header-image:					false !default;
+
+// Navigation
+$navigation-background:			#cccccc !default;
+$navigation-text-color:			#111111 !default;
+$navigation-overlay:			rgba(0, 0, 0, 0.4) !default;
+
+// Showcase
+$showcase-background:			#354D59 !default;
+$showcase-text-color:			#ffffff !default;
+$showcase-image:				false !default;
+
+// Feature
+$features-background:			#ffffff !default;
+$features-text-color:			#666666 !default;
+$features-image:				false !default;
+
+// Subfeature
+$sub-features-background:		#f0f0f0 !default;
+$sub-features-text-color:		#666666 !default;
+$sub-features-image:			false !default;
+
+// Main
+$main-background:				#ffffff !default;
+$main-text-color:				#666666 !default;
+
+// Footer
+$footer-background:				#ffffff !default;
+$footer-text-color:				#666666 !default;
+
+// Off Canvas
+$offcanvas-background:			#354D59 !default;
+$offcanvas-text-color:			#ffffff !default;
+$offcanvas-toggle-color:		#ffffff !default;
+
+// Dropdowns
+$menu-col-width:			 	180px !default;
+$menu-hide-on-mobile:			0 !default;
+
+// Cover
+$cover-blend-mode:				'soft-light' !default;
+$cover-background-1:			false;
+$cover-background-2:			false;
+$cover-background-3:			false;
+$cover-background-4:			false;

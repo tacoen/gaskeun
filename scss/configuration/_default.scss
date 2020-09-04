@@ -1,7 +1,7 @@
 // Font Family
 $base-body-font:				"roboto", "Helvetica", "Tahoma", "Geneva", "Arial", "Apple Color Emoji", "Segoe UI", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif !default;
 $base-heading-font:				"roboto", "Helvetica", "Tahoma", "Geneva", "Arial", "Apple Color Emoji", "Segoe UI", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif !default;
-$font-family-mono:				 "Menlo", "Monaco", monospace;
+$font-family-mono:				"Menlo", "Monaco", monospace;
 $font-family-serif:				"Georgia", "Times", "Times New Roman", serif;
 
 // Font Weights
@@ -21,3 +21,23 @@ $h3-font-size:					$core-font-size + 0.50 !default;
 $h4-font-size:					$core-font-size + 0.15 !default;
 $h5-font-size:					$core-font-size !default;
 $h6-font-size:					$core-font-size - 0.15 !default;
+
+// Basics
+$white:							#ffffff !default;
+$black:							#111111 !default;
+$off-white:						#f7f7f7 !default;
+$rule-color:					#F0F2F4 !default;
+$code-text:						#c7254e !default;
+$code-bg:						#00000000 !default;
+$pre-text:						#237794 !default;
+$pre-bg:						#f6f6f6 !default;
+
+$content-margin:				0.5rem !default;
+$content-padding:				0.5rem !default;
+$core-border-radius:			rem(3) !default;
+
+$section-padding:				0;
+$section-margin:				0;
+
+$offcanvas-width:				17rem !default;
+$offcanvas-toggle-visibility:	1 !default;

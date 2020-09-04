@@ -1,0 +1,33 @@
+.page-staff { 
+
+	display: flex;
+	margin-left:0;
+	
+	li { 
+		list-style-type: none;
+		display: flex;
+		width: 50%;
+		margin-bottom: 2rem;
+		padding:0;
+	
+	}
+	
+	.picture { 
+		height: 200px;
+		margin-right: 2rem;
+		outline: 1px solid #0006;
+		padding: .25rem;
+		background: #fff;	
+		
+		img { height: 100%; }
+
+	}
+	
+	.data {
+		p { margin: 0 0 1rem 0; clear:both; }
+		label { width: 120px; font-weight: 700; display: inline-block; float: left; }
+		.value { float: left; }
+	}
+
+}
+

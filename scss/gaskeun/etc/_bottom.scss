@@ -1,0 +1,28 @@
+
+@mixin container-bottom($size) {
+
+	#g-container-bottom.g-wrapper { 
+		padding: 0 calc((100% - #{$size}) / 2 + #{0.02*$size}) 2rem 
+	}
+
+}
+
+#g-container-bottom .notices { box-shadow: 5px 5px 1rem #0009 }
+
+@include container-bottom($breakpoints-large-desktop-container);
+
+@include breakpoint(mobile-only) { 
+	@include container-bottom($breakpoints-mobile-container);
+}
+
+@include breakpoint(tablet-range) { 
+	@include container-bottom($breakpoints-tablet-container); 
+}
+
+@include breakpoint(desktop-range) { 
+	@include container-bottom($breakpoints-desktop-container);
+}
+
+@include breakpoint(large-desktop-range) { 
+	@include container-bottom($breakpoints-large-desktop-container);
+}

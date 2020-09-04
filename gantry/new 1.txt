@@ -49,30 +49,38 @@ configuration:
       - gantry-theme://scss
       - gantry-engine://scss
     files:
+      - tacoen
       - gaskeun
+      - gaskeun-grav
       - custom
     persistent:
       - gaskeun
+      - gaskeun-grav
     overrides:
       - custom
 
-
   section-variations:
     Position:
-      fix-to-top: Fix at Top
-      fix-to-bottom: Fix at Bottom
-      dock-top: Dock it on Top
+      deck-top: Deck on Top
+      deck-bottom: Deck on Bottom
+    Utility:
+      align-right: Align Right
+      align-left: Align Left
+      nomarginall: No Margin
+      nopaddingall: No Padding
+      full-height: Full Height
+      full-width: Full Width
+    Box Variations:
+      box1: Box 1
+      box2: Box 2
+      box3: Box 3
+      box4: Box 4
     Image Background:
       ga-cover-1: Cover 1
       ga-cover-2: Cover 2
       ga-cover-3: Cover 3
       ga-cover-4: Cover 4
-    Utility:
-      disabled: Disabled
-      center: Center
-      nomarginall: No Margin
-      nopaddingall: No Padding
-
+      
   block-variations:
     Box Variations:
       box1: Box 1
@@ -98,9 +106,7 @@ configuration:
       equal-height: Equal Height
       nomarginall: No Margin
       nopaddingall: No Padding
-      
 
-        
   dependencies:
     gantry: 5.4.0
 

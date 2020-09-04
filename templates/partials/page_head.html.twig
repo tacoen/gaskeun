@@ -35,7 +35,6 @@ gasken.js need this!
 {% endblock %}
 
 {% set media_breakpoint %}
-var gaskeun_toogle_icon ='{{gantry.config.get('styles.offcanvas.toggle-icon')}}';
 var gaskeun_media_breakpoint = {'wide':{{ 16*gantry.config.get('styles.breakpoints.large-desktop-container')|number_format }},'desktop':{{ 16*gantry.config.get('styles.breakpoints.desktop-container')|number_format}},'tablet':{{ 16*gantry.config.get('styles.breakpoints.tablet-container')|number_format}},'mobile':{{ 16*gantry.config.get('styles.breakpoints.large-mobile-container')|number_format}}}
 {% endset %}
 {% do gantry.document.addInlineScript(media_breakpoint, 0) %}

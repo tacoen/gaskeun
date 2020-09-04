@@ -1,5 +1,5 @@
-name: Background Image
-type: configuration
+name: Background-Cover Image
+type: variants
 
 form:
   fields:
@@ -15,20 +15,20 @@ form:
         overlay: overlay
         screen: screen
         none: none
-    background1:
+    background-1:
       type: input.imagepicker
-      label: Image1
+      label: Cover 1
       default: gantry-media://cover1.png
-    background2:
+    background-2:
       type: input.imagepicker
-      label: Image2
+      label: Cover 2
       default: gantry-media://cover2.png
-    background3:
+    background-3:
       type: input.imagepicker
-      label: Image3
+      label: Cover 3
       default: gantry-media://cover3.png
       
-    background4:
+    background-4:
       type: input.imagepicker
-      label: Image4
+      label: Cover 4
       default: gantry-media://cover4.png

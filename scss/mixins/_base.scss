@@ -1,5 +1,8 @@
-// Navigation
-@import "nav";
+@mixin ga-link($color: $link-color) {
+	color: $color;
+	&:hover { color: darken($color, 10%);  }
+	&:focus { color: darken($color, 15%); }
+	&:active { color: lighten($color, 15%); }
+}
 
-// gaskeun/ mix
-@import "gaskeun";
+@import "nav"

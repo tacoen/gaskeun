@@ -1,0 +1,49 @@
+
+#ga-searchbox {
+
+    display: flex;
+    align-items: center;
+    height: 100%;
+    padding: 0 $content-padding*2;
+    
+	form {
+		width:100%;
+	}
+
+	.toggle, .search-input {
+		border: none;
+		outline: none;
+		padding: .25rem;
+		background: none;
+	}
+	
+	.toggle { 
+		padding: .25rem .5rem; 
+		outline: none;
+		box-shadow: none !important;		
+	}
+
+	.search-input {
+		width: 0;
+		border: 1px solid #00000000;		
+		transition: all .25s linear;
+	}
+	
+	&.active {
+		background: $main-background;
+		
+		.search-input {
+			width:100%;
+			border-bottom: 1px dotted #0006;
+			&:hover,
+			&:focus {
+				border-bottom: 1px solid $main-text-color;
+			}
+		}
+	}
+		
+}
+
+.gaskeun-mobile .g-offcanvas-right #ga-searchbox {
+    flex-flow: row-reverse;
+}

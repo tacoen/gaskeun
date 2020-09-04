@@ -1,4 +1,4 @@
-#g-showcase {
+#g-showcase,.showcase {
 	padding: $section-padding 0;
 	background-color: $showcase-background;
 	@if $showcase-image {
@@ -28,16 +28,6 @@
 		}
 	}
 
-	.button.primary {
-		background-color: $accent-color-1;
-		color: $showcase-text-color;
-		&:hover {
-			background-color: lighten($accent-color-1, 5%);
-		}
-		&:active {
-			background-color: darken($accent-color-1, 5%);
-		}
-	}
 	.g-social {
 		a {
 			background-color: darken($showcase-background, 6%);
@@ -52,7 +42,7 @@
 }
 
 @media print {
-	#g-showcase {
+	#g-showcase,.showcase {
 		background: #fff !important;
 		color: #000 !important;
 	}

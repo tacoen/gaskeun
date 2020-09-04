@@ -1,0 +1,45 @@
+name: Transitions
+type: variants
+
+form:
+  fields:
+    animation-1:
+      type: select.selectize
+      label: Transition 1
+      placeholder: 'Select...'
+      default: none
+      options:
+        none: none
+        fade: fade
+        slide-left: slide-left
+        slide-right: slide-right
+    animation-2:
+      type: select.selectize
+      label: Transition 2
+      placeholder: 'Select...'
+      default: none
+      options:
+        none: none
+        fade: fade
+        slide-left: slide-left
+        slide-right: slide-right
+    animation-3:
+      type: select.selectize
+      label: Transition 3
+      placeholder: 'Select...'
+      default: none
+      options:
+        none: none
+        fade: fade
+        slide-left: slide-left
+        slide-right: slide-right
+    animation-4:
+      type: select.selectize
+      label: Transition 4
+      placeholder: 'Select...'
+      default: none
+      options:
+        none: none
+        fade: fade
+        slide-left: slide-left
+        slide-right: slide-right

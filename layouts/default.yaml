@@ -4,21 +4,27 @@ preset:
   name: Gasken Default
   
 layout:
-  /top/:
-    /navigation/:
-      -
-        - 'logo-1945 5'
-        - 'menu-1945 75'
-        - 'custom-1945 20'
-  header: {  }
-  /main/:
+  /container-top/:
+    - 
+      - /navigation/:
+        -
+            - 'logo-1945 5'
+            - 'menu-1945 75'
+            - 'custom-1945 20'
+  /container-main/:
     -
-      - system-content-1945
-  /footer/:
+      - /header/: {  }
     -
-      - 'copyright-1945 50'
-      - 'branding-1945 50'
-  /bottom/:
+      - /main/:
+        -
+            - system-content-1945
+  
+    -
+      - /footer/:
+        -
+            - 'copyright-1945 50'
+            - 'branding-1945 50'
+  /container-bottom/:
     -
       - system-messages-1945
   offcanvas:

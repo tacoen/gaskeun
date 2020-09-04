@@ -2,12 +2,7 @@
 	background-color: $offcanvas-background;
 	width: $offcanvas-width;
 	color: $navigation-text-color;
-	a {
-		color: lighten($offcanvas-background, 50%);
-		&:hover {
-			color: $navigation-text-color;
-		}
-	}
+	a { @include scheme-link-color ($navigation-text-color) }
 
 	h1, h2, h3, h4, h5, h6, strong {
 		color: $navigation-text-color;
@@ -26,12 +21,10 @@
 }
 
 .g-offcanvas-toggle {
-	position: fixed;
-	z-index: 9999;
-	top: $content-padding; 
-	left: $content-padding;
+	
 	font-size: $core-font-size + 0.5;
 	color: $offcanvas-toggle-color;
+
 	@if $offcanvas-toggle-visibility == 1 {
 		display: none;
 		@media only all and (max-width: $breakpoints-mobile-menu-breakpoint) {

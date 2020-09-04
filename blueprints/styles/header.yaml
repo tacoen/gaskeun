@@ -1,4 +1,4 @@
-name: Header Colors
+name: Header
 description: Header colors for the Gasken theme
 type: section
 
@@ -9,6 +9,14 @@ form:
       type: input.colorpicker
       label: Background
       default: "#336699"
+    font:
+      type: input.fonts
+      label: Navigation Font
+      default: 'roboto, sans-serif'
+    image:
+      type: input.imagepicker
+      label: Image
+      description: Select the background image.      
     text-color:
       type: input.colorpicker
       label: Text

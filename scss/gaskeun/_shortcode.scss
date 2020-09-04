@@ -1,0 +1,16 @@
+
+.flexy {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+	flex-flow: row;
+	
+	&.col { flex-flow: column; 
+		&.right { float: right }
+		&.left { float: left }
+	}
+	
+	&.clear { clear:both; }
+
+	> * { margin: 0 1rem 1rem 0;  }
+}

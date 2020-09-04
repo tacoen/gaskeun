@@ -15,9 +15,9 @@ layout:
 
   /showcase/:
   
-  /feature/:
+  /features/:
 
-  /sub-feature/:
+  /sub-features/:
   
   /main/:
     - system-content

@@ -1,68 +1,61 @@
-// REQUIRED DEPENDENCIES - DO NOT CHANGE
+#g-navigation li:hover span.g-menu-parent-indicator:after {
+    text-shadow: 0px 0px 3px #fff;
+    transition: all 1s linear;
+    transform: rotatex(180deg);  
 
-@import "dependencies";
+}
 
-/* long live lazy ------------------------------ */ 
+#g-navigation span.g-menu-parent-indicator::after {
+    text-shadow: 0px 0px 2px #000;
+    transition: all .5s linear;
+}
 
-@mixin ga-nono() {
-	outline: none;
-    border: none;
-    box-shadow: none;
-	box-sizing: border-box;
+
+@keyframes docked-top {
+	0% { margin-top: 0 }
+	10% { margin-top: -8px;  }
+	50% { margin-top: -1px; }
+	65% { margin-top: -3px }
+	100% { margin-top: 0 }
+}
+
+.scrolled {
+	box-shadow: 0px 0px 8px #0009;
+	animation: docked-top .5s linear 1;
+	transition: all 1s ease .4s;
+}
+
+
+/* decktop= pinned ---------------------- */
+
+@-webkit-keyframes pinned {
+    0% {-webkit-transform: translate(0,-1px);}   
+    25% {-webkit-transform: translate(0,-4px);}   
+    75%  {-webkit-transform: translate(0,-1px);}
+    100%  {-webkit-transform: translate(0,0px);}
+}
+
+.deck-top {
+
+	position: relative;
+	z-index: 102 !important;
+
+	&.pinned { 
+		position: fixed !important;
+		animation: pinned 1s 1 ease-in;
+		box-shadow: 0 5px 10px #0003;
+	}
 	
 }
 
-@mixin cover-block() {
-	width: 100%;
-	padding: 6rem;
-	text-align: center;
-	display: block;
+// Small Device
+html.gaskeun-small,
+html.gaskeun-mobile {
+	.hide-small { display:none }
+	.expand-small { flex: 1 }
+	#ga-searchbox { padding: .5rem; background: #0000; }
+	.deck-top { left: 0; width: 100% }
 }
 
-@mixin flush() {
-	padding: 0 !important;
-	margin: 0 !important;
-}
-
-/* custom ------------------------------ */ 
-
-@import 'custom/feature';
-@import 'custom/search';
-@import 'custom/media';
-@import 'custom/gallery';
-@import 'custom/slider';
-@import 'custom/pinned';
-@import 'custom/treelist';
-@import 'custom/etc';
-
-@import 'custom/toc';
-
-@import 'custom/clean';
-
-@import 'custom/tweak';
-
-
-.fix-leftbar {
-	position: fixed;
-	overflow: auto;
-	top: 0;
-	left:0;
-	height: 100vh;
-	background-color: $box1-background;
-	padding-bottom: 2rem;
-
-
-}
-
-/* added variations ------------------------------ */ 
-
-.button-alike {
-	border-bottom: 1px solid rgba(0,0,0,0.3);
-	border-right: 1px solid rgba(0,0,0,0.3);
-	border-top: 1px solid rgba(255,255,255,0.3);
-	border-left: 1px solid rgba(255,255,255,0.3);
-}
-
-.full-height {
-	height: 100vh;
-}
+.g-offcanvas-open #g-page-surround { top: 0 }
+.g-offcanvas-open .g-top-shadow { display: none; }

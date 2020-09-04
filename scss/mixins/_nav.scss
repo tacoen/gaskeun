@@ -1,78 +1,14 @@
+
 %dropdown-column {
 	width: $menu-col-width;
 }
 
-// Main Nav Colors
-@mixin main-nav-colors(
-	$section-background: $navigation-background, 
-	$section-text-color: $navigation-text-color, 
-	$section-hover-background: $navigation-hover-background, 
-	$section-hover-color: $navigation-hover-color, 
-	$section-hover-sub-background: $navigation-hover-sub-background,
-	$section-active-background: $navigation-active-background, 
-	$section-overlay: $navigation-overlay,
-	$section-fontsize: $navigation-fontsize) {
-
-	h1, h2, h3, h4, h5, h6, strong {
-		color: $section-text-color;
-	}
-
-	.g-toplevel {
-		> li {
-			> .g-menu-item-container {
-				color: $section-text-color;
-				font-size: $section-fontsize;
-			}
-			&:not(.g-menu-item-type-particle):not(.g-menu-item-type-module) {
-				&:hover {
-					background-color: $section-hover-background;
-					> .g-menu-item-container {
-						color: $section-hover-color;
-					}
-				}
-
-				&.active {
-					background-color: $section-active-background;
-
-					> .g-menu-item-container {
-						color: darken($section-text-color,25%);
-					}
-
-					&.g-selected {
-						background-color: $section-hover-background;
-
-						> .g-menu-item-container {
-							color: $section-hover-color;
-						}
-					}
-				}
-			}
-		}
-	}
-
-	.g-dropdown {
-		background-color: $section-background;
-		border-top: 1px solid $section-overlay;
-	}
-
-	.g-sublevel {
-		> li {
-			> .g-menu-item-container {
-				color: $section-text-color;
-				font-size: $section-fontsize;				
-			}
-
-			&:not(.g-menu-item-type-particle):not(.g-menu-item-type-module) {
-				&:hover, &.active {
-					background-color: $section-hover-sub-background;
-				}
-			}
-		}
-	}
-}
-
 // Touch Indicators
-@mixin main-nav-indicators($section-background: $navigation-background, $section-text-color: $navigation-text-color) {
+
+@mixin main-nav-indicators(
+	$section-background: $navigation-background, 
+	$section-text-color: $navigation-text-color
+	) {
 	.g-menu-hastouch {
 		.g-toplevel {
 			> li {
@@ -80,9 +16,9 @@
 					> .g-menu-item-container {
 						> .g-menu-parent-indicator {
 							border: 1px solid lighten($section-background, 6%);
-							background: darken($section-background, 4%);
-							&:hover {
-								background: darken($section-background, 8%);
+							background: lighten($section-background, 4%);
+							&:active {
+								background: lighten($section-background, 8%);
 							}
 							border-radius: $core-border-radius;
 							margin: -0.2rem 0 -0.2rem 0.5rem;
@@ -112,9 +48,9 @@
 					> .g-menu-item-container {
 						> .g-menu-parent-indicator {
 							border: 1px solid lighten($section-background, 6%);
-							background: darken($section-background, 4%);
-							&:hover {
-								background: darken($section-background, 8%);
+							background: lighten($section-background, 4%);
+							&:active {
+								background: lighten($section-background, 8%);
 							}
 							border-radius: $core-border-radius;
 							padding: 0.1rem;
@@ -129,4 +65,61 @@
 			}
 		}
 	}
+}
+
+@mixin ga-nav-color(
+	$background,
+	$text-color,
+	$hover-background:'',
+	$hover-text-color:'',
+	$active-background:'',
+	$active-text-color:'',
+	$overlay:''
+	) {
+	
+	@if $hover-background == '' { $hover-background: darken($background,10%); } 
+	@if $hover-text-color == '' { $hover-text-color: darken($text-color,25%); } 
+	@if $active-background == '' { $active-background: lighten($background,15%); } 
+	@if $active-text-color == '' { $active-text-color: $text-color; } 
+	@if $overlay == '' { $overlay: rgba(0,0,0,.3); } 
+
+	.g-main-nav {
+		height: 100%;
+		
+		.g-toplevel { display: flex; align-items: center; height: 100%; }
+
+		.g-menu-item { 
+			padding: $content-padding $content-padding*1.5;
+			display: flex; 
+			align-items: center; 
+			height: 100%;
+			transition: all 1s ease;
+			
+		}
+
+		.g-menu-item-type-link a { display: block; }
+
+		.g-selected { 
+			background-color: $hover-background; 
+			color: $hover-text-color; 
+			a { @include ga-link($hover-text-color); }
+		}
+	
+		.active  { 
+			color: $active-text-color; 
+			background-color: $active-background; 
+
+			a { @include ga-link($active-text-color); }
+		}
+
+		ul.g-dropdown { 
+			background-color: $background;
+			border-top: 1px solid $overlay;
+			width: $menu-col-width;
+		}
+		
+		@include main-nav-indicators($background,$text-color);
+
+	}
+	
 }

@@ -2,73 +2,23 @@
 @import "dependencies";
 
 // THEME COMPONENTS
-// Base
+
 @import "nucleus/theme/base";
-
-// Core
-@import "gaskeun/core";
-
-// Typography
-@import "gaskeun/typography";
-
-
-// Navigation
-@import "gaskeun/nav";
-
-@import "gaskeun/gantry";
-
-// Sidepanel Off Canvas
-@import "gaskeun/offcanvas";
-
-// Header
-@import "gaskeun/header";
-
-// Showcase
-@import "gaskeun/showcase";
-
-// Feature
-@import "gaskeun/feature";
-
-// Subfeature
-@import "gaskeun/subfeature";
-
-// Main
-@import "gaskeun/main";
-
-// Sidebar
-@import "gaskeun/sidebar";
-
-// Footer
-@import "gaskeun/footer";
-
-// Variations
-@import "gaskeun/variations";
-
-// Tables
-@import "gaskeun/tables";
-
-// Forms
-@import "gaskeun/forms";
-
-// Social
-@import "gaskeun/social";
-
-// Sample Content
-@import "gaskeun/sample";
-
-// Content Array
-@import "gaskeun/contentarray";
-
-// Dropdown Animations
-@import "gaskeun/dropdownanimations";
-
-
-// Offline
-@import "gaskeun/offline";
-//-------------------------------------------
-
-// BREAKPOINTS
+@import "configuration/nucleus/base";
+@import "configuration/grav/base";
+@import "configuration/base";
+@import "grav";
 @import "nucleus/theme/breakpoints/base";
 
-//-------------------------------------------
+// From Gantry Hydrogen
 
+@import "gantry/contentarray";
+@import "gantry/dropdownanimations";
+@import "gantry/tables";
+@import "gantry/forms";
+@import "gantry/social";
+@import "gantry/offline";
+@import "gantry/sample";
+
+@import "gaskeun/base";
+@import "gaskeun/etc/base";

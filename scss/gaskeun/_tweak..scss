@@ -1,0 +1,17 @@
+@if $base-padding < 1 {
+
+		$base-padding: 1rem;
+	
+		#g-footer {
+			padding: 2*$base-padding 0 3*$base-padding 0;
+		}
+		
+		#g-main {
+			padding: 0 0 3*$base-padding 0;
+		}
+		
+}
+
+#g-navigation *:focus { outline: none; box-shadow: none; }
+button { text-transform: capitalize; }
+

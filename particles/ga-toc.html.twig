@@ -1,24 +1,36 @@
 {% extends '@nucleus/partials/particle.html.twig' %}
 
+
 {% block particle %}
+
+
 
 {% if particle.title %}<h3>{{ particle.title }}</h3>{% endif %}
 
 <div id="ga-toc"></div>
 
 {% endblock %}
-
+ 
 {% set inline_js %}
 document.addEventListener('DOMContentLoaded', function () {
 	var w  = document.querySelector('.fix-leftbar').offsetWidth;
 	document.querySelector('.mainbar').style.marginLeft = w+'px';
 	generateTOC('#ga-toc');
+	var n = '{{ theme_url }}';
+	var nn = 'gantry-theme://';
+
 });
-
-
 {% endset %}
 
 {% do gantry.document.addInlineScript(inline_js, 0, 'footer') %}
+
 {% block javascript_footer %}
     <script src="{{ url('gantry-theme://js/toc.js') }}"></script>
 {% endblock %}  
+
+{% block stylesheets %}
+	{% for scss in gantry.theme.configuration.css.particles %}
+		<link rel="stylesheet" href="{{ theme_url }}/css-compiled/{{ scss }}.scss" type="text/css"/>
+	{% endfor %}
+{% endblock %}
+

@@ -1,8 +1,5 @@
 /*
- * Dynamic Table of Contents script
- * by Matt Whitlock <http://www.whitsoftdev.com/>
- *
- * modified for gasken
+ * base on : Dynamic Table of Contents script. by Matt Whitlock <http://www.whitsoftdev.com/>
  *
  */
 
@@ -12,7 +9,7 @@ function ga_smooth_scroll(ele) {
 
 	event.preventDefault();
 
-	var f = document.querySelector('#g-mainbar .fix-to-top');
+	var f = document.querySelector('#g-mainbar .dock-top');
 	
 	if (f) {
 		var adjust = f.offsetHeight;

@@ -47,4 +47,8 @@
     <script src="{{ url('gantry-theme://js/toc.js') }}"></script>
 {% endblock %}  
 
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ theme_url }}/css-compiled/particles.css" />
+{% endblock %}
+
 {% do gantry.document.addInlineScript('ga_usetree()', 0, 'footer') %}

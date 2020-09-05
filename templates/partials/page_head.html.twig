@@ -10,10 +10,6 @@
         <meta name="robots" content="{{ header.robots }}">
     {% endif %}
 	
-	{% set aaa = include('meta.html', ignore_missing = true) %}
-	
-	{{ aaa|raw }}
-
 {% endblock %}
 
 {% block head_application %}
@@ -21,17 +17,10 @@
     {% block assets deferred %}
         {{ assets.css()|raw }}
         {{ assets.js()|raw }}
+
+		<script src="{{ url('gantry-assets://js/gaskeun.js') }}"></script>
+		
     {% endblock %}
-{% endblock %}
-
-{# 
-
-gasken.js need this!
-
-#}
-
-{% block javascript_footer %}
-    <script src="{{ url('gantry-assets://js/gaskeun.js') }}"></script>
 {% endblock %}
 
 {% set media_breakpoint %}

@@ -4,6 +4,8 @@ span[itemprop='name']:hover { text-decoration: underline; }
 
 // UI Fx
 
+.ga-block { position: relative; }
+
 #g-navigation li:hover span.g-menu-parent-indicator:after {
     text-shadow: 0px 0px 3px #fff;
     transition: all 1s linear;
@@ -13,34 +15,6 @@ span[itemprop='name']:hover { text-decoration: underline; }
 #g-navigation span.g-menu-parent-indicator::after {
     text-shadow: 0px 0px 2px #000;
     transition: all .5s linear;
-}
-
-@keyframes docked-top {
-	0% { margin-top: 0 }
-	10% { margin-top: -8px;  }
-	50% { margin-top: -1px; }
-	65% { margin-top: -3px }
-	100% { margin-top: 0 }
-}
-
-.scrolled .g-container {
-	box-shadow: 0px 0px 8px #0009;
-	animation: docked-top .5s linear 1;
-	transition: all 1s ease .4s;
-}
-
-.dock-top {
-	position: relative;
-	z-index: 102 !important;
-	&.pinned {
-		position: fixed !important;
-	}
-}
-
-.pinned {
-	box-shadow: 0 5px 10px #0003;
-	animation: docked-top .5s linear 1;
-	transition: all 1s ease .4s;
 }
 
 // Small Device

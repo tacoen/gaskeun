@@ -1,3 +1,9 @@
+#g-mainbar #g-navigation .g-content.g-particle { 
+    display: flex;
+    align-items: center;
+	padding-left: $content-padding*2;
+	padding-ring: $content-padding*2;
+}
 
 html.smooth {
 	scroll-behavior: smooth;

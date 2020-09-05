@@ -51,6 +51,9 @@ configuration:
     files:
       - gaskeun
       - custom
+      - particles
+    particles:
+      - particles
     persistent:
       - gaskeun
     overrides:

@@ -40,6 +40,11 @@
     {% endfor %}
 </ol>
 
-{% do gantry.document.addInlineScript('gasken_usetree()', 0, 'footer') %}
 
 {% endblock %}
+
+{% block javascript_footer %}
+    <script src="{{ url('gantry-theme://js/toc.js') }}"></script>
+{% endblock %}  
+
+{% do gantry.document.addInlineScript('ga_usetree()', 0, 'footer') %}

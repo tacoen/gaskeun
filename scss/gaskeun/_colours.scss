@@ -1,8 +1,19 @@
+@mixin ga-gradient($color,$deg:'0deg') {
+
+	background: $color;
+	background: linear-gradient(
+		unquote($deg), 
+		rgba(0,0,0,1) 0%, 
+		rgba($color,1) 15%, 
+		rgba($color,1) 70%, 
+		rgba(255,255,255,1) 100%
+	);
+}
+
 @mixin ga-bgr($color) {
 	$text-color: if(lightness($color) < 50, $white, $black);
-
-	background-color: $color;
 	color: $text-color;
+	background-color: $color;
 	a { color: $text-color }
 }
 
@@ -15,5 +26,3 @@
 .bgr-red     { @include ga-bgr($systemcolor-error-color); }
 .bgr-blue    { @include ga-bgr($systemcolor-info-color); }
 .bgr-green 	 { @include ga-bgr($systemcolor-success-color); }
-
-span[itemprop='name']:hover { text-decoration: underline; }

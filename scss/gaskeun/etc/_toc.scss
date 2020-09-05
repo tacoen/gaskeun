@@ -1,11 +1,11 @@
 
-html {
+html.smooth {
 	scroll-behavior: smooth;
 	scroll-margin-top: 1em;	
 }
 
 @media screen and (prefers-reduced-motion: reduce) {
-	html {
+	html.smooth {
 		scroll-behavior: auto;
 	}
 }

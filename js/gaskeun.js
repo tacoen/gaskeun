@@ -1,3 +1,33 @@
+function fixtop(query) {
+	var f = document.querySelector(query);
+	
+	/* init */
+	
+	f.style.width = f.offsetWidth+'px';
+
+	var top = f.offsetTop;
+	var sec = f.parentElement.closest('section')
+	
+	console.log(sec)
+
+	window.addEventListener('scroll', (event) => {	
+		var scroll = this.scrollY;
+		if (scroll >= top) {
+			f.style.position = 'fixed';
+			f.style.top = '0px';
+			f.classList.add('pinned')
+		} else {
+			f.style.position = 'relative'
+			f.classList.remove('pinned')
+		}
+	
+	});
+	
+	return f.offsetWidth
+
+}	
+
+
 function combineArray(array1, array2) {
   return [...array1, ...array2];
 }
@@ -48,26 +78,6 @@ function gaskeun_breakpoint() {
 	ghtml.classList.remove('gaskeun-mobile');
 	
 	if (media) { ghtml.classList.add(media); }
-}
-
-function gaskeun_usetree() {
-	
-	var tree = document.querySelectorAll('ol.ga-tree a:not(:last-child)');
-	for(var i = 0; i < tree.length; i++){
-		tree[i].addEventListener('click', function(e) {
-			var parent = e.target.parentElement;
-			var classList = parent.classList;
-			if(classList.contains("open")) {
-				classList.remove('open');
-				var opensubs = parent.querySelectorAll(':scope .open');
-				for(var i = 0; i < opensubs.length; i++){
-					opensubs[i].classList.remove('open');
-				}
-			} else {
-				classList.add('open');
-			}
-		});
-	}
 }
 
 function gaskeun_container_top(id) {
@@ -206,16 +216,8 @@ function gaskeun_decktop() {
 
 document.addEventListener('DOMContentLoaded', function () {
 
-	var h = document.querySelector('.dock-top');
 
-	if (h) {
-		var dc_t = h.offsetTop;
-		var dc_x = h.offsetLeft;
-		var dc_w = h.offsetWidth;
-	}
-
-	console.table (dc_x,dc_t,dc_w)
-
+	var fw = fixtop('.fix-to-top')
 
 	gaskeun_breakpoint();
 	gaskeun_container_top('#g-container-top');

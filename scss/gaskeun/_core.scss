@@ -7,31 +7,8 @@ body {
 	background-color: $base-background;
 }
 
-a { 
-	@include ga-link($link-color); 
-}
-
-main {
-	
-	min-height: 90vh;
-	
-	p:hover a { text-decoration: underline }
-	
-	p,ul,ol,blockquote { 
-		margin-top: .5rem; 
-		margin-bottom: 1rem;
-	}
-
-	h1, h2, h3, h4, h5, h6 {
-		text-transform: capitalize;
-		&:first-child { margin-top: 0 }
-	}
-	
-	h6 { text-transform: uppercase; }
-	
-	[class^='box'] { padding: 1rem; margin-bottom: 1rem; }
-	
-	
+a {
+	@include ga-link($link-color);
 }
 
 bold, strong {
@@ -86,4 +63,44 @@ h1, h2, h3, h4, h5, h6 {
 	a { @include ga-link($heading-color); }
 }
 
-#g-footer { font-size: .9em }
+#g-navigation *:focus { outline: none; box-shadow: none; }
+button { text-transform: capitalize; }
+
+#g-footer {
+
+	font-size: .9em;
+
+	@if $base-padding < 1 {
+		$padding: 1rem;
+		padding: 2*$padding 0 3*$padding 0;
+	}
+
+}
+
+
+main {
+
+	min-height: 90vh;
+
+	p:hover a { text-decoration: underline }
+
+	p,ul,ol,blockquote {
+		margin-top: .5rem;
+		margin-bottom: 1rem;
+	}
+
+	h1, h2, h3, h4, h5, h6 {
+		text-transform: capitalize;
+		&:first-child { margin-top: 0 }
+	}
+
+	h6 { text-transform: uppercase; }
+
+	[class^='box'] { padding: 1rem; margin-bottom: 1rem; }
+
+	@if $base-padding < 1 {
+		$padding: 1rem;
+		padding-bottom: 3*$padding;
+	}
+
+}

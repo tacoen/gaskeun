@@ -9,11 +9,11 @@
 ){
 
 	$section_name: #{$prefix}#{$name}#{$suffix};
-	
+
 	@if $font != $base-body-font {
-		@include import-font($font); 
+		@include import-font($font);
 	}
-	
+
 	#{$section_name} {
 		background-color: $background;
 		color: $text-color;
@@ -23,8 +23,8 @@
 
 		@if $font != $base-body-font {
 			font-family: get-font-family($font);
-		}		
-		
+		}
+
 		@if $image  {
 			background-color: darken($background,5%);
 			background-blend-mode: unquote($cover-blend-mode);
@@ -34,18 +34,22 @@
 		} @else {
 			background-color: $background;
 		}
-		
-		h1,h2,h3,h4,h5,h6 { 
+
+		h1,h2,h3,h4,h5,h6 {
 			color: $text-color;
 			font-family: inherit;
 		}
-		
+
 		a:not(.button) { @include ga-link($text-color) }
 
 	}
 
 }
 
+#g-main {
+	background: $main-background;
+	color: $main-text-color;
+}
 
 @include ga-section(
 	'header',
@@ -54,7 +58,7 @@
 	$header-background,
 	$header-text-color,
 	$header-font,
-	$header-image 
+	$header-image
 );
 
 @include ga-section(
@@ -63,9 +67,9 @@
 	'',
 	$footer-background,
 	$footer-text-color,
-	$footer-font 
+	$footer-font
 );
- 
+
 @include ga-section(
 	'showcase',
 	'#g-',
@@ -73,9 +77,9 @@
 	$showcase-background,
 	$showcase-text-color,
 	$showcase-font,
-	$showcase-image 
+	$showcase-image
 );
- 
+
 @include ga-section(
 	'features',
 	'#g-',
@@ -83,7 +87,7 @@
 	$features-background,
 	$features-text-color,
 	$features-font,
-	$features-image 
+	$features-image
 );
 
 @include ga-section(
@@ -93,7 +97,7 @@
 	$sub-features-background,
 	$sub-features-text-color,
 	$sub-features-font,
-	$sub-features-image 
+	$sub-features-image
 );
 
 @include ga-section(
@@ -104,11 +108,3 @@
 	$navigation-text-color,
 	$navigation-font
 );
-
-
-#g-main {
-	background: $main-background;
-	color: $main-text-color;
-}
-
-

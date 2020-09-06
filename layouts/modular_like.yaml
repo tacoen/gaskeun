@@ -43,7 +43,7 @@ structure:
   navigation:
     type: section
     attributes:
-      variations: deck-top      
+      variations: dock-top      
   main:
     attributes:
       boxed: ''

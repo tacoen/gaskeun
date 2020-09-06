@@ -1,3 +1,6 @@
+.search-wrapper {
+    padding: .5rem;
+}
 
 #ga-searchbox {
 
@@ -25,7 +28,9 @@
 
 	.search-input {
 		width: 0;
-		border: 1px solid #00000000;		
+		border: 1px solid #00000000;
+		outline: none;		
+		box-shadow: none;
 		transition: all .25s linear;
 	}
 	
@@ -34,6 +39,7 @@
 		
 		.search-input {
 			width:100%;
+			background: #fff;
 			border-bottom: 1px dotted #0006;
 			&:hover,
 			&:focus {
@@ -46,4 +52,8 @@
 
 .gaskeun-mobile .g-offcanvas-right #ga-searchbox {
     flex-flow: row-reverse;
+}
+
+.gaskeun-mobile #ga-searchbox {
+		position: relative;
 }

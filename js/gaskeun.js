@@ -25,29 +25,43 @@ function ga_breakpoint_tagging() {
 	if (media) { html.classList.add(media); }
 }
 
-function ga_fixtop(query) {
+function ga_fixtop(query,shadow=false) {
+	
 	var f = document.querySelector(query);
 	
 	if (f){
 		
 		/* init */
-		f.style.width = f.offsetWidth+'px';
+		// f.style.width = f.offsetWidth+'px';
+		
 		var top = f.offsetTop;
+		var ori_w = f.style.width
+		
+		if (shadow) { ga_topshadow(query) }
+		
+		//console.log(sec)
 		
 		/* scroll event */
 		window.addEventListener('scroll', (event) => {	
 			var scroll = this.scrollY;
-			if (scroll >= top) {
+			if (scroll > top) {
 				f.style.position = 'fixed';
 				f.style.top = '0px';
+				f.style.width='100%';
 				f.classList.add('pinned')
 			} else {
-				f.style.position = 'relative'
-				f.classList.remove('pinned')
+				console.log('unpin',f);
+				f.style.width='auto';
+				f.style.position = 'relative';
+				f.classList.remove('pinned');
+				if (shadow) {
+					ga_topshadow(query,true);
+				}
 			}
 		});
-	
+
 		return true;
+
 		
 	} else {
 		
@@ -138,16 +152,33 @@ function ga_bottom(query) {
 
 }	
 
-function ga_topshadow(ele) {
+function ga_topshadow(query, remove_element=false) {
 
-	if(!document.querySelector('.g-top-shadow')) {
-		var c = document.querySelector(ele);
-		var shadow = document.createElement("div");
-		document.body.prepend(shadow);
-		if (! shadow.classList.contains('g-top-shadow')) {
-			shadow.classList.add('g-top-shadow');
-			shadow.style.height = c.offsetHeight+'px';
+	var ele = document.querySelector(query);
+	
+	if (ele) {
+
+		var gs = document.querySelector('.g-top-shadow')
+	
+		if(gs) {
+			
+			if (remove_element) {
+				gs.style.display='none';
+			} else {
+				gs.style.display='block';
+			}
+		
+		} else {
+			
+			var shadow = document.createElement("div");
+			document.body.prepend(shadow);
+			if (! shadow.classList.contains('g-top-shadow')) {
+				shadow.classList.add('g-top-shadow');
+				shadow.style.height = ele.offsetHeight+'px';
+			}
+			
 		}
+	
 	}
 }
 
@@ -155,11 +186,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
 	ga_breakpoint_tagging();
 
-	var f = ga_fixtop('.fix-to-top');
-	var ct = ga_fixtop('#g-container-top'); 
-	var dt = ga_fixtop('.dock-top'); 
-
-	if (ct) { ga_topshadow('#g-container-top') }
+	var f = ga_fixtop('.fix-at-top',true);
+	var ct = ga_fixtop('#g-container-top',true); 
+	var dt = ga_fixtop('.dock-top',false); 
 
 	ga_bottom('#g-container-bottom');	
 	
@@ -169,11 +198,9 @@ window.addEventListener('resize', function() {
 
 	ga_breakpoint_tagging();
 
-	var f = ga_fixtop('.fix-to-top');
-	var ct = ga_fixtop('#g-container-top'); 
-	if (ct) { ga_topshadow('#g-container-top') }
-	var dt = ga_fixtop('.dock-top'); 
-
+	var f = ga_fixtop('.fix-at-top',true);
+	var ct = ga_fixtop('#g-container-top',true); 
+	var dt = ga_fixtop('.dock-top',false); 
 
 
 });

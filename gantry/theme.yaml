@@ -61,10 +61,6 @@ configuration:
 
 
   section-variations:
-    Position:
-      fix-to-top: Fix at Top
-      fix-to-bottom: Fix at Bottom
-      dock-top: Dock it on Top
     Image Background:
       ga-cover-1: Cover 1
       ga-cover-2: Cover 2
@@ -75,23 +71,23 @@ configuration:
       center: Center
       nomarginall: No Margin
       nopaddingall: No Padding
-
-  block-variations:
-    Box Variations:
-      box1: Box 1
-      box2: Box 2
-      box3: Box 3
-      box4: Box 4
     Effects:
       shadow: Shadow 1
       shadow2: Shadow 2
       rounded: Rounded
       square: Square
-    Image Background:
-      ga-cover-1: Cover 1
-      ga-cover-2: Cover 2
-      ga-cover-3: Cover 3
-      ga-cover-4: Cover 4
+    Box Variations:
+      box1: Box 1
+      box2: Box 2
+      box3: Box 3
+      box4: Box 4
+
+  block-variations:
+    Function:
+      dock-top: Dock it on Top
+      fix-at-top: Fix at Top
+      fix-at-left: Fix at left
+      toggleable: toggleable
     Utility:
       disabled: Disabled
       align-right: Align Right

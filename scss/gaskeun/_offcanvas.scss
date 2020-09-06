@@ -28,21 +28,29 @@
 .g-offcanvas-toggle {
 	position: fixed;
 	z-index: 9999;
-	top: $content-padding; 
-	left: $content-padding;
+	top: 0;
+	left: 0;
+	width: 67px;
+	height: 67px;
 	font-size: $core-font-size + 0.5;
 	color: $offcanvas-toggle-color;
 	@if $offcanvas-toggle-visibility == 1 {
 		display: none;
 		@media only all and (max-width: $breakpoints-mobile-menu-breakpoint) {
-			display: block;
+			display: flex !important;
+			justify-content: center;
+			align-items: center;
 		}
 	} @else {
-		display: block !important;
+		display: flex !important;
+		justify-content: center;
+		align-items: center;
 	}
 }
 
+
 // Mobile Menu
+
 #g-offcanvas {
 	#g-mobilemenu-container {
 		ul {
@@ -92,10 +100,7 @@
 }
 
 @media print {
-	#g-offcanvas {
-		background: #fff !important;
-		color: #000 !important;
-	}
+	#g-offcanvas { display: none }
 }
 
 .g-offcanvas-open {

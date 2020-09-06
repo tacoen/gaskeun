@@ -69,6 +69,8 @@ function ga_treelink(href, innerHTML) {
 	return a;
 }
 
+
+
 function generateTOC(query) {
 
 	var toc = document.querySelector(query);
@@ -103,4 +105,64 @@ function generateTOC(query) {
 			toc.appendChild(h2item = document.createElement("li")).appendChild(ga_treelink("#section" + section, node.innerHTML));
 		}
 	}
+}
+
+function ga_toc_init() {
+
+	var tb = document.querySelector('.toggleable-button') 
+	var tc = document.querySelector('.toggleable')
+	var ts = document.querySelector('.toggleable-content')
+	var tw = tc.getAttribute('data-position');
+	var tl = tc.offsetWidth;
+	tb.setAttribute('active',0)
+
+	var ori_w = ts.offsetWidth;
+	tc.style.left = 0;
+	ts.style.marginLeft= tl+'px';
+	ts.style.width = ori_w+'px';
+	
+	tb.onclick = function() {
+		
+		var a = tb.getAttribute('active')
+
+		if (a==0) {
+			tb.setAttribute('active',1)
+			tc.style.left = -tl+'px';
+			ts.style.marginLeft= 0;		
+			ts.style.width = '100%';
+			if (!ts.classList.contains('size-100')) {
+				ts.classList.add('size-100');
+			}
+		} else {
+			tb.setAttribute('active',0)
+			tc.style.left = 0;
+			ts.style.marginLeft= tl+'px'
+			ts.style.width = ori_w+'px'
+			if (ts.classList.contains('size-100')) {
+				ts.classList.remove('size-100');
+			}
+		}
+			
+	};
+
+	document.addEventListener('DOMContentLoaded', function () {
+		generateTOC('#ga-toc');
+	});
+
+	window.addEventListener('resize', function() {
+
+	var tb = document.querySelector('.toggleable-button') 
+	var tc = document.querySelector('.toggleable')
+	var ts = document.querySelector('.toggleable-content')
+	var tw = tc.getAttribute('data-position');
+	var tl = tc.offsetWidth;
+	tb.setAttribute('active',0)
+
+	var ori_w = ts.offsetWidth;
+	tc.style.left = 0;
+	ts.style.marginLeft= tl+'px';
+	ts.style.width = ori_w+'px';
+
+	});
+	
 }

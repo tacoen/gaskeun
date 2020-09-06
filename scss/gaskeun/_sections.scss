@@ -51,6 +51,12 @@
 	color: $main-text-color;
 }
 
+#g-sidebar {
+	background: $main-background;
+	color: $main-text-color;
+}
+
+
 @include ga-section(
 	'header',
 	'#g-',

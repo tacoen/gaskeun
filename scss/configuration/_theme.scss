@@ -127,7 +127,15 @@ $cover-background-4: false !default;
 $heading-font: $base-heading-font !default;
 $heading-text-color: $base-heading-text-color !default;
 
-$border-radius: .25rem;
+// after-zeroing
+
+$base-border-color: $content-box-color !default;
+$base-box-shadow: 0 3px 8px #0004 !default;
+$border-color-hover: $content-box-color !default;
+$border-color-focus: $content-box-color !default;
+
+
+$border-radius: .25rem !default;
 $core-border-radius: $border-radius;
 
 $core-text: $base-text-color;
@@ -138,6 +146,7 @@ $border-color: $content-box-color;
 $code-bg: $content-box-color;
 $pre-bg: $content-box-color;
 $pre-text: $content-box-color;
+
 
 $main-bg: $main-background;
 

@@ -1,0 +1,59 @@
+$boxes: (
+	accent-1: $accent-color-1,
+	accent-2: $accent-color-2,
+	accent-3: $accent-color-3,
+	accent-4: $accent-color-4,
+	box-1: $box-background-1,
+	box-2: $box-background-2,
+	box-3: $box-background-3,
+	box-4: $box-background-4
+);
+
+$covers: (
+	cover-1: $cover-background-1,
+	cover-2: $cover-background-2,
+	cover-3: $cover-background-3,
+	cover-4: $cover-background-4
+);
+
+@each $name, $color in $boxes {
+
+	.#{$name} {
+		--text: textcolor-tint($color);
+		--bg: $color;
+		--border: rgba($color,0.3);
+	}
+
+}
+
+[class*='box-'],
+[class*='accent-'] {
+	padding-bottom: $content-padding*2;
+	background: var(--bg);
+	color: var(--text);
+	@include block-container();
+}
+
+[class*='ga-cover-'] {
+	padding: $content-padding*4;
+	background-color: var(--bg);
+	color: var(--text);
+	background-blend-mode: unquote($cover-blend-mode) !important;
+	background-size: cover;
+	background-position: 50% 50%;
+	background-image: var(--background);
+	@include block-container();
+}
+
+
+@each $name, $background in $covers {
+
+	.ga-#{$name} {
+		$color: #444;
+		--background: url($background);
+		--bg: $color;
+		--text: textcolor-tint($color);
+		--border: rgba($color,0.3);
+	}
+
+}

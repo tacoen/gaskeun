@@ -1,0 +1,106 @@
+#g-offcanvas {
+	background-color: $offcanvas-background;
+	width: $offcanvas-width;
+	color: $navigation-text-color;
+	a { @include link ($navigation-text-color) }
+
+	h1, h2, h3, h4, h5, h6, strong {
+		color: $navigation-text-color;
+	}
+
+	.button {
+		background-color: $accent-color-2;
+		color: $navigation-text-color;
+		&:hover {
+			background-color: $navigation-hover-background;
+		}
+		&:active {
+			background-color: $navigation-active-background;
+		}
+	}
+}
+
+.g-offcanvas-toggle {
+	
+	font-size: $core-font-size + 0.5;
+	color: $offcanvas-toggle-color;
+
+	@if $offcanvas-toggle-visibility == 1 {
+		display: none;
+		@media only all and (max-width: $breakpoints-mobile-menu-breakpoint) {
+			display: block;
+		}
+	} @else {
+		display: block !important;
+	}
+}
+
+// Mobile Menu
+#g-offcanvas {
+	#g-mobilemenu-container {
+		ul {
+			background-color: $offcanvas-background;
+			> li {
+				> .g-menu-item-container {
+					color: $navigation-text-color;
+				}
+				&:not(.g-menu-item-type-particle):not(.g-menu-item-type-module) {
+					&:hover {
+						background-color: $navigation-hover-background;
+					
+					}
+					
+					&.active {
+						background-color: $navigation-active-background;
+
+						> .g-menu-item-container {
+							color: $navigation-text-color;
+						}
+					}
+				}
+				&.g-menu-item-link-parent {
+					> .g-menu-item-container {
+						> .g-menu-parent-indicator {
+							border: 1px solid lighten($accent-color-1, 6%);
+							background-color: $navigation-active-background;
+							&:hover {
+								background-color: $navigation-hover-background;
+							}
+							border-radius: $core-border-radius;
+							margin: -0.2rem 0 -0.2rem 0.5rem;
+							padding: 0.2rem;
+						}
+					}
+				}
+			}
+			.g-dropdown-column {
+				width: $offcanvas-width;
+			}
+		}
+	}
+}
+
+#g-mobilemenu-container {
+	margin: -($content-padding + $content-margin);
+}
+
+@media print {
+	#g-offcanvas {
+		background: #fff !important;
+		color: #000 !important;
+	}
+}
+
+.g-offcanvas-open {
+	.g-offcanvas-left {
+		#g-page-surround {
+			left: $offcanvas-width;
+		}
+	}
+
+	.g-offcanvas-right {
+		#g-page-surround {
+			right: $offcanvas-width;
+		}
+	}
+}

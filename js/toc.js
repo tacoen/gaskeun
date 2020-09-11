@@ -127,6 +127,7 @@ function ga_toc_init() {
 
 		if (a==0) {
 			tb.setAttribute('active',1)
+			tb.innerHTML='<a class="toggle"><i class="fa fa-arrow-right"></i></a>';
 			tc.style.left = -tl+'px';
 			ts.style.marginLeft= 0;		
 			ts.style.width = '100%';
@@ -135,6 +136,7 @@ function ga_toc_init() {
 			}
 		} else {
 			tb.setAttribute('active',0)
+			tb.innerHTML='<a class="toggle"><i class="fa fa-arrow-left"></i></a>';
 			tc.style.left = 0;
 			ts.style.marginLeft= tl+'px'
 			ts.style.width = ori_w+'px'

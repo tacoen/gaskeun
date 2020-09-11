@@ -1,0 +1,31 @@
+name: Content
+description: Content
+type: core
+
+form:
+  fields:
+
+    box-color:
+      type: input.colorpicker
+      label: Boxes bacground
+      default: "#f0f0f0"
+    fnote:
+      type: separator.note
+      class: nulled
+      content: <div style='padding: 0 10px 0 185px'><a onclick="javascript:gasp('[content][box-color]','[accent][color-4]')">Use Sub Color</a></div>
+
+    padding:
+      type: input.text
+      label: Content Padding
+      pattern: '\d+(\.\d+){0,1}(rem|em|ex|ch|vw|vh|vmin|vmax|%|px|cm|mm|in|pt|pc)'
+      default: 0.5rem
+    margin:
+      type: input.text
+      label: Content Margin
+      pattern: '\d+(\.\d+){0,1}(rem|em|ex|ch|vw|vh|vmin|vmax|%|px|cm|mm|in|pt|pc)'
+      default: 0.5rem
+    overlay:
+      type: input.colorpicker
+      label: Overlay
+      default: 'rgba(0, 0, 0, 0.41)'
+

@@ -1,0 +1,19 @@
+name: Sidebar
+type: section
+
+form:
+  fields:
+
+    background:
+      type: input.colorpicker
+      label: Background
+    text-color:
+      type: input.colorpicker
+      label: Text Color
+    font:
+      type: input.fonts
+      label: Section Font
+    image:
+      type: input.imagepicker
+      label: Background Image
+      

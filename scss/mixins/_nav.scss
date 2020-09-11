@@ -1,26 +1,19 @@
-
-%dropdown-column {
-	width: $menu-col-width;
-}
-
 // Touch Indicators
 
-@mixin main-nav-indicators(
-	$section-background: $navigation-background, 
-	$section-text-color: $navigation-text-color
-	) {
+@mixin main-nav-indicators() {
+
 	.g-menu-hastouch {
 		.g-toplevel {
 			> li {
 				&.g-menu-item-link-parent {
 					> .g-menu-item-container {
 						> .g-menu-parent-indicator {
-							border: 1px solid lighten($section-background, 6%);
-							background: lighten($section-background, 4%);
+							border: 1px solid var(--touch-border);
+							background: var(--touch-bg);
 							&:active {
-								background: lighten($section-background, 8%);
+								background: var(--touch-border);
 							}
-							border-radius: $core-border-radius;
+							border-radius: $border-radius;
 							margin: -0.2rem 0 -0.2rem 0.5rem;
 							padding: 0.2rem;
 							&:after {
@@ -33,7 +26,7 @@
 					&.g-menu-item-link-parent {
 						> .g-menu-item-container {
 							> .g-menu-parent-indicator {
-								color: $section-text-color;
+								color: var(--section-text);
 							}
 						}
 					}
@@ -47,12 +40,12 @@
 				&.g-menu-item-link-parent {
 					> .g-menu-item-container {
 						> .g-menu-parent-indicator {
-							border: 1px solid lighten($section-background, 6%);
-							background: lighten($section-background, 4%);
+							border: 1px solid var(--touch-border);
+							background: var(--touch-bg);
 							&:active {
-								background: lighten($section-background, 8%);
+								background: var(--touch-border);
 							}
-							border-radius: $core-border-radius;
+							border-radius: $border-radius;
 							padding: 0.1rem;
 							margin-top: -0.1rem;
 							margin-right: -0.1rem;
@@ -94,7 +87,6 @@
 			align-items: center; 
 			height: 100%;
 			transition: all 1s ease;
-			
 		}
 
 		.g-menu-item-type-link a { display: block; }
@@ -102,14 +94,14 @@
 		.g-selected { 
 			background-color: $hover-background; 
 			color: $hover-text-color; 
-			a { @include ga-link($hover-text-color); }
+			a { @include link($hover-text-color); }
 		}
 	
 		.active  { 
 			color: $active-text-color; 
 			background-color: $active-background; 
 
-			a { @include ga-link($active-text-color); }
+			a { @include link($active-text-color); }
 		}
 
 		ul.g-dropdown { 

@@ -1,0 +1,22 @@
+name: Colours
+type: palletes
+
+form:
+  fields:
+
+    yellow:
+      type: input.colorpicker
+      label: Warning
+      default: '#ffcc11'
+    red:
+      type: input.colorpicker
+      label: Error
+      default: '#cc1111'
+    blue:
+      type: input.colorpicker
+      label: Info
+      default: '#1111cc'
+    green:
+      type: input.colorpicker
+      label: Success
+      default: '#11cc11'

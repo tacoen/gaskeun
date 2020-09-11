@@ -1,8 +1,4 @@
-@mixin ga-link($color: $link-color) {
-	color: $color;
-	&:hover { color: darken($color, 10%);  }
-	&:focus { color: darken($color, 15%); }
-	&:active { color: lighten($color, 15%); }
-}
-
-@import "nav"
+@import "vars";
+@import "function";
+@import "nav";
+@import "shorts";

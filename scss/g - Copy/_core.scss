@@ -1,0 +1,16 @@
+// Font Import
+
+a { @include link($link) }
+a:not(.button).primary { @include link($primary-link) }
+a:not(.button).secondary { @include link($secondary-link) }
+
+pre {
+	background-color: var(--pre-bg);
+	border: 1px solid var(--pre-border);
+	color: var(--pre-text);
+}
+
+footer {
+	font-size: .9rem;
+}
+

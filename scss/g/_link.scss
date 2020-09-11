@@ -1,0 +1,8 @@
+a:not(.button) {
+	color: var(--link);
+	&:hover { color: var(--hover); }
+	&:focus { color: var(--focus); }
+	&:active { color: var(--active); }	
+}
+
+p:hover a:not(.button) { text-decoration: underline; } 

@@ -1,5 +1,5 @@
 name: Offcanvas Section
-description: Paramters for the Off Canvas sidepanel section.
+description: Parameters for the Off Canvas sidepanel section.
 type: core
 
 form:
@@ -9,6 +9,10 @@ form:
       type: input.colorpicker
       label: Background
       default: "#ffcc33"
+    fnote:
+      type: separator.note
+      class: nulled
+      content: <div style='padding: 0 10px 0 185px'><a onclick="javascript:gasp('[offcanvas][background]','[navigation][background]')">Use Navigation Color</a></div>
     width:
       type: input.text
       label: Panel Width

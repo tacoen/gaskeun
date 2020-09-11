@@ -1,0 +1,17 @@
+@mixin link($color: $link-color) {
+	&:hover { color: lighten($color, 10%);  }
+	&:focus { color: lighten($color, 5%); }
+	&:active { color: darken($color, 15%); }
+}
+
+@mixin clean() {
+	background: none !important;
+	outline: none !important;
+	border: none !important;
+}
+
+
+@mixin nofirstchild() {
+	:first-child { border-bottom: none }
+}
+

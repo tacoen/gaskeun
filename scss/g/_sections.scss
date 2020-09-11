@@ -1,0 +1,55 @@
+.modular-row,
+[id^=g-] {
+	color: var(--section-text);
+	background: var(--section-bg);
+	font-family: var(--section-font);	
+}
+
+.modular-row {
+	padding: 6rem 4rem;
+	text-align: center;
+	h1,h2,h3,h4,h5,h6 { color: var(--section-text); }
+	a:not(.button) { color: var(--section-text); }
+	@include nofirstchild();
+	font-size: 1.2rem;
+	p { margin-bottom: 1.5rem; }
+	p:last-child { margin-bottom: 0 }
+}
+
+
+// sections base
+
+@each $name, $set in $sections {
+
+	$prefix: "#g-";
+	$suffix: "";
+	$naming: #{$prefix}#{$name}#{$suffix};
+
+	@if map-get($set,'modular') {
+		$m: ', .modular .';
+		$mn: #{$m}#{$name}; 
+		$naming: #{$prefix}#{$name}#{$suffix}#{$mn};
+	}	 
+	
+	#{$naming} {
+	
+		$bg: map-get($set,'bg');
+		$txt: map-get($set,'txt');
+		$img: map-get($set,'img');
+		$font: map-get($set,'font');
+		
+		@if img == '' { $img: false; }
+		
+		@if isnt-same($font, $base-font) {	--section-font: get-font-family($font); }
+		@if isnt-same($bg, $base-background) {	--section-bg: $bg; }
+		@if isnt-same($txt, $base-text-color) { --section-text: $txt; }
+	
+		@if $img {
+			--section-bg: maxdarken($bg,30);
+			--section-text: maxlighten($bg,95);		
+			background-image: url($img);
+			@extend %box-cover;
+		}
+	}
+			
+}

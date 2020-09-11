@@ -1,0 +1,16 @@
+name: Sytle Option
+description: Style Option
+type: configuration
+
+form:
+  fields:
+    grav_css:
+      type: input.checkbox
+      label: Import Grav CSS
+      description: Grav CSS
+      default: false
+    hydrogen_css:
+      type: input.checkbox
+      label: Import Hydrogen CSS
+      description: hydrogen CSS
+      default: false

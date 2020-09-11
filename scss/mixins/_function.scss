@@ -1,0 +1,23 @@
+// function
+
+@function isnt-same($var1,$var2: false ) {
+	@if $var1 == $var2 { 
+		@return false; 
+	} @else {
+		@return true
+	}
+}  
+
+@function maxlighten($color,$target:95) {
+	$val: $target - floor(lightness($color));
+	@if $val < 0 { $val: 0%; }
+	@if $val > $target { $val: $target/100; }
+	@return lighten($color,$val);
+}
+
+@function maxdarken($color,$target:35) {
+	$val: floor(lightness($color))-$target;
+	@if $val < 0 { $val: 0%; }
+	@if $val > $target { $val: $target/100; }
+	@return darken($color,$val);
+}

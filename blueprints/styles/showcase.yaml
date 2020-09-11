@@ -1,5 +1,4 @@
 name: Showcase
-description: Showcase colors for the Gasken theme
 type: section
 
 form:
@@ -8,12 +7,21 @@ form:
     background:
       type: input.colorpicker
       label: Background
-      default: "#001122"
-    image:
-      type: input.imagepicker
-      label: Image
-      description: Select the background image.
+      default: "#336699"
+
+    fnote:
+      type: separator.note
+      class: nulled
+      content: <div style='padding: 0 10px 0 185px'><a onclick="javascript:gasp('[showcase][background]','[accent][color-1]')">Use Primary Color</a></div>
+      
     text-color:
       type: input.colorpicker
-      label: Text
+      label: Text Color
       default: "#ffffff"
+    font:
+      type: input.fonts
+      label: Section Font
+    image:
+      type: input.imagepicker
+      label: Background Image
+      

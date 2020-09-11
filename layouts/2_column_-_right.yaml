@@ -1,7 +1,7 @@
 version: 2
 preset:
   image: 'gantry-admin://images/layouts/fixtop.png'
-  name: Gasken - Sidebar Right
+  name: gasken - Sidebar Right
   
 layout:
   /top/:

@@ -1,0 +1,15 @@
+name: Scroll Bar
+description: Scroll bar
+type: configuration
+
+form:
+  fields:
+
+    color:
+      type: input.colorpicker
+      label: Bar Color
+
+    track:
+      type: input.colorpicker
+      label: Track Color
+

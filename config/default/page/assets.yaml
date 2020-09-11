@@ -1,11 +1,4 @@
 favicon: ''
 touchicon: ''
 css: {  }
-javascript:
-  -
-    location: 'gantry-assets://js/gaskeun.js'
-    inline: 'console.log(''gaskeun!'')'
-    in_footer: '1'
-    extra: {  }
-    priority: '0'
-    name: gaskeun
+javascript: {}

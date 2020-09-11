@@ -58,9 +58,18 @@
     {{ gantry.document.getHtml('body_bottom')|join("\n    ")|raw }}
 {% endset -%}
 
-{%- do gantry.document.addScript(url('gantry-assets://js/main.js'), 11, 'footer') -%}
-
 {# Head and footer needs to come last because of any of the above blocks may have CSS or JavaScript in them #}
+
+{# gaskeun added //------- #}
+
+	{%- do gantry.document.addScript(url('gantry-assets://js/main.js'), 11, 'footer') -%}
+	{%- do gantry.document.addScript(url('gantry-assets://js/gaskeun.js'), 11, 'footer') -%}
+	{% set media_breakpoint %}
+	var gaskeun_media_breakpoint = {'wide':{{ 16*gantry.config.get('styles.breakpoints.large-desktop-container')|number_format }},'desktop':{{ 16*gantry.config.get('styles.breakpoints.desktop-container')|number_format}},'tablet':{{ 16*gantry.config.get('styles.breakpoints.tablet-container')|number_format}},'mobile':{{ 	16*gantry.config.get('styles.breakpoints.large-mobile-container')|number_format}}}
+	{% endset %}
+	{% do gantry.document.addInlineScript(media_breakpoint|trim, 0, 'footer') %}
+
+{# //------- #}
 
 {%- set page_head %}
     {% block page_head -%}

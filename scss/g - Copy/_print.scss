@@ -1,0 +1,15 @@
+@media print {
+
+	@each $name, $data in $sections {
+	
+		#g-#{name} {
+			background: #fff !important;
+			color: #000 !important;
+		}
+	
+	}
+
+	#g-offcanvas { display: none }
+	#g-navigation { display: none }
+
+}

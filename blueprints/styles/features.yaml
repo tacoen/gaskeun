@@ -1,5 +1,4 @@
 name: Features
-description: Feature colors for the Gasken theme
 type: section
 
 form:
@@ -8,12 +7,20 @@ form:
     background:
       type: input.colorpicker
       label: Background
-      default: "#f0f0f0"
-    image:
-      type: input.imagepicker
-      label: Image
-      description: Select the background image.
+      default: "#ff9911"
+    fnote:
+      type: separator.note
+      class: nulled
+      content: <div style='padding: 0 10px 0 185px'><a onclick="javascript:gasp('[features][background]','[accent][color-2]')">Use Secondary Color</a></div>
+
     text-color:
       type: input.colorpicker
-      label: Text
-      default: "#222222"
+      label: Text Color
+      default: "#ffffff"
+    font:
+      type: input.fonts
+      label: Section Font
+    image:
+      type: input.imagepicker
+      label: Background Image
+      

@@ -1,0 +1,38 @@
+@each $name, $data in $sections {
+
+	$prefix: "#g-";
+	$suffix: "";
+	$naming: #{$prefix}#{$name}#{$suffix};
+
+	@if map-get($data,'modular') {
+		$m: ', .modular .';
+		$mn: #{$m}#{$name}; 
+		$naming: #{$prefix}#{$name}#{$suffix}#{$mn};
+	}	 
+	
+	#{$naming}{
+		
+		$bg: #999999;
+		@if map-get($data,'bg') { $bg: map-get($data,'bg'); }
+		@if map-get($data,'txt') { color: map-get($data,'txt'); }		
+
+		@if map-get($data,'font') { 
+			@if isnt-same(map-get($data,'font'), $base-font) {		
+				font-family: get-font-family(map-get($data,'font')); 
+			}
+		}
+		
+		@if map-get($data,'img') { 
+			background-image: url(map-get($data,'img')); 
+			@include background-cover($bg);
+		} @else {
+			@if isnt-same($bg,$base-background) {
+				background-color: $bg;
+			}
+		}
+
+		@if map-get($data,'modular') { @include modular-default(map-get($data,'txt')); }
+		
+	}
+
+}

@@ -1,5 +1,4 @@
-name: Sub Features
-description: Feature colors for the Gasken theme
+name: Sub-Features
 type: section
 
 form:
@@ -8,12 +7,18 @@ form:
     background:
       type: input.colorpicker
       label: Background
-      default: "#dddddd"
-    image:
-      type: input.imagepicker
-      label: Image
-      description: Select the background image.
+      default: "#cccccc"
+    fnote:
+      type: separator.note
+      class: nulled
+      content: <div style='padding: 0 10px 0 185px'><a onclick="javascript:gasp('[sub-features][background]','[accent][color-4]')">Use Sub Color</a></div>
     text-color:
       type: input.colorpicker
-      label: Text
-      default: "#222222"
+      label: Text Color
+      default: "#ffffff"
+    font:
+      type: input.fonts
+      label: Section Font
+    image:
+      type: input.imagepicker
+      label: Background Image

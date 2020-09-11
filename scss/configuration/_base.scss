@@ -1,2 +1,11 @@
-@import "default";
+// From nucleus grav
+@import "default/depend";
+
+// From hydrogen default
+@import "default/hydrogen";
+
+// From gantry blueprint
 @import "theme";
+
+// default pre-mixing
+@import "default/pre-mixing";

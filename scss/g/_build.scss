@@ -1,0 +1,57 @@
+@mixin link-a-dinky($color) {
+	--link: $color;
+	--hover: lighten($color, 15%);
+	--focus: lighten($color, 10%);
+	--active: darken($color,15%);
+	--visited: $color;
+}
+
+
+// color base
+
+@each $name, $set in $colours {
+
+	$alias: map-get($set,'alias');
+
+	@if map-get($set,'table') {
+		.#{$name} table,table.#{$name} { @include table(map-get($set,'color')); }
+	}
+	
+	@if map-get($set,'notices') {
+		.notices.#{$alias},
+		.notices.#{$name} { @include notices(maxlighten(map-get($set,'color'),95), map-get($set,'color')); }
+	}
+
+	@if map-get($set,'button') {
+		a.button,
+		button{
+			&.#{$alias},
+			&.#{$name} { @include button(map-get($set,'color')); }
+		}
+	}
+
+	@if map-get($set,'alert') {
+		$icon: map-get($alert_fa_icon, $alias);
+		.alert-#{$alias} { @include alerting(map-get($set,'color'), $icon); }
+	}
+	
+	a:not(.button) {
+		@if $alias {
+			&.#{$alias}, &.#{$name} { @include link-a-dinky(map-get($set,'color')); }
+		} @else {
+			&.#{$name} { @include link-a-dinky(map-get($set,'color')); }
+		}
+	}
+
+	@if map-get($set,'box') {
+	
+		.box {
+			&.#{$name} { @include box(map-get($set,'color'),map-get($set,'image')); }
+		}
+		
+	}
+
+}
+
+
+

@@ -1,5 +1,5 @@
 name: Navigation
-description: Navigation colors for the Gasken theme
+description: Navigation colors for the gasken theme
 type: core
 
 form:
@@ -7,11 +7,14 @@ form:
     font:
       type: input.fonts
       label: Navigation Font
-      default: 'roboto, sans-serif'
     background:
       type: input.colorpicker
       label: Background
       default: "#ffcc33"
+    fnote:
+      type: separator.note
+      class: nulled
+      content: <div style='padding: 0 10px 0 185px'><a onclick="javascript:gasp('[navigation][background]','[basic][navigation]')">Use Basic</a></div>
     text-color:
       type: input.colorpicker
       label: Text
@@ -24,14 +27,14 @@ form:
       type: input.colorpicker
       label: Hover text
       default: "#111111"
-    active-text-color:
-      type: input.colorpicker
-      label: Active Text Color
-      default: "#111133"
     active-background:
       type: input.colorpicker
       label: Active Background
       default: "rgba(255, 32, 32, 0.3)"
+    active-text-color:
+      type: input.colorpicker
+      label: Active Text Color
+      default: "#111133"
     overlay:
       type: input.colorpicker
       label: Overlay

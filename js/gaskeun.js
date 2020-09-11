@@ -5,6 +5,26 @@
  
 // Global references
 
+
+
+function coba() {
+	console.log('he')
+	var is = document.querySelectorAll('.coba .fa')
+	for (i=0; i < is.length; ++i) { 
+		ic = is[i]
+		
+		var ico = escape ( window.getComputedStyle(ic,':before').getPropertyValue('content')).replace('%u','\\').replaceAll('%22','').toLowerCase()
+		
+		var ain = ic.classList.value;
+		
+		console.log(ico)
+		
+		ic.innerText=ain + '=' +ico
+		
+	}
+}
+
+
 var html = document.querySelector('html')
 var body = document.querySelector('body')
 
@@ -50,7 +70,7 @@ function ga_fixtop(query,shadow=false) {
 				f.style.width='100%';
 				f.classList.add('pinned')
 			} else {
-				console.log('unpin',f);
+				//console.log('unpin',f);
 				f.style.width='auto';
 				f.style.position = 'relative';
 				f.classList.remove('pinned');

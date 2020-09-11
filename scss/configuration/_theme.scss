@@ -1,87 +1,160 @@
+$font-family-mono: "Menlo", "Monaco", monospace !default;
+$font-family-serif: "Georgia", "Times", "Times New Roman", serif !default;
+$font-weight-bold: 700 !default;
+$font-weight-light: 300 !default;
+$font-weight-regular: 400 !default;
+$font-weight-medium: 500 !default;
+$black: #000000 !default;
+$white: #ffffff !default;
+$light-gray: #ddd !default;
+$dark-gray: #999 !default;
 
-$main-font: 					$base-body-font !default;
-$footer-font: 					$base-body-font !default;
-$header-font: 					$base-body-font !default;
-$features-font:			 		$base-body-font !default;
-$sub-features-font: 			$base-body-font !default;
-$showcase-font:			 		$base-body-font !default;
-$navigation-font: 				$base-body-font !default;
+$option-grav_css: false !default;
+$option-hydrogen_css: false !default;
 
-// Base
-$base-background:				#ffffff !default;
-$base-text-color:				#111111 !default;
-$base-border-color:				#dddddd !default;
+// See: gantry5/theme.yaml
 
-$border-color-hover:			darken($base-border-color, 10%);
-$border-color-focus:			darken($base-border-color, 15%);
-$base-box-shadow:				inset 0 1px 3px hsla(0, 0%, 0%, 0.06);
+// Palletes --------------------------------------------------------------
 
-// Accents
-$accent-color-1:				#336699 !default;
-$accent-color-2:				#ff9911 !default;
-$accent-color-3:				#114477 !default;
-$accent-color-4:				#6699cc !default;
+$basic-base: $white !default;
+$basic-text: $black !default;
+$basic-content: $light-gray !default;
+$basic-navigation: $dark-gray !default;
 
-$link-color:					$accent-color-1 !default;
-$heading-color:					$accent-color-2 !default;
-$primary-color:					$accent-color-3 !default;
-$button-color:					$accent-color-4 !default;
+$colours-yellow: #ffcc11 !default;
+$colours-red: #cc1111 !default;
+$colours-blue: #1111cc !default;
+$colours-green: #11cc11 !default;
 
-$box-background-1: 				#f0f0f0 !default;
-$box-background-2: 				#333333 !default;
-$box-background-3: 				#336699 !default;
-$box-background-4: 				#ffcc33 !default;
+$accent-color-1: #ffcc33 !default;
+$accent-color-2: #335577 !default;
+$accent-color-3: #052ca3 !default;
+$accent-color-4: #8ca2b8 !default;
 
-$warning-color: 				#ffcc33 !default;
-$error-color: 					#cc1111 !default;
-$info-color: 					#28a1c5 !default;
-$success-color: 				#3d8b3d !default;
+// Core ------------------------------------------------------------------
 
-// Header
-$header-background:				#439A86 !default;
-$header-text-color:				#ffffff !default;
-$header-image:					false !default;
+$base-background: $basic-base !default;
+$base-text-color: $basic-text !default;
+$base-heading-text-color: $accent-color-3 !default;
+$base-heading-font: $base-font !default;
+$base-font: roboto, sans-serif !default;
 
-// Navigation
-$navigation-background:			#cccccc !default;
-$navigation-text-color:			#111111 !default;
-$navigation-overlay:			rgba(0, 0, 0, 0.4) !default;
+$content-box-color: $basic-content !default;
+$content-padding: 0.5rem !default;
+$content-margin: 0.5rem !default;
+$content-overlay: rgba(0, 0, 0, 0.4) !default;
 
-// Showcase
-$showcase-background:			#354D59 !default;
-$showcase-text-color:			#ffffff !default;
-$showcase-image:				false !default;
+$scrollbar-color: false !default;
+$scrollbar-track: false !default;
 
-// Feature
-$features-background:			#ffffff !default;
-$features-text-color:			#666666 !default;
-$features-image:				false !default;
+// Core sections
 
-// Subfeature
-$sub-features-background:		#f0f0f0 !default;
-$sub-features-text-color:		#666666 !default;
-$sub-features-image:			false !default;
+$main-background: $basic-base !default;
+$main-text-color: $basic-text !default;
+$main-font: $base-font !default;
+$main-image: false !default;
 
-// Main
-$main-background:				#ffffff !default;
-$main-text-color:				#666666 !default;
+$header-background: $main-background !default;
+$header-text-color: $main-text-color !default;
+$header-font: $base-font !default;
+$header-image: false !default;
 
-// Footer
-$footer-background:				#ffffff !default;
-$footer-text-color:				#666666 !default;
+$sidebar-background: $main-background !default;
+$sidebar-text-color: $main-text-color !default;
+$sidebar-font: $base-font !default;
+$sidebar-image: false !default;
 
-// Off Canvas
-$offcanvas-background:			#354D59 !default;
-$offcanvas-text-color:			#ffffff !default;
-$offcanvas-toggle-color:		#ffffff !default;
+$footer-background: $main-background !default;
+$footer-text-color: $main-text-color !default;
+$footer-font: $base-font !default;
+$footer-image: false !default;
 
-// Dropdowns
-$menu-col-width:			 	180px !default;
-$menu-hide-on-mobile:			0 !default;
+// sections
 
-// Cover
-$cover-blend-mode:				'soft-light' !default;
-$cover-background-1:			false;
-$cover-background-2:			false;
-$cover-background-3:			false;
-$cover-background-4:			false;
+$showcase-background: $accent-color-1 !default;
+$showcase-text-color: #ffffff !default;
+$showcase-font: $base-font !default;
+$showcase-image: false !default;
+
+$features-background: $accent-color-2 !default;
+$features-text-color: #ffffff !default;
+$features-font: $base-font !default;
+$features-image: false !default;
+
+$sub-features-background: $accent-color-3 !default;
+$sub-features-text-color: #ffffff !default;
+$sub-features-font: $base-font !default;
+$sub-features-image: false !default;
+
+
+// navigation section
+
+$navigation-font: $base-font !default;
+$navigation-background: #ffcc33 !default;
+$navigation-text-color: #444444 !default;
+$navigation-hover-background: rgba(255, 255, 255, 0.3) !default;
+$navigation-hover-text-color: #222222 !default;
+$navigation-active-text-color: #111111 !default;
+$navigation-active-background: rgba(255, 32, 32, 0.3) !default;
+$navigation-overlay: rgba(0, 0, 0, 0.4) !default;
+
+$navigation-image: false !default;
+
+// break-point
+
+$breakpoints-large-desktop-container: 75rem !default;
+$breakpoints-desktop-container: 60rem !default;
+$breakpoints-tablet-container: 48rem !default;
+$breakpoints-large-mobile-container: 30rem !default;
+$breakpoints-mobile-menu-breakpoint: 48rem !default;
+
+
+// variations
+
+$box-background-1: #f1f1f1 !default;
+$box-background-2: #ebf2fa !default;
+$box-background-3: #fcf9ed !default;
+$box-background-4: #232847 !default;
+
+$cover-blend-mode: 'soft-light' !default;
+$cover-background-1: false !default;
+$cover-background-2: false !default;
+$cover-background-3: false !default;
+$cover-background-4: false !default;
+
+// Fallback -----------------------------------------------------------------
+
+$heading-font: $base-heading-font !default;
+$heading-text-color: $base-heading-text-color !default;
+
+$border-radius: .25rem;
+$core-border-radius: $border-radius;
+
+$core-text: $base-text-color;
+$core-accent: $heading-text-color;
+$body-border: $content-box-color;
+$core-border-color: $content-box-color;
+$border-color: $content-box-color;
+$code-bg: $content-box-color;
+$pre-bg: $content-box-color;
+$pre-text: $content-box-color;
+
+$main-bg: $main-background;
+
+$link: $accent-color-1 !default;
+$primary-link: $accent-color-2 !default;
+$secondary-link: $accent-color-3 !default;
+
+$h1-font-size:					$core-font-size * 2;
+$h2-font-size:					$core-font-size * 1.75;
+$h3-font-size:					$core-font-size * 1.5;
+$h4-font-size:					$core-font-size * 1.25;
+$h5-font-size:					$core-font-size * 1;
+$h6-font-size:					$core-font-size * 0.90 ;
+
+$font-weight-bold: 700 !default;
+$font-weight-light: 300 !default;
+$font-weight-regular: 400 !default;
+$font-weight-medium: 500 !default;
+
+

@@ -1,10 +1,10 @@
 details:
-  name: Gasken
+  name: gasken
   version: '1.0'
   icon: html5
   date: 'August 17, 2020'
 
-  description: Gasken Theme
+  description: gasken Theme
   images:
     thumbnail: /admin/image/preset1.png
     preview: /admin/image/preset1.png
@@ -105,22 +105,34 @@ configuration:
 
 admin:
   styles:
+
+    palletes:
+      - color
+      - accent
+      - basic
+    
     core:
       - base
-      - offcanvas
-      - accent
+      - content
       - navigation
+      - offcanvas
+    
     section:
       - main
       - header
       - footer
+      - sidebar
       - showcase
       - feature
-    variants:      
-      - cover
-      - animation
-      - box
-      - systemcolor
+      - sub-features
+      
     configuration:
       - breakpoints
       - menu
+      - scrollbar
+      - option
+      
+    variants:
+      - box
+      - cover
+      - transition

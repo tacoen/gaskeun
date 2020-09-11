@@ -1,0 +1,66 @@
+@include import-font($base-font);
+
+@if isnt-same($heading-font, $base-font) {
+	@include import-font($heading-font);
+}
+
+body {
+	font-family: get-font-family($base-font);
+	font-weight: $font-weight-regular;
+	background-color: $base-background;
+	color: $base-text-color;
+}
+
+h1 { font-size: $h1-font-size; }
+h2 { font-size: $h2-font-size; }
+h3 { font-size: $h3-font-size; }
+h4 { font-size: $h4-font-size; }
+h5 { font-size: $h5-font-size; }
+h6 { font-size: $h6-font-size; }
+
+h1,h2,h3,h4,h5,h6 {
+	color: $heading-text-color;
+	font-weight: $font-weight-medium;
+	@if isnt-same($heading-font, $base-font) {
+		font-family: get-font-family($heading-font);
+	}
+}
+
+h1,h2 {
+	&:first-child { 
+		margin-top: 0;
+		border-bottom: 1px solid darken($heading-text-color,30%);
+	}
+	padding-bottom: $content-padding;
+}
+
+h1,h2,h3,h4 { text-transform: capitalize; }
+h5,h6 { 
+	text-transform: uppercase;
+	color: maxlighten($heading-text-color,50);
+}
+
+.title { 
+	@extend h1; 
+	margin-top: 0;
+	border-bottom: 1px solid darken($heading-text-color,30%);
+}
+
+h6 { text-decoration: underline; }
+
+.g-content {
+	padding: var(--content-padding);
+	margin: var(--content-margin);
+}
+
+p { margin-top: 0 }
+
+pre {
+	background-color: var(--pre-bg);
+	border: 1px solid var(--pre-border);
+	color: var(--pre-text);
+}
+
+footer {
+	font-size: .9rem;
+}

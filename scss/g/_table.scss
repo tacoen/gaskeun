@@ -1,0 +1,39 @@
+// table
+
+table {
+
+	background-color: var(--table-bg);
+	color: var(--table-text);
+	th { 
+		padding: var(--table-padding); 
+		background-color: var(--table-head); 
+	}
+
+	td { 
+		padding: var(--table-padding); 
+		border: 1px solid var(--table-border);
+	}
+
+	tr:nth-child(odd) { background: var(--table-odd); }
+	tr:nth-child(even)  { background: var(--table-even); }
+	tr:hover { background: #00000011 }
+
+	border: 1px solid var(--table-border);
+	border-collapse: collapse;	
+	margin-bottom: 1em;
+	border-radius: var(--border-radius);
+	overflow: hidden;	
+
+}
+
+@mixin table($color, $padding: $content-padding) {
+	$table-color: maxlighten($color,90);
+	--table-bg: $table-color;
+	--table-border: darken($table-color,15%);
+	--table-text: textcolor-tint($table-color);
+	--table-head: darken($table-color,15%);
+	--table-odd: lighten($table-color,5%);
+	--table-even: darken($table-color,1%);
+	--table-padding: $padding;
+}
+

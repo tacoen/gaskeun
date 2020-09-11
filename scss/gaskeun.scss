@@ -1,28 +1,52 @@
 // REQUIRED DEPENDENCIES - DO NOT CHANGE
 @import "dependencies";
 
+/*-- grav -- */
 
-// THEME COMPONENTS
+@if $option-grav_css { @import "grav"; }
 
-@import "nucleus/theme/base";
-@import "configuration/nucleus/base";
-@import "configuration/grav/base";
-@import "configuration/base";
-@import "grav";
+/*-- hydrogen -- */
+
+@if $option-hydrogen_css { @import "hydrogen/base"; }
+
+@import "g/root";
+
+@import "g/core";
+@import "g/link";
+@import "g/button";
+@import "g/notices";
+@import "g/alert";
+@import "g/table";
+@import "g/box";
+
+@import "g/sections";
+@import "g/build";
+@import "g/nav";
+
+/* hydrogen */
+
+@if !$option-hydrogen_css { 
+
+	@import "g/h/offcanvas";
+	@import "g/h/contentarray";
+	@import "g/h/dropdownanimations";
+	@import "g/h/social";
+	@import "g/h/forms";
+	@import "g/h/offline";
+	@import "g/h/sample";
+
+}
+
+
+/* from particles, modular, template */
+
+@import "g/etc/base";
+
+/* proposal from custom.scss */
+
+@import "g/propose";
+
+/* fin */
+
+@import "g/print";
 @import "nucleus/theme/breakpoints/base";
-
-// From Gantry Hydrogen
-
-@import "gantry/contentarray";
-@import "gantry/dropdownanimations";
-@import "gantry/tables";
-@import "gantry/forms";
-@import "gantry/social";
-@import "gantry/offline";
-@import "gantry/sample";
-
-
-@import "gaskeun/base";
-
-@import "gaskeun/etc/base";
-

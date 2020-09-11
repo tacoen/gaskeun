@@ -1,0 +1,47 @@
+
+:root {
+	
+	--content-padding: $content-padding;
+	--content-margin: $content-margin;
+	
+	--link: $link;
+	--focus:  lighten($link,15%);
+	--hover: lighten($link,15%);
+	--active: lighten($link,10%);
+	--visited: $link;
+	
+	--border-radius: $border-radius;
+	
+	// table
+
+	$table-color: lighten($content-box-color,32%);
+	--table-bg: $table-color;
+	--table-border: darken($table-color,15);
+	--table-text: textcolor-tint($table-color);
+	--table-head: darken($table-color,15);
+	--table-odd: lighten($table-color,5%);
+	--table-even: darken($table-color,1%);
+	--table-padding: $content-padding;
+
+	--pre-bg: $content-box-color;
+	--pre-border: $content-box-color; 
+	--pre-text: darken($content-box-color,65%);
+
+	$button-color: $content-box-color;
+	--button-bg: $button-color;
+	--button-text: textcolor-tint($button-color);
+	--button-border: darken($button-color,32%); 
+	--button-hover: lighten($button-color,16%); 
+	--button-active: lighten($button-color,32%); 
+	--button-padding: $content-padding $content-padding*2;
+	
+	--bg: $content-box-color;
+	--text: textcolor-tint($content-box-color);
+	--border: $content-box-color;
+	
+	--section-bg: $main-background;
+	--section-text: $main-text-color;
+	--section-font: get-font-family($base-font); 
+	
+	
+}

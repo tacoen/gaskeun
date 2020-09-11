@@ -1,0 +1,14 @@
+
+:hover a.button, a.button:hover { text-decoration: none !important }
+
+.fix-at-top,
+#g-container-top {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+}
+
+.pinned {
+	box-shadow: 0 1px 5px #0009;
+}

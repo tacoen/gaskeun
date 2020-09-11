@@ -1,5 +1,4 @@
 name: Header
-description: Header colors for the Gasken theme
 type: section
 
 form:
@@ -8,18 +7,18 @@ form:
     background:
       type: input.colorpicker
       label: Background
-      default: "#336699"
-    font:
-      type: input.fonts
-      label: Navigation Font
-      default: 'roboto, sans-serif'
-    image:
-      type: input.imagepicker
-      label: Image
-      description: Select the background image.
-      default: gantry-media://cover3.png
+      default: "#224488"
+    fnote:
+      type: separator.note
+      class: nulled
+      content: <div style='padding: 0 10px 0 185px'><a onclick="javascript:gasp('[header][background]','[accent][color-3]')">Use Heading Color</a></div>
     text-color:
       type: input.colorpicker
-      label: Text
+      label: Text Color
       default: "#ffffff"
-      
+    font:
+      type: input.fonts
+      label: Section Font
+    image:
+      type: input.imagepicker
+      label: Background Image

@@ -4,7 +4,7 @@ Gaskeun is Grav Gantry 5 Theme for your new website. Base on Hydrogen, the defau
 Gaskeun loaded with more options.
 
 <div class='fit'>
-<img src='screenshot.jpg' alt='Gasken!'>
+<img src='screenshot.jpg' alt='gasken!'>
 </div>
 
 <div class='images'>
@@ -30,8 +30,8 @@ Then:
  
 ```
 	$ find ./ -type f -exec sed -i 's/gasken/newtheme/g' {} \;
-	$ find ./ -type f -exec sed -i 's/Gasken/newtheme/g' {} \;
-	$ find ./ -type f -exec sed -i 's/GASKEN/NEWTHEME/g' {} \;
+	$ find ./ -type f -exec sed -i 's/gasken/newtheme/g' {} \;
+	$ find ./ -type f -exec sed -i 's/gasken/NEWTHEME/g' {} \;
 ```
 
 While several 'gaskeun' remain intact.

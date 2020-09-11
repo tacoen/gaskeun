@@ -1,33 +1,31 @@
-name: Base Styles
-description: Base styles for the Gasken theme
+name: Base
+description: Base styles for the theme
 type: core
 
 form:
   fields:
 
-    background:
-      type: input.colorpicker
-      label: Base Background
-      default: "#f7f7f7"
-    text-color:
-      type: input.colorpicker
-      label: Base Text Color
-      default: "#111111"
-    padding:
-        type: input.text
-        label: Content Padding
-        pattern: '\d+(\.\d+){0,1}(rem|em|ex|ch|vw|vh|vmin|vmax|%|px|cm|mm|in|pt|pc)'
-        default: 0.5rem
-    margin:
-        type: input.text
-        label: Content Margin
-        pattern: '\d+(\.\d+){0,1}(rem|em|ex|ch|vw|vh|vmin|vmax|%|px|cm|mm|in|pt|pc)'
-        default: 0.5rem
     body-font:
       type: input.fonts
       label: Body Font
       default: 'roboto, sans-serif'
+    background:
+      type: input.colorpicker
+      label: Background
+      default: "#f7f7f7"
+    text-color:
+      type: input.colorpicker
+      label: Text Color
+      default: "#333333"
     heading-font:
       type: input.fonts
       label: Heading Font
-      default: 'roboto, sans-serif'
+    heading-text-color:
+      type: input.colorpicker
+      label: Heading Color
+      default: "#224488"
+    fnote:
+      type: separator.note
+      class: nulled
+      content: <div style='padding: 0 10px 0 185px'><a onclick="javascript:gasp('[base][heading-text-color]','[accent][color-3]')">Use Heading Color</a></div>
+

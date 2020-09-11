@@ -1,0 +1,22 @@
+name: Basic Colors
+type: palletes
+
+form:
+  fields:
+
+    base:
+      type: input.colorpicker
+      label: Background
+      default: "#ffffff"
+    text:
+      type: input.colorpicker
+      label: Text Color
+      default: "#000000"
+    content:
+      type: input.colorpicker
+      label: Content
+      default: "#dddddd"
+    navigation:
+      type: input.colorpicker
+      label: Navigation
+      default: "#999999"

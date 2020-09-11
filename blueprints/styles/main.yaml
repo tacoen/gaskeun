@@ -1,5 +1,4 @@
 name: Main
-description: Main content colors for the Gasken theme
 type: section
 
 form:
@@ -8,8 +7,13 @@ form:
     background:
       type: input.colorpicker
       label: Background
-      default: "#ffffff"
     text-color:
       type: input.colorpicker
-      label: Text
-      default: "#333333"
+      label: Text Color
+    font:
+      type: input.fonts
+      label: Section Font
+    image:
+      type: input.imagepicker
+      label: Background Image
+      

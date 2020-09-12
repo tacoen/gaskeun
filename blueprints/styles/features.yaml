@@ -7,11 +7,11 @@ form:
     background:
       type: input.colorpicker
       label: Background
-      default: "#ff9911"
+      default: "#5d737e"
     fnote:
       type: separator.note
       class: nulled
-      content: <div style='padding: 0 10px 0 185px'><a onclick="javascript:gasp('[features][background]','[accent][color-2]')">Use Secondary Color</a></div>
+      content: <div style='padding: 0 10px 0 185px'><a onclick="javascript:gasp('[features][background]','[box][background-1]')">Use Box-1(table) Color</a></div>
 
     text-color:
       type: input.colorpicker

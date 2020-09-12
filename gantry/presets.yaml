@@ -2,7 +2,7 @@ default:
   image: 'gantry-admin://images/default.png'
   description: Default Preset
   colors:
-    - '#336699'
-    - '#ffcc33'
-    - '#e6e6e6'
-    - '#333333'
+    - '#ffc20a'
+    - '#113377'
+    - '#011638'
+    - '#224488'

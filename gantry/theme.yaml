@@ -62,10 +62,10 @@ configuration:
 
   section-variations:
     Image Background:
-      ga-cover-1: Cover 1
-      ga-cover-2: Cover 2
-      ga-cover-3: Cover 3
-      ga-cover-4: Cover 4
+      cover-1: Cover 1
+      cover-2: Cover 2
+      cover-3: Cover 3
+      cover-4: Cover 4
     Utility:
       disabled: Disabled
       center: Center
@@ -77,10 +77,10 @@ configuration:
       rounded: Rounded
       square: Square
     Box Variations:
-      box1: Box 1
-      box2: Box 2
-      box3: Box 3
-      box4: Box 4
+      box-1: Box 1
+      box-2: Box 2
+      box-3: Box 3
+      box-4: Box 4
 
   block-variations:
     Function:
@@ -98,8 +98,6 @@ configuration:
       nomarginall: No Margin
       nopaddingall: No Padding
       
-
-        
   dependencies:
     gantry: 5.4.0
 
@@ -107,9 +105,9 @@ admin:
   styles:
 
     palletes:
-      - color
       - accent
-      - basic
+      - color
+      - box
     
     core:
       - base
@@ -133,6 +131,5 @@ admin:
       - option
       
     variants:
-      - box
       - cover
       - transition

@@ -3,8 +3,9 @@
 // alert
 
 @mixin alerting($color: $base-background, $icon:none ) {
-	--bg: maxlighten($color,80);
-	--text: textcolor-tint($color);
+	$bg: maxlighten($color,80);
+	--bg: $bg;
+	--text: textcolor-tint($bg);
 	--border: rgba($color,0.3);	
 	--icon: $icon;
 	--icon-color: darken($color,40%);	
@@ -13,8 +14,9 @@
 
 .alert {
 	padding: $content-padding;
-    margin-bottom: $content-padding*2;
+		margin-bottom: $content-padding*2;
 	border-radius: $core-border-radius;
+	color: var(--text);
 	background-color: var(--bg);
 	border: 1px solid var(--border);
 	&:before {

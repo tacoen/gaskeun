@@ -26,11 +26,39 @@
 	border-radius: var(--border-radius);
 }
 
+.box[class*='cover-'] {
+	min-height: 8rem;
+}
+
+[class*='ge--'] {
+	min-height: 2rem;
+	background-color: var(--section-bg);
+	color: var(--section-text);
+	padding: $content-padding*2;
+		position:relative;
+}
+
+[class*='ge--']:hover {
+		outline: 1px dashed #0009;
+	outline-offset: -1px;
+
+	&:before {
+		background:#0009;
+		content: var(--name);
+		color:#fff;
+		font-size:.7rem;
+		padding: .25rem .5rem;
+		top: -1rem;
+		left: -1rem;
+		position: absolute;
+	}
+}
+
 @mixin box($color, $cover:false) {
 	--content-padding: $content-padding*2;
 	
 	@if $cover {
-		--bg: $color;
+		--bg: maxdarken($color,30%);
 		--text: maxlighten($color,95);
 		background-image: url($cover);
 		@extend %box-cover;

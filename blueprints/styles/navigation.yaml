@@ -10,11 +10,7 @@ form:
     background:
       type: input.colorpicker
       label: Background
-      default: "#ffcc33"
-    fnote:
-      type: separator.note
-      class: nulled
-      content: <div style='padding: 0 10px 0 185px'><a onclick="javascript:gasp('[navigation][background]','[basic][navigation]')">Use Basic</a></div>
+      default: "#ffc20a"
     text-color:
       type: input.colorpicker
       label: Text
@@ -34,7 +30,7 @@ form:
     active-text-color:
       type: input.colorpicker
       label: Active Text Color
-      default: "#111133"
+      default: "#111111"
     overlay:
       type: input.colorpicker
       label: Overlay

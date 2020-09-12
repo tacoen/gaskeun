@@ -29,7 +29,7 @@ $footer-text: #999 !default;
 $bullet-icon-size: 3.5rem !default;
 
 $core-border-radius: rem(3) !default;
-$border-radius: 3px !default;
+$border-radius: $core-border-radius !default;
 
 $bottom-text: $core-text !default;
 $breakpoints-desktop-container: 60.000rem !default;

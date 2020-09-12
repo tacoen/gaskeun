@@ -7,11 +7,11 @@ form:
     background:
       type: input.colorpicker
       label: Background
-      default: "#cccccc"
+      default: "#fff0c2"
     fnote:
       type: separator.note
       class: nulled
-      content: <div style='padding: 0 10px 0 185px'><a onclick="javascript:gasp('[sub-features][background]','[accent][color-4]')">Use Sub Color</a></div>
+      content: <div style='padding: 0 10px 0 185px'><a onclick="javascript:gasp('[sub-features][background]','[box][background-3]')">Use Box3 (blockquote) Color</a></div>
     text-color:
       type: input.colorpicker
       label: Text Color

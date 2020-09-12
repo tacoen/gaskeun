@@ -20,46 +20,50 @@ h6 { font-size: $h6-font-size; }
 
 h1,h2,h3,h4,h5,h6 {
 	color: $heading-text-color;
+	margin: 1rem 0 1rem 0;
 	font-weight: $font-weight-medium;
 	@if isnt-same($heading-font, $base-font) {
 		font-family: get-font-family($heading-font);
 	}
 }
 
-h1,h2 {
-	&:first-child { 
-		margin-top: 0;
-		border-bottom: 1px solid darken($heading-text-color,30%);
-	}
-	padding-bottom: $content-padding;
-}
 
 h1,h2,h3,h4 { text-transform: capitalize; }
 h5,h6 { 
+	margin: 1rem 0 0.5rem 0;
 	text-transform: uppercase;
-	color: maxlighten($heading-text-color,50);
-}
-
-.title { 
-	@extend h1; 
-	margin-top: 0;
-	border-bottom: 1px solid darken($heading-text-color,30%);
+	color: maxdarken($heading-text-color,50);
 }
 
 h6 { text-decoration: underline; }
+
+.title { 
+	@extend h1; 
+}
+
+h1,h2,.title {
+	&:first-child { 
+		margin: 0 0 3rem 0;
+		border-bottom: 1px solid rgba($heading-text-color,0.5);
+	}
+}
+
+
+p { margin: 1rem 0 }
+
 
 .g-content {
 	padding: var(--content-padding);
 	margin: var(--content-margin);
 }
 
-p { margin-top: 0 }
+p { margin-top: .5rem }
 
-pre {
-	background-color: var(--pre-bg);
-	border: 1px solid var(--pre-border);
-	color: var(--pre-text);
-}
+code { color: maxdarken($colours-red,60); }
+var { color: maxdarken($colours-green,60); }
+mark { background-color: maxlighten($colours-yellow,80); color: $black }
+abbr,kbd { color: maxdarken($colours-blue,60); }
+kbd { font-weight: $font-weight-medium; }
 
 footer {
 	font-size: .9rem;

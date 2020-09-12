@@ -16,7 +16,7 @@ form:
     text-color:
       type: input.colorpicker
       label: Text Color
-      default: "#333333"
+      default: "#111111"
     heading-font:
       type: input.fonts
       label: Heading Font
@@ -28,4 +28,12 @@ form:
       type: separator.note
       class: nulled
       content: <div style='padding: 0 10px 0 185px'><a onclick="javascript:gasp('[base][heading-text-color]','[accent][color-3]')">Use Heading Color</a></div>
+    link-color:
+      type: input.colorpicker
+      label: Link Color
+      default: "#224488"
+    fnote2:
+      type: separator.note
+      class: nulled
+      content: <div style='padding: 0 10px 0 185px'><a onclick="javascript:gasp('[base][link-color]','[accent][color-4]')">Use Link Color</a></div>
 

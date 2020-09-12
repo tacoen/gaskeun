@@ -25,11 +25,23 @@
 	$suffix: "";
 	$naming: #{$prefix}#{$name}#{$suffix};
 
+	$en: '';
+	
+	@if map-get($set,'generic') {
+
+		$e: ', .ge--';
+		$en: #{$e}#{$name}; 
+		
+	}
+	
+	$mn:'';
+	
 	@if map-get($set,'modular') {
 		$m: ', .modular .';
 		$mn: #{$m}#{$name}; 
-		$naming: #{$prefix}#{$name}#{$suffix}#{$mn};
-	}	 
+	}	
+
+	$naming: #{$prefix}#{$name}#{$suffix}#{$mn}#{$en};
 	
 	#{$naming} {
 	
@@ -50,6 +62,21 @@
 			background-image: url($img);
 			@extend %box-cover;
 		}
+		
+		@if map-get($set,'generic') {
+			--name: quote($name); 
+		}
+
+		@if map-get($set,'navigation') {
+		
+			--active-text: $txt;
+			--hover-text: $txt;
+			--active-bg: maxlighten($bg,70);
+			--hover-bg: adjust-hue($bg, -8deg); 
+			--touch-bg: adjust-hue($bg, -8deg); 
+			--touch-border: maxlighten($bg,70);
+		}
+	
 	}
 			
 }

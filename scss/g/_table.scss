@@ -1,5 +1,20 @@
 // table
 
+@mixin table($color, $padding: $content-padding) {
+	$table-color: maxlighten($color,90);
+	--table-bg: $table-color;
+	--table-border: darken($table-color,15%);
+	--table-text: textcolor-tint($table-color);
+	--table-head: darken($table-color,15%);
+	--table-odd: lighten($table-color,5%);
+	--table-even: darken($table-color,1%);
+	--table-padding: $padding;
+}
+
+:root {
+	@include table($box-background-1);
+}
+
 table {
 
 	background-color: var(--table-bg);
@@ -15,25 +30,14 @@ table {
 	}
 
 	tr:nth-child(odd) { background: var(--table-odd); }
-	tr:nth-child(even)  { background: var(--table-even); }
+	tr:nth-child(even)	{ background: var(--table-even); }
 	tr:hover { background: #00000011 }
 
 	border: 1px solid var(--table-border);
 	border-collapse: collapse;	
-	margin-bottom: 1em;
+	margin: 1em 0 1.5rem 0;
 	border-radius: var(--border-radius);
 	overflow: hidden;	
 
-}
-
-@mixin table($color, $padding: $content-padding) {
-	$table-color: maxlighten($color,90);
-	--table-bg: $table-color;
-	--table-border: darken($table-color,15%);
-	--table-text: textcolor-tint($table-color);
-	--table-head: darken($table-color,15%);
-	--table-odd: lighten($table-color,5%);
-	--table-even: darken($table-color,1%);
-	--table-padding: $padding;
 }
 

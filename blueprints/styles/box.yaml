@@ -1,5 +1,5 @@
 name: Boxes
-type: variants
+type: palletes
 
 form:
   fields:
@@ -7,19 +7,19 @@ form:
     background-1:
       type: input.colorpicker
       label: Table
-      default: '#d9d9df'
+      default: '#5d737e'
     background-2:
       type: input.colorpicker
-      label: Pre
-      default: '#f6f6f6'
+      label: Box
+      default: '#272b27'
     background-3:
       type: input.colorpicker
       label: Block Quote
-      default: '#ffefe0'
+      default: '#fff0c2'
     background-4:
       type: input.colorpicker
-      label: Box4
-      default: '#c9d0f9'
+      label: Offwhite
+      default: '#f0f0f0'
 
 
 

@@ -68,22 +68,22 @@ $colours: (
 		box: true,
 	),
 	'cover-1': (
-		color: $box-background-4,	
+		color: $box-background-2,	
 		image: $cover-background-1,
 		box: true,
 	),
 	'cover-2': (
-		color: $box-background-4,	
+		color: $box-background-2,	
 		image: $cover-background-2,
 		box: true,
 	),
 	'cover-3': (
-		color: $box-background-4,	
+		color: $box-background-2,	
 		image: $cover-background-3,
 		box: true,
 	),
 	'cover-4': (
-		color: $box-background-4,	
+		color: $box-background-2,	
 		image: $cover-background-4,
 		box: true,
 	)
@@ -102,30 +102,38 @@ $sections: (
 		txt: $main-text-color,
 		img: $main-image,
 		font: $main-font,
+		generic: true
 	),
 	navigation: (
 		bg: $navigation-background,
 		txt: $navigation-text-color,
 		img: $navigation-image,
 		font: $navigation-font,
+		generic: true,
+		navigation: true,
 	),
 	footer: (
 		bg: $footer-background,
 		txt: $footer-text-color,
 		img: $footer-image,
 		font: $footer-font,
+		navigation: true,
+		generic: true
 	),
 	header: (
 		bg: $header-background,
 		txt: $header-text-color,
 		img: $header-image,
 		font: $header-font,
+		navigation: true,
+		generic: true
 	),
 	sidebar: (
 		bg: $sidebar-background,
 		txt: $sidebar-text-color,
 		img: $sidebar-image,
 		font: $sidebar-font,
+		generic: true
 	),
 	features: (
 		bg: $features-background,

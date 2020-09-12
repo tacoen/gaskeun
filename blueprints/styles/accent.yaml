@@ -12,19 +12,19 @@ form:
     color-1:
       type: input.colorpicker
       label: Primary
-      default: "#336699"
+      default: "#ffc20a"
     color-2:
       type: input.colorpicker
       label: Secondary
-      default: "#ff9911"
+      default: "#113377"
     color-3:
       type: input.colorpicker
       label: Heading
-      default: "#224488"
+      default: "#011638"
     color-4:
       type: input.colorpicker
-      label: Subs
-      default: "#cccccc"
+      label: Link Color
+      default: "#224488"
 
     note:
       type: separator.note

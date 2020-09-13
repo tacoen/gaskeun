@@ -26,6 +26,7 @@ pre {
 blockquote,.blockquote {
 	background-color: var(--quote-bg);
 	border-left: 10px solid var(--quote-border);
+	border-radius: var(--border-radius);
 	color: var(--quote-text);
 	line-height: 2rem;
 	padding: calc(2 * var(--padding)) calc(3 * var(--padding));

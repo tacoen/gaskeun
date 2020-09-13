@@ -13,7 +13,16 @@
 
 	$alias: map-get($set,'alias');
 	
-	.color-#{$name} { color: map-get($set,'color') }
+	.color-#{$name} { 
+		$color: map-get($set,'color');
+		color: $color;
+		--pre-bg: maxlighten($color,95);
+		--pre-text: maxdarken($color,30);
+		--pre-border: maxdarken($color,70);
+		--quote-bg: maxlighten($color,90);
+		--quote-text: maxdarken($color,40);
+		--quote-border: maxdarken($color,60);
+	}
 
 	@if map-get($set,'table') {
 		.color-#{$name} table,table.#{$name} { @include table(map-get($set,'color')); }

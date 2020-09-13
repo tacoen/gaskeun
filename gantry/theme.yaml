@@ -61,16 +61,23 @@ configuration:
 
 
   section-variations:
-    Image Background:
-      cover-1: Cover 1
-      cover-2: Cover 2
-      cover-3: Cover 3
-      cover-4: Cover 4
     Utility:
       disabled: Disabled
       center: Center
       nomarginall: No Margin
       nopaddingall: No Padding
+    Function:
+      dock-top: Dock it on Top
+      fix-at-top: Fix at Top
+      fix-at-left: Fix at left
+      toggleable: toggleable
+    Image Background:
+      cover-1: Cover 1
+      cover-2: Cover 2
+      cover-3: Cover 3
+      cover-4: Cover 4
+      
+      
     Effects:
       shadow: Shadow 1
       shadow2: Shadow 2
@@ -82,12 +89,9 @@ configuration:
       box-3: Box 3
       box-4: Box 4
 
+
   block-variations:
-    Function:
-      dock-top: Dock it on Top
-      fix-at-top: Fix at Top
-      fix-at-left: Fix at left
-      toggleable: toggleable
+
     Utility:
       disabled: Disabled
       align-right: Align Right
@@ -97,6 +101,7 @@ configuration:
       equal-height: Equal Height
       nomarginall: No Margin
       nopaddingall: No Padding
+      hide-mobile: Hide on small
       
   dependencies:
     gantry: 5.4.0

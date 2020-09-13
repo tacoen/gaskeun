@@ -34,7 +34,7 @@ function ga_smooth_scroll(ele) {
 	
 	var t = document.querySelector(ele.attributes.href.value)
 	var pad = 16 /* 1rem */
-	window.scrollTo(0, t.offsetTop-adjust-pad)
+	window.scrollTo(0, t.offsetTop-pad)
 		
 	var c = document.querySelector(q).parentNode	
 	c.classList.add('active')
@@ -114,12 +114,19 @@ function ga_toc_init() {
 	var ts = document.querySelector('.toggleable-content')
 	var tw = tc.getAttribute('data-position');
 	var tl = tc.offsetWidth;
+	var ta = document.querySelector('.fix-at-top')
 	tb.setAttribute('active',0)
 
 	var ori_w = ts.offsetWidth;
 	tc.style.left = 0;
+
+	if (ta) {
+		tc.style.height = "calc(100% - "+ta.offsetHeight+"px)";
+	}
+	
 	ts.style.marginLeft= tl+'px';
 	ts.style.width = ori_w+'px';
+	
 	
 	tb.onclick = function() {
 		
@@ -131,8 +138,8 @@ function ga_toc_init() {
 			tc.style.left = -tl+'px';
 			ts.style.marginLeft= 0;		
 			ts.style.width = '100%';
-			if (!ts.classList.contains('size-100')) {
-				ts.classList.add('size-100');
+			if (!ts.classList.contains('ff-width')) {
+				ts.classList.add('ff-width');
 			}
 		} else {
 			tb.setAttribute('active',0)

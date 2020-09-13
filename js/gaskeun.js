@@ -55,11 +55,10 @@ function ga_fixtop(query,shadow=false) {
 		// f.style.width = f.offsetWidth+'px';
 		
 		var top = f.offsetTop;
-		var ori_w = f.style.width
+		var ori_w = f.offsetWidth;
+
 		
 		if (shadow) { ga_topshadow(query) }
-		
-		//console.log(sec)
 		
 		/* scroll event */
 		window.addEventListener('scroll', (event) => {	
@@ -67,14 +66,20 @@ function ga_fixtop(query,shadow=false) {
 			if (scroll > top) {
 				f.style.position = 'fixed';
 				f.style.top = '0px';
-				f.style.width='100%';
+				
+				var p = f.parentNode.closest('section');
+
+				f.style.width=ori_w+'px';
 				f.classList.add('pinned')
+				
+				if (!shadow) { ga_topshadow(query) }
+				
 			} else {
+				
 				//console.log('unpin',f);
-				f.style.width='auto';
-				f.style.position = 'relative';
 				f.classList.remove('pinned');
-				if (shadow) {
+				f.style='';
+				if (f.classList.contains('dock-top')) {
 					ga_topshadow(query,true);
 				}
 			}

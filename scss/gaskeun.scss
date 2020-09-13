@@ -7,7 +7,20 @@
 
 /*-- hydrogen -- */
 
-@if $option-hydrogen_css { @import "hydrogen/base"; }
+@if $option-hydrogen_css { 
+
+	@import "hydrogen/base"; 
+
+} @else {
+
+	@import "g/h/contentarray";
+	@import "g/h/dropdownanimations";
+	@import "g/h/social";
+	@import "g/h/forms";
+	@import "g/h/offline";
+	@import "g/h/sample";
+
+}
 
 @import "g/root";
 
@@ -25,20 +38,9 @@
 @import "g/tooltip";
 @import "g/build";
 @import "g/nav";
+@import "g/variations";
+@import "g/offcanvas";
 
-/* hydrogen */
-
-@if !$option-hydrogen_css { 
-
-	@import "g/h/offcanvas";
-	@import "g/h/contentarray";
-	@import "g/h/dropdownanimations";
-	@import "g/h/social";
-	@import "g/h/forms";
-	@import "g/h/offline";
-	@import "g/h/sample";
-
-}
 
 
 /* from particles, modular, template */

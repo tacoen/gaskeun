@@ -1,3 +1,6 @@
+.g-offcanvas-open #g-page-surround { top: 0 }
+.g-offcanvas-open .g-top-shadow { display: none; }
+
 #g-offcanvas {
 	background-color: $offcanvas-background;
 	width: $offcanvas-width;
@@ -22,18 +25,26 @@
 
 .g-offcanvas-toggle {
 	
-	z-index: 1000;
-	
+
+    z-index: 1000;
+    position: fixed;
+    height: 48px;
+    width: 48px;
+    top: 0;
+    left: 0;
+    align-items: center;
+    justify-content: center;
+
 	font-size: $font-size + 0.5;
 	color: $offcanvas-toggle-color;
 
 	@if $offcanvas-toggle-visibility == 1 {
 		display: none;
 		@media only all and (max-width: $breakpoints-mobile-menu-breakpoint) {
-			display: block;
+			display: flex;
 		}
 	} @else {
-		display: block !important;
+		display: flex !important;
 	}
 }
 
@@ -105,4 +116,8 @@
 			right: $offcanvas-width;
 		}
 	}
+}
+
+.gaskeun-mobile .g-offcanvas-right #ga-searchbox {
+    flex-flow: row-reverse;
 }

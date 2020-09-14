@@ -1,5 +1,5 @@
 name: gasken
-version: "1.0"
+version: "1.2"
 description: "Gaskeun/gasken is Indonesian Slang for 'Speedu-up!'. Gaskeun was base on Hydrogen, the default Gantry 5 theme. Gaskeun with more options."
 icon: html5
 author:
@@ -19,12 +19,23 @@ dependencies:
 form:
   validation: loose
   fields:
-    client:
+    
+    note:
         type: section
-        title: Client
+        title: Options
+        size: small
+
     owner:
+        size: long
         type: textarea
-        label: Information
         size: large
-        readonly: true
+        label: <b>Owner Information</b> 
         default: owner information
+
+    links:
+        type: array
+        size: long
+        label: Add Links to Admin Navigation
+
+
+    

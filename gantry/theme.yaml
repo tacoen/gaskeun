@@ -52,10 +52,10 @@ configuration:
       - gaskeun
       - custom
       - particles
-    particles:
-      - particles
     persistent:
       - gaskeun
+    particles:
+      - particles
     overrides:
       - custom
 
@@ -102,6 +102,9 @@ configuration:
       nomarginall: No Margin
       nopaddingall: No Padding
       hide-mobile: Hide on small
+    Position:
+      flex-x: flex-x
+      flex-y: flex-y
       
   dependencies:
     gantry: 5.4.0

@@ -1,0 +1,14 @@
+/* 
+
+Use: http://beautifytools.com/css-to-scss-converter.php 
+
+*/
+
+.flex-x .g-content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.flex-x .moduletable {
+    display:inline-flex
+}

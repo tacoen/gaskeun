@@ -22,10 +22,30 @@ class Gasken extends Theme
     public static function getSubscribedEvents()
     {
         return [
-            'onThemeInitialized' => ['onThemeInitialized', 0]
+            'onThemeInitialized' => ['onThemeInitialized', 0],
+            'onAdminMenu' => ['onAdminMenu', 0],			
         ];
     }
+   
+    public function onAdminMenu()
+    {
+	
+		if ($this->grav['theme']->config()['links']) {
+			
+			foreach ($this->grav['theme']->config()['links'] as $key => $val) {
 
+				$this->grav['twig']->plugins_hooked_nav[$key] = [
+					'route' => "..".$val, 
+					'icon' => 'fa-link'
+				];
+		
+			}
+		
+		}
+		
+	
+	}
+	
     public function onThemeInitialized()
     {
         if (defined('GRAV_CLI') && GRAV_CLI) {

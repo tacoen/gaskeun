@@ -1,16 +1,29 @@
-name: Sytle Option
+name: Developer Options
 description: Style Option
 type: configuration
 
 form:
   fields:
+
+    note:
+      type: separator.note
+      class: alert alert-warning
+      content: All options shall be un-check on production project
+  
     grav_css:
       type: input.checkbox
       label: Import Grav CSS
       description: Grav CSS
       default: false
+      
     hydrogen_css:
       type: input.checkbox
       label: Import Hydrogen CSS
       description: hydrogen CSS
       default: false
+
+    devinchrome_css:
+      type: input.checkbox
+      label: Use dev-in-chrome
+      description: dev-in-chrome CSS
+      default: true      

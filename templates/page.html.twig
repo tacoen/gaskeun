@@ -64,6 +64,11 @@
 
 	{%- do gantry.document.addScript(url('gantry-assets://js/main.js'), 11, 'footer') -%}
 	{%- do gantry.document.addScript(url('gantry-assets://js/gaskeun.js'), 11, 'footer') -%}
+
+	{% if gantry.config.get('styles.option.devinchrome_css') -%}
+		{%- do gantry.document.addStyle(url('gantry-assets://css/dev-in-chrome.css')) -%}
+	{% endif %}
+	
 	{% set media_breakpoint %}
 	var gaskeun_media_breakpoint = {'wide':{{ 16*gantry.config.get('styles.breakpoints.large-desktop-container')|number_format }},'desktop':{{ 16*gantry.config.get('styles.breakpoints.desktop-container')|number_format}},'tablet':{{ 16*gantry.config.get('styles.breakpoints.tablet-container')|number_format}},'mobile':{{ 	16*gantry.config.get('styles.breakpoints.large-mobile-container')|number_format}}}
 	{% endset %}

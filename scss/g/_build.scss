@@ -19,8 +19,10 @@
 	
 		[class*='section-'] {
 			&.#{$name} {
-				--bg: $color;
-				--text: textcolor-tint($color)
+				--text: textcolor-tint($color);
+				--active-text: textcolor-tint($color);
+				--hover-text: textcolor-tint($color);
+				@include hslbgr($color);
 			}
 		}
 		

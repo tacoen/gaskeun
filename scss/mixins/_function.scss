@@ -1,5 +1,23 @@
 // function
 
+@function hsl-str($color) {
+	@return unquote("hsl(#{hue($color)/1deg}, #{saturation($color)}, #{lightness($color)})");
+}
+
+@mixin hslbgr($color){
+	--o: $color;
+	--h: hue($color)/1deg;
+	--s: saturation($color);
+	--l: lightness($color);
+	--bg: unquote("hsl(var(--h), var(--s), var(--l))");
+	--complement: unquote("hsl( calc(var(--h) - 180), var(--s), var(--l))"); 
+	--lighten: unquote("hsl(var(--h), var(--s), calc(var(--l) + 15%))");
+	--darken: unquote("hsl(var(--h), var(--s), calc(var(--l) - 15%))");
+	--hover-bg: unquote("hsl( calc(var(--h) - 20), var(--s), var(--l))"); 
+	--active-bg: unquote("hsl( calc(var(--h) + 20), var(--s), var(--l))"); 
+}
+
+
 @function isnt-same($var1,$var2: false ) {
 	@if $var1 == $var2 { 
 		@return false; 

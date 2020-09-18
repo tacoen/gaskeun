@@ -27,7 +27,7 @@
 }
 */
 
-#g-navigation {
+.section-navigation {
 
 	--active-text: $navigation-active-text-color; 
 	--active-bg: $navigation-active-background;
@@ -46,6 +46,10 @@
 
 	@extend %flex-vcenter;
 
+	> ul > li > ul {
+ 		box-shadow: inset 0px 1px 5px 0px #0003;
+	}
+
 	.g-toplevel {
 		@extend %flex-vcenter;
 		width:100%;
@@ -58,7 +62,6 @@
 	}
 
 	.g-dropdown {
-		box-shadow: inset 0px 2px 1px 0px #0001;
 		background-color: var(--bg);
 		@extend %dropdown-column;
 	}
@@ -80,6 +83,17 @@
 		background-color: var(--hover-bg); 
 		color: var(--hover-text);
 		a { color: var(--hover-text); }
+
+		.g-dropdown {
+			background-color: var(--hover-bg);
+
+			li:hover > a {
+				background-color: var(--bg);
+			}
+		}
+
+		
+		
 	}
 
 	.active {

@@ -5,6 +5,10 @@
 	background-repeat: no-repeat !important;
 }
 
+.ga-bgrimg {
+	@extend %box-cover;
+}
+
 %box-container {
 	h1,h2,h3,h4,h5,h6 { 
 		color: var(--text);
@@ -15,7 +19,7 @@
 
 
 .box {
-	background: var(--bg);
+	background-color: var(--bg);
 	color: var(--text);
 	padding: var(--content-padding);
 	@extend %box-container;
@@ -30,20 +34,22 @@
 	min-height: 8rem;
 }
 
+/*
 [class*='ge--'] {
 	min-height: 2rem;
-	background-color: var(--section-bg);
-	color: var(--section-text);
+	background-color: var(--bg);
+	color: var(--text);
 	padding: $content-padding*2;
 		position:relative;
 }
+*/
 
 [class*='ge--']:hover {
-		outline: 1px dashed #0009;
+	outline: 1px dashed #0009;
 	outline-offset: -1px;
 
 	&:before {
-		background:#0009;
+		background-color:#0009;
 		content: var(--name);
 		color:#fff;
 		font-size:.7rem;
@@ -70,4 +76,9 @@
 	
 }
 
-
+/*
+.cover-1 { background-image: $cover-background-1; }
+.cover-2 { background-image: $cover-background-2; }
+.cover-3 { background-image: $cover-background-3; }
+.cover-4 { background-image: $cover-background-4; }
+*/

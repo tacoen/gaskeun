@@ -50,7 +50,7 @@
 	
 	
 	.g-content {
-		background: $main-background;
+		background-color: $main-background;
 		padding: 0;
 		min-height: 50vh;
 		max-height: 70vh;
@@ -67,7 +67,7 @@
 			.caption {
 				position: absolute;
 				bottom: 0;
-				background: rgba($main-background,.6);
+				background-color: rgba($main-background,.6);
 				padding: $content-padding;
 				width: 100%;
 			}

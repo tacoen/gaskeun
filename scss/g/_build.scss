@@ -12,9 +12,21 @@
 @each $name, $set in $colours {
 
 	$alias: map-get($set,'alias');
+
+	$color: map-get($set,'color');
+
+	@if map-get($set,'section') {
+	
+		[class*='section-'] {
+			&.#{$name} {
+				--bg: $color;
+				--text: textcolor-tint($color)
+			}
+		}
+		
+	}
 	
 	.color-#{$name} { 
-		$color: map-get($set,'color');
 		color: $color;
 		--pre-bg: maxlighten($color,95);
 		--pre-text: maxdarken($color,30);

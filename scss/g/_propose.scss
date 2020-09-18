@@ -41,7 +41,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-	background: #0009;
+	background-color: #0009;
 	
 	a { 
 		color: #fffd !important; 
@@ -147,9 +147,51 @@ html.gaskeun-small {
 
 
 
-.logo img,
-.logo a {
-    display: flex;
-    height: 100%;
-    align-items: center;
+// pabiak
+
+#pabiak-head {
+	display: flex;
+	align-items: center;
+	
+	h1 {
+		border-bottom: none;
+		color: var(--text);
+		margin: 0 0 .25rem 0;
+	}
+	small {
+		font-size: 1rem;
+		color: #fffc;
+	}
+	
+	div { margin-left: 1rem; }
+	img { height: 100%; width:100%; }
+
+	.logo { height: 70px; }
+	h1 { font-size: 1.1rem; }
+	
+	&.medium {
+		.logo { height: 120px; }
+		h1 { font-size: 1.2rem; }
+	}
+	
+	&.big {
+		.text { margin: 0.5rem 0 }	
+		.logo { height: 200px; margin: 0; }
+		h1 { font-size: 1.6rem; }
+	}
+
+}
+html.gaskeun-small #pabiak-head,
+html.gaskeun-mobile #pabiak-head {
+	&.small,
+	&.medium,
+	&.big {
+		.logo { height: 70px; width: 58px; }
+	}
+	&.small { padding: .5rem 2rem; }
+	&.medium { 
+		.text { padding-left: .5rem; }
+	}
+	div { margin: 0 }
+	.pab-hide { display: none; }
 }

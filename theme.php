@@ -30,7 +30,7 @@ class Gasken extends Theme
     public function onAdminMenu()
     {
 	
-		if ($this->grav['theme']->config()['links']) {
+		if (isset($this->grav['theme']->config()['links'])) {
 			
 			foreach ($this->grav['theme']->config()['links'] as $key => $val) {
 

@@ -14,6 +14,7 @@ $colours: (
 		table: true,
 		button: true,
 		alert: true,
+		section: true,
 	),
 	'blue': (
 		color: $colours-blue,
@@ -22,6 +23,7 @@ $colours: (
 		table: true,
 		button: true,
 		alert: true,
+		section: true,
 	),
 	'green': (
 		color: $colours-green,
@@ -30,26 +32,31 @@ $colours: (
 		table: true,
 		button: true,
 		alert: true,
+		section: true,
 	),
 	'accent-1': (
 		color: $accent-color-1,
 		alias: 'primary',
 		button: true,
 		box: true,
+		section: true,
 	),
 	'accent-2': (
 		color: $accent-color-2,
 		alias: 'secondary',
 		button: true,		
 		box: true,
+		section: true,
 	),
 	'accent-3': (
 		color: $accent-color-3,
 		box: true,
+		section: true,
 	),
 	'accent-4': (
 		color: $accent-color-4,
 		box: true,
+		section: true,
 	),
 	'box-1': (
 		color: $box-background-1,

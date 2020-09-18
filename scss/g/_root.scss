@@ -6,10 +6,7 @@
 	--bg: $content-background;
 	--text: textcolor-tint($content-background);
 	--border: $content-background;
-
-	--section-bg: $main-background;
-	--section-text: $main-text-color;
-	--section-font: get-font-family($main-font); 
+	--font: get-font-family($main-font); 
 
 
 	

@@ -1,13 +1,17 @@
 // REQUIRED DEPENDENCIES - DO NOT CHANGE
 @import "dependencies";
 
-/*-- grav -- */
+@if $option-grav_css=='1' { 
 
-@if $option-grav_css { @import "grav"; }
+	/*-- grav -- */
 
-/*-- hydrogen -- */
+	@import "grav"; 
+}
 
-@if $option-hydrogen_css { 
+
+@if $option-hydrogen_css=='1' { 
+
+	/*-- hydrogen -- */
 
 	@import "hydrogen/base"; 
 

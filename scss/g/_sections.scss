@@ -1,15 +1,11 @@
-.modular-row,
-[id^=g-] {
-	color: var(--section-text);
-	background: var(--section-bg);
-	font-family: var(--section-font);	
-}
-
 .modular-row {
+	color: var(--text);
+	background-color: var(--bg);
+	font-family: var(--font);	
 	padding: 6rem 4rem;
 	text-align: center;
-	h1,h2,h3,h4,h5,h6 { color: var(--section-text); }
-	a:not(.button) { color: var(--section-text); }
+	h1,h2,h3,h4,h5,h6 { color: var(--text); }
+	a:not(.button) { color: var(--text); }
 	@include nofirstchild();
 	font-size: 1.2rem;
 	p { margin-bottom: 1.5rem; }
@@ -21,19 +17,10 @@
 
 @each $name, $set in $sections {
 
-	$prefix: "#g-";
+	$prefix: ".section-";
 	$suffix: "";
 	$naming: #{$prefix}#{$name}#{$suffix};
 
-	$en: '';
-	
-	@if map-get($set,'generic') {
-
-		$e: ', .ge--';
-		$en: #{$e}#{$name}; 
-		
-	}
-	
 	$mn:'';
 	
 	@if map-get($set,'modular') {
@@ -41,7 +28,7 @@
 		$mn: #{$m}#{$name}; 
 	}	
 
-	$naming: #{$prefix}#{$name}#{$suffix}#{$mn}#{$en};
+	$naming: #{$prefix}#{$name}#{$suffix}#{$mn};
 	
 	#{$naming} {
 	
@@ -52,15 +39,23 @@
 		
 		@if img == '' { $img: false; }
 		
-		@if isnt-same($font, $base-font) {	--section-font: get-font-family($font); }
-		@if isnt-same($bg, $base-background) {	--section-bg: $bg; }
-		@if isnt-same($txt, $base-text-color) { --section-text: $txt; }
+		@if isnt-same($font, $base-font) {	--font: get-font-family($font); }
+		@if isnt-same($bg, $base-background) {	--bg: $bg; }
+		@if isnt-same($txt, $base-text-color) { --text: $txt; }
 	
 		@if $img {
-			--section-bg: maxdarken($bg,30);
-			--section-text: maxlighten($bg,95);		
+			--bg: maxdarken($bg,30);
+			--text: maxlighten($bg,95);		
 			background-image: url($img);
 			@extend %box-cover;
+		}
+		
+
+		background-color: var(--bg);
+		
+		h1,h2,h3,h4,h5,h6 { 
+			color: var(--text);
+			border:none;
 		}
 		
 		@if map-get($set,'generic') {
@@ -79,4 +74,14 @@
 	
 	}
 			
+}
+
+#g-navigation a,
+#g-footer a,
+#g-header a {
+	color: var(--text);
+	&:active {
+		color: var(--text);
+	}
+	
 }

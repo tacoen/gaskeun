@@ -1,14 +1,13 @@
 .modal {
 
 	&.screen {
-		background: $content-overlay;
+		background-color: $content-overlay;
 		display: flex;
 		justify-content: center;
 		align-items: center;
 		width: 100%;
 		padding: 2rem;
 		height: 100%;
-		background: rgba(0, 0, 0, 0.6);
 		display: flex;
 		justify-content: space-around;
 		align-items: flex-end;
@@ -24,7 +23,7 @@
 	}
 
 	> .container {
-		background: $white;
+		background-color: $white;
 		padding: 1rem;
 		border-radius: .5rem;
 	}

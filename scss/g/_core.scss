@@ -65,6 +65,15 @@ mark { background-color: maxlighten($colours-yellow,80); color: $black }
 abbr,kbd { color: maxdarken($colours-blue,60); }
 kbd { font-weight: $font-weight-medium; }
 
+main {
+	background-color: var(--bg);
+	color: var(--text);	
+}
+
+#g-page-surround {
+	background: inherit;
+}
+
 footer {
 	font-size: .9rem;
 }

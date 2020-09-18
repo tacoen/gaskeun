@@ -12,7 +12,7 @@
 
 .img-slider-container {
 
-	background: #ccc;
+	background-color: #ccc;
 	overflow: hidden;
 	height: 200px;
 	position: relative;
@@ -35,7 +35,7 @@
 			position:relative;
     
 			.caption {
-				background: #0009;
+				background-color: #0009;
 				color: #fff;
 				position: absolute;
 				bottom: 0;
@@ -185,11 +185,17 @@
 
 	}
 
+	.carousel-button { margin: 2rem 0; }
+
 }
 
 
-	
 
-
+.ga-carousel,
+.ga-showcase {
+	@extend #g-showcase;
+	h1,h2,h3,h4,h5,h6,p { margin: 0 }
+	p { margin-top: .5rem; }
+}
 
 

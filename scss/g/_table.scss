@@ -29,8 +29,8 @@ table {
 		border: 1px solid var(--table-border);
 	}
 
-	tr:nth-child(odd) { background: var(--table-odd); }
-	tr:nth-child(even)	{ background: var(--table-even); }
+	tr:nth-child(odd) { background-color: var(--table-odd); }
+	tr:nth-child(even)	{ background-color: var(--table-even); }
 	tr:hover { background: #00000011 }
 
 	border: 1px solid var(--table-border);

@@ -59,11 +59,11 @@
 
 	.g-dropdown {
 		box-shadow: inset 0px 2px 1px 0px #0001;
-		background-color: var(--section-bg);
+		background-color: var(--bg);
 		@extend %dropdown-column;
 	}
 
-	a { color: var(--section-text); }
+	a { color: var(--text); }
 
 	.g-menu-item { 
 		@extend %flex-vcenter;

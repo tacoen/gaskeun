@@ -4,6 +4,15 @@ Use: http://beautifytools.com/css-to-scss-converter.php
 
 */
 
+.term { 
+background: var(--bg);
+border: 1px solid var(--text);
+padding: 2rem;
+height: 40vh;
+overflow-y: auto;
+
+}
+
 .flex-x .g-content {
     display: flex;
     justify-content: space-between;

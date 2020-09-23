@@ -3,8 +3,8 @@
 		display: inline-block;
 		padding: 0.1rem 0.4rem;
 		background: #fafafa;
-		border: 1px solid $base-border-color;
-		border-radius: $core-border-radius;
+		border: 1px solid var(--dark);
+		border-radius: $border-radius;
 		margin-bottom: 4px;
 		text-decoration: none;
 	}

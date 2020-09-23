@@ -7,7 +7,7 @@
 
 
 
-function coba() {
+function qtest() {
 	console.log('he')
 	var is = document.querySelectorAll('.coba .fa')
 	for (i=0; i < is.length; ++i) { 
@@ -29,7 +29,6 @@ var html = document.querySelector('html')
 var body = document.querySelector('body')
 
 
-
 function ga_modular_slideshow(ele,sec=15) {
 
 	window.value = 0
@@ -42,13 +41,14 @@ function ga_modular_slideshow(ele,sec=15) {
 
 function ga_modular_slideshow_func(ele) {
 	var r = document.querySelector(ele); 
-	var images = r.getAttribute('data-image').split(",");
-	window.value = window.value + 1;
-	if (window.value == images.length) { window.value = 0; }
-	//console.log(window.value,images[window.value])
-	r.style.backgroundImage='url('+images[window.value]+')'
+	if (r) {
+		var images = r.getAttribute('data-image').split(",");
+		window.value = window.value + 1;
+		if (window.value == images.length) { window.value = 0; }
+		//console.log(window.value,images[window.value])
+		r.style.backgroundImage='url('+images[window.value]+')'
+	}
 }
-
 
 function ga_breakpoint_tagging() {
 

@@ -9,7 +9,7 @@ Gaskeun loaded with more options.
 
 <div class='images'>
 <img src='admin/preset/zero.png' height='160'>
-<img src='admin/images/blank.png' height='160'>
+<img src='admin/preset/blank.png' height='160'>
 </div>
 
 ## Tips

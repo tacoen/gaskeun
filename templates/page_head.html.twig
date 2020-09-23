@@ -9,8 +9,10 @@
         {# ---
 		<link rel="stylesheet" href="gantry-engine://css-compiled/nucleus.css" type="text/css"/>
         -- #}
-		<link rel="stylesheet" href="gantry-theme://css/nucleus.min.css" type="text/css"/>
-        {% for scss in gantry.theme.configuration.css.persistent|default(gantry.theme.configuration.css.files) %}
+		{% if gantry.config.get('styles.option.nucleus_css')=='0' -%}
+			<link rel="stylesheet" href="gantry-theme://css/nucleus.min.css" type="text/css"/>
+        {% endif %}
+		{% for scss in gantry.theme.configuration.css.persistent|default(gantry.theme.configuration.css.files) %}
         <link rel="stylesheet" href="{{ scss }}.scss" type="text/css"/>
         {%- endfor %}
     {% endblock -%}

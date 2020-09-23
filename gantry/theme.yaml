@@ -38,10 +38,11 @@ configuration:
     class: \Gantry\Framework\Theme
 
   fonts:
-    roboto:
-      400: 'gantry-theme://fonts/roboto_regular_macroman/Roboto-Regular-webfont'
-      500: 'gantry-theme://fonts/roboto_medium_macroman/Roboto-Medium-webfont'
-      700: 'gantry-theme://fonts/roboto_bold_macroman/Roboto-Bold-webfont'
+    clearsans:
+      300: 'gantry-theme://fonts/clearsans_light_macroman/clearsans-light-webfont'
+      400: 'gantry-theme://fonts/clearsans_regular_macroman/clearsans-regular-webfont'
+      500: 'gantry-theme://fonts/clearsans_medium_macroman/clearsans-medium-webfont'
+      700: 'gantry-theme://fonts/clearsans_bold_macroman/clearsans-bold-webfont'
 
   css:
     compiler: \Gantry\Component\Stylesheet\ScssCompiler
@@ -49,15 +50,14 @@ configuration:
       - gantry-theme://scss
       - gantry-engine://scss
     files:
-      - gaskeun
-      - custom
+      - theme
       - particles
+      - custom
     persistent:
-      - gaskeun
+      - theme
     particles:
       - particles
-    overrides:
-      - custom
+
 
 
   section-variations:
@@ -66,29 +66,24 @@ configuration:
       center: Center
       nomarginall: No Margin
       nopaddingall: No Padding
+
     Function:
       dock-top: Dock it on Top
       fix-at-top: Fix at Top
       fix-at-left: Fix at left
       toggleable: toggleable
+       
     Image Background:
       cover-1: Cover 1
       cover-2: Cover 2
       cover-3: Cover 3
       cover-4: Cover 4
-      
-      
+
     Effects:
       shadow: Shadow 1
       shadow2: Shadow 2
       rounded: Rounded
       square: Square
-    Box Variations:
-      box-1: Box 1
-      box-2: Box 2
-      box-3: Box 3
-      box-4: Box 4
-
 
   block-variations:
 
@@ -102,9 +97,20 @@ configuration:
       nomarginall: No Margin
       nopaddingall: No Padding
       hide-mobile: Hide on small
-    Position:
-      flex-x: flex-x
-      flex-y: flex-y
+    Theme colors:
+      bg-accent-1: accent-1
+      bg-accent-2: accent-2
+      bg-accent-3: accent-3
+      bg-accent-4: accent-4
+      bg-yellow: yellow
+      bg-red: red
+      bg-blue: blue
+      bg-green: green
+    Transition:
+      banim-fade: fade
+      banim-slide-left: slide left
+      banim-slide-right: slie right
+      banim-bounce: bounce
       
   dependencies:
     gantry: 5.4.0
@@ -112,32 +118,15 @@ configuration:
 admin:
   styles:
 
-    palletes:
-      - accent
-      - color
-      - box
-    
-    core:
+    base:
       - base
-      - content
-      - navigation
-      - offcanvas
     
-    section:
-      - main
-      - header
-      - footer
-      - sidebar
-      - showcase
-      - feature
-      - sub-features
-      
+    menu:
+      - menu
+
+    variations:
+
     configuration:
       - breakpoints
-      - menu
-      - scrollbar
       - option
-      
-    variants:
-      - cover
-      - transition
+

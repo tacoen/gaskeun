@@ -1,32 +1,22 @@
-name: Accent Colors
-type: palletes
+name: Accent
+type: variations
 
 form:
   fields:
 
-    snote:
-      type: separator.note
-      class: nulled
-      content: <script>function gasp(d,s) {var sc='input[name=\'styles'+s+'\']';var ds='input[name=\'styles'+d+'\']';document.querySelector(ds).value=document.querySelector(sc).value};document.querySelector(ds).focus();</script>
-
     color-1:
       type: input.colorpicker
-      label: Primary
-      default: "#ffc20a"
+      label: Color 1
+
     color-2:
       type: input.colorpicker
-      label: Secondary
-      default: "#113377"
+      label: Color 2
+
     color-3:
       type: input.colorpicker
-      label: Heading
-      default: "#011638"
+      label: Color 3
+
     color-4:
       type: input.colorpicker
-      label: Link Color
-      default: "#224488"
+      label: Color 4
 
-    note:
-      type: separator.note
-      class: alert alert-info
-      content: Read: <a href='https://github.com/tacoen/gaskeun/wiki'>https://github.com/tacoen/gaskeun/wiki</a>

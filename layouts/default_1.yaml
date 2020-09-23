@@ -1,0 +1,84 @@
+version: 2
+preset:
+  image: 'gantry-admin://images/layouts/fixtop.png'
+  name: default
+  timestamp: 1599207037
+layout:
+  /container-top/:
+    -
+      -
+        /navigation/:
+          -
+            - 'logo-1945 5'
+            - 'menu-1945 75'
+            - 'custom-1945 20'
+  /container-main/:
+    -
+      -
+        /header/: {  }
+    -
+      -
+        /main/:
+          -
+            - system-content-1945
+    -
+      -
+        /footer/:
+          -
+            - 'copyright-1945 50'
+            - 'branding-1945 50'
+  /container-bottom/:
+    -
+      - system-messages-1945
+  offcanvas:
+    -
+      - mobile-menu-1945
+structure:
+  navigation:
+    type: section
+    attributes:
+      boxed: ''
+  container-top:
+    attributes:
+      boxed: '3'
+      class: ''
+      extra: {  }
+  header:
+    attributes:
+      boxed: ''
+  main:
+    attributes:
+      boxed: ''
+  footer:
+    attributes:
+      boxed: ''
+  container-main:
+    attributes:
+      boxed: ''
+  container-bottom:
+    attributes:
+      boxed: ''
+content:
+  logo-1945:
+    title: 'Logo / Image'
+    attributes:
+      image: 'gantry-media://su-b.png'
+    block:
+      class: 'logo hide-small'
+      fixed: '1'
+  menu-1945:
+    block:
+      variations: align-left
+  custom-1945:
+    title: 'ga-simplesearch'
+    attributes:
+      html: "<div class=\"ga-search-wrapper\" id='ga-searchbox'><form name=\"search\" data-simplesearch-form=\"\" id=\"search\">\n<input name=\"searchfield\" class=\"search-input\" aria-label=\"search\" type=\"text\" data-min=\"3\" required=\"\" placeholder=\"Search …\" value=\"\" data-search-invalid=\"Please add at least 3 characters\" data-search-separator=\":\" data-search-input=\"/search/query\"></form><button onclick='javascript:gasearch_toggle(this)' class='toggle'><i class='fa fa-search'></i></button></div>"
+    block:
+      variations: align-right
+      fixed: '1'
+  copyright-1945:
+    block:
+      variations: align-left
+  branding-1945:
+    block:
+      variations: align-right

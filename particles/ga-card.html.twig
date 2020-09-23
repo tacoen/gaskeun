@@ -1,0 +1,60 @@
+{% extends '@nucleus/partials/particle.html.twig' %}
+
+{% block particle %}
+
+	<div class="cards {% if particle.layout %}{{ particle.layout|e }}{% endif %}">
+		{% if particle.image %}
+			<div class='image'>
+			<img src="{{ url(particle.image) }}" alt="{{ particle.headline|e }}" />
+			</div>
+		{% endif %}
+		<div class='text'>
+			
+			{% if particle.headline %}
+				<h3 class='title'>{{ particle.headline|raw }}</h3>
+			{% endif %}
+			
+			{% if particle.description %}
+				<div class="description">
+				{{ particle.description|raw }}
+				</div>
+			{% endif %}
+			
+			{% if particle.items|length >0 %}
+			
+			<ul class='items'>
+			{% for sample in particle.items %}
+				<li class="item {{ sample.class }} {{ sample.variations }}"
+				{% if sample.id %}id="{{ sample.id|e }}"{% endif %}">
+					{% if sample.icon %}
+						<div class='item-image'>
+						<img
+							alt="{{ sample.title|raw }}" src="{{ sample.image|url }}">
+						</div>
+					{% endif %}
+					{% if sample.title %}
+						<div class='text1'>{{ sample.title|raw }}</div>
+					{% endif %}
+					{% if sample.subtitle %}
+						<div class='text2'>{{ sample.subtitle|raw }}</div>
+					{% endif %}
+					{% if sample.description %}
+						<div class='text3'>{{ sample.description|raw }}</div>
+					{% endif %}
+				</li>
+			{% endfor %}
+			</ul>
+			{% endif %}			
+		
+			
+			{% if particle.linktext %}
+				<div class='link'>
+				<a href="{{ particle.link|e }}">{{ particle.linktext|e }}</a>
+				</div>
+			{% endif %}
+		</div><!--- eof text-->
+	
+
+	</div><!--- eof card-->
+
+{% endblock %}

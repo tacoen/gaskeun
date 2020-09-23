@@ -1,8 +1,71 @@
 default:
-  image: 'gantry-admin://images/default.png'
-  description: Default Preset
+  image: 'gantry-admin://images/preset1.png'
+  description: default preset
   colors:
-    - '#ffc20a'
-    - '#113377'
-    - '#011638'
-    - '#224488'
+    - '#ffcc11'
+    - '#233d4d'
+    - '#dde0c0'
+    - '#dde0c0'
+
+  styles:
+    base:
+        font: 'clearsans, sans-serif'
+        font-size: '1.5rem'
+        background: '#233d4d'
+        text-color: '#dde0c0'
+        padding: '0.5rem'
+        margin: '0.5rem'
+        offwhite: ''
+        heading-font: 'clearsans, sans-serif'
+    breakpoints:
+        large-desktop-container: '75rem'
+        desktop-container: '60rem'
+        tablet-container: '48rem'
+        large-mobile-container: '30rem'
+        mobile-menu-breakpoint: '48rem'
+    color:
+        yellow: '#ffc20a'
+        red: '#cc2936'
+        blue: '#3c60ad'
+        green: '#44af69'
+    cover:
+        blend-mode: 'soft-light'
+        image-1: ''
+        image-2: ''
+        image-3: ''
+        image-4: ''
+    footer:
+        background: ''
+        text-color: ''
+    header:
+        background: '#ffcc11'
+        text-color: '#262020'
+    menu:
+        col-width: '220px'
+        animation: 'g-fade'
+        hide-on-mobile: '0'
+    navigation:
+        background: '#ffcc11'
+        text-color: ''
+    offcanvas:
+        width: '75%'
+        overlay: '#000033'
+        toggle-icon: 'fa fa-bars'
+        toggle-width: '3rem'
+        toggle-height: '3rem'
+        toggle-visibility: '1'
+        toggle-background: ''
+        toggle-color: ''
+    option:
+        nucleus_css: '0'
+        grav_css: '0'
+        hydrogen_css: '0'
+        devinchrome_css: '1'
+    sidebar:
+        background: ''
+        text-color: ''
+    accent:
+        color-1: ''
+        color-2: ''
+        color-3: ''
+        color-4: ''

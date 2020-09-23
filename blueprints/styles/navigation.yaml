@@ -1,38 +1,15 @@
 name: Navigation
-description: Navigation colors for the gasken theme
-type: core
+type: base
 
 form:
   fields:
-    font:
-      type: input.fonts
-      label: Navigation Font
+
     background:
       type: input.colorpicker
       label: Background
-      default: "#ffc20a"
+      default: "#e0e0f0"
+
     text-color:
       type: input.colorpicker
-      label: Text
-      default: "#333333"
-    hover-background:
-      type: input.colorpicker
-      label: Hover Background
-      default: "rgba(255, 255, 255, 0.3)"
-    hover-text-color:
-      type: input.colorpicker
-      label: Hover text
-      default: "#111111"
-    active-background:
-      type: input.colorpicker
-      label: Active Background
-      default: "rgba(255, 32, 32, 0.3)"
-    active-text-color:
-      type: input.colorpicker
-      label: Active Text Color
-      default: "#111111"
-    overlay:
-      type: input.colorpicker
-      label: Overlay
-      description: Set the color of the page overlay when the certain menu modes are active.
-      default: "rgba(0, 0, 0, 0.4)"
+      label: Text Color
+

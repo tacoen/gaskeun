@@ -1,0 +1,97 @@
+// Hide on Mobile Menu Breakpoint
+@if $menu-hide-on-mobile == 1 {
+	@media only all and (max-width: $breakpoints-mobile-menu-breakpoint) {
+		[data-g-mobile-target] {
+			display: none;
+			visibility: hidden;
+			pointer-events: none;
+		}
+	}
+}
+
+.g-main-nav {
+
+	--col-width: $menu-col-width;
+	background-color: var(--bg);
+	color: var(--txt);
+	font-size: $base-font-size * .9;
+
+	@extend %flex-vcenter;
+	@extend %flush-g-content;
+
+	.g-menu-parent-indicator {
+		font-size: .9rem;
+		display: inline-flex !important;
+		position: unset !important;
+		align-self: center;
+		color: var(--bg-a2);
+	}
+
+	.g-menu-item-content  {
+		flex-grow:1;
+	}
+
+	> ul > li > ul {
+ 		border: 1px solid #0003;
+		border-top: none;
+	}
+
+	.g-toplevel {
+		@extend %flex-vcenter;
+		width:100%;
+
+		> li {
+			cursor: pointer;
+			@extend %flex-vcenter;
+		}
+
+	}
+
+	.g-dropdown {
+		background-color: var(--bg);
+		@extend %dropdown-column;
+	}
+
+	a { color: var(--txt); }
+
+	.g-menu-item { 
+		@extend %flex-vcenter;
+		transition: all .5s ease;
+		
+		.g-menu-item-container { 
+			@extend %flex-vcenter;
+			width: 100%;
+			padding: $content-padding $content-padding*1.5;
+		}
+	}
+
+	
+	.g-selected { 
+		background-color: var(--bg-light-1); 
+		color: var(--txt);
+		a:not(.button) { color: var(--txt); }
+
+		.g-dropdown {
+
+			li:hover > a {
+				background-color: var(--bg-dark-1);
+			}
+		}
+
+		
+		
+	}
+
+	.active {
+
+		background-color: var(--bg-light);
+		a { color: var(--txt); }
+	
+	}
+
+	a { display: block; }
+
+	@include main-nav-indicators();
+}
+
+

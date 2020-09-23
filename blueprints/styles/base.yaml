@@ -1,14 +1,27 @@
-name: Base
-description: Base styles for the theme
-type: core
+name: Main
+type: base
 
 form:
   fields:
 
-    body-font:
+    snote:
+      type: separator.note
+      class: nulled
+      content: <script>function gasp(d,s) {var sc='input[name=\'styles'+s+'\']';var ds='input[name=\'styles'+d+'\']';document.querySelector(ds).value=document.querySelector(sc).value};document.querySelector(ds).focus();</script>
+
+    font:
       type: input.fonts
       label: Body Font
-      default: 'roboto, sans-serif'
+      default: 'clearsans, sans-serif'
+    heading-font:
+      type: input.fonts
+      label: Heading Font
+    font-size:
+      type: input.text
+      label: Font Size
+      pattern: '\d+(\.\d+){0,1}(rem|em|ex|ch|vw|vh|vmin|vmax|%|px|cm|mm|in|pt|pc)'
+      default: 1.5rem
+    
     background:
       type: input.colorpicker
       label: Background
@@ -16,24 +29,20 @@ form:
     text-color:
       type: input.colorpicker
       label: Text Color
-      default: "#111111"
-    heading-font:
-      type: input.fonts
-      label: Heading Font
-    heading-text-color:
-      type: input.colorpicker
-      label: Heading Color
-      default: "#224488"
-    fnote:
-      type: separator.note
-      class: nulled
-      content: <div style='padding: 0 10px 0 185px'><a onclick="javascript:gasp('[base][heading-text-color]','[accent][color-3]')">Use Heading Color</a></div>
-    link-color:
-      type: input.colorpicker
-      label: Link Color
-      default: "#224488"
-    fnote2:
-      type: separator.note
-      class: nulled
-      content: <div style='padding: 0 10px 0 185px'><a onclick="javascript:gasp('[base][link-color]','[accent][color-4]')">Use Link Color</a></div>
+      default: "#222222"
 
+    padding:
+      type: input.text
+      label: Padding
+      pattern: '\d+(\.\d+){0,1}(rem|em|ex|ch|vw|vh|vmin|vmax|%|px|cm|mm|in|pt|pc)'
+      default: 0.5rem
+    margin:
+      type: input.text
+      label: Margin
+      pattern: '\d+(\.\d+){0,1}(rem|em|ex|ch|vw|vh|vmin|vmax|%|px|cm|mm|in|pt|pc)'
+      default: 0.5rem      
+
+    offwhite:
+      type: input.colorpicker
+      label: Off Content
+      default: "#ffffff"

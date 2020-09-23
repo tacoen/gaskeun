@@ -1,0 +1,33 @@
+name: Gaskeun Dummy
+description: Display Lorem Ipsum in style
+type: particle
+icon: fa-train
+
+configuration:
+  caching:
+    type: config_matches
+    values:
+      twig: '0'
+      filter: '0'
+
+form:
+  fields:
+    enabled:
+      type: input.checkbox
+      label: Enabled
+      description: Globally enable the particle.
+      default: true
+
+    content:
+      type: select.selectize
+      isset: true
+      label: Content
+      default: element
+      options:
+        'element': element
+        'modular': modular
+        'fa': Font Awesome
+        'page': page
+        'text': text
+        'dump': style dump
+

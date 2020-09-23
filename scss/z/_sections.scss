@@ -1,0 +1,52 @@
+$sections: (
+  header:(
+    background: $header-background,
+    text-color: $header-text-color,
+	font: $header-font,
+	flush: true,
+  ),
+  footer:(
+    background: $footer-background,
+    text-color: $footer-text-color,
+	font: $footer-font
+  ),
+  navigation:(
+    background: $navigation-background,
+    text-color: $navigation-text-color,
+	font: $navigation-font,
+	flush: true,
+  ),
+  sidebar:(
+    background: $sidebar-background,
+    text-color: $sidebar-text-color,
+	font: $sidebar-font
+  )
+
+);
+
+
+@each $name, $set in $sections {
+
+	$prefix: '.section-';
+	$naming: #{$prefix}#{$name};
+	
+	#{$naming} {
+		
+		@if isnt-same(map-get($set,'background'),$base-background) {
+			@include hsl-bg( map-get($set,'background'), map-get($set,'text-color') );
+		}
+		
+		@if isnt-same(map-get($set,'text-color'),$base-text-color) {
+			@include hsl-txt( map-get($set,'background'), map-get($set,'text-color') );
+		}
+		
+		background-color: var(--bg);
+		color: var(--txt);
+
+		@if	map-get($set,'flush') {	
+			@extend %flush-g-content;
+		}
+
+	}
+	
+}

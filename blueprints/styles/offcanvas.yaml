@@ -1,32 +1,26 @@
 name: Offcanvas Section
 description: Parameters for the Off Canvas sidepanel section.
-type: core
+type: configuration
 
 form:
   fields:
 
-    background:
-      type: input.colorpicker
-      label: Background
-      default: "#ffcc33"
-    fnote:
-      type: separator.note
-      class: nulled
-      content: <div style='padding: 0 10px 0 185px'><a onclick="javascript:gasp('[offcanvas][background]','[navigation][background]')">Use Navigation Color</a></div>
     width:
       type: input.text
       label: Panel Width
       description: Set offcanvas size in rem, em, px, or percentage unit values
       default: "100vw"
       pattern: '\d+(\.\d+){0,1}(rem|em|ex|ch|vw|vh|vmin|vmax|%|px|cm|mm|in|pt|pc)'
+
+    overlay:
+      type: input.colorpicker
+      label: Modal Overlays
+      default: "#000011"
+      
     toggle-icon:
         type: input.icon
         label: Toggle Icon
         default: fa fa-bars
-    toggle-color:
-      type: input.colorpicker
-      label: Toggle Color
-      default: "#111111"
     toggle-width:
       type: input.text
       label: Toggle Width
@@ -39,6 +33,14 @@ form:
       description: Set offcanvas size in rem, em, px, or percentage unit values
       default: "3rem"
       pattern: '\d+(\.\d+){0,1}(rem|em|ex|ch|vw|vh|vmin|vmax|%|px|cm|mm|in|pt|pc)'
+
+    toggle-background:
+      type: input.colorpicker
+      label: Toggle backround
+
+    toggle-color:
+      type: input.colorpicker
+      label: Toggle Color
     
     toggle-visibility:
       type: select.selectize

@@ -1,5 +1,5 @@
 name: Menu
-description: Set menu style configuration options.
+description: Navigation colors for the gasken theme
 type: configuration
 
 form:
@@ -28,4 +28,4 @@ form:
       label: Hide on Mobile
       description: Check this field to completely hide the dropdown menu on mobile devices. This prevents menu flickering but you might end with no menu when JS is not supported by the respective device.
       placeholder: 'Select...'
-      default: 0
+      default: 1      

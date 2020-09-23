@@ -1,0 +1,33 @@
+.modal {
+
+	&.screen {
+		background: $offcanvas-overlay;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 100%;
+		padding: 2rem;
+		height: 100%;
+		background: rgba(0, 0, 0, 0.6);
+		display: flex;
+		justify-content: space-around;
+		align-items: flex-end;
+		width: 100%;
+		padding: 2rem 2rem 6rem 2rem;
+		height: 100%;	
+	}
+
+	&.active {
+		position: fixed;
+		top: 0;
+		left: 0;
+	}
+
+	> .container {
+		background-color: var(--bg);
+		padding: 1rem;
+		border-radius: .5rem;
+	}
+
+}
+

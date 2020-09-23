@@ -1,0 +1,45 @@
+// new vars
+
+@include import-font($base-font);
+
+@if isnt-same($base-heading-font, $base-font) {
+	@include import-font($base-heading-font);
+}
+
+
+:root {
+	@include hsl-bg($base-background,$base-text-color);
+
+	--yellow: $color-yellow;
+	--red: $color-red;
+	--blue: $color-blue;
+	--green: $color-green;
+	
+	--accent-1: $accent-color-1;
+	--accent-2: $accent-color-2;
+	--accent-3: $accent-color-3;
+	--accent-4: $accent-color-4;
+
+	--padding: $leading-margin;
+	--margin: 0;
+}
+
+
+@import "animation";
+@import "core";
+@import "nav";
+@import "sections";
+@import "color";
+@import "buttons";
+@import "forms";
+@import "list";
+@import "tooltip";
+@import "scrollbars";
+@import "offcanvas";
+@import "modal";
+@import "modular";
+@import "cards";
+@import "utilities";
+@import "etc";
+
+@import "print";

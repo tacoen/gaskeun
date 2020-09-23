@@ -1,5 +1,5 @@
 name: Background-Cover Image
-type: variants
+type: variations
 
 form:
   fields:
@@ -9,26 +9,32 @@ form:
       placeholder: 'Select...'
       default: soft-light
       options:
+        normal: normal
         soft-light: soft-light
+        hard-light: hard-light
+        overlay: overlay
         darken: darken
         multiply: multiply
-        overlay: overlay
         screen: screen
-        none: none
-    background-1:
+        lighten: lighten
+        color-burn: color-burn
+        color-dodge: color-dodge
+        saturation: saturation
+        hue: hue
+        color: color
+        luminosity: luminosity
+        difference: difference
+        auto: auto
+        
+    image-1:
       type: input.imagepicker
       label: Cover 1
-      default: gantry-media://cover1.png
-    background-2:
+    image-2:
       type: input.imagepicker
       label: Cover 2
-      default: gantry-media://cover2.png
-    background-3:
+    image-3:
       type: input.imagepicker
       label: Cover 3
-      default: gantry-media://cover3.png
-      
-    background-4:
+    image-4:
       type: input.imagepicker
       label: Cover 4
-      default: gantry-media://cover4.png

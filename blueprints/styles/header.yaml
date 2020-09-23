@@ -1,5 +1,5 @@
 name: Header
-type: section
+type: base
 
 form:
   fields:
@@ -7,18 +7,9 @@ form:
     background:
       type: input.colorpicker
       label: Background
-      default: "#113377"
-    fnote:
-      type: separator.note
-      class: nulled
-      content: <div style='padding: 0 10px 0 185px'><a onclick="javascript:gasp('[header][background]','[accent][color-2]')">Use Secondary Color</a></div>
+      default: "#e0e0f0"
+
     text-color:
       type: input.colorpicker
       label: Text Color
-      default: "#ffffff"
-    font:
-      type: input.fonts
-      label: Section Font
-    image:
-      type: input.imagepicker
-      label: Background Image
+

@@ -1,0 +1,91 @@
+// colours
+
+$colours: (
+
+	accent-1:(
+		background: $accent-color-1,
+		alias: showcase
+	),
+
+	accent-2:(
+		background: $accent-color-2,
+		alias: features
+	),
+
+	accent-3:(
+		background: $accent-color-3, 
+		alias: callout
+	),	
+
+	accent-4:(
+		background: $accent-color-4, 
+	),
+
+	yellow:(
+		background: $color-yellow, 
+		button: true,
+		alert: 'warning'
+	),
+
+	red:(
+		background: $color-red, 
+		button: true,
+		alert: 'error' 
+	),
+
+	blue:(
+		background: $color-blue, 
+		button: true,
+		alert: 'info' 
+	),
+
+	green:(
+		background: $color-green, 
+		button: true,
+		alert: 'success' 
+	)
+
+);
+
+
+@each $name, $set in $colours {
+
+	@if map-get($set,'alias') {
+		$prefix: ', .modular-row.';
+		$alias: map-get($set,'alias');
+		$alias-name: #{$prefix}#{$alias};
+	} @else {
+		$alias-name:'';
+	}
+	
+	$prefix: 'html .bg-';
+	$bg-name: #{$prefix}#{$name}#{$alias-name};
+
+	#{$bg-name} {
+		@if (map-get($set,'background')) {
+			@include hsl-bg( 
+				map-get($set,'background')
+			);
+		}
+	}
+
+	$prefix: 'html .txt-';
+	$txt-name: #{$prefix}#{$name};
+
+	#{$txt-name} {
+		@if (map-get($set,'background')) {
+			@include hsl-txt-parse(map-get($set,'background'));
+			--txt: unquote("hsl(var(--txt-h), var(--txt-s), var(--txt-l))");
+			color: var(--txt);
+		}
+	}
+
+}
+
+.modular-row.features,
+.modular-row.callout,
+.modular-row.showcase {
+	background-color: var(--bg);
+	color: var(--txt);
+	margin: -1rem -2rem;
+}

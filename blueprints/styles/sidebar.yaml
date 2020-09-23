@@ -1,5 +1,5 @@
 name: Sidebar
-type: section
+type: base
 
 form:
   fields:
@@ -7,13 +7,9 @@ form:
     background:
       type: input.colorpicker
       label: Background
+      default: "#e0e0f0"
+
     text-color:
       type: input.colorpicker
       label: Text Color
-    font:
-      type: input.fonts
-      label: Section Font
-    image:
-      type: input.imagepicker
-      label: Background Image
-      
+

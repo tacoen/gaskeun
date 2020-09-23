@@ -1,7 +1,6 @@
-name: ga-SearchBox
-description: Display SearchBox
+name: Gasken SearchBox
 type: particle
-icon: fa-search-o
+icon: fa-search-plus
 
 form:
   fields:

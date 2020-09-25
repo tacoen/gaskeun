@@ -41,7 +41,9 @@
 
 	@if (if-not-empty($offcanvas-toggle-background)) {
 		--bg: $offcanvas-toggle-background;
-		--bg--light: lighten($offcanvas-toggle-background,15%);
+		--bg-light: lighten($offcanvas-toggle-background,15%);
+	} @else {
+		--bg: #0000;
 	}
 
 	@if (if-not-empty($offcanvas-toggle-color)) {
@@ -135,7 +137,7 @@
 	}
 }
 
-.gaskeun-mobile .g-offcanvas-right #ga-searchbox {
+.ga-mobile .g-offcanvas-right #ga-searchbox {
     flex-flow: row-reverse;
 }
 

@@ -1,0 +1,63 @@
+@mixin font-awesome($code,$color: $base-text-color ) {
+	&:before  {
+		font-family: 'FontAwesome';
+		content: $code;
+		margin-right: .25rem;
+		@if $color != $base-text-color { color: $color; }
+	}
+}
+
+@mixin linktype() {
+
+	a[href$="zip"] { @include font-awesome("\f1c6",#900); }
+	a[href$="rar"] { @include font-awesome("\f1c6",#090); }
+	a[href$="tar"] { @include font-awesome("\f1c6",#009); }
+	a[href$="gz"]  { @include font-awesome("\f1c6",#909); }
+	a[href$="arj"] { @include font-awesome("\f1c6",#990); }
+
+	a[href$="html"] { @include font-awesome("\f1c9"; }
+	a[href$="css"] { @include font-awesome("\f1c9",#090); }
+	a[href$="php"] { @include font-awesome("\f1c9",#009); }
+	a[href$="java"] { @include font-awesome("\f1c9",#900); }
+	a[href$="php"] { @include font-awesome("\f1c9",#909); }
+	a[href$="py"] { @include font-awesome("\f1c9",#990); }
+
+	a[href$="pdf"] { @include font-awesome("\f1c1"); }
+
+	a[href$="jpg"] { @include font-awesome("\f1c5"); }
+	a[href$="jpeg"] { @include font-awesome("\f1c5"); }
+	a[href$="png"] { @include font-awesome("\f1c5",#900); }
+	a[href$="svg"] { @include font-awesome("\f1c5",#090); }
+	a[href$="bmp"] { @include font-awesome("\f1c5",#009); }
+	a[href$="gif"] { @include font-awesome("\f1c5",#990); }
+
+	a[href$="txt"] { @include font-awesome("\f15c"); }
+	a[href$="md"] { @include font-awesome("\f0f6"); }
+	
+	a[href$="doc"] { @include font-awesome("\f1c2"); }
+	a[href$="ppt"] { @include font-awesome("\f1c4"); }
+	a[href$="xls"] { @include font-awesome("\f1c3"; }
+	a[href$="docx"] { @include font-awesome("\f1c2",#090);  }
+	a[href$="pptx"] { @include font-awesome("\f1c4",#090); }
+	a[href$="xlsx"] { @include font-awesome("\f1c3",#090); }
+
+	a[href$="mp4"] { @include font-awesome("\f1c8"); }
+	a[href$="ogv"] { @include font-awesome("\f1c8",#900); }
+	a[href$="avi"] { @include font-awesome("\f1c8",#009); }
+
+	a[href$="mp3"] { @include font-awesome("\f1c7"); }
+	a[href$="ogg"] { @include font-awesome("\f1c7",#009); }
+	a[href$="au"] { @include font-awesome("\f1c7",#090); }
+
+	a[href$="zip|rar"] { @include font-awesome("\f1c6"); }
+
+	// a[href^="/"], a[href^=".."] {}
+	
+	a[href^="http"] { @include font-awesome("\f0ac",#009); }
+	a[href^="mailto:"] {@include font-awesome("\f003",#009); }
+
+}
+
+.list {	
+	@include linktype();
+}

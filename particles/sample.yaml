@@ -1,6 +1,7 @@
-name: Gaskeun Card
+name: Sample Content
+description: Displays Sample Content
 type: particle
-icon: fa-credit-card
+icon: fa-pencil-square-o
 
 configuration:
   caching:
@@ -14,16 +15,6 @@ form:
       description: Globally enable the particle.
       default: true
 
-    layout:
-      type: select.selectize
-      label: Content Layout
-      overridable: false
-      placeholder: Select Layout...
-      options:
-        cue: cue-card
-        card: card
-        imagebox: imagebox
-        
     image:
       type: input.imagepicker
       label: Image
@@ -56,7 +47,7 @@ form:
       description: Customize the link text.
       overridable: false
 
-    items:
+    samples:
       type: collection.list
       array: true
       label: Sample Items
@@ -66,17 +57,27 @@ form:
       overridable: false
 
       fields:
-        .image:
-            type: input.imagepicker
-            label: Image
+        .icon:
+          type: input.icon
+          label: Icon
 
         .title:
           type: input.text
           label: Title
 
+        .subtitle:
+          type: input.text
+          label: Sub Title
+
         .description:
           type: textarea.textarea
           label: Description
+
+        .id:
+          type: input.text
+          label: CSS ID
+          description: 'Enter the ID for the block without the hash (#) (ie. <code>your-id</code>. You can then reference the element via CSS as <code>#your-id</code>'
+          default:
 
         .class:
           type: input.selectize
@@ -84,3 +85,6 @@ form:
           description: Enter CSS class names.
           default:
 
+        .variations:
+          type: input.block-variations
+          label: Variations

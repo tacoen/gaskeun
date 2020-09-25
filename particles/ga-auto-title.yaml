@@ -1,7 +1,6 @@
-name: Tree
-description: Article Tree particle
+name: Page Title
 type: particle
-icon: fa-list-ol
+icon: fa-header
 
 configuration:
   caching:
@@ -14,8 +13,5 @@ form:
       label: Enabled
       description: Globally enable the particle.
       default: true  
-    pagekey:
-        type: input.text
-        label: Folder
-        overrideable: True
+
  

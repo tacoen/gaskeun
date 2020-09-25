@@ -14,7 +14,6 @@
 	--col-width: $menu-col-width;
 	background-color: var(--bg);
 	color: var(--txt);
-	font-size: $base-font-size * .9;
 
 	@extend %flex-vcenter;
 	@extend %flush-g-content;
@@ -24,7 +23,7 @@
 		display: inline-flex !important;
 		position: unset !important;
 		align-self: center;
-		color: var(--bg-a2);
+		color: var(--txt);
 	}
 
 	.g-menu-item-content  {

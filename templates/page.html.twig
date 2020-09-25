@@ -100,7 +100,10 @@
 <html gaskeun {{ gantry.page.htmlAttributes|raw }}>
     {{ page_head|raw }}
     {% block page_body -%}
-    <body{{ gantry.page.bodyAttributes({'class': [offcanvas_position, gantry.page.preset, 'g-style-' ~ gantry.theme.preset]})|raw }}>
+    <body{{ gantry.page.bodyAttributes({'class': [offcanvas_position, 
+	'page-'~page.slug(), 
+	gantry.page.preset, 
+	'g-style-' ~ gantry.theme.preset]})|raw }}>
         {{ gantry.config.page.body.body_top|raw }}
         {{ body_top|raw }}
         {{ page_offcanvas|raw }}

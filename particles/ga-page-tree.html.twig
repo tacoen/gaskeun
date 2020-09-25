@@ -1,16 +1,17 @@
 {% extends '@nucleus/partials/particle.html.twig' %}
 
 {% block particle %}
-{% for page in pages.find(particle.pagekey).children %}
-{{ page.title }}
-{% endfor %}
+
 {% if particle.pagekey %}
-	{% set pagecol = pages.find('/'~particle.pagekey).children.visible %}
+	{% set colm = particle.pagekey %}
 {% else %}
-	{% set pagecol = pages.children.visible %}
+	{% set colm = page.slug() %}
 {% endif %}
 
-<ol class="ga-tree">
+	{% set pagecol = pages.find('/'~colm).children.visible %}
+
+
+<ol class="ga-tree top-level" data-slug="{{ colm }}">
     {% for page in pagecol %}
         {% if page.children.visible is empty %}
             <li class="item">

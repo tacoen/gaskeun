@@ -24,24 +24,28 @@ $colours: (
 	yellow:(
 		background: $color-yellow, 
 		button: true,
+		notices: true,
 		alert: 'warning'
 	),
 
 	red:(
 		background: $color-red, 
 		button: true,
+		notices: true,
 		alert: 'error' 
 	),
 
 	blue:(
 		background: $color-blue, 
 		button: true,
+		notices: true,
 		alert: 'info' 
 	),
 
 	green:(
 		background: $color-green, 
 		button: true,
+		notices: true,
 		alert: 'success' 
 	)
 
@@ -57,9 +61,16 @@ $colours: (
 	} @else {
 		$alias-name:'';
 	}
+
+	@if map-get($set,'notices') {
+		$prefix: ',.notices.';
+		$notice-name: #{$prefix}#{$name};
+	} @else {
+		$notice-name:'';
+	}
 	
 	$prefix: 'html .bg-';
-	$bg-name: #{$prefix}#{$name}#{$alias-name};
+	$bg-name: #{$prefix}#{$name}#{$alias-name}#{$notice-name};
 
 	#{$bg-name} {
 		@if (map-get($set,'background')) {

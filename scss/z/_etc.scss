@@ -126,7 +126,7 @@ i.fa {
     align-items: center;
 }
 
-html.gaskeun-mobile {
+html.ga-mobile {
 
 	#g-header,
 	#g-navigation {
@@ -153,22 +153,23 @@ html.gaskeun-mobile {
 	}
 }
 
-html.gaskeun-small  { @extend html.gaskeun-mobile }
+html.ga-small  { @extend html.ga-mobile }
 
 /*
-// Small Device
+// Small Device/ modal-search
 
-html.gaskeun-small {
+html.ga-small {
 	#ga-searchbox { padding: .5rem; background: #0000; }
 	.dock-top { left: 0; width: 100% }
 }
 */
 
 
-
+/*
 .logo img,
 .logo a {
     display: flex;
     height: 100%;
     align-items: center;
 }
+*/

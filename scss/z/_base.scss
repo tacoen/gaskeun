@@ -1,4 +1,17 @@
-// new vars
+// empty string issue
+
+$accent-color-1: if-is-empty($accent-color-1, $core-accent);
+$accent-color-2: if-is-empty($accent-color-2, $accent-color-1);
+$accent-color-3: if-is-empty($accent-color-2, $accent-color-2);
+$accent-color-4: if-is-empty($accent-color-2, $accent-color-4);
+
+$header-text-color: if-is-empty($header-text-color, $base-text-color);
+$footer-text-color: if-is-empty($footer-text-color, $base-text-color);
+$sidebar-text-color: if-is-empty($sidebar-text-color, $base-text-color);
+$navigation-text-color: if-is-empty($navigation-text-color, $base-text-color);
+
+$base-heading-font: if-is-empty($base-heading-font, $base-font);
+
 
 @include import-font($base-font);
 

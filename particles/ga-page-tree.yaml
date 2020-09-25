@@ -1,0 +1,20 @@
+name: Page Tree
+type: particle
+icon: fa-tree
+
+configuration:
+  caching:
+    type: static
+
+form:
+  fields:
+    enabled:
+      type: input.checkbox
+      label: Enabled
+      description: Globally enable the particle.
+      default: true  
+    pagekey:
+        type: input.text
+        label: Folder
+        overrideable: True
+ 

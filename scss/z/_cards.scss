@@ -1,6 +1,6 @@
-.gaskeun-tablet,
-.gaskeun-small,
-.gaskeun-mobile {
+.ga-tablet,
+.ga-small,
+.ga-mobile {
 	.card { font-size: 1em; }
 }
 
@@ -16,7 +16,7 @@ $all-tablet: assign-inputs([
 	'.size-40'
 ]);
 
-.gaskeun-tablet {
+.ga-tablet {
 	#{$all-tablet} { width: 50%; flex: 0 50%; }
 }
 

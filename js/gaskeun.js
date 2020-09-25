@@ -52,17 +52,17 @@ function ga_modular_slideshow_func(ele) {
 
 function ga_breakpoint_tagging() {
 
-	if (window.innerWidth < gaskeun_media_breakpoint.tablet) { media='gaskeun-mobile'; }
-	if (window.innerWidth <= 520) { media='gaskeun-small'; }
-	if (window.innerWidth <= gaskeun_media_breakpoint.mobile) { media='gaskeun-small'; }
-	if (window.innerWidth >= gaskeun_media_breakpoint.tablet) { media='gaskeun-tablet'; }
-	if (window.innerWidth >= gaskeun_media_breakpoint.desktop) { media='gaskeun-desktop'; }
+	if (window.innerWidth < gaskeun_media_breakpoint.tablet) { media='ga-mobile'; }
+	if (window.innerWidth <= 520) { media='ga-small'; }
+	if (window.innerWidth <= gaskeun_media_breakpoint.mobile) { media='ga-small'; }
+	if (window.innerWidth >= gaskeun_media_breakpoint.tablet) { media='ga-tablet'; }
+	if (window.innerWidth >= gaskeun_media_breakpoint.desktop) { media='ga-desktop'; }
 	if (window.innerWidth >= gaskeun_media_breakpoint.wide) { media=false; }
 	
-	html.classList.remove('gaskeun-small');
-	html.classList.remove('gaskeun-desktop');
-	html.classList.remove('gaskeun-tablet');
-	html.classList.remove('gaskeun-mobile');
+	html.classList.remove('ga-small');
+	html.classList.remove('ga-desktop');
+	html.classList.remove('ga-tablet');
+	html.classList.remove('ga-mobile');
 	
 	if (media) { html.classList.add(media); }
 }
@@ -121,12 +121,13 @@ function gasearch_toggle(th) {
 	
 	event.preventDefault()
 	
-	var ga = document.getElementById('ga-searchbox');
-	if (! ga.classList.contains('active')) {
-		ga.classList.add('active')
+	var gas = document.querySelector('#ga-search-box');
+	console.log(gas);
+	if (! gas.classList.contains('active')) {
+		gas.classList.add('active')
 		th.innerHTML = '<i class="fa fa-chevron-right"></i>'
 	} else {
-		ga.classList.remove('active')
+		gas.classList.remove('active')
 		th.innerHTML = '<i class="fa fa-search"></i>'
 	}
 }

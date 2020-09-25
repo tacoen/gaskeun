@@ -60,4 +60,6 @@ html {
 	.bg-white { background-color: var(--white); color: var(--black); }
 	.bg-black { background-color: var(--black); color: var(--white); }
 
+	.txt-white { color: var(--white); --txt: #fff; }
+	.txt-black { color: var(--black); --txt: #000; }
 }

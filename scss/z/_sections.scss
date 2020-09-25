@@ -50,3 +50,9 @@ $sections: (
 	}
 	
 }
+
+[class*='section-sidebar'] {
+	@extend .section-sidebar;
+	@extend %page-main-height;
+
+}

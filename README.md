@@ -27,6 +27,18 @@ Gaskeun loaded with more options.
 
 <img src='admin/bucket/theme-options.png'>
 
+To lock the owner information, open `blueprint.yaml` on your theme folder, set `readonly` to `true` under `owner` field
+
+```
+    owner:
+        size: long
+        type: textarea
+        size: large
+        label: Owner Information 
+        default: owner information
+	readonly: true
+```
+
 ## Grav Templates
 
 ## Tips

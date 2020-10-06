@@ -79,14 +79,14 @@ configuration:
       mobile-only: Mobile Only
 
     Styles Color:
-      bg-accent-1: accent-1
-      bg-accent-2: accent-2
-      bg-accent-3: accent-3
-      bg-accent-4: accent-4
-      bg-yellow: yellow
-      bg-red: red
-      bg-blue: blue
-      bg-green: green
+      bg-color-accent-1: accent-1
+      bg-color-accent-2: accent-2
+      bg-color-accent-3: accent-3
+      bg-color-accent-4: accent-4
+      bg-color-yellow: yellow
+      bg-color-red: red
+      bg-color-blue: blue
+      bg-color-green: green
       cover-1: Cover 1
       cover-2: Cover 2
       cover-3: Cover 3

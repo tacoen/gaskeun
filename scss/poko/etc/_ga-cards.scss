@@ -3,6 +3,11 @@
 	
 	height: $box-height;
 
+	--bg: $base-neutral;
+	--b1: #000;
+	--w1: #fff;
+	
+	
 	overflow: hidden;
 	text-align: center;
 	border: 1px solid #0003;
@@ -106,8 +111,13 @@
 		background-blend-mode: lighten;
 		position: relative;
 		transition: all 1s ease;
+		color: var(--txt);
 	}
 
+	h4 {
+		font-size: 1.1rem; 
+	}
+	
 	.overlay {
 		height: 100%;
 		line-height: 1.2;
@@ -166,6 +176,7 @@
     display: flex;
     flex-flow: column;
     justify-content: flex-end;
+	line-height: 1.2;	
   }
 
   .overlay {
@@ -177,11 +188,13 @@
 
   .description {
     padding: 0;
+	line-height: 1.8;	
   }
 
   .hover {
     padding: 1rem;
     transition: all 1s ease-out;
+	font-size: .9rem;
   }
 
   .normal {
@@ -200,7 +213,7 @@
     opacity: 0;
   }
 
-  li{ padding-left: 1.5rem; position: relative; }
+  li{ padding-left: 1.5rem; position: relative;  }
 
   li:before {
     font-family: FontAwesome;
@@ -208,7 +221,7 @@
     position: absolute;
 	left:  0;
 	width: 1rem;
-    color: var(--bg-co, #fc3);
+    color: var(--co, $base-primary);
   }
 
   &:hover {
@@ -224,12 +237,12 @@
   a.pin {
     --fz:1rem;
     --sq:calc(5 * var(--fz));
-    background-color: #F00;
+    background-color: var(--co,$base-primary);
     color: #fff !important;
     z-index: 3;
     right: 1rem;
     position: absolute;
-    top: calc(-1.5 * var(--fz));
+    top: calc(-3 * var(--fz));
     font-size: var(--fz);
     width: var(--sq);
     height: var(--sq);

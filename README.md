@@ -21,9 +21,9 @@ Gaskeun loaded with more options.
 * Each html sections is constructed styles
 * Sass Skeleton 
 
-## Particles 
+## Gantry Particles 
 
-## Templates
+## Grav Templates
 
 ## Styles Options
 

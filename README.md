@@ -8,8 +8,9 @@ Gaskeun loaded with more options.
 </div>
 
 <div class='images'>
-<img src='admin/preset/zero.png' height='160'>
-<img src='admin/preset/blank.png' height='160'>
+<img src='admin/preset/default.png' height='160'>
+<img src='admin/preset/nocolor.png' height='160'>
+<img src='admin/preset/slate.png' height='160'>
 </div>
 
 ## Tips

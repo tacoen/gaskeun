@@ -27,6 +27,14 @@ Gaskeun loaded with more options.
 
 <img src='admin/bucket/theme-options.png'>
 
+For html header:
+
+```
+<meta name="generator" content="GravCMS">
+<meta name="description" content="Grav is an easy to use, yet powerful, open source flat-file CMS">
+<meta name="owner" content="Niki cookies corner - It's a relieve">
+```
+
 To lock the *owner information*, open `blueprint.yaml` on your theme folder, set `readonly` to `true` under `owner` field
 
 ```
@@ -38,15 +46,6 @@ To lock the *owner information*, open `blueprint.yaml` on your theme folder, set
         default: owner information
 	readonly: true
 ```
-
-
-
-```
-<meta name="generator" content="GravCMS">
-<meta name="description" content="Grav is an easy to use, yet powerful, open source flat-file CMS">
-<meta name="owner" content="Niki cookies corner">
-```
-
 ## Grav Templates
 
 ## Tips

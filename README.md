@@ -27,7 +27,7 @@ Gaskeun loaded with more options.
 
 <img src='admin/bucket/theme-options.png'>
 
-To lock the owner information, open `blueprint.yaml` on your theme folder, set `readonly` to `true` under `owner` field
+To lock the *owner information*, open `blueprint.yaml` on your theme folder, set `readonly` to `true` under `owner` field
 
 ```
     owner:
@@ -37,6 +37,14 @@ To lock the owner information, open `blueprint.yaml` on your theme folder, set `
         label: Owner Information 
         default: owner information
 	readonly: true
+```
+
+
+
+```
+<meta name="generator" content="GravCMS">
+<meta name="description" content="Grav is an easy to use, yet powerful, open source flat-file CMS">
+<meta name="owner" content="Niki cookies corner">
 ```
 
 ## Grav Templates

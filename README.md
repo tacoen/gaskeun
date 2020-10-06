@@ -25,6 +25,8 @@ Gaskeun loaded with more options.
 
 ## Themes Options
 
+<img src='admin/bucket/theme-options.png'>
+
 ## Grav Templates
 
 ## Tips

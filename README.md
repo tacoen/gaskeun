@@ -13,13 +13,19 @@ Gaskeun loaded with more options.
 <img src='admin/preset/slate.png' height='160'>
 </div>
 
-## Functions
+## Key Features
+
+* Sass convert hexcolor to hsl
+* Use css3 var(), dynamic theme var
+* Each html sections is constructed styles
+* Sass Skeleton 
 
 ## Particles 
 
 ## Templates
 
 ## Styles Options
+
 
 ## Tips
 

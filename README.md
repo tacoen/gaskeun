@@ -17,6 +17,7 @@ Gaskeun loaded with more options.
 
 * Sass convert hexcolor to hsl
 * Use css3 var(), dynamic theme var
+* css3 var() provide color pallete, triadic, analogus, complement, and 8 level of shade.
 * Each html sections is constructed styles
 * Sass Skeleton 
 

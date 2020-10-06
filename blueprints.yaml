@@ -31,7 +31,6 @@ form:
         size: large
         label: <b>Owner Information</b> 
         default: owner information
-        readonly: true
 
     links:
         type: array

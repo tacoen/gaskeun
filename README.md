@@ -23,10 +23,9 @@ Gaskeun loaded with more options.
 
 ## Gantry Particles 
 
+## Themes Options
+
 ## Grav Templates
-
-## Styles Options
-
 
 ## Tips
 

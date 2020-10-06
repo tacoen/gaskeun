@@ -7,7 +7,7 @@ form:
     background:
       type: input.colorpicker
       label: Background
-      default: "#e0e0f0"
+      default: "#991111"
 
     text-color:
       type: input.colorpicker

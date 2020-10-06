@@ -1,7 +1,7 @@
 name: Gaskeun Dummy
 description: Display Lorem Ipsum in style
 type: particle
-icon: fa-train
+icon: fa-asterisk
 
 configuration:
   caching:
@@ -15,7 +15,6 @@ form:
     enabled:
       type: input.checkbox
       label: Enabled
-      description: Globally enable the particle.
       default: true
 
     content:
@@ -24,10 +23,12 @@ form:
       label: Content
       default: element
       options:
-        'element': element
-        'modular': modular
+        'typography': Typography
+        'colors': Colours
         'fa': Font Awesome
-        'page': page
-        'text': text
-        'dump': style dump
+        'emoji': Common Emoji
+        'modular': Modular Replica
+        'cards': Cards Replica
+        'dump': Theme Creator Vars
+        'sandbox': sandbox
 

@@ -1,11 +1,33 @@
 version: 2
+
 preset:
   image: 'gantry-admin://images/layouts/clean.png'
   name: default
 
 layout:
-  /header/:
-  /main/:
-  /footer/:
+  /header/: {  }
+  /navigation/: { }
+  /main/: { }
+  /footer/: {  }
+  floats:
+    -
+      - system-messages-1945
   offcanvas:
-    - mobile-menu
+    -
+      - mobile-menu-1945
+
+structure:
+  header:
+    attributes:
+      boxed: ''
+  main:
+    attributes:
+      boxed: ''
+  footer:
+    attributes:
+      boxed: ''
+  container-messages:
+    attributes:
+      boxed: ''
+
+content:

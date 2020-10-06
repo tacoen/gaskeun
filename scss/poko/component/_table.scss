@@ -1,0 +1,22 @@
+
+table {
+	background: var(--d1,#0001);
+	border-radius: $border-radius;
+	border-collapse: collapse;
+	overflow: hidden;
+  
+	th { 
+		background-color: var(--l1,var(--shade));
+	}
+
+	tbody {
+		tr:nth-child(odd) { background-color: #fff2; }
+		tr:nth-child(even) { background-color: #0001; }
+	}
+	
+	th, td { 
+		@extend %content-padding; 
+		border: 1px solid var(--outline);		
+	}
+
+}

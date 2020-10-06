@@ -1,0 +1,5 @@
+$all-buttons: assign-inputs(['button','a.button','input[type="submit"]','input[type="reset"]']);
+
+$all-heading: assign-inputs(['h1','h2','h3','h4','h5','h6']);
+$all-heading-firstchild: assign-inputs(['h1','h2','h3','h4','h5','h6'],'first-child');
+

@@ -1,10 +1,10 @@
 details:
-  name: gasken
-  version: '1.0'
+  name: Gasken
+  version: '2.0'
   icon: html5
   date: 'August 17, 2020'
 
-  description: gasken Theme
+  description: Gasken Theme
   images:
     thumbnail: /admin/image/preset1.png
     preview: /admin/image/preset1.png
@@ -60,44 +60,25 @@ configuration:
 
 
 
+  color-variantions:
+  
   section-variations:
-    Utility:
-      disabled: Disabled
-      center: Center
-      nomarginall: No Margin
-      nopaddingall: No Padding
 
-    Function:
+    Layout Function:
       dock-top: Dock it on Top
       fix-at-top: Fix at Top
       fix-at-left: Fix at left
-      toggleable: toggleable
-       
-    Image Background:
-      cover-1: Cover 1
-      cover-2: Cover 2
-      cover-3: Cover 3
-      cover-4: Cover 4
-
-    Effects:
-      shadow: Shadow 1
-      shadow2: Shadow 2
-      rounded: Rounded
-      square: Square
-
-  block-variations:
+      toggle-able: Toggleable
 
     Utility:
       disabled: Disabled
-      align-right: Align Right
-      align-left: Align Left
       center: Center
-      full-width: Full Width
-      equal-height: Equal Height
       nomarginall: No Margin
       nopaddingall: No Padding
-      hide-mobile: Hide on small
-    Theme colors:
+      small-font: Small Font
+      mobile-only: Mobile Only
+
+    Styles Color:
       bg-accent-1: accent-1
       bg-accent-2: accent-2
       bg-accent-3: accent-3
@@ -106,11 +87,47 @@ configuration:
       bg-red: red
       bg-blue: blue
       bg-green: green
+      cover-1: Cover 1
+      cover-2: Cover 2
+      cover-3: Cover 3
+      cover-4: Cover 4
+      
+    Effects:
+      shadow: Shadow 1
+      shadow2: Shadow 2
+      rounded: Rounded
+      square: Square
+    
+  block-variations:
+
+    Utility:
+      disabled: Disabled
+      align-right: Align Right
+      align-left: Align Left
+      center: Center
+      nomarginall: No Margin
+      nopaddingall: No Padding
+      hide-mobile: Hide on small
+      
     Transition:
       banim-fade: fade
-      banim-slide-left: slide left
-      banim-slide-right: slie right
+      banim-slide-l: slide-left
+      banim-slide-r: slie-right
       banim-bounce: bounce
+      
+    Styles Color:
+      bg-accent-1: accent-1
+      bg-accent-2: accent-2
+      bg-accent-3: accent-3
+      bg-accent-4: accent-4
+      bg-yellow: yellow
+      bg-red: red
+      bg-blue: blue
+      bg-green: green
+      cover-1: Cover 1
+      cover-2: Cover 2
+      cover-3: Cover 3
+      cover-4: Cover 4      
       
   dependencies:
     gantry: 5.4.0
@@ -119,13 +136,17 @@ admin:
   styles:
 
     base:
+      - preview
       - base
-    
-    menu:
-      - menu
+      - header
+      - navigation
+      - footer
 
     variations:
-
+      - accent
+      - cover
+      - color
+    
     configuration:
       - breakpoints
       - option

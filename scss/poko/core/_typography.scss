@@ -1,0 +1,50 @@
+// ----------------------------
+
+@include import-font($base-font);
+
+body {
+	font-family: get-font-family($base-font);
+	font-size: $base-font-size;
+	line-height: $line-height;
+}
+
+pre,textarea { width: 100% }
+
+#{$all-heading} {
+	margin-block-start: 1em;
+    margin-block-end: .75em;
+	margin-right: 1rem;
+}
+
+#{$all-heading-firstchild} {
+	margin-block-start: 0;
+	text-transform: capitalize;
+}
+
+h1 { font-size: $base-font-size*2; }
+h2 { font-size: $base-font-size*1.5; }
+h3 { font-size: $base-font-size*1.25; }
+h4 { font-size: $base-font-size*1; }
+h5 { font-size: $base-font-size*.9; }
+h6 { font-size: $base-font-size*.8; }
+
+img:hover {
+    background-color: var(--l2, var(--shade,#ddd) );
+}
+
+main {
+
+	line-height: var(--line-height,$line-height);
+
+	a:not(.button):not(.footnote-ref) {
+		color: var(--txt);
+		transition: all .5s linear;
+		border-bottom: 1px dotted #0003;
+		&:hover { border-bottom: 1px solid var(--co,var(--primary)); }
+		&:active { border-bottom: 1px dashed var(--t1,var(--primary)); }
+	}
+}
+
+a.logo {
+	border-bottom: none !important;
+}

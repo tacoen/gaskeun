@@ -45,7 +45,7 @@
 
             i.fa {
                 font-size: 2rem;
-                color: $core-accent;
+                color: $base-neutral;
             }
 
             h4 {
@@ -55,7 +55,7 @@
 
             p {
                 display: inline-block;
-                font-size: $core-font-size;
+                font-size: $base-font-size;
                 margin: 0.2rem 0 1rem;
             }
         }
@@ -85,6 +85,7 @@
                 }
 
                 h4 {
+					color: red;
                     font-size: 1.3rem;
                     text-align: left;
                 }

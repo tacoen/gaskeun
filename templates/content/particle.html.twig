@@ -13,7 +13,7 @@
     {% set html %}
         {% if enabled and (segment.attributes.enabled is null or segment.attributes.enabled) %}
             {% include ['particles/' ~ segment.subtype ~ '.html.twig',
-            '@particles/' ~ segment.subtype ~ '.html.twig',
+            'particles/' ~ segment.subtype ~ '.html.twig',
             '/content/missing.html.twig'] %}
         {% endif %}
     {% endset %}

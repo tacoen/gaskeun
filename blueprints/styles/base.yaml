@@ -4,10 +4,34 @@ type: base
 form:
   fields:
 
-    snote:
+    background:
+      type: input.colorpicker
+      label: Background Color
+      default: "#f7f7f7"
+
+    neutral:
+      type: input.colorpicker
+      label: Neutral Color
+      default: "#dddddd"
+    
+    accent:
+      type: input.colorpicker
+      label: Accent Color
+      default: "#ffcc33"
+      
+    offwhite:
+      type: input.colorpicker
+      label: Off Content
+      default: "#ffffff"
+    fnote4:
       type: separator.note
-      class: nulled
-      content: <script>function gasp(d,s) {var sc='input[name=\'styles'+s+'\']';var ds='input[name=\'styles'+d+'\']';document.querySelector(ds).value=document.querySelector(sc).value};document.querySelector(ds).focus();</script>
+      class: sf
+      content: <div class='sf-note'><a onclick='javascript:poko_direct_modif(this,"light")' data-ref='[base][background]' data-dst='[base][offwhite]'>Lighter Background</a></div>
+
+    text-color:
+      type: input.colorpicker
+      label: Text Color
+      default: "#222222"
 
     font:
       type: input.fonts
@@ -22,27 +46,16 @@ form:
       pattern: '\d+(\.\d+){0,1}(rem|em|ex|ch|vw|vh|vmin|vmax|%|px|cm|mm|in|pt|pc)'
       default: 1.5rem
     
-    background:
-      type: input.colorpicker
-      label: Background
-      default: "#f7f7f7"
-    text-color:
-      type: input.colorpicker
-      label: Text Color
-      default: "#222222"
-
     padding:
       type: input.text
       label: Padding
       pattern: '\d+(\.\d+){0,1}(rem|em|ex|ch|vw|vh|vmin|vmax|%|px|cm|mm|in|pt|pc)'
       default: 0.5rem
+
     margin:
       type: input.text
       label: Margin
       pattern: '\d+(\.\d+){0,1}(rem|em|ex|ch|vw|vh|vmin|vmax|%|px|cm|mm|in|pt|pc)'
       default: 0.5rem      
 
-    offwhite:
-      type: input.colorpicker
-      label: Off Content
-      default: "#ffffff"
+      

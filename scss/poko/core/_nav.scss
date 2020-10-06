@@ -1,0 +1,148 @@
+main .g-main-nav {
+	@include hsl-bg-init($base-neutral);	
+	@extend %hsl-pal;
+}
+
+.g-menu-item-container {
+	@extend %flex-vcenter;
+	@extend %content-padding;
+	justify-content: space-between;
+	width:100%
+}
+
+nav {
+
+	@extend %flex-vcenter;
+
+	.g-toplevel {
+		@extend %flex-vcenter;
+	}
+
+	.g-menu-item {
+		height: 100%;
+		display: inline-flex !important;
+		align-items: center;
+	}
+
+	.g-sublevel {
+		width: $menu-col-width;
+	}
+
+	.g-sublevel li{
+		width: 100%;
+	}	
+
+	.active { 
+		background-color: var(--l0); 
+
+		&.g-selected {
+			background-color: var(--l1); 
+		}
+		
+		.g-selected { 
+			background-color: var(--l2);
+		}
+
+		.g-sublevel { 
+			background-color: var(--l0);
+		}
+	}
+}
+
+#g-mobilemenu-container {
+
+	.g-sublevel {
+		width: 100%;
+	}
+
+	.active { 
+		.g-sublevel { 
+			background-color: var(--bg);
+		}
+	}
+}
+
+nav,
+#g-mobilemenu-container {
+
+	background-color: var(--bg);
+	color: var(--txt);
+
+	a { 
+		color: inherit;
+		display:block;
+		border-bottom: none !important;
+	}
+
+	.g-sublevel {
+		background-color: var(--bg);
+	}
+
+	.g-selected { 
+		background-color: var(--d0); 
+	}
+	
+	
+}
+
+.g-go-back a:hover:before,
+.g-menu-parent-indicator:hover:after {
+	opacity: 1 !important;
+}
+
+.g-offcanvas-toggle[aria-expanded=true] i:before {
+    content:"\f104";
+}
+
+.g-offcanvas-open .g-nav-overlay {
+    background-color: #0003;
+}
+
+#g-offcanvas[aria-expanded=true] {
+    transform: translateX(0px);
+}
+
+#g-offcanvas[aria-expanded=false] {
+    transform: translateX(-100%);
+}
+
+.vertical-menu {
+
+	.g-main-nav {
+
+		.g-sublevel {
+			background-color: var(--bg);
+		}
+
+		.g-selected { 
+			background-color: var(--d0); 
+			color: var(--hover);
+		}
+
+		>ul {
+			display: flex;
+			flex-flow: column;
+			margin-left: -1px;
+		}
+
+
+		ul, li {
+			background-color: var(--bg);
+		}
+
+		li a {
+			width: $menu-col-width;
+		}
+
+
+		.g-selected .g-dropdown {
+			display:block;  
+			left: 100%;
+			top:0;  
+		}
+	
+		.g-menu-parent-indicator:after {
+			transform:rotate(-90deg)
+		}
+	}
+}

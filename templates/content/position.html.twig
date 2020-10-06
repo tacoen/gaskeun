@@ -7,7 +7,7 @@
     {% set html %}
         {% if enabled and (segment.attributes.enabled is null or segment.attributes.enabled) %}
             {% include ['particles/' ~ segment.subtype|default('position') ~ '.html.twig',
-            '@particles/' ~ segment.subtype|default('position') ~ '.html.twig'] %}
+            'particles/' ~ segment.subtype|default('position') ~ '.html.twig'] %}
         {% endif %}
     {% endset %}
 

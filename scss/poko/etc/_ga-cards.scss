@@ -1,0 +1,253 @@
+
+.ga-card {
+	
+	height: $box-height;
+
+	overflow: hidden;
+	text-align: center;
+	border: 1px solid #0003;
+	border-radius: 1rem;
+
+	.description {
+		padding: .5rem 1rem;
+	}
+	
+	.items { 
+		list-style-type: none; 
+		padding-left: 0; 
+		font-size: .9rem; 
+		line-height: 1.2 
+	}
+	
+	.item {
+
+		padding: .5rem 0;
+		
+		h4 {
+			margin:0 0 .25rem 0;
+		}
+		
+	}
+}
+
+.ga-card.default {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	padding: 2rem;
+}
+
+// card --------------------------------------------------- 
+
+.ga-card.card {
+
+	position: relative;
+	transition: all .25s linear;
+	transform: translateY(0px);
+
+	&:hover {
+		transform: translateY(-8px);
+		box-shadow: 0 4px 8px #0003;		
+	}
+
+	.image {
+		background-color: #0009; 
+		background-blend-mode: soft-light;
+		height: 50%;
+		background-size: cover;
+		background-position: 100% 50%;
+	}
+	
+	.headline {
+		margin: 0;
+		padding: .5rem 1rem;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+	}
+	
+	.description {
+		margin: 0;
+		align-self: flex-start;
+		flex: 1 1 100%;
+		line-height: 1.2;
+		padding: 1rem;
+	}
+	
+	.items {
+		margin: 0;
+		flex: 1 1 100%;
+		padding: 0 1rem 1rem 1rem;
+		display: flex;
+		flex-flow: column;
+		align-items: center;
+	}
+	
+	.item { font-size: .9rem; }
+	
+	.content {
+		display: flex;
+		flex-flow: wrap;
+		height: 50%;
+		width: 100%;
+	}
+}
+
+// cue --------------------------------------------------- 
+
+.ga-card.cue {
+
+	.content {
+		height: 100%;
+		background-position: 50% 30%;
+		background-size: 100%;
+		background-repeat: no-repeat;
+		background-blend-mode: lighten;
+		position: relative;
+		transition: all 1s ease;
+	}
+
+	.overlay {
+		height: 100%;
+		line-height: 1.2;
+		
+		.normal,.hover {
+			height: 100%;
+			display: flex;
+			flex-flow: column;
+			justify-content: flex-end;
+			position: absolute;
+			width: 100%;
+			padding-bottom: 2rem;
+			transition: all .5s ease;
+		}
+		
+		.normal {
+			opacity: 1;
+			color: var(--txt);
+		}
+
+		.hover {
+			transform: translateY(100%);
+			background-color: #0009;
+			color: var(--w1);
+		}
+	}
+
+	h3 {
+		margin-bottom: 0;
+	}
+	
+	&:hover {
+		.content {
+			background-size: 120%;
+			background-position: 50% 15%;
+		}
+		.hover {
+			transform: translateY(0);
+		}
+		.normal {
+			opacity: .1;
+		}
+	}	
+}
+
+// imagebox --------------------------------------------------- 
+
+.ga-card.imagebox {
+  .content {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-color: var(--shade);
+    color: var(--w1);
+    background-blend-mode: soft-light;
+    display: flex;
+    flex-flow: column;
+    justify-content: flex-end;
+  }
+
+  .overlay {
+    background-color: #000C;
+    position: relative;
+    height: 50%;
+    z-index: 2;
+  }
+
+  .description {
+    padding: 0;
+  }
+
+  .hover {
+    padding: 1rem;
+    transition: all 1s ease-out;
+  }
+
+  .normal {
+    padding: 1rem;
+    transition: all 1s ease-out;
+    text-align: left;
+    position: absolute;
+    top: 0;
+    display: block;
+  }
+
+  .hover {
+    text-align: left;
+    position: absolute;
+    top: 0;
+    opacity: 0;
+  }
+
+  li{ padding-left: 1.5rem; position: relative; }
+
+  li:before {
+    font-family: FontAwesome;
+    content: '\f00c';
+    position: absolute;
+	left:  0;
+	width: 1rem;
+    color: var(--bg-co, #fc3);
+  }
+
+  &:hover {
+    .normal {
+      opacity: 0;
+    }
+
+    .hover {
+      opacity: 1;
+    }
+  }
+
+  a.pin {
+    --fz:1rem;
+    --sq:calc(5 * var(--fz));
+    background-color: #F00;
+    color: #fff !important;
+    z-index: 3;
+    right: 1rem;
+    position: absolute;
+    top: calc(-1.5 * var(--fz));
+    font-size: var(--fz);
+    width: var(--sq);
+    height: var(--sq);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    word-spacing: 100vh;
+    word-break: break-word;
+    line-height: 1;
+    transform: rotate(15deg);
+    border: none;
+    outline: none;
+    transition: all 1s linear;
+  }
+
+  &:hover a.pin {
+    transform: rotate(0deg);
+    box-shadow: 0 3px 4px #0009;
+  }
+}

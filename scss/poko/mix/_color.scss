@@ -1,0 +1,91 @@
+$colors: ( 
+	'accent-1': (
+		color: $accent-color-1,
+	),
+	'accent-2': (
+		color: $accent-color-2,
+	),
+	'accent-3': (
+		color: $accent-color-3,
+	),
+	'accent-4': (
+		color: $accent-color-4,
+	),
+	'yellow': (
+		color: $color-yellow,
+		alert: 'warning',
+		icon: '\f071',
+		notices: true
+	),
+	'red': (
+		color: $color-red,
+		alert: 'error',
+		icon: '\f188',
+		notices: true
+	),
+	'blue': (
+		color: $color-blue,
+		alert: 'info',
+		icon: '\f05a',
+		notices: true
+	),
+	'green': ( 
+		color: $color-green,
+		alert: 'success',
+		icon: '\f046',
+		notices: true
+	)
+);
+
+
+@each $name, $set in $colors {
+	
+	$color: map-get($set,'color');
+	
+	@if (not-empty($color)) {
+	
+		.txt-#{$name} {
+			color: $color;
+		}
+
+		.bg-color-#{$name} {
+			@include hsl-bg-parse($color);
+			--txt: textcolor-tint($color);
+			background-color: var(--bg);
+			color: var(--txt);
+		}
+	
+		#{$all-buttons} {
+			&.#{$name} {
+				background-color: $color; 
+				color: textcolor-tint($color);
+			}
+		}
+		
+		@if map-get($set,'alert') {
+
+			$alert: map-get($set,'alert');
+
+			.alert-#{$alert} { 
+				--color: $color;
+				$color: maxlighten($color,85);	
+				--d1: $color;
+				--txt: textcolor-tint($color);
+				--icon: map-get($set,'icon');
+			}
+			
+		}
+		
+		@if map-get($set,'notices') {
+	
+			.notices.#{$name} {
+				--color: $color;
+				$color: maxlighten($color,75);	
+				--d1: $color;
+				--txt: textcolor-tint($color);
+			}
+
+		}
+		
+	}
+}

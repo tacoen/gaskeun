@@ -1,0 +1,79 @@
+@mixin linkcolor($color) {
+	transition: all .25s linear;
+	color: var(--txt);
+	--txt-2: darken($color,15); 
+	--txt-3: lighten($color,15);
+	&:hover { color: var(--txt-2, var(--txt)); }
+	&:active { color: var(--txt-3, var(--txt)); }
+}
+
+@function isnt-same($var1, $var2: false ) {
+	@if $var1 == $var2 { 
+		@return false; 
+	} @else {
+		@return true
+	}
+}  
+
+@function not-empty($var) {
+	@if ($var=='false') { @return false; }	
+	@else if ($var=='0') { @return false; }	
+	@else if ($var=='') { @return false; }	
+	@else if ($var=='null') { @return false; }	
+	@else if ($var==false) { @return false; } 
+	@else if ($var==null) { @return false; }
+	@return true;
+}
+
+@function if-is-empty($var,$default) {
+	@if ($var=='false') { @return $default; }	
+	@else if ($var=='0') { @return $default; }	
+	@else if ($var=='') { @return $default; }	
+	@else if ($var=='null') { @return $default; }	
+	@else if ($var==false) { @return $default; } 
+	@else if ($var==null) { @return $default; }
+	@return $var;
+}
+
+
+@function maxlighten($color, $target: 90) {
+	@return lighten($color,floor($target - lightness($color)));
+}
+
+@function maxdarken($color, $target: 10) {
+	@return darken($color,floor(lightness($color)-$target));
+}
+
+@function textcolor-maxtint($color) {
+ 	@if (lightness($color) > 50) {
+ 		@return maxdarken($color);
+	} @else {
+    	@return maxlighten($color);
+  	}	
+}
+	
+
+
+
+@mixin hsl-bg-init($color) {
+
+	--color: $color;
+	--h: round(hue($color)/1deg);
+	--s: round(saturation($color));
+	--l: round(lightness($color));
+}
+
+@mixin hsl-bg-parse($color) {
+
+	@include hsl-bg-init($color);
+
+	
+	@if (lightness($color) > 50) {
+		--txt: var(--b0, maxdarken($color));
+	} @else {
+		--txt: var(--w0, maxlighten($color));
+	}
+	
+	--bg: unquote("hsl(var(--h),var(--s),var(--l))");
+
+}

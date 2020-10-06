@@ -1,4 +1,4 @@
-name: Navigation
+name: Navigation / Offcanvas
 type: base
 
 form:
@@ -7,9 +7,12 @@ form:
     background:
       type: input.colorpicker
       label: Background
-      default: "#e0e0f0"
+      default: "#556699"
 
-    text-color:
+    active-color:
       type: input.colorpicker
-      label: Text Color
+      label: Active Color
 
+    hover-color:
+      type: input.colorpicker
+      label: Hover Color

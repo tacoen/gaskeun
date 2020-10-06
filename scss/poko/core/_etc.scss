@@ -1,0 +1,53 @@
+.line-data div { 
+    display: flex; 
+    border-top: 1px dotted #0002; 
+    justify-content:space-between;
+}
+
+.line-data div:last-child {
+    border-bottom: 1px dotted var(--outline); 
+}
+
+h2 a.u-url { 
+	border-bottom: 0 !important;
+	&:hover { color: var(--primary); }
+}
+
+code { 
+	font-size: 1.3rem;
+	color: var(--txt-1,#933);
+}
+
+pre code { 
+	font-size: 1rem;
+}
+
+kbd {
+	font-size: 1.2rem;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: rgba(255, 255, 255, 0.867);
+    display: inline-flex;
+    align-items: center;
+    padding: 0 .5rem;
+    border-radius: $border-radius;
+    text-transform: uppercase;
+}
+
+mark {
+	display: inline-flex;
+    align-items: center;
+    padding: 0 .5rem;
+}
+ 
+hr { 
+	margin-block-start: 0em;
+    margin-block-end: 0em;
+	padding: 0; 
+	border-top: 1px solid #0003 
+}	
+
+abbr[title] {
+	cursor: alias;
+	text-decoration: underline dotted #d00;
+	border:none;
+}

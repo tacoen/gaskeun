@@ -1,0 +1,52 @@
+
+button.naked { background-color: #0000;  }
+
+
+#{$all-buttons} {
+
+	background-color: var(--d1,#ccc6);
+	color: var(--txt);
+	border-radius: $border-radius;
+	padding: 0.25em 1em;
+	outline: none;
+	border: 1px solid var(--shade);		
+	appearance: button;
+	cursor: pointer;
+	line-height: 1.5;
+	
+	&.primary {
+		background-color: var(--co,var(--primary));
+		color: var(--primary-txt, var(--txt));
+	}
+	
+	&:active {
+		box-shadow: 0 0 3px var(--shadow);
+		border: 1px solid #0000;
+	}
+
+	&:hover {
+		box-shadow: inset 0 1px 2px 0px var(--shadow-1);
+		border: 1px solid var(--outline);		
+	}
+	
+	&.toggle { 
+		background-color: #0000; 
+		border:none; 
+		outline: none;
+		box-shadow: none;		
+	}
+
+	&.xsmall { padding: .1em .25rem; font-size: .75em;  }
+	&.small { padding: .25em .5em; font-size: .9em; }
+	&.large { padding: .5em 1rem; font-size: 1.2em; }
+	&.xlarge { padding: .75em 1.5em; font-size: 1.5em; }
+	
+}
+
+p a.button { display: inline-block; padding: 0 $base-padding; }
+
+input[type='submit'] + input[type='submit'],
+button + button,
+.button + .button {
+    margin-left: 1rem;
+}

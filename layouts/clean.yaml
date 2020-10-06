@@ -1,7 +1,7 @@
 version: 2
 preset:
   image: 'gantry-admin://images/layouts/clean.png'
-  name: gasken - Clean 
+  name: poko - Clean 
 
 layout:
   /container-clean/:

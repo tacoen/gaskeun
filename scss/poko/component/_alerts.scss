@@ -1,0 +1,22 @@
+
+.alert {
+	--icon: '\f05a';
+	--color: $color-yellow;
+	--d1: maxlighten($color-yellow,85);
+	background-color: var(--d1);
+	border: 1px solid #0005;
+	border-left: 3rem solid var(--color);
+	color: var(--btxt);
+	border-radius: $border-radius;	
+	padding: $leading-margin/2 $leading-margin;
+	margin: $leading-margin 0;
+	&:before {
+		font-family:'FontAwesome';
+		display: inline-flex;
+		padding: 0 1.5rem 0 0;
+		margin-left: -3em;
+		margin-right: $base-padding;
+		content: var(--icon);
+		color: var(--d1);
+	}		
+}

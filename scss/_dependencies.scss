@@ -1,8 +1,11 @@
 // Load Third Party Libraries
 @import "vendor/bourbon/bourbon";
 
-@import "configuration/configuration";
 @import "function/function";
+/*--- function loaded */
+
+@import "configuration/configuration";
+/*--- configuration loaded */
+
 @import "mixin/mixin";
 
-/* ------------------------------- dependencies loaded */

@@ -16,34 +16,40 @@
 			{% if particle.items|length >0 %}
 			
 			<ul class='items'>
-			{% for sample in particle.items %}
-				<li class="item {{ sample.class }} {{ sample.variations }}"
-				{% if sample.id %}id="{{ sample.id|e }}"{% endif %}">
+			{% for item in particle.items %}
+				<li class="item {{ item.class }} {{ item.variations }}"
+				{% if item.id %}id="{{ item.id|e }}"{% endif %}">
 					
-					{% if sample.image %}
+					{% if item.image %}
 						{% set image %}
-						<div class='item-image'>
+						<span class='item-image'>
 						<img 
-							alt="{{ sample.title|raw }}" src="{{ sample.image|url }}">
-						</div>
+							alt="{{ item.title|raw }}" src="{{ item.image|url }}">
+						</span>
 						{% endset %}
 					{% endif %}
 
-					{% if sample.link %}
-						{% set pre = "<a class='link' href='"~sample.link~"'>" %}
+					{% if item.link %}
+						{% set pre = "<a class='link' href='"~item.link~"'>" %}
 						{% set suf = "</a>" %}
 					{% else %}
 						{% set pre = "" %}
 						{% set suf = "" %}
 					{% endif %}
 
-					{% if sample.title %}
-						{% set title = "<div class='title'>"~sample.title|raw~"</div>" %}
+					{% if item.title %}
+						{% set title = "<span class='title'>"~item.title|raw~"</span>" %}
 					{% else %}
 						{% set title = "" %}
 					{% endif %}
 
-					{{ pre|raw }}{{ image|raw }}{{ title|raw }}{{ suf|raw }}
+					{% if item.subtitle %}
+						{% set subtitle = "<span class='subtitle'>"~item.subtitle|raw~"</span>" %}
+					{% else %}
+						{% set subtitle = "" %}
+					{% endif %}
+
+					{{ pre|raw }}{{ image|raw }}{{ title|raw }}{{ subtitle|raw }}{{ suf|raw }}
 
 				</li>
 			{% endfor %}

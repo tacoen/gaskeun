@@ -54,7 +54,8 @@
 {% endif %}
 
 	
-	<div class="modular-row showcase {{layout}}" style="{{style}}" {{img_list}}  >
+	<div class="modular-row showcase {{layout}}" style="{{style}}" {{img_list}}  
+	data-delay={{page.header.timeout}}>
 
     <div class='content'>
 	{{ content|raw }}
@@ -70,11 +71,3 @@
 
 </div>
 
-{% if page.header.timeout > 0 %}
-{% if img_list %}
-{% set showcase_slide %}
-ga_modular_slideshow('.modular-row.showcase', {{page.header.timeout}});
-{% endset %}
-{% do gantry.document.addInlineScript(showcase_slide|trim, 0, 'footer') %}
-{% endif %}
-{% endif %}

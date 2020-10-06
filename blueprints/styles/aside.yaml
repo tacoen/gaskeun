@@ -1,0 +1,15 @@
+name: Aside
+type: base
+
+form:
+  fields:
+
+    background:
+      type: input.colorpicker
+      label: Background
+      default: "#991111"
+
+    text-color:
+      type: input.colorpicker
+      label: Text Color
+

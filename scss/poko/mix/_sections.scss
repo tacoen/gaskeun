@@ -1,0 +1,37 @@
+$sections: (
+	'header':(
+		background: $header-background,
+	),
+	'footer':(
+		background: $footer-background,
+	),
+	'navigation':(
+		background: $navigation-background,
+		also: 'offcanvas'
+	),
+	'aside':(
+		background: $aside-background,
+	),
+);
+	
+@each $name,$set in $sections {
+
+	$color: map-get($set,'background');
+
+	@if isnt-same($color,$base-background) {
+		.section-#{$name} {
+			--color: $color;
+			background-color: var(--bg);
+			color: var(--txt);
+			
+			a { @include linkcolor(textcolor-tint($color)); }
+		}
+
+		@if map-get($set,'also') {
+			.section-#{map-get($set,'also')} {
+				@extend .section-#{$name}
+			}
+		}
+	}
+
+}	

@@ -1,7 +1,7 @@
-name: Carousel
+name: Gaskeun Carousel
 description: Displays Carousel Content
 type: particle
-icon: fa-image
+icon: fa-tv
 
 configuration:
   caching:
@@ -14,7 +14,16 @@ form:
       label: Enabled
       description: Globally enable the particle.
       default: true
-      
+
+    layout:
+      type: select.select
+      label: Layout
+      default: ''
+      options:
+          frames: Frames
+          '': Slides
+      overridable: false      
+
     height:
       type: input.text
       label: height
@@ -53,6 +62,5 @@ form:
             label: url
 
         .variations:
-          type: input.block-variations
-          label: Variations
-          
+          type: input.selectize
+          label: CSS Class

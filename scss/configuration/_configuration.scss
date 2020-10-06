@@ -1,5 +1,16 @@
-// required
-@import "nucleus/base";
-@import "grav/base";
+$option-nucleus_css: 0 !default;
+$option-grav_css: 0 !default;
+$option-hydrogen_css: 0 !default;
+$option-devinchrome_css: 0 !default;
 
-@import "z/base";
+@if ($option-nucleus_css == '1') { @import "nucleus/base"; }
+@if ($option-grav_css == '1') { @import "grav/base"; }
+@if ($option-hydrogen_css == '1') { @import "hydrogen/base"; }
+
+$font-weight-bold: 700 !default;
+$font-weight-medium: 500 !default;
+$font-weight-light: 300 !default;
+$font-weight-regular: 400 !default;
+
+
+@import "theme";

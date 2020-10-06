@@ -1,0 +1,48 @@
+<div class='sandbox'>
+
+<div class='row'>
+	<div>95%</div>
+	<div>90%</div>
+	<div>+15%</div>
+	<div>+10%</div>
+	<div>+5%</div>
+	<div>bg</div>
+	<div>-5%</div>
+	<div>-10%</div>
+	<div>-15%</div>
+	<div>10%</div>
+	<div>5%</div>
+</div>
+
+<div class='row'>
+	<div class='bg-w1'></div>
+	<div class='bg-w0'></div>
+	<div class='bg-l2'></div>
+	<div class='bg-l1'></div>
+	<div class='bg-l0'></div>
+	<div class='bg'>BG*</div>
+	<div class='bg-d0'></div>
+	<div class='bg-d1'></div>
+	<div class='bg-d2'></div>
+	<div class='bg-b0'></div>
+	<div class='bg-b1'></div>
+</div>
+<div class='row'>
+	<div class='n1'></div>
+	<div class='bg-co-w'></div>
+	<div class='n3'></div>
+	<div class='bg-co'></div>
+	<div class='n3'></div>
+	<div class='bg-co-b'></div>
+</div>
+
+
+</div>
+
+<script>
+
+document.querySelectorAll('[class*=bg-]').forEach(
+	c=>c.innerHTML=c.getAttribute('class').replace('bg-','')
+);
+
+</script>

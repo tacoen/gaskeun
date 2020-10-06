@@ -1,26 +1,18 @@
-.g-block {
-background-color: #0000;
+#g-floats,.ga-floats {
+    overflow:hidden;
+    height:0;
+    width:0;
 }
 
-.ga-content {
-    background: var(--bg);
-    color: var(--txt);
+.ga-floats .g-particle >div,
+#g-floats .g-particle >div {
+    position: absolute;
 }
 
-.equal-height .g-block {
-    display: flex;
-    min-height: 100%;
-}
-
-
-.coba {
-    animation-name: coba;
-    animation-duration: 1s;
-    animation-iteration-count: infinite;
-
-}
-
-@keyframes coba  {
-    0% {  transform: translateY(-20px); }
-    100% { transform: translateY(0);  }
+#g-floats .branding {
+    background: red;
+    padding: 1rem;
+    color: #fff;
+    right: 1rem;
+    top: 5rem;
 }

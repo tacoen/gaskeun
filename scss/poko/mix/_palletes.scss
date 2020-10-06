@@ -1,0 +1,66 @@
+:root {
+	--margin: $base-margin;
+	--padding: $base-padding;
+	--line-height: ($base-font-size + 1.0)/1rem;
+	--lead: $base-margin+$base-padding;
+	--shade: #0002;
+	--outline: #0004;
+	--hilite: #fff1;
+	--shadow: #000C;
+	--shadow-1: #fffc;
+	--d1: $base-neutral;
+	--txt: $base-text-color;
+	--primary: $primary-color;
+	--primary-txt: textcolor-tint($primary-color);
+	
+}
+
+%hsl-pal {
+	--w1: unquote("hsl(var(--h),var(--s),95%)");
+    --w0: unquote("hsl(var(--h),var(--s),90%)");
+    --l2: unquote("hsl(var(--h),var(--s),calc(var(--l) + 15%))");
+    --l1: unquote("hsl(var(--h),var(--s),calc(var(--l) + 10%))");
+    --l0: unquote("hsl(var(--h),var(--s),calc(var(--l) + 5%))");
+    --bg: unquote("hsl(var(--h),var(--s),var(--l))");
+    --d0: unquote("hsl(var(--h),var(--s),calc(var(--l) - 5%))");
+    --d1: unquote("hsl(var(--h),var(--s),calc(var(--l) - 10%))");
+    --d2: unquote("hsl(var(--h),var(--s),calc(var(--l) - 15%))");
+    --b0: unquote("hsl(var(--h),var(--s),10%)");
+    --b1: unquote("hsl(var(--h),var(--s),5%)");
+    --co: unquote("hsl(calc(var(--h) + 180),var(--s),var(--l))");
+    --t1: unquote("hsl(calc(var(--h) + 120),var(--s),var(--l))");
+    --t2: unquote("hsl(calc(var(--h) + 240),var(--s),var(--l))");
+    --co-w: unquote("hsl(calc(var(--h) + 180),var(--s),90%)");
+    --co-b: unquote("hsl(calc(var(--h) + 180),var(--s),10%)");
+}
+
+.hsl-pal {
+	@extend %hsl-pal;
+}
+
+html {
+
+	.bg-b0 { background-color: var(--b0); color:var(--w1); }
+	.bg-b1 { background-color: var(--b1); color:var(--w0); }
+	.bg-d0 { background-color: var(--d0); color:var(--txt); }
+	.bg-d1 { background-color: var(--d1); color:var(--txt);	}
+	.bg-d2 { background-color: var(--d2); color:var(--txt);	}
+	
+	.bg-w0 { background-color: var(--w0); color:var(--b1); }
+	.bg-w1 { background-color: var(--w1); color:var(--b0); }
+	.bg-l0 { background-color: var(--l0); color:var(--txt); }
+	.bg-l1 { background-color: var(--l1); color:var(--txt);	}
+	.bg-l2 { background-color: var(--l2); color:var(--txt);	}
+
+	.bg-co { background-color: var(--co); color:var(--txt);	}
+	.bg-co-w { background-color: var(--co-w); color:var(--b0);	}
+	.bg-co-b { background-color: var(--co-b); color:var(--w0);	}
+	
+	.bg { background-color: var(--bg); color:var(--txt); }
+	.bg-1 { background-color: var(--bg-1); color:var(--txt); }
+	.bg-2 { background-color: var(--bg-2); color:var(--txt); }	
+
+	[class*='bg-color'] {
+		@extend %hsl-pal;
+	}
+}

@@ -1,0 +1,115 @@
+.emoji { line-height: 1.1; align-items: flex-start; }
+.emoji big { font-size: 3rem; }
+.emoji code { displau: inline-block; margin: 1rem 0 0 0;}
+
+
+[data-heighta] {
+    --height: attr(data-height);
+    height: var(--height) !important;
+}
+
+[data-width] {
+    --width: attr(data-width);
+    width: var(--width) !important;
+}
+
+html:not(.ga-small):not(.ga-mobile) {
+
+	.g-grid {
+		&.f-flush {
+			.g-block:first-child { margin-left:  -1rem; }
+			.g-block:last-child { margin-right:  -1rem; }
+		}
+	}
+	
+}
+
+.g-block {
+
+	.g-content {
+		@extend %content-padding;
+	}
+
+	&.f-nomargin {
+		.g-content {
+			margin: calc(-1 * var(--margin));
+		}
+	}
+
+	&.f-nopadding {
+		.g-content {
+			padding: 0;
+		}
+	}
+
+
+	&.f-flush {
+		.g-content {
+			margin: calc(-1 * (calc(var(--margin) + var(--padding))));
+			padding: 0;
+		}
+	}
+
+}
+
+
+.g-flushed .f-flush .g-block:first-child { margin-left:  0 }
+.g-flushed .f-flush .g-block:last-child { margin-right:  0 }
+
+
+.f-table {
+    display: flex;
+    flex-flow:wrap;
+    justify-content:space-evenly;
+}
+
+.f-table span {
+    width: 10%;
+    display:inline-flex;
+    flex-flow:column;
+    justify-content:center;
+    font-size: .8rem;
+    text-align: center;
+    margin: 1rem;
+}
+
+.f-table i.fa { display:block; font-size: 3rem; }
+
+.f-small-font { font-size: .85em; }
+
+
+.f-content {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    justify-content: center;
+    height:100%;
+    width: 100%;
+    margin: 0;
+}
+
+.f-table .g-block  {
+    display: flex;
+    align-items: center;
+    height:100%;
+}
+
+.f-table f.content {
+    text-align: center;
+}
+
+
+.f-padding {
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+}
+
+[class*='f-margin'] {
+    --fmargin: 1rem;
+    margin-bottom: var(--fmargin) !important; 
+
+}
+
+.f-margin-1 { --fmargin: 1rem; }
+.f-margin-2 { --fmargin: 2rem; }
+.f-margin-3 { --fmargin: 3rem; }

@@ -1,0 +1,15 @@
+blockquote {
+	background: var(--d2,var(--shade));
+	border-radius: $border-radius;
+	margin: 1rem 0;
+	padding: 2rem 3rem 1rem 3rem;
+	font-size: 1.3rem;
+	line-height: 1.3;
+	font-weight: 300;
+	
+	cite { 
+		text-transform: capitalize;
+		display: block; margin-bottom: 0; text-align: right; font-size: 1rem;
+		&:before { content: '\2014\00A0'; }
+	}
+}

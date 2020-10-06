@@ -1,0 +1,67 @@
+
+// toggle
+
+.toggle {
+
+	.toggle-label {
+		background-color: var(--d1);
+		padding: $leading-margin;
+		cursor: pointer;
+		display: block;
+		margin:0;
+		font-weight: 700;
+
+		&:after {
+			color: var(--txt-co);
+			content: "+";
+			float: right;
+			font-weight: bold;
+		}
+	}
+
+	.toggle-content {
+        padding: 1em;
+		border: 1px solid #0002;
+        border-bottom-left-radius: $border-radius;
+        border-bottom-right-radius: $border-radius;
+	}
+
+	.toggle-input {
+		display: none; //Hide input element
+
+		&:not(checked) ~ .toggle-content {
+			display:none;
+		}
+
+		&:checked {
+			~ .toggle-content {
+				display: block;
+			}
+
+			~ .toggle-label {
+        		border-bottom-left-radius: 0;
+        		border-bottom-right-radius: 0;
+				&:after { content: "-"; }
+			}
+		}
+	}
+}
+
+.toggle-group {
+	.toggle:first-child {
+		.toggle-label {
+			border-top-left-radius: $border-radius;
+			border-top-right-radius: $border-radius;
+			border-bottom-left-radius: 0;
+			border-bottom-right-radius: 0;
+		}
+	}
+
+	.toggle:last-child {
+		.toggle-label {
+			border-bottom-left-radius: $border-radius;
+			border-bottom-right-radius: $border-radius;
+		}
+	}
+}
+

@@ -14,12 +14,19 @@ form:
       description: Globally enable the particle.
       default: true
 
+    variations:
+      type: input.block-variations
+      label: Variations
+      description: Enter Theme Variations.
+
     layout:
       type: select.selectize
       label: Content Layout
       overridable: false
       placeholder: Select Layout...
+      default: default
       options:
+        default: default
         cue: cue-card
         card: card
         imagebox: imagebox
@@ -66,21 +73,7 @@ form:
       overridable: false
 
       fields:
-        .image:
-            type: input.imagepicker
-            label: Image
-
-        .title:
-          type: input.text
-          label: Title
-
-        .description:
+        .text:
           type: textarea.textarea
-          label: Description
-
-        .class:
-          type: input.selectize
-          label: CSS Classes
-          description: Enter CSS class names.
-          default:
+          label: Text
 

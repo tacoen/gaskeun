@@ -1,0 +1,103 @@
+$base-padding: 0.5rem !default;
+$base-margin: 0.5rem !default;
+$base-font-size: 1.5rem !default;
+
+$base-background: #f7f7f7 !default;
+$base-offwhite: $base-background !default;
+$aside-background: $base-background !default;
+$navigation-background: $base-background !default;
+$header-background: $base-background !default;
+$footer-background: $base-background !default;
+
+$base-text-color: #111111 !default;
+$aside-text-color: $base-text-color !default;
+$header-text-color: $base-text-color !default;
+$footer-text-color:  !default;
+
+$offcanvas-toggle-background: rgba(0,0,0,0) !default;
+$offcanvas-toggle-color: $base-text-color !default;
+
+$base-neutral: #ccc !default;
+$base-accent: #fc3 !default;
+$navigation-active-color: #fff1 !default;
+$navigation-hover-color: #0002 !default;
+
+
+$base-font: clearsans, sans-serif !default;
+$base-font-size: 1.5rem !default;
+$base-heading-font: false !default;
+
+$breakpoints-large-desktop-container: 75rem !default;
+$breakpoints-desktop-container: 60rem !default;
+$breakpoints-tablet-container: 48rem !default;
+$breakpoints-large-mobile-container: 30rem !default;
+$breakpoints-mobile-menu-breakpoint: 48rem !default;
+
+$color-yellow: #ffc20a !default;
+$color-red: #cc2936 !default;
+$color-blue: #3c60ad !default;
+$color-green: #44af69 !default;
+
+$accent-color-1: #402050 !default;
+$accent-color-2: false !default;
+$accent-color-3: false !default;
+$accent-color-4: false !default;
+
+$cover-background: textcolor-tint($base-background) !default;
+$cover-blend-mode: soft-light !default;
+$cover-image-1: false !default;
+$cover-image-2: false !default;
+$cover-image-3: false !default;
+$cover-image-4: false !default;
+
+$menu-col-width: 180px !default;
+$menu-animation: g-fade !default;
+$menu-hide-on-mobile: 0 !default;
+
+
+$offcanvas-width: 70vw !default;
+$offcanvas-overlay: #000011 !default;
+$offcanvas-toggle-icon: fa fa-bars !default;
+$offcanvas-toggle-width: 3rem !default;
+$offcanvas-toggle-height: 3rem !default;
+$offcanvas-toggle-visibility: 1 !default;
+
+/* suggest ---------------------------- */
+
+$box-height: 80vh;
+
+/* inheritage ---------------------------- */
+
+$primary-color: $base-accent;
+
+
+$leading-margin: $base-padding + $base-margin;
+$border-radius: $base-padding/2;
+$line-height: $base-font-size + 0.3;
+
+
+/* need by grav  ---------------------------- */
+
+$padding-horiz: 6rem;
+$padding-vert: 3rem;
+$border-color: #0002;
+
+$core-font-size: $base-font-size;
+$core-accent: $accent-color-1;
+$content-padding: $base-padding;
+$content-margin: $base-margin;
+
+/* hydrogen compatible ---------------------- */
+
+$feature-background: $accent-color-1 !default;
+$feature-text-color: $base-text-color !default;
+$showcase-background: $feature-background !default;
+$showcase-text-color: $feature-text-color !default;
+$subfeature-background: $feature-background !default;
+$subfeature-text-color: $feature-text-color !default;
+
+$base-border-color: $border-color;
+$border-color-focus: $base-border-color;
+$border-color-hover: $base-border-color;
+$base-box-shadow: $border-color;
+

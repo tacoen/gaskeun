@@ -24,6 +24,16 @@ form:
           title: Properties
           fields:
 
+            header.layout:
+              name: layout
+              type: select
+              label: Layout
+              placeholder: 'Select...'
+              default: vertical
+              options:
+                vertical: vertical
+                horizontal: horizontal
+
             header.blend:
               type: select
               label: Image Blend-Mode

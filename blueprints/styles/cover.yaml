@@ -3,6 +3,12 @@ type: variations
 
 form:
   fields:
+
+    background:
+      type: input.colorpicker
+      label: Background
+      default: "#101010"
+      
     blend-mode:
       type: select.selectize
       label: blend

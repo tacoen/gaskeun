@@ -63,7 +63,15 @@
 {# gaskeun added //------- #}
 
 	{%- do gantry.document.addScript(url('gantry-assets://js/main.js'), 11, 'footer') -%}
-	{%- do gantry.document.addScript(url('gantry-assets://js/gaskeun.js'), 11, 'footer') -%}
+	{%- do gantry.document.addScript(url('gantry-assets://js/gaskeun/module/w3color.js'), 11) -%}
+	{%- do gantry.document.addScript(url('gantry-assets://js/gaskeun/module/gas.js'), 11) -%}
+	{%- do gantry.document.addScript(url('gantry-assets://js/gaskeun/module/util.js'), 11) -%}
+	{%- do gantry.document.addScript(url('gantry-assets://js/gaskeun/function.js'), 11) -%}
+	{%- do gantry.document.addScript(url('gantry-assets://js/gaskeun.js'), 10, 'footer') -%}
+
+	{% if gantry.config.get('styles.option.animate_css') -%}
+		{%- do gantry.document.addStyle(url('gantry-assets://vendors/animate.min.css')) -%}
+	{% endif %}
 
 	{% if gantry.config.get('styles.option.devinchrome_css') -%}
 		{%- do gantry.document.addStyle(url('gantry-assets://css/dev-in-chrome.css')) -%}
@@ -92,12 +100,10 @@
 {% endset -%}
 
 {%- set icon = gantry.config.get('styles.offcanvas.toggle-icon') -%}
-{%- set icon_h = gantry.config.get('styles.offcanvas.toggle-height') -%}
-{%- set icon_w = gantry.config.get('styles.offcanvas.toggle-width') -%}
 
 {%- block page -%}
 <!DOCTYPE {{ gantry.config.page.doctype|default('html')|raw }}>
-<html gaskeun {{ gantry.page.htmlAttributes|raw }}>
+<html {{ gantry.page.htmlAttributes|raw }}>
     {{ page_head|raw }}
     {% block page_body -%}
     <body{{ gantry.page.bodyAttributes({'class': [offcanvas_position, 
@@ -109,9 +115,7 @@
         {{ page_offcanvas|raw }}
         <div id="g-page-surround">
             {% if page_offcanvas|trim -%}
-            <div class="g-offcanvas-hide g-offcanvas-toggle" role="navigation" data-offcanvas-toggle aria-controls="g-offcanvas" aria-expanded="false"
-			style="height:{{icon_h}}; width:{{icon_w}};"><i 
-			class="{{ icon }}"></i></div>
+            <div class="g-offcanvas-hide g-offcanvas-toggle" role="navigation" data-offcanvas-toggle aria-controls="g-offcanvas" aria-expanded="false"><i class="{{ icon }}"></i></div>
             {%- endif %}
             {{ page_top|raw }}
             {{ page_layout|raw }}

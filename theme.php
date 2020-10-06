@@ -43,8 +43,7 @@ class Gasken extends Theme
 		
 		}
 		
-	
-	}
+    }
 	
     public function onThemeInitialized()
     {
@@ -80,10 +79,30 @@ class Gasken extends Theme
         // Define the template.
         require $locator('theme://includes/theme.php');
 
+		$theme_uri = str_replace( $_SERVER['DOCUMENT_ROOT'], '', $locator('theme://'));
+
+        if ($this->isAdmin()) {
+			$assets = $this->grav['assets'];
+			$assets->addCss($theme_uri.'/admin/poko.css', 1);
+			$assets->addJs($theme_uri.'/admin/poko.js', 1);
+		}
+
+
+
+        $log_path     = $locator('log://popularity');
+		$gantry['global']['stat_daily']=array_values((array)json_decode(file_get_contents($log_path . '/daily.json')))[0];
+		$gantry['global']['stat_monthly']=array_values((array)json_decode(file_get_contents($log_path . '/monthly.json')))[0];
+		$gantry['global']['stat_total']=array_values((array)json_decode(file_get_contents($log_path . '/totals.json')))[0];
+
+/*		echo "<pre>";
+		print_r($gantry);
+		echo "</pre>";
+*/
         // Define Gantry services.
         $gantry['theme'] = function ($c) {
             return new \Gantry\Theme\Gasken($c['theme.path'], $c['theme.name']);
         };
     }
 }
+
 

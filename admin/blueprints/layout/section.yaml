@@ -27,8 +27,6 @@ form:
     variations:
       type: input.block-variations
       label: Variations
-      description: Enter Theme Variations.
-      default:
           
     extra:
       type: collection.keyvalue

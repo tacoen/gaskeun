@@ -1,0 +1,27 @@
+
+main {
+	@include hsl-bg-parse($base-background);
+	background-color: var(--bg);
+	color: var(--txt);
+}	
+
+body { background: $base-offwhite; }
+
+.g-content {
+	@extend %content-padding;
+}
+
+#g-navigation, 
+header {
+
+	.g-container { height: 100% }
+	
+	.g-block,
+	.g-content {
+		@extend %flex-vcenter;
+		@extend %no-content-padding;
+		width:100%;
+		align-self: center;
+	}
+
+}

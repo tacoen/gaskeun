@@ -1,6 +1,6 @@
 name: Gasken
-version: "0.0"
-description: "Gasken is Grav theme"
+version: "2.0"
+description: "Gasken(base on Gaskeun) a Gantry Grav theme."
 icon: html5
 author:
   name: tacoen
@@ -8,7 +8,7 @@ author:
   url: https://tacoen.github.io/
 homepage: https://tacoen.github.io/gaskeun/
 readme: https://github.com/tacoen/gaskeun/blob/master/README.md
-keywords: gantry, gantry5, theme
+keywords: gantry5, css3, theme
 bugs: https://github.com/tacoen/gaskeun/issues
 license: MIT
 
@@ -31,6 +31,7 @@ form:
         size: large
         label: <b>Owner Information</b> 
         default: owner information
+        readonly: true
 
     links:
         type: array

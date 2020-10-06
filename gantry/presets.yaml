@@ -1,22 +1,23 @@
-default:
-  image: 'gantry-admin://preset/zero.png'
-  description: default preset
+base:
+  image: 'gantry-admin://preset/default.png'
+  description: Defaults
   colors:
-    - '#ffcc11'
-    - '#233d4d'
-    - '#dde0c0'
-    - '#dde0c0'
+        - '#304055'
+        - '#991111'
+        - '#f7f7f7'
+        - '#222222'
 
   styles:
+    aside:
     base:
+        background: '#f7f7f7'
+        neutral: '#dddddd'
+        accent: '#ffcc33'
+        text-color: '#222222'
         font: 'clearsans, sans-serif'
-        font-size: '1.5rem'
-        background: '#233d4d'
-        text-color: '#dde0c0'
+        font-size: '1rem'
         padding: '0.5rem'
         margin: '0.5rem'
-        offwhite: ''
-        heading-font: 'clearsans, sans-serif'
     breakpoints:
         large-desktop-container: '75rem'
         desktop-container: '60rem'
@@ -29,65 +30,51 @@ default:
         blue: '#3c60ad'
         green: '#44af69'
     cover:
+        background: '#101010'
         blend-mode: 'soft-light'
-        image-1: ''
-        image-2: ''
-        image-3: ''
-        image-4: ''
-    footer:
-        background: ''
-        text-color: ''
     header:
-        background: '#ffcc11'
-        text-color: '#262020'
+        background: '#304055'
     menu:
-        col-width: '220px'
+        col-width: '180px'
         animation: 'g-fade'
-        hide-on-mobile: '0'
+        hide-on-mobile: '1'
     navigation:
-        background: '#ffcc11'
-        text-color: ''
+        background: '#991111'
     offcanvas:
-        width: '75%'
-        overlay: '#000033'
+        width: '100vw'
+        overlay: '#000011'
         toggle-icon: 'fa fa-bars'
         toggle-width: '3rem'
         toggle-height: '3rem'
         toggle-visibility: '1'
-        toggle-background: ''
-        toggle-color: ''
     option:
         nucleus_css: '0'
         grav_css: '0'
         hydrogen_css: '0'
         devinchrome_css: '1'
-    sidebar:
-        background: ''
-        text-color: ''
+        animate_css: '0'
+    footer:
     accent:
-        color-1: ''
-        color-2: ''
-        color-3: ''
-        color-4: ''
-        
-Blank:
-  image: 'gantry-admin://preset/blank.png'
-  description: Blank Preset
+    
+nocolor:
+  image: 'gantry-admin://preset/nocolor.png'
+  description: Gray
   colors:
-        - '#999999'
         - '#ffffff'
         - '#000000'
 
   styles:
+    aside:
     base:
-        font: 'clearsans, sans-serif'
-        font-size: '1.5rem'
         background: '#ffffff'
+        neutral: '#cccccc'
+        accent: '#990000'
+        offwhite: '#eeeeee'
         text-color: '#000000'
+        font: 'clearsans, sans-serif'
+        font-size: '1rem'
         padding: '0.5rem'
         margin: '0.5rem'
-        offwhite: ''
-        heading-font: 'clearsans, sans-serif'
     breakpoints:
         large-desktop-container: '75rem'
         desktop-container: '60rem'
@@ -101,43 +88,81 @@ Blank:
         green: '#44af69'
     cover:
         blend-mode: 'soft-light'
-        image-1: ''
-        image-2: ''
-        image-3: ''
-        image-4: ''
-    footer:
-        background: ''
-        text-color: ''
     header:
-        background: '#999999'
-        text-color: ''
     menu:
-        col-width: '220px'
+        col-width: '180px'
         animation: 'g-fade'
-        hide-on-mobile: '0'
+        hide-on-mobile: '1'
     navigation:
-        background: ''
-        text-color: ''
     offcanvas:
-        width: '75%'
-        overlay: '#000000'
+        width: '100vw'
+        overlay: '#000011'
         toggle-icon: 'fa fa-bars'
         toggle-width: '3rem'
         toggle-height: '3rem'
         toggle-visibility: '1'
-        toggle-background: ''
-        toggle-color: ''
     option:
         nucleus_css: '0'
         grav_css: '0'
         hydrogen_css: '0'
         devinchrome_css: '1'
-    sidebar:
-        background: ''
-        text-color: ''
-    accent:
-        color-1: ''
-        color-2: ''
-        color-3: ''
-        color-4: ''
-        
+        animate_css: '0'
+    footer:
+    accent:    
+    
+slate:
+  image: 'gantry-admin://preset/slate.png'
+  description: Slate
+  colors:
+        - '#406060'
+        - '#ffcc33'
+        - '#304050'
+        - '#ffffff'
+
+  styles:
+    aside:
+    base:
+        background: '#304050'
+        neutral: '#8899aa'
+        accent: '#ffcc33'
+        text-color: '#ffffff'
+        font: 'clearsans, sans-serif'
+        font-size: '1rem'
+        padding: '0.5rem'
+        margin: '0.5rem'
+    breakpoints:
+        large-desktop-container: '75rem'
+        desktop-container: '60rem'
+        tablet-container: '48rem'
+        large-mobile-container: '30rem'
+        mobile-menu-breakpoint: '48rem'
+    color:
+        yellow: '#ffc20a'
+        red: '#cc2936'
+        blue: '#3c60ad'
+        green: '#44af69'
+    cover:
+        blend-mode: 'soft-light'
+    header:
+        background: '#406060'
+    menu:
+        col-width: '180px'
+        animation: 'g-fade'
+        hide-on-mobile: '1'
+    navigation:
+        background: '#ffcc33'
+    offcanvas:
+        width: '100vw'
+        overlay: '#000011'
+        toggle-icon: 'fa fa-bars'
+        toggle-width: '3rem'
+        toggle-height: '3rem'
+        toggle-visibility: '1'
+    option:
+        nucleus_css: '0'
+        grav_css: '0'
+        hydrogen_css: '0'
+        devinchrome_css: '1'
+        animate_css: '0'
+    footer:
+    accent:    

@@ -1,6 +1,6 @@
 name: Gaskeun List
 type: particle
-icon: fa-navicon
+icon: fa-list-ol
 
 
 configuration:
@@ -22,13 +22,22 @@ form:
       placeholder: Select Layout...
       options:
         table: table
-        list: list
+        link-list: links
+        buttons: buttons
+        default: default
 
     headline:
       type: input.text
       label: Headline
       description: Customize the headline text.
       placeholder: Enter headline
+      overridable: false
+
+    description:
+      type: textarea.textarea
+      label: Description
+      description: Customize the description.
+      placeholder: Enter short description
       overridable: false
 
     items:
@@ -38,24 +47,22 @@ form:
       description: Create each item to appear in the content row.
       value: title
       ajax: true
-      overridable: false
 
       fields:
-        .image:
-            type: input.imagepicker
-            label: Image
 
         .title:
           type: input.text
           label: Title
 
+        .image:
+            type: input.imagepicker
+            label: Image
+
+        .subtitle:
+          type: input.text
+          label: Sub Title
+
         .link:
             type: input.text
             label: Link
 
-    description:
-      type: textarea.textarea
-      label: Description
-      description: Customize the description.
-      placeholder: Enter short description
-      overridable: false

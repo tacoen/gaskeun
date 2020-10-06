@@ -4,7 +4,13 @@ type: configuration
 
 form:
   fields:
+    
+    _info2:
+      type: separator.note
+      class: opt-note header
+      content: <b>Turnable</b>
 
+      
     nucleus_css:
       type: input.checkbox
       label: Compile Nucleus
@@ -20,7 +26,19 @@ form:
       label: Hydrogen Style
       default: false
 
+
+    _info3:
+      type: separator.note
+      class: opt-note header
+      content: <b>Modules</b>
+
     devinchrome_css:
       type: input.checkbox
       label: dev-in-chrome.css
       default: true      
+
+    animate_css:
+      type: input.checkbox
+      label: animate.css
+      default: false
+    

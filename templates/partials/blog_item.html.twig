@@ -54,6 +54,8 @@
     <div class="list-blog-padding">
 
     {% if page.header.continue_link is same as(false) %} 
+	
+ 	
         <div class="e-content">
             {{ page.content|raw }}
         </div>
@@ -76,6 +78,7 @@
             <p><a class="read-more button" href="{{ page.url }}">{{ display.read_more.label|default('GANTRY5_ENGINE_READMORE'|trans) }}</a></p>
         </div>
     {% else %}
+		
         <div class="e-content">
             {{ page.content|raw }}
         </div>

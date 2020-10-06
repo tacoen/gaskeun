@@ -13,6 +13,14 @@ Gaskeun loaded with more options.
 <img src='admin/preset/slate.png' height='160'>
 </div>
 
+## Functions
+
+## Particles 
+
+## Templates
+
+## Styles Options
+
 ## Tips
 
 To copy this theme theme
@@ -34,11 +42,3 @@ Then:
 ```
 
 While several 'gaskeun' remain intact.
-
-<style type="text/css"> 
-.fit { width:100% }
-.fit a { display:block; }
-.fit img { width:100%; }
-.images { display: flex; margin: 2rem 0; }
-.images > img { padding: .25rem; }
-</style>

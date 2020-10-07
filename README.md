@@ -30,6 +30,19 @@ Gaskeun loaded with more options.
 
 ## Themes Options
 
+### Instant Preview
+
+### CSS/SASS Modules
+
+### Varitions Bind
+
+### Floats
+
+Floats avaliable as sections, or when you use '.ga-floats' as CSS Classess.  
+Floats section is basicly a zero width and height sections, so every block inside floats section should use `position: fixed` or `position: absolute`
+
+### Owner information
+
 <img src='admin/bucket/theme-options.png'>
 
 To lock the *owner information*, open `blueprint.yaml` on your theme folder, set `readonly` to `true` under `owner` field

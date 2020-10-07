@@ -1,0 +1,21 @@
+:root {
+	--margin: $base-margin;
+	--padding: $base-padding;
+	--lead: $base-margin+$base-padding;
+	--line-height: $line-height;
+	--bg: $base-background;
+	--txt: $base-text-color;
+	--d0: $base-neutral;
+	--d1: darken($base-neutral,10%);
+	--d2: darken($base-neutral,20%);
+	--b1: #000;
+	--w1: #fff;
+	--hilite: #fff1;
+	--shade: #0002;
+	--shadow: #000C;
+	--outline: #0004;
+	--primary: $primary-color;
+	--primary-txt: textcolor-tint($primary-color);
+	--secondary: $secondary-color;
+	--secondary-txt: textcolor-tint($secondary-color);
+}

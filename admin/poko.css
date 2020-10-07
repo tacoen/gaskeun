@@ -22,11 +22,35 @@ font-size: .8em;
 	color: #0005;
 }
 
+.sf-view a { 
+	padding: 1rem 0; 
+	display:block; 
+}
+
+.sf-view .btn {
+	padding: .25rem;
+	display:inline-block;
+	appearance: button;
+}
+
+.sf-view .pre {
+	display:block;
+	padding: .5rem;
+	margin-bottom: 1rem;
+}
+	
+.sf-view p { 
+	margin: 1rem 0 0 31% !important; 
+	font-size: .9rem;
+	line-height: 1.1;
+}
+
+.sf-view b { font-size: 1.2rem }
+
 .sf-view .body {
 	width: 340px;
 	height: 272px;
 	position: relative;
-	overflow: hidden;
 	margin: 0 auto;
 }
 
@@ -72,6 +96,8 @@ font-size: .8em;
     padding: .3rem;
     justify-content: flex-end;
     align-items: center;
+	position: absolute;
+	left: 100%;
 }
 
 
@@ -79,3 +105,6 @@ font-size: .8em;
 .sf-view .header:before { content: "header"; }
 .sf-view .navi:before { content: "navigation"; }
 .sf-view .base:before { content: "base/main";  }
+
+
+

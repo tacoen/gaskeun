@@ -1,0 +1,57 @@
+#ga-branding {
+ 
+	display: flex;
+    flex-flow:wrap;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+
+	.site-logo {
+		flex-shrink: 1;
+		margin-right: .5rem;
+
+		i.icon,
+		svg,
+		img {
+			height: 100%;    
+			margin: 0 1rem;
+			width: calc(100% - 1rem);
+		}
+
+		i.icon {
+			display: inline-flex;
+			align-items: center;
+		}
+	}
+	
+	a { border: none; outline: none; }
+
+	.wrapper {
+		display: flex;
+		align-items: flex-start;
+		flex-direction:column;
+		flex-grow: 1;
+		justify-content: center;
+		font-weight: 300;
+		line-height: 1.2;
+	}
+
+	h1 { 
+		font-weight: 400;
+		margin: 0 0 .125rem 0; 
+		font-size: 1.5em; 
+		
+		small {
+			display:block;
+			font-size: .625rem;
+			text-transform:uppercase;
+		}		
+	}
+
+	.subtext { 
+		font-size: .85em;
+		margin: 0;
+	}
+
+
+}

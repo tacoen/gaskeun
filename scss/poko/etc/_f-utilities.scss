@@ -1,17 +1,4 @@
-.emoji { line-height: 1.1; align-items: flex-start; }
-.emoji big { font-size: 3rem; }
-.emoji code { displau: inline-block; margin: 1rem 0 0 0;}
 
-
-[data-heighta] {
-    --height: attr(data-height);
-    height: var(--height) !important;
-}
-
-[data-width] {
-    --width: attr(data-width);
-    width: var(--width) !important;
-}
 
 html:not(.ga-small):not(.ga-mobile) {
 
@@ -82,7 +69,7 @@ html:not(.ga-small):not(.ga-mobile) {
     display: flex;
     align-items: center;
     padding: 1rem;
-    justify-content: center;
+    justify-content: space-evenly;
     height:100%;
     width: 100%;
     margin: 0;
@@ -113,3 +100,24 @@ html:not(.ga-small):not(.ga-mobile) {
 .f-margin-1 { --fmargin: 1rem; }
 .f-margin-2 { --fmargin: 2rem; }
 .f-margin-3 { --fmargin: 3rem; }
+
+
+.f-table-d {
+    display: flex;
+    flex-direction: row;
+    flex-flow:wrap
+
+	div {
+		flex: 1 1 15%;
+		text-align: center;
+		max-width: 15%;
+		margin-bottom: 1rem;
+	}
+
+	input {
+		font-size: .85rem;
+		margin: 0 1rem;
+		width: calc(100% - 2rem);
+	}
+}
+

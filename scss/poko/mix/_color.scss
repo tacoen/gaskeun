@@ -50,9 +50,15 @@ $colors: (
 
 		.bg-color-#{$name} {
 			@include hsl-bg-parse($color);
-			--txt: textcolor-tint($color);
-			background-color: var(--bg);
-			color: var(--txt);
+			$text-color: textcolor-tint($color);
+			--txt: $text-color;
+			background-color: var(--bg,var(--color,$color));
+			@if (lightness($color)>50%) {
+				color: var(--b1,var(--txt, $text-color));
+			} @else {
+				color: var(--w1,var(--txt, $text-color));
+			}
+			
 		}
 	
 		#{$all-buttons} {

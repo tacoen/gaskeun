@@ -3,16 +3,29 @@ document.addEventListener('DOMContentLoaded', function () {
     console.log('ready dom');
 	
 	var sections = document.querySelectorAll("[class*='section-']")
-	sections.forEach(function(s) { 
+	var this_done = [];
+	sections.forEach(function(s) {
+
 		sc = s.classList.value;
 		var re = /(.+)(section-(\w+\s?))(.+)?/gm;
 		var shadow = sc.replace(re, '$2').trim();
-		if (
-			(shadow != 'section-main') &&
-			(shadow != 'section-floats')
-			){
-			construct_SectionPallete("."+shadow);
-			gas('.'+shadow).addClass('hsl-pal');
+		
+		if (! this_done.includes(shadow)) {
+
+			this_done.push(shadow);
+
+			if (
+				(shadow != 'section-main') &&
+				(shadow != 'section-floats')
+				){
+				/* 
+				 * section-main use :root 
+				 * section-floats: basicaly is hidden sections
+				 */
+				
+				construct_SectionPallete("."+shadow);
+				gas('.'+shadow).addClass('hsl-pal');
+			}
 		}
 		
 	})

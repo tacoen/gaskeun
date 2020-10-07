@@ -7,4 +7,4 @@ form:
     _preview:
       type: separator.note
       class: sf-view 
-      content: <a title='click to generate' href='javascript:poko_preview();'><div class='body'><div class='header'></div><div class='navi'></div><div class='base'><div class='aside'></div></div><div class='footer'></div></div></a>
+      content: <a title='click to generate' href='javascript:poko_preview();'><div class='body'><div class='header'></div><div class='navi'></div><div class='base'><div class='aside'></div><p class='txt'><b>Hello!</b><br/></br>Let's do <span class='accent2'>&lt;b&gt;code&lt;/b&gt;</span> line</br></br><span class='pre'>inside a box, with some</span><span class='btn accent'>Button</span></p></div><div class='footer'></div></div></a>

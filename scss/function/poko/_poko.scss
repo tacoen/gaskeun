@@ -1,10 +1,19 @@
-@mixin linkcolor($color) {
+@mixin link-color($color:#000) {
 	transition: all .25s linear;
-	color: var(--txt);
-	--txt-2: darken($color,15); 
-	--txt-3: lighten($color,15);
-	&:hover { color: var(--txt-2, var(--txt)); }
-	&:active { color: var(--txt-3, var(--txt)); }
+	color: var(--txt, $color);
+	border-bottom: none;
+	&:hover { color: var(--hover, darken($color,15%));border-bottom: none; }
+	&:active { color: var(--active, lighten($color,15%)); border-bottom: none;}
+	
+}
+
+@function link-color-calc($color) {
+	@if (lightness($color)<50%) { 
+		$link_color: hsl( hue($color)+200deg , 50%, 75%);
+	} @else {
+		$link_color: hsl( hue($color)+200deg , 50%, 25%);
+	}
+	@return $link-color;
 }
 
 @function isnt-same($var1, $var2: false ) {
@@ -66,12 +75,11 @@
 @mixin hsl-bg-parse($color) {
 
 	@include hsl-bg-init($color);
-
 	
 	@if (lightness($color) > 50) {
-		--txt: var(--b0, maxdarken($color));
+		--txt: var(--b1, maxdarken($color));
 	} @else {
-		--txt: var(--w0, maxlighten($color));
+		--txt: var(--w1, maxlighten($color));
 	}
 	
 	--bg: unquote("hsl(var(--h),var(--s),var(--l))");

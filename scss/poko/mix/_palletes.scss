@@ -1,23 +1,4 @@
-:root {
-	--margin: $base-margin;
-	--padding: $base-padding;
-	--line-height: ($base-font-size + 1.0)/1rem;
-	--lead: $base-margin+$base-padding;
-	--shade: #0002;
-	--outline: #0004;
-	--hilite: #fff1;
-	--shadow: #000C;
-	--shadow-1: #fffc;
-	--d1: $base-neutral;
-	--b1: #000;
-	--w1: #fffl;
-	--txt: $base-text-color;
-	--primary: $primary-color;
-	--primary-txt: textcolor-tint($primary-color);
-	--secondary: $secondary-color;
-	--secondary-txt: textcolor-tint($secondary-color);
-	
-}
+
 
 %hsl-pal {
 	--w1: unquote("hsl(var(--h),var(--s),95%)");

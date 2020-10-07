@@ -1,0 +1,9 @@
+[data-heighta] {
+    --height: attr(data-height);
+    height: var(--height) !important;
+}
+
+[data-width] {
+    --width: attr(data-width);
+    width: var(--width) !important;
+}

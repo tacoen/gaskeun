@@ -1,16 +1,20 @@
 $sections: (
 	'header':(
 		background: $header-background,
+		text-color: $header-text-color,
 	),
 	'footer':(
 		background: $footer-background,
+		text-color: $footer-text-color,
 	),
 	'navigation':(
 		background: $navigation-background,
+		text-color: $navigation-text-color,
 		also: 'offcanvas'
 	),
 	'aside':(
 		background: $aside-background,
+		text-color: $aside-text-color,
 	),
 );
 	
@@ -19,12 +23,25 @@ $sections: (
 	$color: map-get($set,'background');
 
 	@if isnt-same($color,$base-background) {
+	
 		.section-#{$name} {
+	
+
 			--color: $color;
-			background-color: var(--bg);
-			color: var(--txt);
+			background-color: var(--bg,var(--color));
 			
-			a { @include linkcolor(textcolor-tint($color)); }
+			@if (not-empty(map-get($set,'text-color'))) {
+				$text-color: map-get($set,'text-color');
+				$link-color: link-color-calc($text-color);
+			} @else {
+				$text-color: $base-text-color;
+				$link-color: $base-accent;
+			}
+			
+			color: var(--txt,$text-color);
+
+			a { @include link-color($link-color); }
+
 		}
 
 		@if map-get($set,'also') {
@@ -34,4 +51,10 @@ $sections: (
 		}
 	}
 
+}	
+
+main [class*='section-'] a:not(.button) { 
+	border: none;
+	&:hover { border: none; }
+	&:active { border: none; }
 }	

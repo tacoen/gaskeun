@@ -18,6 +18,11 @@ form:
       type: input.colorpicker
       label: Accent Color
       default: "#ffcc33"
+
+    accent-2:
+      type: input.colorpicker
+      label: Secondary Color
+      default: "#dd2222"
       
     offwhite:
       type: input.colorpicker

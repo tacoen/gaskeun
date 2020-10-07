@@ -753,5 +753,9 @@ function poko_preview() {
 	pv.querySelector('.footer').style.backgroundColor = document.querySelector("input[name='styles[footer][background]']").value;	
 	pv.querySelector('.aside').style.backgroundColor = document.querySelector("input[name='styles[aside][background]']").value;	
 	pv.querySelector('.base').style.backgroundColor = document.querySelector("input[name='styles[base][background]']").value;	
+	pv.querySelector('.accent').style.backgroundColor = document.querySelector("input[name='styles[base][accent]']").value;	
+	pv.querySelector('.pre').style.backgroundColor = document.querySelector("input[name='styles[base][neutral]']").value;	
+	pv.querySelector('.txt').style.color = document.querySelector("input[name='styles[base][text-color]']").value;	
+	pv.querySelector('.accent2').style.color = document.querySelector("input[name='styles[base][accent-2]']").value;	
 
 }

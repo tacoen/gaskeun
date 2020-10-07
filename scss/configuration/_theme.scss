@@ -12,13 +12,15 @@ $footer-background: $base-background !default;
 $base-text-color: #111111 !default;
 $aside-text-color: $base-text-color !default;
 $header-text-color: $base-text-color !default;
-$footer-text-color:  !default;
+$navigation-text-color: $base-text-color !default;
+$footer-text-color: $base-text-color !default;
 
 $offcanvas-toggle-background: rgba(0,0,0,0) !default;
 $offcanvas-toggle-color: $base-text-color !default;
 
 $base-neutral: #ccc !default;
 $base-accent: #fc3 !default;
+$base-accent-2: #d22 !default;
 $navigation-active-color: #fff1 !default;
 $navigation-hover-color: #0002 !default;
 
@@ -70,11 +72,11 @@ $box-height: 80vh;
 
 
 $primary-color: $base-accent;
-$secondary-color: #b22;
+$secondary-color: $base-accent-2;
 
 $leading-margin: $base-padding + $base-margin;
 $border-radius: $base-padding/2;
-$line-height: $base-font-size + 0.3;
+$line-height: ($base-font-size + 1.0)/1rem;
 
 
 /* need by grav  ---------------------------- */

@@ -8,11 +8,6 @@
 } 
 
 
-@mixin var-linkcolor($color) {
-	--link: $color;
-	--hover: if(lightness($color)>50, darken($color,10%), lighten($color,10%) );
-} 
-
 @mixin var-textcolor($color) {
 	--text: $color;
 	--link: $color;

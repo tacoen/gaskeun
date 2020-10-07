@@ -39,8 +39,10 @@ Gaskeun loaded with more options.
 <img src='admin/bucket/opt.png'>
 
 ### CSS/SASS Modules
+<img src='admin/bucket/opt2.png'>
 
 ### Varitions Bind
+<img src='admin/bucket/opt3.png'>
 
 ### Floats
 

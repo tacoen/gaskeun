@@ -41,7 +41,7 @@ To lock the *owner information*, open `blueprint.yaml` on your theme folder, set
         size: large
         label: Owner Information 
         default: owner information
-		readonly: true
+        readonly: true
 ```
 
 

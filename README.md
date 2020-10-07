@@ -23,7 +23,16 @@ Gaskeun loaded with more options.
 
 ## Gantry Particles 
 
+* branding
+* cards
+* carousel
+* and a dummy particles for theme developer
+
 ## Themes Options
+
+* long document with toc
+* gallery
+* portfolio/staff list
 
 <img src='admin/bucket/theme-options.png'>
 

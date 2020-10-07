@@ -30,10 +30,6 @@ Gaskeun loaded with more options.
 
 ## Themes Options
 
-* long document with toc
-* gallery
-* portfolio/staff list
-
 <img src='admin/bucket/theme-options.png'>
 
 To lock the *owner information*, open `blueprint.yaml` on your theme folder, set `readonly` to `true` under `owner` field
@@ -54,6 +50,11 @@ To lock the *owner information*, open `blueprint.yaml` on your theme folder, set
 ```
 
 ## Grav Templates
+
+* long document with toc
+* gallery
+* portfolio/staff list
+
 
 ## Tips
 

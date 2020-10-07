@@ -1,51 +1,14 @@
 version: 2
-
 preset:
-  image: 'gantry-admin://images/layouts/default.png'
+  image: 'gantry-admin://images/layouts/error.png'
 
 layout:
-  /container-clean/:
-    -
-      -
-        header:
-          -
-            - logo-1945
-    -
-      -
-        /main/:
-          -
-            - system-content-1945
-          -
-            - custom-1945
-    -
-      -
-        footer:
-          -
-            - 'copyright-1945 50'
-  offcanvas:
-    -
-      - mobile-menu-1945
+  /main/:
+    - system-content-1945
+    - custom-1945
 
-structure:
-  header:
-    attributes:
-      variations: null
-      css: clean
-  main:
-    attributes:
-      boxed: ''
-  footer:
-    attributes:
-      variations: null
-  container-clean:
-    attributes:
-      boxed: ''
 content:
-  logo-1945:
-    title: 'Logo / Image'
+  custom-1945:
+    title: 'Site Info'
     attributes:
-      url: /
-      image: 'gantry-media://su-b.png'
-    block:
-      class: logo
-      variations: nomarginall
+      html: ''

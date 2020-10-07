@@ -4,8 +4,22 @@
 }
 
 %no-content-padding {
-	margin:0; 
-	padding: 0;
+	margin:0 !important; 
+	padding: 0 !important;
+}
+
+.h-padding {
+	padding-left: calc(2 * var(--padding));
+	padding-right: calc(2 * var(--padding));
+}
+
+.v-padding {
+	padding-top: calc(2 * var(--padding));
+	padding-bottom: calc(2 * var(--padding));
+}
+
+.c-padding {
+	padding: calc(2 * var(--padding));
 }
 
 %fix-at-top {

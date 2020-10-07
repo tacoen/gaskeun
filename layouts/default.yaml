@@ -1,7 +1,7 @@
 version: 2
 
 preset:
-  image: 'gantry-admin://images/layouts/clean.png'
+  image: 'gantry-admin://images/layouts/default.png'
   name: default
 
 layout:

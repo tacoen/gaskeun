@@ -84,6 +84,45 @@ preset-name:
 </div></div>
 
 <div class="toggle">  
+  <input type="checkbox" value="selected" id="toggle-6" class="toggle-input">
+  <label for="toggle-6" class="toggle-label">cheatsheet</label> 
+  <div role="toggle" class="toggle-content">
+
+<h3>Basic</h3>
+<div class='f-table-d'>
+<div><img src="{{ 'gantry-admin://images/layouts/body-only.png'|url }}"><input type='text' value='gantry-admin://images/layouts/body-only.png'></div>
+<div><img src="{{ 'gantry-admin://images/layouts/default.png'|url }}"><input type='text' value='gantry-admin://images/layouts/default.png'></div>
+<div><img src="{{ 'gantry-admin://images/layouts/home.png'|url }}"><input type='text' value='gantry-admin://images/layouts/home.png'></div>
+</div>
+<div class='f-table-d'>
+<div><img src="{{ 'gantry-admin://images/layouts/error.png'|url }}"><input type='text' value='gantry-admin://images/layouts/error.png'></div>
+<div><img src="{{ 'gantry-admin://images/layouts/offline.png'|url }}"><input type='text' value='gantry-admin://images/layouts/offline.png'></div>
+</div>
+
+<h3>Columns</h3>
+<div class='f-table-d'>
+<div><img src="{{ 'gantry-admin://images/layouts/2-col-left.png'|url }}"><input type='text' value='gantry-admin://images/layouts/2-col-left.png'></div>
+<div><img src="{{ 'gantry-admin://images/layouts/2-col-right.png'|url }}"><input type='text' value='gantry-admin://images/layouts/2-col-right.png'></div>
+<div><img src="{{ 'gantry-admin://images/layouts/3-col-left.png'|url }}"><input type='text' value='gantry-admin://images/layouts/3-col-left.png'></div>
+<div><img src="{{ 'gantry-admin://images/layouts/3-col-right.png'|url }}"><input type='text' value='gantry-admin://images/layouts/3-col-right.png'></div>
+<div><img src="{{ 'gantry-admin://images/layouts/3-col.png'|url }}"><input type='text' value='gantry-admin://images/layouts/3-col.png'></div>
+</div>
+
+<h3>Fixture</h3>
+<div class='f-table-d'>
+<div><img src="{{ 'gantry-admin://images/layouts/fix-left.png'|url }}"><input type='text' value='gantry-admin://images/layouts/fix-left.png'></div>
+<div><img src="{{ 'gantry-admin://images/layouts/fixtop.png'|url }}"><input type='text' value='gantry-admin://images/layouts/fixtop.png'></div>
+<div><img src="{{ 'gantry-admin://images/layouts/column-left.png'|url }}"><input type='text' value='gantry-admin://images/layouts/column-left.png'></div>
+<div><img src="{{ 'gantry-admin://images/layouts/column-right.png'|url }}"><input type='text' value='gantry-admin://images/layouts/column-right.png'></div>
+</div>
+
+
+
+{% include '@particles/ga-dummy/gantry.html' %}
+
+</div></div>
+
+<div class="toggle">  
   <input type="checkbox" value="selected" id="toggle-1" class="toggle-input">
   <label for="toggle-1" class="toggle-label">php array</label> 
   <div role="toggle" class="toggle-content">
@@ -93,6 +132,8 @@ preset-name:
 </pre>
 
 </div></div>
+
+
 {% endset %}
 
 {% set text_content %}

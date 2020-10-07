@@ -1,18 +1,19 @@
 base:
   image: 'gantry-admin://preset/default.png'
-  description: Defaults
+  description: Default
   colors:
         - '#304055'
         - '#991111'
-        - '#f7f7f7'
+        - '#ffffff'
         - '#222222'
 
   styles:
     aside:
     base:
-        background: '#f7f7f7'
-        neutral: '#dddddd'
+        background: '#ffffff'
+        neutral: '#f7f7f7'
         accent: '#ffcc33'
+        offwhite: '#ffffff'
         text-color: '#222222'
         font: 'clearsans, sans-serif'
         font-size: '1rem'

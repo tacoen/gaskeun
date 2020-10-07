@@ -15,7 +15,7 @@ h2 a.u-url {
 
 code { 
 	font-size: 1.3rem;
-	color: var(--txt-1,#933);
+	color: var(--secondary,#933);
 }
 
 pre code { 
@@ -37,6 +37,8 @@ mark {
 	display: inline-flex;
     align-items: center;
     padding: 0 .5rem;
+	background: #BFFA37dd;
+	color: #000;	
 }
  
 hr { 

@@ -95,7 +95,7 @@ nav,
 }
 
 .g-offcanvas-open .g-nav-overlay {
-    background-color: #0003;
+    background-color: var(--outline);
 }
 
 #g-offcanvas[aria-expanded=true] {

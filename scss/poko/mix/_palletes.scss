@@ -9,9 +9,13 @@
 	--shadow: #000C;
 	--shadow-1: #fffc;
 	--d1: $base-neutral;
+	--b1: #000;
+	--w1: #fffl;
 	--txt: $base-text-color;
 	--primary: $primary-color;
 	--primary-txt: textcolor-tint($primary-color);
+	--secondary: $secondary-color;
+	--secondary-txt: textcolor-tint($secondary-color);
 	
 }
 

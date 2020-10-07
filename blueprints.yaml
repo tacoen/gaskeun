@@ -30,7 +30,6 @@ form:
         type: textarea
         size: large
         label: <b>Owner Information</b> 
-        default: owner information
 
     links:
         type: array

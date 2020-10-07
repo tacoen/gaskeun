@@ -35,7 +35,7 @@ Gaskeun loaded with more options.
 #### Instant Preview
 <img src='admin/bucket/preview.png'>
 
-#### Color Alternated
+#### Color Alternated Tools
 <img src='admin/bucket/opt.png'>
 
 ### CSS/SASS Modules

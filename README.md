@@ -40,7 +40,7 @@ Gaskeun loaded with more options.
 
 <img src='admin/bucket/floats.png'>
 
-Floats avaliable as sections, or when you use '.ga-floats' as CSS Classess.  
+Floats('#g-floats') avaliable as sections, or when you use 'ga-floats' as CSS Classess.  
 Floats section is basicly a zero width and height sections, so every block inside floats section should use `position: fixed` or `position: absolute`
 
 ### Owner information

@@ -30,7 +30,13 @@ Gaskeun loaded with more options.
 
 ## Themes Options
 
-### Instant Preview
+### Color Tools 
+
+#### Instant Preview
+<img src='admin/bucket/preview.png'>
+
+#### Color Alternated
+<img src='admin/bucket/opt.png'>
 
 ### CSS/SASS Modules
 

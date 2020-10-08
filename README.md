@@ -10,4 +10,4 @@ Gaskeun done using [Gantry 5 Framework](http://gantry.org/).
 
 &#128213; [Wiki](https://github.com/tacoen/gaskeun/wiki)
 
-&#128444;&#65039;[Screenshoot](screenshoot.png)
+&#128444;&#65039;[Screenshoot](https://github.com/tacoen/gaskeun/blob/master/screenshot.png)

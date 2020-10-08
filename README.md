@@ -8,6 +8,4 @@ Gaskeun! (Gasken/Gaskan) is [Grav](http://getgrav.org/) Theme.
 Gaskeun done using [Gantry 5 Framework](http://gantry.org/).
 
 
-[Wiki](https://github.com/tacoen/gaskeun/wiki)
-
-&#128378;&#128131; Gaskeun!
+&#128213; [Wiki](https://github.com/tacoen/gaskeun/wiki)

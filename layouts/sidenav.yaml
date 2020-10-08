@@ -1,0 +1,36 @@
+version: 2
+preset:
+  image: 'gantry-admin://images/layouts/fix-left.png'
+  name: sidenav
+  timestamp: 1602128651
+layout:
+  navigation: {  }
+  container-main:
+    -
+      -
+        'aside 25': {  }
+      -
+        'container-content 75':
+          -
+            -
+              header: {  }
+          -
+            -
+              main: {  }
+          -
+            -
+              footer: {  }
+  floats:
+    -
+      - system-messages
+  offcanvas:
+    -
+      - mobile-menu
+structure:
+  navigation:
+    type: section
+  floats:
+    type: section
+content:
+  mobile-menu:
+    title: 'Mobile Menu'

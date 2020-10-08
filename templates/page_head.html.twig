@@ -6,9 +6,6 @@
         {% if gantry.config.page.fontawesome.enable|default(1) %}
             <link rel="stylesheet" href="gantry-assets://css/font-awesome.min.css" type="text/css"/>
         {% endif %}
-        {# ---
-		<link rel="stylesheet" href="gantry-engine://css-compiled/nucleus.css" type="text/css"/>
-        -- #}
 		{% if gantry.config.get('styles.option.nucleus_css')=='0' -%}
 			<link rel="stylesheet" href="gantry-theme://css/nucleus.min.css" type="text/css"/>
         {% endif %}

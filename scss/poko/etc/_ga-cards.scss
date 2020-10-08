@@ -2,8 +2,10 @@
 .ga-card {
 	
 	height: $box-height;
+	max-height: $box-height;
+	min-height: $box-height;
 
-	--bg: $base-neutral;
+	background-color: $base-neutral;
 	--b1: #000;
 	--w1: #fff;
 	
@@ -39,7 +41,7 @@
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	padding: 2rem;
+	padding: 0 2rem;
 }
 
 // card --------------------------------------------------- 
@@ -56,7 +58,7 @@
 	}
 
 	.image {
-		background-color: #0009; 
+		background-color: var(--d2,#0009); 
 		background-blend-mode: soft-light;
 		height: 50%;
 		background-size: cover;
@@ -103,6 +105,7 @@
 
 .ga-card.cue {
 
+    background-color: var(--bg);
 	.content {
 		height: 100%;
 		background-position: 50% 30%;
@@ -129,8 +132,11 @@
 			justify-content: flex-end;
 			position: absolute;
 			width: 100%;
-			padding-bottom: 2rem;
 			transition: all .5s ease;
+		}
+
+		.items,.description {
+			padding-bottom: 4rem;
 		}
 		
 		.normal {
@@ -170,7 +176,7 @@
     width: 100%;
     height: 100%;
     background-size: cover;
-    background-color: var(--shade);
+    background-color: var(--d4,var(--shade));
     color: var(--w1);
     background-blend-mode: soft-light;
     display: flex;

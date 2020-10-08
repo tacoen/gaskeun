@@ -6,16 +6,33 @@
     justify-content: flex-start;
     width: 100%;
 
+
+	@include breakpoint(mobile-only) {
+		margin: 0 $toggle-width*1.5;
+		
+		flex-flow: column;
+		
+		.site-logo { 
+			margin-right: 0 !important;
+			zoom: 2
+		}
+		
+		.wrapper {
+			flex: 0 0;
+			align-items: center !important;
+			.subtext { text-align: center }
+		}
+		
+	}
+
 	.site-logo {
 		flex-shrink: 1;
-		margin-right: .5rem;
+		margin-right: var(--margin);
 
 		i.icon,
 		svg,
 		img {
 			height: 100%;    
-			margin: 0 1rem;
-			width: calc(100% - 1rem);
 		}
 
 		i.icon {

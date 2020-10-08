@@ -1,3 +1,8 @@
+#g-navigation .g-main-nav {
+	@if $navigation-active-color { --active: $navigation-active-color; }
+	@if $navigation-hover-color { --hover: $navigation-hover-color; }
+}
+
 main .g-main-nav {
 	@include hsl-bg-init($base-neutral);	
 	@extend %hsl-pal;
@@ -72,6 +77,7 @@ nav,
 		color: inherit;
 		display:block;
 		border-bottom: none !important;
+		
 	}
 
 	.g-sublevel {

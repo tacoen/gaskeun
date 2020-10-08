@@ -1,9 +1,9 @@
 .g-content-array {
-	margin-left: -($base-padding);
-	margin-right: -($base-padding);
+	margin-left: -($content-padding);
+	margin-right: -($content-padding);
 
 	.g-grid {
-		margin-bottom: ($base-padding + $base-margin) * 1.5;
+		margin-bottom: ($content-padding + $content-margin) * 1.5;
 
 		&:last-child {
 			margin-bottom: 0;
@@ -32,7 +32,7 @@
 
 	.g-array-item {
 		@include breakpoint(mobile-only) {
-			margin-bottom: ($base-margin + $base-padding) * 1.5;
+			margin-bottom: ($content-margin + $content-padding) * 1.5;
 		}
 	}
 

@@ -75,7 +75,7 @@ gas.prototype = {
 	cssvar: function(what,value=false) {
 		var c = getComputedStyle(this.ele)
 		if (value) { 
-			this.ele.style.setProperty('--'+what,value) 
+			this.ele.style.setProperty('--'+what,value,'important');
 		} else {
 			return c.getPropertyValue('--'+what)
 		}

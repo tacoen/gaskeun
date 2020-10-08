@@ -3,6 +3,11 @@
 {% set image = url(particle.logo) %}
 {% set icon = particle.icon|raw %}
 
+{% if particle.title %}
+	{%- set title = particle.twig ? gantry.theme.compile(particle.title) : particle.title -%}
+	{%- set stitle = (particle.filter ? gantry.platform.filter(title) : title)|html|raw %}
+{% endif %}
+
 {% if particle.height is not empty %}
 	{% set heights = "style=height:"~particle.height|raw~";" %}
 	{% set iconsize = (round(particle.height|raw|number_format/16)-1)~"rem"  %}
@@ -16,19 +21,18 @@
 	<div id="ga-branding" class="{{ particle.class|raw }}" >
 
     {% if particle.svg is not empty %}
-		<div class='site-logo' {{ heights }} ><a href="/" title="{{ particle.title }}">{{ particle.svg|raw }}</a></div>
+		<div class='site-logo' {{ heights }} ><a href="/" title="{{ stitle }}">{{ particle.svg|raw }}</a></div>
 	{% elseif image %}
-        <div class='site-logo' {{ heights }}><a href="/" title="{{ particle.title }}"><img src="{{ url(particle.logo) }}" alt="{{ particle.title }}"></a></div>
+        <div class='site-logo' {{ heights }}><a href="/" title="{{ stitle }}"><img src="{{ url(particle.logo) }}" alt="{{ particle.title }}"></a></div>
 	{% elseif icon %}
-        <div class='site-logo' {{ heights }}><a href="/" title="{{ particle.title }}"><i style="font-size:{{ iconsize }}" class="icon {{ icon }}" title="{{ particle.title }}"></i></a></div>
+        <div class='site-logo' {{ heights }}><a href="/" title="{{ stitle }}"><i style="font-size:{{ iconsize }}" class="icon {{ icon }}" title="{{ particle.title }}"></i></a></div>
     {% endif %}
 
 	{% if particle.title %}
 		{% set wrap = 1 %}
 		{% set wtitle %}
 		<h1 class='site-title'>
-		{%- set title = particle.twig ? gantry.theme.compile(particle.title) : particle.title -%}
-		{{ (particle.filter ? gantry.platform.filter(title) : title)|html|raw }}
+		{{ stitle }}
 		</h1>
 		{% endset %}
 	{% endif %}

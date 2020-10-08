@@ -1,6 +1,5 @@
-$base-padding: 0.5rem !default;
-$base-margin: 0.5rem !default;
-$base-font-size: 1.5rem !default;
+$content-padding: 0.5rem !default;
+$content-margin: 0.5rem !default;
 
 $base-background: #f7f7f7 !default;
 $base-offwhite: $base-background !default;
@@ -15,19 +14,16 @@ $header-text-color: $base-text-color !default;
 $navigation-text-color: $base-text-color !default;
 $footer-text-color: $base-text-color !default;
 
-$offcanvas-toggle-background: rgba(0,0,0,0) !default;
-$offcanvas-toggle-color: $base-text-color !default;
-
 $base-neutral: #ccc !default;
 $base-accent: #fc3 !default;
 $base-accent-2: #d22 !default;
-$navigation-active-color: #fff1 !default;
-$navigation-hover-color: #0002 !default;
 
+$navigation-active-color: false !default;
+$navigation-hover-color: false !default;
 
-$base-font: clearsans, sans-serif !default;
-$base-font-size: 1.5rem !default;
-$base-heading-font: false !default;
+$font-base: clearsans, sans-serif !default;
+$font-size: 1rem !default;
+$font-heading: false !default;
 
 $breakpoints-large-desktop-container: 75rem !default;
 $breakpoints-desktop-container: 60rem !default;
@@ -56,13 +52,19 @@ $menu-col-width: 180px !default;
 $menu-animation: g-fade !default;
 $menu-hide-on-mobile: 0 !default;
 
-
 $offcanvas-width: 70vw !default;
 $offcanvas-overlay: #000011 !default;
-$offcanvas-toggle-icon: fa fa-bars !default;
-$offcanvas-toggle-width: 3rem !default;
-$offcanvas-toggle-height: 3rem !default;
-$offcanvas-toggle-visibility: 1 !default;
+
+$toggle-icon: fa fa-bars !default;
+$toggle-width: 3rem !default;
+$toggle-height: 3rem !default;
+$toggle-visibility: 1 !default;
+$toggle-background: rgba(0,0,0,0) !default;
+$toggle-color: $base-text-color !default;
+
+$content-padding: .5rem !default;
+$content-margin: .5rem !default;
+$content-border-radius: .25rem !default;
 
 /* suggest ---------------------------- */
 
@@ -74,9 +76,9 @@ $box-height: 80vh;
 $primary-color: $base-accent;
 $secondary-color: $base-accent-2;
 
-$leading-margin: $base-padding + $base-margin;
-$border-radius: $base-padding/2;
-$line-height: ($base-font-size + 1.0)/1rem;
+$leading-margin: $content-padding + $content-margin;
+$border-radius: $content-border-radius;
+$line-height: ($font-size + 1.0)/1rem;
 
 
 /* need by grav  ---------------------------- */
@@ -85,10 +87,10 @@ $padding-horiz: 6rem;
 $padding-vert: 3rem;
 $border-color: #0002;
 
-$core-font-size: $base-font-size;
+$core-font-size: $font-size;
 $core-accent: $accent-color-1;
-$content-padding: $base-padding;
-$content-margin: $base-margin;
+$content-padding: $content-padding;
+$content-margin: $content-margin;
 
 /* hydrogen compatible ---------------------- */
 

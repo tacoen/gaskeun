@@ -2,7 +2,7 @@
 	#grav-login {
 		max-width: 36rem;
 		.form-actions {
-			margin-top: $base-margin;
+			margin-top: $content-margin;
 			@include breakpoint(mobile-only) {
 				text-align: center;
 			}

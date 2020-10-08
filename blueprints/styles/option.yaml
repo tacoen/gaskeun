@@ -32,9 +32,9 @@ form:
       class: opt-note header
       content: <b>Modules</b>
 
-    devinchrome_css:
+    devinchrome:
       type: input.checkbox
-      label: dev-in-chrome.css
+      label: Enable Workspaces
       default: true      
 
     animate_css:

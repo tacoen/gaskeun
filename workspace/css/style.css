@@ -1,0 +1,14 @@
+.ga-tree ol.block { list-style-type: none; }
+
+.outlined nav.g-main-nav {
+    border: 1px solid var(--outline)
+}
+
+.outlined nav.g-main-nav .g-sublevel {
+    border: 1px solid var(--outline);
+    border-top: none;
+}
+
+.outlined nav.g-main-nav .g-sublevel li {
+    border-top: 1px solid var(--shade);
+}

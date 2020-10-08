@@ -1,13 +1,16 @@
 version: 2
-
 preset:
-  image: 'gantry-admin://images/layouts/default.png'
-  name: default
-
+  image: 'gantry-admin://images/layouts/2-col-right.png'
+  name: 2 Column Left
+  
 layout:
   /header/: {  }
   /navigation/: { }
-  /main/: { }
+  /container-main/:
+    -
+      - aside 30: { }
+      - main 70: { }
+        
   /footer/: {  }
   floats:
     -

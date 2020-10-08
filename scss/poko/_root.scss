@@ -1,7 +1,7 @@
 :root {
-	--margin: $base-margin;
-	--padding: $base-padding;
-	--lead: $base-margin+$base-padding;
+	--margin: $content-margin;
+	--padding: $content-padding;
+	--lead: $content-margin+$content-padding;
 	--line-height: $line-height;
 	--bg: $base-background;
 	--txt: $base-text-color;
@@ -10,7 +10,7 @@
 	--d2: darken($base-neutral,20%);
 	--b1: #000;
 	--w1: #fff;
-	--hilite: #fff1;
+	--hilite: #fffd;
 	--shade: #0002;
 	--shadow: #000C;
 	--outline: #0004;

@@ -11,8 +11,8 @@
 #g-mainbar #g-navigation .g-content.g-particle { 
     display: flex;
     align-items: center;
-	padding-left: $base-padding*2;
-	padding-right: $base-padding*2;
+	padding-left: $content-padding*2;
+	padding-right: $content-padding*2;
 }
 
 html.smooth {

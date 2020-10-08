@@ -16,24 +16,28 @@
 
 .g-offcanvas-toggle {
 
-	@if isnt-same($offcanvas-toggle-color,$base-text-color) {
-		color: $offcanvas-toggle-color;
+	@if isnt-same($toggle-color,$base-text-color) {
+		color: $toggle-color;
 	} @else {
 		color: var(--txt);
 	}
 	
-	background-color: $offcanvas-toggle-background;
-	width: $offcanvas-toggle-width;
-	height: $offcanvas-toggle-height;
+	background-color: $toggle-background;
+	width: $toggle-width;
+	height: $toggle-height;
 
-	border-radius: $border-radius;
+	border-radius: 50%;
 	text-align: center;
 	position: absolute;
-	top: $base-margin;
-	left: $base-margin;
+	top: $content-margin;
+	left: $content-margin;
 	z-index: 30;
 
-	padding: (1/6 * $offcanvas-toggle-height);
-	i { font-size: (2/3 * $offcanvas-toggle-height); }
+	display: flex;
+    align-items: center;
+    justify-content: center;
+	
+	padding: (1/6 * $toggle-height);
+	i { font-size: (2/3 * $toggle-height); }
 
 }

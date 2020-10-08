@@ -103,15 +103,16 @@ html:not(.ga-small):not(.ga-mobile) {
 
 
 .f-table-d {
+
     display: flex;
     flex-direction: row;
-    flex-flow:wrap
+    flex-flow: wrap;
 
 	div {
 		flex: 1 1 15%;
 		text-align: center;
 		max-width: 15%;
-		margin-bottom: 1rem;
+		margin: 0 1rem 1rem 0;
 	}
 
 	input {

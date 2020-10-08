@@ -1,0 +1,23 @@
+version: 2
+
+preset:
+  image: 'gantry-admin://images/layouts/column-right.png'
+  name: default
+
+layout:
+  navigation: { }
+  /container-main/:
+    -
+        - header : {  }
+    -
+        - main: { }
+        - aside 30: { }
+    -
+        - footer: {  }
+
+  floats:
+    -
+      - system-messages
+  offcanvas:
+    -
+      - mobile-menu

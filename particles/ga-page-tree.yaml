@@ -1,4 +1,4 @@
-name: Page Tree
+name: Gaskeun PageTree
 type: particle
 icon: fa-tree
 
@@ -8,13 +8,29 @@ configuration:
 
 form:
   fields:
+
     enabled:
       type: input.checkbox
       label: Enabled
       description: Globally enable the particle.
       default: true  
+
     pagekey:
         type: input.text
-        label: Folder
+        label: Branch
         overrideable: True
+        default: 
+
+    layout:
+        type: select.selectize
+        label: Layout
+        default: tree
+        options:
+            tree: tree
+            block: block
+            
+    expand:
+        type: input.checkbox
+        label: Show Child
+        default: 0
  

@@ -1,5 +1,5 @@
 name: Navigation / Offcanvas
-type: base
+type: sections
 
 form:
   fields:

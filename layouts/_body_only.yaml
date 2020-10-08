@@ -5,5 +5,5 @@ preset:
 
 layout:
   /main/:
-    - system-messages
     - system-content
+    - system-messages

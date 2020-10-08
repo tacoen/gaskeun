@@ -4,3 +4,9 @@
 .g-topshadow {
 	z-index:1
 }
+
+@include breakpoint(mobile-only) {
+
+	.hide-small { display:none; }
+
+}	

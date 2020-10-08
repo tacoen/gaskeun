@@ -1,0 +1,20 @@
+version: 2
+preset:
+  image: 'gantry-admin://images/layouts/2-col-right.png'
+  name: 2 Column Right
+  
+layout:
+  /header/: {  }
+  /navigation/: { }
+  /container-main/:
+    -
+      - main 70: { }
+      - aside 30: { }
+        
+  /footer/: {  }
+  floats:
+    -
+      - system-messages
+  offcanvas:
+    -
+      - mobile-menu

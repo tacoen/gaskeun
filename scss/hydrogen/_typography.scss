@@ -1,6 +1,6 @@
 // Font Import
 @include import-font($base-body-font);
-@include import-font($base-heading-font);
+@include import-font($font-heading);
 
 body {
 	font-family: get-font-family($base-body-font);
@@ -8,7 +8,7 @@ body {
 }
 
 h1, h2, h3, h4, h5 {
-	font-family: get-font-family($base-heading-font);
+	font-family: get-font-family($font-heading);
 	font-weight: $font-weight-medium;
 }
 

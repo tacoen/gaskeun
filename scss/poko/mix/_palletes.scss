@@ -10,6 +10,8 @@
     --d0: unquote("hsl(var(--h),var(--s),calc(var(--l) - 5%))");
     --d1: unquote("hsl(var(--h),var(--s),calc(var(--l) - 10%))");
     --d2: unquote("hsl(var(--h),var(--s),calc(var(--l) - 15%))");
+    --d3: unquote("hsl(var(--h),var(--s),calc(var(--l) - 20%))");
+    --d4: unquote("hsl(var(--h),var(--s),calc(var(--l) - 25%))");
     --b0: unquote("hsl(var(--h),var(--s),10%)");
     --b1: unquote("hsl(var(--h),var(--s),5%)");
     --co: unquote("hsl(calc(var(--h) + 180),var(--s),var(--l))");

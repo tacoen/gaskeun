@@ -18,7 +18,7 @@ form:
       type: input.block-variations
       label: Variations
       description: Enter Theme Variations.
-
+      
     layout:
       type: select.selectize
       label: Content Layout
@@ -30,26 +30,26 @@ form:
         cue: cue-card
         card: card
         imagebox: imagebox
-        
-    image:
-      type: input.imagepicker
-      label: Image
-      description: Select the main image.
-      overridable: false
 
+    color:
+      type: input.colorpicker
+      label: Color
+        
     headline:
       type: input.text
       label: Headline
       description: Customize the headline text.
       placeholder: Enter headline
-      overridable: false
+
+    image:
+      type: input.imagepicker
+      label: Image
 
     description:
       type: textarea.textarea
       label: Description
       description: Customize the description.
       placeholder: Enter short description
-      overridable: false
 
     link:
       type: input.text
@@ -61,7 +61,6 @@ form:
       type: input.text
       label: Link Text
       description: Customize the link text.
-      overridable: false
 
     items:
       type: collection.list

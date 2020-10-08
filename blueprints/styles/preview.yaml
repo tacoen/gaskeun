@@ -1,5 +1,5 @@
 name: Instant Preview
-type: base
+type: configuration
 
 form:
   fields:

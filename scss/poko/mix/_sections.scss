@@ -2,10 +2,12 @@ $sections: (
 	'header':(
 		background: $header-background,
 		text-color: $header-text-color,
+		small-center: true,
 	),
 	'footer':(
 		background: $footer-background,
 		text-color: $footer-text-color,
+		small-center: true,
 	),
 	'navigation':(
 		background: $navigation-background,
@@ -22,34 +24,50 @@ $sections: (
 
 	$color: map-get($set,'background');
 
-	@if isnt-same($color,$base-background) {
 	
-		.section-#{$name} {
+	.section-#{$name} {
 	
-
 			--color: $color;
+
+		@if isnt-same($color,$base-background) {
 			background-color: var(--bg,var(--color));
+		} @else {
+			background-color: var(--bg);
+		}
 			
-			@if (not-empty(map-get($set,'text-color'))) {
-				$text-color: map-get($set,'text-color');
-				$link-color: link-color-calc($text-color);
+		@if (not-empty(map-get($set,'text-color'))) {
+			$text-color: map-get($set,'text-color');
+			$link-color: link-color-calc($text-color);
+			@if isnt-same($text-color,$base-text-color) {
+				--txt: $text-color !important;
 			} @else {
-				$text-color: $base-text-color;
-				$link-color: $base-accent;
+				--txt: $text-color;
 			}
 			
-			color: var(--txt,$text-color);
-
-			a { @include link-color($link-color); }
-
+			
+		} @else {
+			$text-color: $base-text-color;
+			$link-color: $base-accent;
 		}
+
+		color: var(--txt,$text-color);
+
+		a { @include link-color($link-color); }
+			
+		@if map-get($set,'small-center') {
+	        @include breakpoint(mobile-only) {
+				--mobile-center: 1;
+			}
+		}
+
+
+	}
 
 		@if map-get($set,'also') {
 			.section-#{map-get($set,'also')} {
 				@extend .section-#{$name}
 			}
 		}
-	}
 
 }	
 
@@ -57,4 +75,11 @@ main [class*='section-'] a:not(.button) {
 	border: none;
 	&:hover { border: none; }
 	&:active { border: none; }
-}	
+}
+
+footer {
+	@include breakpoint(mobile-only) {
+		text-align:center;
+		font-size: .9rem;
+	}
+}				

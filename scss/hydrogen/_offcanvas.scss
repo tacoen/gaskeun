@@ -25,7 +25,7 @@
 	font-size: $core-font-size + 0.5;
 	color: $offcanvas-toggle-color;
 
-	@if $offcanvas-toggle-visibility == 1 {
+	@if $toggle-visibility == 1 {
 		display: none;
 		@media only all and (max-width: $breakpoints-mobile-menu-breakpoint) {
 			display: block;

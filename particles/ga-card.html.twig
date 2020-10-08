@@ -4,12 +4,18 @@
 {% include '@particles/ga-card/'~particle.layout~'.html.twig' ignore missing with particle %}
 {% endset %}
 
+{% if particle.color %}
+	{% set stylecolor = "style=--color:"~particle.color %}
+{% endif %}
+
+{% set uniqId = 'ga-card-'~random(100, 999) %}
+
 {% block particle %}
 
 
 	{% if layout %}
 
-		<div class="ga-card {{ particle.layout|e }} {{ particle.variations|e }}">
+		<div id='{{ uniqId }}'{{ stylecolor}} class="hsl-pal ga-card {{ particle.layout|e }} {{ particle.variations|e }}">
 		{{ layout }}
 		</div>
 
@@ -59,4 +65,7 @@
 	{% endif %}
 
 
+
 {% endblock %}
+
+{% do gantry.document.addInlineScript('construct_SectionPallete("#'~uniqId~'")', 0, 'footer') %}

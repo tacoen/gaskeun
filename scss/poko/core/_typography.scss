@@ -1,19 +1,16 @@
 // ----------------------------
 
-@include import-font($base-font);
+@include import-font($font-base);
 
 body {
-	font-family: get-font-family($base-font);
-	font-size: $base-font-size;
+	font-family: get-font-family($font-base);
+	font-size: $font-size;
 	line-height: $line-height;
 }
-
-pre,textarea { width: 100% }
 
 #{$all-heading} {
 	margin-block-start: 1em;
     margin-block-end: .75em;
-	margin-right: 1rem;
 }
 
 #{$all-heading-firstchild} {
@@ -21,12 +18,12 @@ pre,textarea { width: 100% }
 	text-transform: capitalize;
 }
 
-h1 { font-size: $base-font-size*2; }
-h2 { font-size: $base-font-size*1.5; }
-h3 { font-size: $base-font-size*1.25; }
-h4 { font-size: $base-font-size*1; }
-h5 { font-size: $base-font-size*.9; }
-h6 { font-size: $base-font-size*.8; }
+h1 { font-size: $font-size*2; }
+h2 { font-size: $font-size*1.5; }
+h3 { font-size: $font-size*1.25; }
+h4 { font-size: $font-size*1; }
+h5 { font-size: $font-size*.9; }
+h6 { font-size: $font-size*.8; }
 
 img:hover {
     background-color: var(--l2, var(--shade,#ddd) );

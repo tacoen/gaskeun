@@ -57,6 +57,9 @@ configuration:
       - theme
     particles:
       - particles
+    overrides:
+      - custom    
+
 
 
 
@@ -135,19 +138,24 @@ configuration:
 admin:
   styles:
 
-    base:
+    configuration:
       - preview
+      - option
+      - offcanvas
+      - breakpoints
+      - toggle
       - base
+      - fonts
+    
+    sections:
       - header
       - navigation
       - footer
-
+      - aside
+    
     variations:
       - accent
       - cover
       - color
     
-    configuration:
-      - breakpoints
-      - option
 

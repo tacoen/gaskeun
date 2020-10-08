@@ -1,0 +1,21 @@
+name: Fonts
+type: configuration
+
+form:
+  fields:
+
+    base:
+      type: input.fonts
+      label: Base Font
+      default: 'clearsans, sans-serif'
+
+    heading:
+      type: input.fonts
+      label: Heading Font
+
+    size:
+      type: input.text
+      label: Font Size
+      pattern: '\d+(\.\d+){0,1}(rem|em|ex|ch|vw|vh|vmin|vmax|%|px|cm|mm|in|pt|pc)'
+      default: 1.5rem
+    

@@ -2,54 +2,70 @@
 
 {% block particle %}
 
-{% if particle.pagekey %}
-	{% set colm = particle.pagekey %}
-{% else %}
+{% if particle.pagekey is empty %}
 	{% set colm = page.slug() %}
+{% elseif particle.pagekey == "/" %}
+	{% set colm = "home" %}
 {% endif %}
 
+{% if colm == "home" %}
+	{% set pagecol = pages.children.visible %}		
+{% else %}
 	{% set pagecol = pages.find('/'~colm).children.visible %}
+{% endif %}
 
-
-<ol class="ga-tree top-level" data-slug="{{ colm }}">
-    {% for page in pagecol %}
-        {% if page.children.visible is empty %}
-            <li class="item">
-            <a href="{{ page.url }}">{{ page.title }}</a>
-        {% else %}
-            <li class="parent">
-            <a href="javascript:void(0);">{{ page.title }}</a>
-            <ol>
-                {% for child in page.children.visible %}
-                    {% if child.children.visible is empty %}
-                        <li class="item">
-                        <a href="{{ child.url }}">{{ child.title }}</a>
-                    {% else %}
-                        <li class="parent">
-                        <a href="javascript:void(0);">{{ child.title }}</a>
-                        <ol>
-                            {% for subchild in child.children.visible %}
-                                <li><a href="{{ subchild.url }}">{{ subchild.title }}</a></li>
-                            {% endfor %}
-                        </ol>
-                    {% endif %}
-                    </li>
-                {% endfor %}
-            </ol>
-        {% endif %}
-        </li>
-    {% endfor %}
+<div class='ga-tree {{ particle.layout }}' data-slug="{{ colm }}">
+<ol class="top-level">
+	
+	{% for page in pagecol %}
+		{% if particle.expand == 0  %}
+            <li class="item"><a href="{{ page.url }}">{{ page.title }}</a>		
+		{% else %}
+			{% if page.children.visible is empty %}
+				<li class="item">
+				<a href="{{ page.url }}">{{ page.title }}</a>
+			{% else %}
+				<li class="parent">
+				<a href="javascript:void(0);">{{ page.title }}</a>
+				<ol>
+					{% for child in page.children.visible %}
+						{% if child.children.visible is empty %}
+							<li class="item">
+							<a href="{{ child.url }}">{{ child.title }}</a>
+						{% else %}
+							<li class="parent">
+							<a href="javascript:void(0);">{{ child.title }}</a>
+							<ol>
+								{% for subchild in child.children.visible %}
+									<li><a href="{{ subchild.url }}">{{ subchild.title }}</a></li>
+								{% endfor %}
+							</ol>
+						{% endif %}
+						</li>
+					{% endfor %}
+				</ol>
+			{% endif %}
+		{% endif %}
+		
+		</li>
+		
+		{% endfor %}
 </ol>
-
+</div>
 
 {% endblock %}
 
-{% block javascript_footer %}
-    <script src="{{ url('gantry-theme://js/toc.js') }}"></script>
-{% endblock %}  
+{% if particle.layout == 'tree' %}
 
-{% block stylesheets %}
-    <link rel="stylesheet" href="{{ theme_url }}/css-compiled/particles.css" />
-{% endblock %}
+	{% block javascript_footer %}
+		<script src="{{ url('gantry-theme://js/toc.js') }}"></script>
+	{% endblock %}  
 
-{% do gantry.document.addInlineScript('ga_usetree()', 0, 'footer') %}
+	{% do gantry.document.addInlineScript('ga_usetree()', 0, 'footer') %}
+
+	{% block stylesheets %}
+		<link rel="stylesheet" href="{{ theme_url }}/css-compiled/particles.css" />
+	{% endblock %}
+
+{% endif %}
+

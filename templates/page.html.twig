@@ -73,8 +73,9 @@
 		{%- do gantry.document.addStyle(url('gantry-assets://vendors/animate.min.css')) -%}
 	{% endif %}
 
-	{% if gantry.config.get('styles.option.devinchrome_css') -%}
-		{%- do gantry.document.addStyle(url('gantry-assets://css/dev-in-chrome.css')) -%}
+	{% if gantry.config.get('styles.option.devinchrome') -%}
+		{%- do gantry.document.addStyle(url('gantry-assets://workspace/css/style.css')) -%}
+		{%- do gantry.document.addScript(url('gantry-assets://workspace/js/script.js'), 10, 'footer') -%}
 	{% endif %}
 	
 	{% set media_breakpoint %}
@@ -99,7 +100,7 @@
     {{ gantry.debugger.render()|raw }}
 {% endset -%}
 
-{%- set icon = gantry.config.get('styles.offcanvas.toggle-icon') -%}
+{%- set icon = gantry.config.get('styles.toggle.icon') -%}
 
 {%- block page -%}
 <!DOCTYPE {{ gantry.config.page.doctype|default('html')|raw }}>

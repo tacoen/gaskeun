@@ -122,6 +122,8 @@
     justify-content:space-around;
     background-size: 160%;
     animation-iteration-count:infinite;
+	
+	a.button.primary { background: var(--primary); }
 }
 
 .modular-row.showcase .content {

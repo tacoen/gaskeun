@@ -11,6 +11,7 @@
 {% if particle.height is not empty %}
 	{% set heights = "style=height:"~particle.height|raw~";" %}
 	{% set iconsize = (round(particle.height|raw|number_format/16)-1)~"rem"  %}
+	{% set margin = (round(particle.height|raw|number_format/16)-1)/5~"rem"  %}
 {% else %}
 	{% set heights = "" %}
 	{% set iconsize = "1rem" %}	
@@ -25,7 +26,7 @@
 	{% elseif image %}
         <div class='site-logo' {{ heights }}><a href="/" title="{{ stitle }}"><img src="{{ url(particle.logo) }}" alt="{{ particle.title }}"></a></div>
 	{% elseif icon %}
-        <div class='site-logo' {{ heights }}><a href="/" title="{{ stitle }}"><i style="font-size:{{ iconsize }}" class="icon {{ icon }}" title="{{ particle.title }}"></i></a></div>
+        <div class='site-logo' {{ heights }}><a href="/" title="{{ stitle }}"><i style="font-size:{{ iconsize }}; margin-right:{{ margin }}" class="icon {{ icon }}" title="{{ stitle }}"></i></a></div>
     {% endif %}
 
 	{% if particle.title %}

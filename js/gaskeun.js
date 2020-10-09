@@ -1,7 +1,12 @@
 document.addEventListener('DOMContentLoaded', function () {
 
-    console.log('ready dom');
+
+	var x = document.querySelectorAll("[data-height]");
+	var i; for (i = 0; i < x.length; i++) {
+		x[i].style.height = x[i].getAttribute('data-height');
+	}
 	
+
 	var sections = document.querySelectorAll("[class*='section-']")
 	var this_done = [];
 	sections.forEach(function(s) {

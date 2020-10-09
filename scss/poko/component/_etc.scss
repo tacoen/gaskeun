@@ -1,9 +1,13 @@
-[data-heighta] {
+[data-height] {
     --height: attr(data-height);
-    height: var(--height) !important;
+    height: var(--height);
 }
 
 [data-width] {
     --width: attr(data-width);
-    width: var(--width) !important;
+    width: var(--width);
+}
+
+html .content-padding {
+	padding: calc(2 * var(--padding)) !important;
 }

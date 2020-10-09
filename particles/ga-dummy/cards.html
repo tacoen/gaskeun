@@ -1,7 +1,8 @@
+<h3>Cards Particle</h3>
 <div class="g-grid">
     <div class="g-block size-25">
         <div id="ga-card-9623-particle" class="g-content g-particle">
-            <div class="ga-card card banim-slide-l bg-color-red">
+            <div class="ga-card card banim-slide-l bg-color-red hsl-pal">
                 <a href="//gantry.org/">
                     <div class="image" style="background-image: url('/user/themes/gasken/images/cover7.png?5f6e7e3a');"></div>
                     <h3 class="headline bg-d2">Gantry</h3>
@@ -24,7 +25,7 @@
     </div>
     <div class="g-block size-25">
         <div id="ga-card-7323-particle" class="g-content g-particle">
-            <div class="ga-card cue banim-bounce bg-color-accent-1">
+            <div class="ga-card cue banim-bounce ga-card-demo-1 hsl-pal" style='--color:#60c96f'>
                 <div class="content" style="background-image: url('/user/themes/gasken/images/su-w.png');">
                     <div class="overlay">
                         <div class="normal">
@@ -56,8 +57,8 @@
     </div>
     <div class="g-block size-25">
         <div id="ga-card-6949-particle" class="g-content g-particle">
-            <div class="ga-card imagebox bg-color-accent-1 banim-fade">
-                <div class="content" style="background-image: url('/user/themes/gasken/images/cover5.png?5f6e7e3a');">
+            <div class="ga-card imagebox banim-fade hsl-pal ga-card-demo-2" style='--color:#60CC90'>
+                <div class="content" style="background-image: url('/user/themes/gasken/images/cover2.png');">
                     <div class="overlay">
                         <a class="pin" href="//getgrav.org/">We Love Grav</a>
                         <div class="normal">
@@ -96,3 +97,9 @@
         </div>
     </div>
 </div>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+	construct_SectionPallete(".ga-card-demo-1");
+	construct_SectionPallete(".ga-card-demo-2");
+});
+</script>
